@@ -1,0 +1,10 @@
+.main-st {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 53px 20px 53px 20px;
+    display: flex;
+    justify-content: center;
+    .underline-st {
+        border-bottom: solid 5px var(--primary-color);
+    }
+}

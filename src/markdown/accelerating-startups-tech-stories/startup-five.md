@@ -1,0 +1,6 @@
+---
+name: "Start-Up Five"
+featureImage: ../images/active-partners/science-and-tech.png
+date: 2020-03-14T00:00:00+00:00
+---
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem provident sapiente temporibus eveniet unde recusandae saepe, ducimus natus voluptatum porro voluptate quis? Accusamus velit unde ab cum numquam, aperiam magnam.

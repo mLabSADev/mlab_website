@@ -1,0 +1,54 @@
+@import url("./colors.scss");
+html,
+body {
+  margin: 0px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}
+.responsive-column {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 20px;
+}
+@media only screen and (max-width: 880px) {
+  .responsive-column {
+    grid-template-columns: auto;
+  }
+}
+.video-i {
+  box-sizing: border-box;
+  width: 100%;
+  height: 900px;
+  padding: 100px 100px 100px 100px;
+  background: url("../images/backgrounds/geometric-minimal-background-3d-rendered-shape-in-2021-12-15-21-13-17-utc.jpg")
+    fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  .play-video {
+    box-sizing: border-box;
+    margin: auto; 
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+  }
+}

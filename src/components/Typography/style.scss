@@ -1,0 +1,90 @@
+@import url("../../assets/Fonts/fonts.scss");
+:root {
+  --primary-font: "Trebuchet";
+  --header-font: "Oswald";
+  --secondary-font-regular: "Source_Regular";
+  --secondary-font-light: "Source_Light";
+  --secondary-font-bold: "Source_Bold";
+}
+.main-t {
+  margin: 0px;
+}
+.light {
+  color: white;
+}
+.dark {
+  color: #171717;
+}
+// h1
+.h1 {
+  font-family: var(--header-font);
+  font-size: 96px;
+}
+// h2
+.h2 {
+  font-family: var(--header-font);
+  font-size: 60px;
+}
+// h3
+.h3 {
+  font-family: var(--header-font);
+  font-size: 48px;
+}
+// h4
+.h4 {
+  font-family: var(--header-font);
+  font-size: 34px;
+}
+// h5
+.h5 {
+  font-family: var(--header-font);
+  font-size: 24px;
+}
+// h6
+.h6 {
+  font-family: var(--header-font);
+  font-size: 20px;
+}
+// s1
+.s1 {
+  font-family: var(--secondary-font-bold);
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+// s2
+.s2 {
+  font-family: var(--secondary-font-regular);
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+// b1
+.b1 {
+  font-family: var(--primary-font);
+  font-size: 16px;
+}
+// b2
+.b2 {
+  font-family: var(--primary-font);
+  font-size: 14px;
+}
+// button
+.button {
+  font-family: var(--secondary-font-bold);
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+// caption
+.caption {
+  font-family: var(--primary-font);
+  font-size: 12px;
+}
+// overline
+.overline {
+  font-family: var(--primary-font);
+  font-size: 12px;
+  text-transform: uppercase;
+}
