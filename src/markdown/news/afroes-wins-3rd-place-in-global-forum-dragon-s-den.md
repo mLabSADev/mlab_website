@@ -3,9 +3,10 @@ path: /afroesdragonsden
 date: 06 Jun 2013
 title: afroes-wins-3rd-place-in-global-forum-dragon-s-den
 author: mlab
-featureImage: ./.png
+featureImage: ../../images/accelerating-africa-s-participation-in-healthcare-innovation-through-rehealthafrica.png
+thumb: ../../images/accelerating-africa-s-participation-in-healthcare-innovation-through-rehealthafrica.png
 attachments: 
-- ./.png
+- ../../images/accelerating-africa-s-participation-in-healthcare-innovation-through-rehealthafrica.png
 abstract: ""
 tags: []
 timeStamp: 2013-06-06T13:21:15

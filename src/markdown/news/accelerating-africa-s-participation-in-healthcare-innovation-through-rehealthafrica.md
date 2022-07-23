@@ -3,9 +3,10 @@ path: /accelerating-africas-participation-healthcare-innovation-rehealthafrica
 date: 14 Apr 2017
 title: accelerating-africa-s-participation-in-healthcare-innovation-through-rehealthafrica
 author: mlab
-featureImage: ./accelerating-africa-s-participation-in-healthcare-innovation-through-rehealthafrica.png
+featureImage: ../../images/accelerating-africa-s-participation-in-healthcare-innovation-through-rehealthafrica.png
+thumb: ../../images/accelerating-africa-s-participation-in-healthcare-innovation-through-rehealthafrica.png
 attachments: 
-- ./accelerating-africa-s-participation-in-healthcare-innovation-through-rehealthafrica.png
+- ../../images/accelerating-africa-s-participation-in-healthcare-innovation-through-rehealthafrica.png
 abstract: ""
 tags: ['Adele Botha','Africa','csir','DEMOLA','derrick kotze','Digital Health','Health','Innovation','mLab','mobile']
 timeStamp: 2017-04-14T14:12:57

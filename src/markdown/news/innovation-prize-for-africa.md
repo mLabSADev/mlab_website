@@ -3,9 +3,10 @@ path: /innovation-prize-for-africa
 date: 27 Sep 2012
 title: innovation-prize-for-africa
 author: mlab
-featureImage: ./innovation-prize-for-africa.png
+featureImage: ../../images/nokiax-port-weekly-coming-to-your-city-.png
+thumb: ../../images/nokiax-port-weekly-coming-to-your-city-.png
 attachments: 
-- ./innovation-prize-for-africa.png
+- ../../images/nokiax-port-weekly-coming-to-your-city-.png
 abstract: ""
 tags: ['Africa','competition','Innovation','mlabsa']
 timeStamp: 2012-09-27T07:30:46

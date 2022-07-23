@@ -3,9 +3,10 @@ path: /mlab-csir-partner-mhealth-wellness-ecosystem
 date: 26 May 2016
 title: mlab-and-the-csir-partner-on-mhealth-wellness-ecosystem
 author: mlab
-featureImage: ./mlab-and-the-csir-partner-on-mhealth-wellness-ecosystem.png
+featureImage: ../../images/mlab-and-the-csir-partner-on-mhealth-wellness-ecosystem.png
+thumb: ../../images/mlab-and-the-csir-partner-on-mhealth-wellness-ecosystem.png
 attachments: 
-- ./mlab-and-the-csir-partner-on-mhealth-wellness-ecosystem.png
+- ../../images/mlab-and-the-csir-partner-on-mhealth-wellness-ecosystem.png
 abstract: ""
 tags: ['csir','DEMOLA','derrick kotze','featured','health tracker','mHealth','mLab','mlab southern africa','wearables','Wellness']
 timeStamp: 2016-05-26T11:41:51

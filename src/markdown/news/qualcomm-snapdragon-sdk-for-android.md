@@ -3,9 +3,10 @@ path: /qualcomm-snapdragon-sdk-android
 date: 26 Jun 2012
 title: qualcomm-snapdragon-sdk-for-android
 author: mlab
-featureImage: ./qualcomm-snapdragon-sdk-for-android.png
+featureImage: ../../images/qualcomm-snapdragon-sdk-for-android.png
+thumb: ../../images/qualcomm-snapdragon-sdk-for-android.png
 attachments: 
-- ./qualcomm-snapdragon-sdk-for-android.png
+- ../../images/qualcomm-snapdragon-sdk-for-android.png
 abstract: ""
 tags: ['android','qdevnet','qualcomm','snapdragon']
 timeStamp: 2012-06-26T17:52:23

@@ -3,9 +3,10 @@ path: /pe-think-tank-2014
 date: 20 Nov 2014
 title: pe-think-tank-2014
 author: mlab
-featureImage: ./pe-think-tank-2014.png
+featureImage: ../../images/pe-think-tank-2014.png
+thumb: ../../images/pe-think-tank-2014.png
 attachments: 
-- ./pe-think-tank-2014.png
+- ../../images/pe-think-tank-2014.png
 abstract: ""
 tags: ['developers','Entrepreneurship','GEW2014','Hub','ict','mLab','mobile','PE','Port Elizabeth','silicon cape']
 timeStamp: 2014-11-20T16:40:20

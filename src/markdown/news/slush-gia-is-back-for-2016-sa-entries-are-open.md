@@ -3,9 +3,10 @@ path: /slush-gia-back-2016-sa-entries-open
 date: 29 Jun 2016
 title: slush-gia-is-back-for-2016-sa-entries-are-open
 author: mlab
-featureImage: ./slush-gia-is-back-for-2016-sa-entries-are-open.png
+featureImage: ../../images/slush-gia-is-back-for-2016-sa-entries-are-open.png
+thumb: ../../images/slush-gia-is-back-for-2016-sa-entries-are-open.png
 attachments: 
-- ./slush-gia-is-back-for-2016-sa-entries-are-open.png
+- ../../images/slush-gia-is-back-for-2016-sa-entries-are-open.png
 abstract: ""
 tags: ['featured','Finland','Global Impact Accelerator','helsinki','Impact Investment','invetors','mLab','Slush','startups','Tech']
 timeStamp: 2016-06-29T16:39:19

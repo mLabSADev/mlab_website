@@ -3,9 +3,10 @@ path: /find-path-demola
 date: 15 Feb 2017
 title: students-find-your-path-with-demola
 author: Lebogang Madise
-featureImage: ./.png
+featureImage: ../../images/startup-knight-competition.png
+thumb: ../../images/startup-knight-competition.png
 attachments: 
-- ./.png
+- ../../images/startup-knight-competition.png
 abstract: ""
 tags: []
 timeStamp: 2017-02-15T13:13:48

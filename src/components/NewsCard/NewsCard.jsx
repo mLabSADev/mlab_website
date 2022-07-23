@@ -19,10 +19,10 @@ const NewsCard = () => {
     <div className="main-nc">
       <div className="image-nc"></div>
       <div className="details-nc">
-        <Typography variant="h4">
+        <Typography variant="h5">
           Winners of the AgriTourZA programme
         </Typography>
-        <Typography variant="b1">
+        <Typography color="gray" variant="b2">
           It’s a win/win for these entrepreneurs and tourism and agricultural
         </Typography>
       </div>

@@ -3,9 +3,10 @@ path: /tih
 date: 19 May 2011
 title: the-innovation-hub
 author: mlab
-featureImage: ./the-innovation-hub.png
+featureImage: ../../images/the-innovation-hub.png
+thumb: ../../images/the-innovation-hub.png
 attachments: 
-- ./the-innovation-hub.png
+- ../../images/the-innovation-hub.png
 abstract: ""
 tags: []
 timeStamp: 2011-05-19T15:26:01

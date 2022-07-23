@@ -3,9 +3,10 @@ path: /applications-now-open-10x10-hackathon-croatia
 date: 06 Jun 2014
 title: applications-now-open-for-10x10-hackathon-in-croatia
 author: mlab
-featureImage: ./applications-now-open-for-10x10-hackathon-in-croatia.png
+featureImage: ../../images/applications-now-open-for-10x10-hackathon-in-croatia.png
+thumb: ../../images/applications-now-open-for-10x10-hackathon-in-croatia.png
 attachments: 
-- ./applications-now-open-for-10x10-hackathon-in-croatia.png
+- ../../images/applications-now-open-for-10x10-hackathon-in-croatia.png
 abstract: ""
 tags: ['GEW','global entrepreneurship week','Hackathon','mLab']
 timeStamp: 2014-06-06T10:48:34

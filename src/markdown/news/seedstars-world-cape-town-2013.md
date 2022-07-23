@@ -3,9 +3,10 @@ path: /seedstars-world
 date: 17 May 2013
 title: seedstars-world-cape-town-2013
 author: mlab
-featureImage: ./.png
+featureImage: ../../images/rhok-pretoria-is-back-for-2015.png
+thumb: ../../images/rhok-pretoria-is-back-for-2015.png
 attachments: 
-- ./.png
+- ../../images/rhok-pretoria-is-back-for-2015.png
 abstract: ""
 tags: ['Aftarobot','competition','investors','pitching','Seedstarworld']
 timeStamp: 2013-05-17T14:58:49

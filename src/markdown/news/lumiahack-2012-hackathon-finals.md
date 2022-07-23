@@ -3,9 +3,10 @@ path: /lumiahack-2012-hackathon-finals
 date: 25 Jun 2012
 title: lumiahack-2012-hackathon-finals
 author: mlab
-featureImage: ./lumiahack-2012-hackathon-finals.png
+featureImage: ../../images/lumiahack-2012-hackathon-finals.png
+thumb: ../../images/lumiahack-2012-hackathon-finals.png
 attachments: 
-- ./lumiahack-2012-hackathon-finals.png
+- ../../images/lumiahack-2012-hackathon-finals.png
 abstract: ""
 tags: ['Hackathon','Microsoft','mlab east africa','nokia','Windows Phone']
 timeStamp: 2012-06-25T17:03:15

@@ -3,9 +3,10 @@ path: /electronics-hackathon
 date: 29 Jan 2015
 title: electronics-hackathon
 author: mlab
-featureImage: ./electronics-hackathon.png
+featureImage: ../../images/electronics-hackathon.png
+thumb: ../../images/electronics-hackathon.png
 attachments: 
-- ./electronics-hackathon.png
+- ../../images/electronics-hackathon.png
 abstract: ""
 tags: ['Electronics','Fast Company','Geekulcha','Hackathon','Innovation','mLab','Nunnovation','SAIS','The Innovation Hub']
 timeStamp: 2015-01-29T12:16:03

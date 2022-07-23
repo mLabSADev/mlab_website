@@ -1,6 +1,7 @@
 ---
 path: "/galeshewe"
-featureImage: ../images/locations/mlab-nothern-cape-background-image_v2-01.jpeg
+featureImage: ../../images/locations/mlab-nothern-cape-background-image_v2-01.jpeg
+thumb: ../../images/locations/mlab-nothern-cape-background-image_v2-01.jpeg
 city: "Galeshewe"
 province: "Nothern Cape"
 image: "https://images.unsplash.com/photo-1501664201380-78af13a2783e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"

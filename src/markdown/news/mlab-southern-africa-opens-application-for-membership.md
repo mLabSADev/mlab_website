@@ -3,9 +3,10 @@ path: /mlab-southern-africa-opens-application-for-members
 date: 27 Jul 2011
 title: mlab-southern-africa-opens-application-for-membership
 author: mlab
-featureImage: ./.png
+featureImage: ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
+thumb: ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
 attachments: 
-- ./.png
+- ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
 abstract: ""
 tags: []
 timeStamp: 2011-07-27T07:00:12

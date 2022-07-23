@@ -3,9 +3,10 @@ path: /join-the-networked-society-ericsson-ahub-17-19-november
 date: 28 Oct 2015
 title: join-the-networked-society-ericsson-ahub-17-19-november
 author: mlab
-featureImage: ./join-the-networked-society-ericsson-ahub-17-19-november.png
+featureImage: ../../images/join-the-networked-society-ericsson-ahub-17-19-november.png
+thumb: ../../images/join-the-networked-society-ericsson-ahub-17-19-november.png
 attachments: 
-- ./join-the-networked-society-ericsson-ahub-17-19-november.png
+- ../../images/join-the-networked-society-ericsson-ahub-17-19-november.png
 abstract: ""
 tags: ['Africacom','ahub','cape town','entrepreneurs','ericsson','Innovation','mLab','south africa','startups']
 timeStamp: 2015-10-28T07:33:59

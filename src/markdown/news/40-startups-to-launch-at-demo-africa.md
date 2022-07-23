@@ -3,9 +3,10 @@ path: /40-startups-to-launch-at-demo-africa
 date: 27 Sep 2012
 title: 40-startups-to-launch-at-demo-africa
 author: mlab
-featureImage: ./40-startups-to-launch-at-demo-africa.png
+featureImage: ../../images/40-startups-to-launch-at-demo-africa.png
+thumb: ../../images/40-startups-to-launch-at-demo-africa.png
 attachments: 
-- ./40-startups-to-launch-at-demo-africa.png
+- ../../images/40-startups-to-launch-at-demo-africa.png
 abstract: ""
 tags: ['DEMO Africa','mlab southern africa','startups']
 timeStamp: 2012-09-27T13:02:48

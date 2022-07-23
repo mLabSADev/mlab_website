@@ -3,9 +3,10 @@ path: /nokia-lumia-and-windowsphone-8-challenge
 date: 15 Jul 2013
 title: nokia-lumia-windows-phone-challenge
 author: mlab
-featureImage: ./nokia-lumia-windows-phone-challenge.png
+featureImage: ../../images/nokia-lumia-windows-phone-challenge.png
+thumb: ../../images/nokia-lumia-windows-phone-challenge.png
 attachments: 
-- ./nokia-lumia-windows-phone-challenge.png
+- ../../images/nokia-lumia-windows-phone-challenge.png
 abstract: ""
 tags: ['competition','Lumia','Microsoft','mLab','nokia','Nokia Ad Exchange','Prizes','Windows Phone']
 timeStamp: 2013-07-15T11:14:49

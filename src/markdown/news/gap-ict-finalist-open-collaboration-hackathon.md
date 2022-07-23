@@ -3,9 +3,10 @@ path: /gap-ict-finalist-open-collaboration-hackathon
 date: 19 Sep 2014
 title: gap-ict-finalist-open-collaboration-hackathon
 author: mlab
-featureImage: ./gap-ict-finalist-open-collaboration-hackathon.png
+featureImage: ../../images/gap-ict-finalist-open-collaboration-hackathon.png
+thumb: ../../images/gap-ict-finalist-open-collaboration-hackathon.png
 attachments: 
-- ./gap-ict-finalist-open-collaboration-hackathon.png
+- ../../images/gap-ict-finalist-open-collaboration-hackathon.png
 abstract: ""
 tags: ['GAP ICT','Hackathon','mLab','Open Innovation','The Innovation Hub']
 timeStamp: 2014-09-19T15:04:03

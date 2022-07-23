@@ -3,9 +3,10 @@ path: /durban-agrihack-28november-2-december
 date: 26 Oct 2015
 title: durban-agrihack-28november-2-december
 author: mlab
-featureImage: ./durban-agrihack-28november-2-december.png
+featureImage: ../../images/durban-agrihack-28november-2-december.png
+thumb: ../../images/durban-agrihack-28november-2-december.png
 attachments: 
-- ./durban-agrihack-28november-2-december.png
+- ../../images/durban-agrihack-28november-2-december.png
 abstract: ""
 tags: ['Agri Hack','Agriculture','climate change','DUT','GFIA Africa','Global Forum on Innovations in Agriculture in Africa Conference','Hackathon','mLab']
 timeStamp: 2015-10-26T10:07:09

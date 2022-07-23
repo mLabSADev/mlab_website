@@ -3,9 +3,10 @@ path: /slush-impact-accelerator-2015-south-african-entries-now-open
 date: 18 Jun 2015
 title: slush-2015-global-impact-accelerator-
 author: mlab
-featureImage: ./slush-2015-global-impact-accelerator-.png
+featureImage: ../../images/slush-2015-global-impact-accelerator-.png
+thumb: ../../images/slush-2015-global-impact-accelerator-.png
 attachments: 
-- ./slush-2015-global-impact-accelerator-.png
+- ../../images/slush-2015-global-impact-accelerator-.png
 abstract: ""
 tags: ['apps','Finland','helsinki','Impact Accelerator','infodev','investment','mLab','Slush','startups']
 timeStamp: 2015-06-18T10:00:21

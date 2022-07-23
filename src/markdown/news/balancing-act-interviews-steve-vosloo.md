@@ -3,9 +3,10 @@ path: /balancing-act-interviews-steve-vosloo
 date: 29 Aug 2011
 title: balancing-act-interviews-steve-vosloo
 author: mlab
-featureImage: ./.png
+featureImage: ../../images/bg.jpg
+thumb: ../../images/bg.jpg
 attachments: 
-- ./.png
+- ../../images/bg.jpg
 abstract: ""
 tags: ['yoza']
 timeStamp: 2011-08-29T12:42:19

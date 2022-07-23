@@ -3,9 +3,10 @@ path: /join-freelance
 date: 16 May 2013
 title: join-our-freelance-community
 author: mlab
-featureImage: ./join-our-freelance-community.png
+featureImage: ../../images/join-our-freelance-community.png
+thumb: ../../images/join-our-freelance-community.png
 attachments: 
-- ./join-our-freelance-community.png
+- ../../images/join-our-freelance-community.png
 abstract: ""
 tags: ['android','blackberry','code','designer','developers','featured','freelance','iOS','nokia','s40']
 timeStamp: 2013-05-16T16:43:51

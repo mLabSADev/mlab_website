@@ -3,9 +3,10 @@ path: /helpful-tips-for-submitting-your-app-to-blackberry-app-world
 date: 06 Dec 2012
 title: helpful-tips-for-submitting-your-app-to-blackberry-app-world
 author: mlab
-featureImage: ./helpful-tips-for-submitting-your-app-to-blackberry-app-world.png
+featureImage: ../../images/helpful-tips-for-submitting-your-app-to-blackberry-app-world.png
+thumb: ../../images/helpful-tips-for-submitting-your-app-to-blackberry-app-world.png
 attachments: 
-- ./helpful-tips-for-submitting-your-app-to-blackberry-app-world.png
+- ../../images/helpful-tips-for-submitting-your-app-to-blackberry-app-world.png
 abstract: ""
 tags: ['app world','blackberry','tips']
 timeStamp: 2012-12-06T07:58:57

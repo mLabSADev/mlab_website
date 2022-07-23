@@ -3,9 +3,10 @@ path: /mobile-developer-survey
 date: 07 Apr 2014
 title: mobile-developer-survey
 author: mlab
-featureImage: ./mobile-developer-survey.png
+featureImage: ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
+thumb: ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
 attachments: 
-- ./mobile-developer-survey.png
+- ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
 abstract: ""
 tags: ['developers','EDC','evansdata','mLab','research','survey']
 timeStamp: 2014-04-07T10:50:52

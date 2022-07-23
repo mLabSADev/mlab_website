@@ -3,9 +3,10 @@ path: /global-impact-accelerator-2017
 date: 08 Jun 2017
 title: global-impact-accelerator-2017
 author: mlab
-featureImage: ./global-impact-accelerator-2017.png
+featureImage: ../../images/global-impact-accelerator-2017.png
+thumb: ../../images/global-impact-accelerator-2017.png
 attachments: 
-- ./global-impact-accelerator-2017.png
+- ../../images/global-impact-accelerator-2017.png
 abstract: ""
 tags: ['Finland','Global Impact Accelerator','helsinki','investment','mLab','Slush','south africa','startups']
 timeStamp: 2017-06-08T15:02:21

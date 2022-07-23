@@ -3,9 +3,10 @@ path: /ashachallenge2013
 date: 17 May 2013
 title: nokia-asha-developer-challenge-2013
 author: mlab
-featureImage: ./nokia-asha-developer-challenge-2013.png
+featureImage: ../../images/nokia-asha-developer-challenge-2013.png
+thumb: ../../images/nokia-asha-developer-challenge-2013.png
 attachments: 
-- ./nokia-asha-developer-challenge-2013.png
+- ../../images/nokia-asha-developer-challenge-2013.png
 abstract: ""
 tags: ['apps','Asha','Asha 311','competition','Java','Lumia 920','mobile','nokia','nokia JBL speaker','Nokia purity headset']
 timeStamp: 2013-05-17T13:34:47

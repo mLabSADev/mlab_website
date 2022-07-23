@@ -3,9 +3,10 @@ path: /intel-android-training
 date: 06 Nov 2014
 title: intel-android-training
 author: mlab
-featureImage: ./intel-android-training.png
+featureImage: ../../images/nokiax-port-weekly-coming-to-your-city-.png
+thumb: ../../images/nokiax-port-weekly-coming-to-your-city-.png
 attachments: 
-- ./intel-android-training.png
+- ../../images/nokiax-port-weekly-coming-to-your-city-.png
 abstract: ""
 tags: ['android','google','Intel','Intel Student Partners','mLab','Mobile Developers','sdk','The Launchlab','training']
 timeStamp: 2014-11-06T15:14:37

@@ -3,9 +3,10 @@ path: /microsoft-developer-training-dates
 date: 21 Aug 2012
 title: microsoft-developer-training-dates
 author: mlab
-featureImage: ./microsoft-developer-training-dates.png
+featureImage: ../../images/microsoft-developer-training-dates.png
+thumb: ../../images/microsoft-developer-training-dates.png
 attachments: 
-- ./microsoft-developer-training-dates.png
+- ../../images/microsoft-developer-training-dates.png
 abstract: ""
 tags: ['Game Development','Microsoft','Windows 8','Windows Phone']
 timeStamp: 2012-08-21T12:53:34

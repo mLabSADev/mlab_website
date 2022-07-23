@@ -3,9 +3,10 @@ path: /bold-plan-to-bring-internet-to-the-masses
 date: 29 Aug 2011
 title: bold-plan-to-bring-internet-to-the-masses
 author: mlab
-featureImage: ./.png
+featureImage: ../../images/launch-of-digital-lab-africa-platform-at-discop-africa-abidjan-a-springboard-for-african-talent-in-multimedia.png
+thumb: ../../images/launch-of-digital-lab-africa-platform-at-discop-africa-abidjan-a-springboard-for-african-talent-in-multimedia.png
 attachments: 
-- ./.png
+- ../../images/launch-of-digital-lab-africa-platform-at-discop-africa-abidjan-a-springboard-for-african-talent-in-multimedia.png
 abstract: ""
 tags: ['ben zaaiman','laurens cloete','meraka']
 timeStamp: 2011-08-29T12:52:44

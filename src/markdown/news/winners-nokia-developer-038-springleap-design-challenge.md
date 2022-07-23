@@ -3,9 +3,10 @@ path: /winners-nokia-developer-springleap-design-challenge
 date: 13 Aug 2012
 title: winners-nokia-developer-038-springleap-design-challenge
 author: mlab
-featureImage: ./winners-nokia-developer-038-springleap-design-challenge.png
+featureImage: ../../images/winners-nokia-developer-038-springleap-design-challenge.png
+thumb: ../../images/winners-nokia-developer-038-springleap-design-challenge.png
 attachments: 
-- ./winners-nokia-developer-038-springleap-design-challenge.png
+- ../../images/winners-nokia-developer-038-springleap-design-challenge.png
 abstract: ""
 tags: ['Design','nokia','Springleap']
 timeStamp: 2012-08-13T13:48:42

@@ -3,9 +3,10 @@ path: /test-app-free-intel-devices
 date: 11 Nov 2014
 title: test-your-app-for-free-on-intel-devices
 author: mlab
-featureImage: ./test-your-app-for-free-on-intel-devices.png
+featureImage: ../../images/test-your-app-for-free-on-intel-devices.png
+thumb: ../../images/test-your-app-for-free-on-intel-devices.png
 attachments: 
-- ./test-your-app-for-free-on-intel-devices.png
+- ../../images/test-your-app-for-free-on-intel-devices.png
 abstract: ""
 tags: ['android','apps','AppThwack','Device Lab','Intel','mLab','mobile','Testing']
 timeStamp: 2014-11-11T17:11:22

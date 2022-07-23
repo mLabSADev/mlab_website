@@ -3,9 +3,10 @@ path: /mlab-hosts-first-tedxcapetown-simulcast
 date: 13 Aug 2012
 title: mlab-hosts-first-tedxcapetown-simulcast
 author: mlab
-featureImage: ./mlab-hosts-first-tedxcapetown-simulcast.png
+featureImage: ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
+thumb: ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
 attachments: 
-- ./mlab-hosts-first-tedxcapetown-simulcast.png
+- ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
 abstract: ""
 tags: ['mLab','simulcast','TEDxCapeTown']
 timeStamp: 2012-08-13T14:05:54

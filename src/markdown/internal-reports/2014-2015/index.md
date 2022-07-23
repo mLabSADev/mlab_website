@@ -1,6 +1,7 @@
 ---
 date: "6 April 2015"
-featureImage: ../images/femintech.jpeg
+featureImage: ../../../images/femintech.jpeg
+thumb: ../../../images/femintech.jpeg
 link: "https://www.infodev.org/sites/default/files/do_mlabs_still_make_a_difference_-_a_second_assessment_-_full_report_-_digital_entrepreneurship_program_-_infodev_2017_1.pdf"
 title: "2014-2015 Report"
 ---

@@ -1,4 +1,4 @@
 ---
 name: " Tech Innovation"
-featureImage: ../images/active-partners/tech-innovation.png
+thumb: ../../images/active-partners/tech-innovation.png
 ---

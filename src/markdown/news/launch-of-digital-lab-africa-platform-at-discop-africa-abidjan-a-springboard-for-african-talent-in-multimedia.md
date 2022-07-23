@@ -3,9 +3,10 @@ path: /launch-digital-lab-africa-platform-discop-africa-abidjan-springboard-afri
 date: 07 Jun 2016
 title: launch-of-digital-lab-africa-platform-at-discop-africa-abidjan-a-springboard-for-african-talent-in-multimedia
 author: mlab
-featureImage: ./launch-of-digital-lab-africa-platform-at-discop-africa-abidjan-a-springboard-for-african-talent-in-multimedia.png
+featureImage: ../../images/launch-of-digital-lab-africa-platform-at-discop-africa-abidjan-a-springboard-for-african-talent-in-multimedia.png
+images: ../../images/launch-of-digital-lab-africa-platform-at-discop-africa-abidjan-a-springboard-for-african-talent-in-multimedia.png
 attachments: 
-- ./launch-of-digital-lab-africa-platform-at-discop-africa-abidjan-a-springboard-for-african-talent-in-multimedia.png
+- ../../images/launch-of-digital-lab-africa-platform-at-discop-africa-abidjan-a-springboard-for-african-talent-in-multimedia.png
 abstract: ""
 tags: ['featured','FrenchTech','games','mlab southern africa','mobile','Multimedia','Tech']
 timeStamp: 2016-06-07T11:44:29

@@ -3,9 +3,10 @@ path: /opera-mini-usage-continues-to-grow-in-sa
 date: 25 Mar 2011
 title: opera-mini-usage-continues-to-grow-in-south-africa
 author: mlab
-featureImage: ./.png
+featureImage: ../../images/nxtgen-coding-camp.png
+thumb: ../../images/nxtgen-coding-camp.png
 attachments: 
-- ./.png
+- ../../images/nxtgen-coding-camp.png
 abstract: ""
 tags: ['south africa','statistics']
 timeStamp: 2011-03-25T10:24:05

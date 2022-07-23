@@ -3,9 +3,10 @@ path: /vodacom-appstar
 date: 08 Oct 2013
 title: vodacom-appstar
 author: mlab
-featureImage: ./vodacom-appstar.png
+featureImage: ../../images/vodacom-appstar.png
+thumb: ../../images/vodacom-appstar.png
 attachments: 
-- ./vodacom-appstar.png
+- ../../images/vodacom-appstar.png
 abstract: ""
 tags: ['appstar','competition','mLab','south africa','vodacom']
 timeStamp: 2013-10-08T14:11:18

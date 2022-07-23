@@ -3,9 +3,10 @@ path: /happy-1st-birthday-to-us
 date: 17 Sep 2012
 title: happy-1st-birthday-to-us-
 author: mlab
-featureImage: ./happy-1st-birthday-to-us-.png
+featureImage: ../../images/happy-1st-birthday-to-us-.png
+thumb: ../../images/happy-1st-birthday-to-us-.png
 attachments: 
-- ./happy-1st-birthday-to-us-.png
+- ../../images/happy-1st-birthday-to-us-.png
 abstract: ""
 tags: []
 timeStamp: 2012-09-17T16:25:33

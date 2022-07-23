@@ -3,9 +3,10 @@ path: /mobile-job-opportunities-cape-town
 date: 07 Nov 2014
 title: mobile-job-opportunities-in-cape-town
 author: mlab
-featureImage: ./mobile-job-opportunities-in-cape-town.png
+featureImage: ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
+thumb: ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
 attachments: 
-- ./mobile-job-opportunities-in-cape-town.png
+- ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
 abstract: ""
 tags: ['cape town','Consulting','jobs','Mobile Developers','UI','UX']
 timeStamp: 2014-11-07T18:02:48

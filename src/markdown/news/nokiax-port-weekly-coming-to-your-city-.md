@@ -3,9 +3,10 @@ path: /nokiax-port-weekly-coming-city
 date: 24 Apr 2014
 title: nokiax-port-weekly-coming-to-your-city-
 author: mlab
-featureImage: ./nokiax-port-weekly-coming-to-your-city-.png
+featureImage: ../../images/nokiax-port-weekly-coming-to-your-city-.png
+thumb: ../../images/nokiax-port-weekly-coming-to-your-city-.png
 attachments: 
-- ./nokiax-port-weekly-coming-to-your-city-.png
+- ../../images/nokiax-port-weekly-coming-to-your-city-.png
 abstract: ""
 tags: ['android','cape town','Durban','event','Johannesburg','mLab','Nokia X','Port Elizabeth','Porting','pretoria']
 timeStamp: 2014-04-24T13:26:15

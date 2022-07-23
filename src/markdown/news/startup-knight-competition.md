@@ -3,9 +3,10 @@ path: /startup-knight-competition
 date: 08 Oct 2012
 title: startup-knight-competition
 author: mlab
-featureImage: ./startup-knight-competition.png
+featureImage: ../../images/startup-knight-competition.png
+thumb: ../../images/startup-knight-competition.png
 attachments: 
-- ./startup-knight-competition.png
+- ../../images/startup-knight-competition.png
 abstract: ""
 tags: ['8ta','bandwidth barn','Byte Orbit','competition','Microsoft','nokia','Software','Startup Knight']
 timeStamp: 2012-10-08T10:32:40

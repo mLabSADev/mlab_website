@@ -3,9 +3,10 @@ path: /highlights-from-the-bmi-techknowledge-telecom-trends-2
 date: 14 Apr 2011
 title: highlights-from-the-bmi-techknowledge-telecom-trends
 author: mlab
-featureImage: ./.png
+featureImage: ../../images/terms-of-reference-for-consultants.png
+thumb: ../../images/terms-of-reference-for-consultants.png
 attachments: 
-- ./.png
+- ../../images/terms-of-reference-for-consultants.png
 abstract: ""
 tags: ['south africa','statistics']
 timeStamp: 2011-04-14T16:45:19

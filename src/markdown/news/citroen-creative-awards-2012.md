@@ -3,9 +3,10 @@ path: /citroen-creative-awards-2012
 date: 19 Dec 2012
 title: citroen-creative-awards-2012
 author: mlab
-featureImage: ./citroen-creative-awards-2012.png
+featureImage: ../../images/citroen-creative-awards-2012.png
+thumb: ../../images/citroen-creative-awards-2012.png
 attachments: 
-- ./citroen-creative-awards-2012.png
+- ../../images/citroen-creative-awards-2012.png
 abstract: ""
 tags: ['apps','awards','citroen','connected cars','smartphones']
 timeStamp: 2012-12-19T13:14:37

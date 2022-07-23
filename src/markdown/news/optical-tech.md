@@ -3,9 +3,10 @@ path: /optical-tech
 date: 24 Feb 2016
 title: optical-tech
 author: mlab
-featureImage: ./optical-tech.png
+featureImage: ../../images/optical-tech.png
+thumb: ../../images/optical-tech.png
 attachments: 
-- ./optical-tech.png
+- ../../images/optical-tech.png
 abstract: ""
 tags: ['British Council','featured','Geekulcha','Holograms','Maker Librarians','Makers','mLab','mobile','smartphones','Soweto']
 timeStamp: 2016-02-24T18:16:09

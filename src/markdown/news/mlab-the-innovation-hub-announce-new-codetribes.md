@@ -3,9 +3,10 @@ path: /mlab-innovation-hub-announce-new-codetribes
 date: 16 Jun 2016
 title: mlab-the-innovation-hub-announce-new-codetribes
 author: mlab
-featureImage: ./mlab-the-innovation-hub-announce-new-codetribes.png
+featureImage: ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
+thumb: ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
 attachments: 
-- ./mlab-the-innovation-hub-announce-new-codetribes.png
+- ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
 abstract: ""
 tags: ['android','Code Academy','CodeTribe','Economic Development','eKasi Labs','featured','Gauteng','McLean Sibanda','mLab','mobile']
 timeStamp: 2016-06-16T16:36:34

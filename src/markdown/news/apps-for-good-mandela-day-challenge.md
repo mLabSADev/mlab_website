@@ -3,9 +3,10 @@ path: /apps-for-good-mandela-day-challenge
 date: 10 Jul 2012
 title: apps-for-good-mandela-day-challenge
 author: mlab
-featureImage: ./apps-for-good-mandela-day-challenge.png
+featureImage: ../../images/apps-for-good-mandela-day-challenge.png
+thumb: ../../images/apps-for-good-mandela-day-challenge.png
 attachments: 
-- ./apps-for-good-mandela-day-challenge.png
+- ../../images/apps-for-good-mandela-day-challenge.png
 abstract: ""
 tags: ['Angry Birds','Apps for Good','Challenge','Mandela Day']
 timeStamp: 2012-07-10T18:48:18

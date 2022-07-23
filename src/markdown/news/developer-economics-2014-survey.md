@@ -3,9 +3,10 @@ path: /developer-economics-2014-survey
 date: 27 Oct 2014
 title: developer-economics-2014-survey
 author: mlab
-featureImage: ./developer-economics-2014-survey.png
+featureImage: ../../images/developer-economics-2014-survey.png
+thumb: ../../images/developer-economics-2014-survey.png
 attachments: 
-- ./developer-economics-2014-survey.png
+- ../../images/developer-economics-2014-survey.png
 abstract: ""
 tags: ['android','blackberry','developers','iOS','mLab','Mobile Developers','nokia','survey','VisionMobile','WindowsPhone']
 timeStamp: 2014-10-27T10:42:24

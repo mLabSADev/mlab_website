@@ -3,9 +3,12 @@ path: /lumiahack-heading-back-joburg
 date: 18 Jun 2012
 title: -lumiahack-heading-back-to-jo-8217-burg
 author: mlab
-featureImage: ./-lumiahack-heading-back-to-jo-8217-burg.png
+featureImage: ../../images/lumiahack-2012-hackathon-finals.png
 attachments: 
-- ./-lumiahack-heading-back-to-jo-8217-burg.png
+- ../../images/lumiahack-2012-hackathon-finals.png
+- ../../images/newsimage2.png
+- ../../images/lumiahack-2012-hackathon-finals.png
+- ../../images/newsimage2.png
 abstract: ""
 tags: ['Hackathon','Microsoft','nokia','Windows Phone']
 timeStamp: 2012-06-18T16:14:10

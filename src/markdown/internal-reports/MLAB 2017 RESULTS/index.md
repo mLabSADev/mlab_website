@@ -1,6 +1,7 @@
 ---
 date: "12 September 2017"
-featureImage: ../images/resources/do_mlabs_still_make_a_difference.png
+featureImage: ../../../images/resources/do_mlabs_still_make_a_difference.png
+thumb: ../../../images/resources/do_mlabs_still_make_a_difference.png
 link: "https://mlab.co.za/wp-content/uploads/2017/09/mLab-Results-Infographic-2017-PNG-791x1024.png"
 hosted: false
 title: "mLab 2017 Results [Infographic]"

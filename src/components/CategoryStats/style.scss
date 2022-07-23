@@ -1,14 +1,15 @@
 .main-sc {
-    box-sizing: border-box;
-    width: 100%;
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    align-items: flex-start;
-    .image-cs {
-        width: 150px;
-    }
-    .text-cs {
-
-    }
+  box-sizing: border-box;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  .image-cs {
+    width: 150px;
+    margin: auto;
+  }
+  .text-cs {
+  }
 }

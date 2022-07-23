@@ -3,9 +3,10 @@ path: /codetribe-journey-chauke-kurisani
 date: 14 Jun 2016
 title: my-codetribe-journey-chauke-kurisani
 author: mlab
-featureImage: ./.png
+featureImage: ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
+thumb: ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
 attachments: 
-- ./.png
+- ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
 abstract: ""
 tags: ['Chauke Kurisani','CodeTribe','mLab','mobile Developer','Skill Academy','training']
 timeStamp: 2016-06-14T11:52:36

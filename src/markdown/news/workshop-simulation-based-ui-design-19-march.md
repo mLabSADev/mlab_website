@@ -3,9 +3,10 @@ path: /workshop-simulation-based-ui-design
 date: 15 Mar 2016
 title: workshop-simulation-based-ui-design-19-march
 author: mlab
-featureImage: ./workshop-simulation-based-ui-design-19-march.png
+featureImage: ../../images/workshop-simulation-based-ui-design-19-march.png
+thumb: ../../images/workshop-simulation-based-ui-design-19-march.png
 attachments: 
-- ./workshop-simulation-based-ui-design-19-march.png
+- ../../images/workshop-simulation-based-ui-design-19-march.png
 abstract: ""
 tags: ['Digital','featured','mLab','Reactor.com','skills','south africa','training','UI','UX']
 timeStamp: 2016-03-15T09:21:30

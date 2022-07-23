@@ -3,9 +3,10 @@ path: /intern-kicks-off-mgovernment-research
 date: 02 Jul 2011
 title: intern-kicks-off-mgovernment-research
 author: mlab
-featureImage: ./.png
+featureImage: ../../images/nokiax-port-weekly-coming-to-your-city-.png
+thumb: ../../images/nokiax-port-weekly-coming-to-your-city-.png
 attachments: 
-- ./.png
+- ../../images/nokiax-port-weekly-coming-to-your-city-.png
 abstract: ""
 tags: ['intern']
 timeStamp: 2011-07-02T18:37:11

@@ -3,9 +3,10 @@ path: /impact-snapshot-2014-2018
 date: 30 Oct 2019
 title: impact-snapshot-2014-2018
 author: mlab
-featureImage: ./impact-snapshot-2014-2018.png
+featureImage: ../../images/nokiax-port-weekly-coming-to-your-city-.png
+thumb: ../../images/nokiax-port-weekly-coming-to-your-city-.png
 attachments: 
-- ./impact-snapshot-2014-2018.png
+- ../../images/nokiax-port-weekly-coming-to-your-city-.png
 abstract: ""
 tags: []
 timeStamp: 2019-10-30T10:03:54

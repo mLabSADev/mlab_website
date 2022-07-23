@@ -3,9 +3,10 @@ path: /photos-of-the-mlab-sa-launch
 date: 15 Sep 2011
 title: photos-of-the-mlab-sa-launch
 author: mlab
-featureImage: ./.png
+featureImage: ../../images/pe-think-tank-2014.png
+thumb: ../../images/pe-think-tank-2014.png
 attachments: 
-- ./.png
+- ../../images/pe-think-tank-2014.png
 abstract: ""
 tags: []
 timeStamp: 2011-09-15T16:10:16

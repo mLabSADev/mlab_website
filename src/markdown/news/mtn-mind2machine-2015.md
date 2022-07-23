@@ -3,9 +3,10 @@ path: /mtn-mind2machine-2015
 date: 06 Mar 2015
 title: mtn-mind2machine-2015
 author: mlab
-featureImage: ./mtn-mind2machine-2015.png
+featureImage: ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
+thumb: ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
 attachments: 
-- ./mtn-mind2machine-2015.png
+- ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
 abstract: ""
 tags: ['Africa','developers','Intel Software','Machine2Machine','Mind2Machine','MTN','The Innovation Hub']
 timeStamp: 2015-03-06T10:48:02

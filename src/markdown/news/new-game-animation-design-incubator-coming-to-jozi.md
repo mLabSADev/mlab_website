@@ -3,9 +3,10 @@ path: /new-game-animation-design-incubator-coming-jozi
 date: 18 Sep 2014
 title: new-game-animation-design-incubator-coming-to-jozi
 author: mlab
-featureImage: ./new-game-animation-design-incubator-coming-to-jozi.png
+featureImage: ../../images/new-game-animation-design-incubator-coming-to-jozi.png
+thumb: ../../images/new-game-animation-design-incubator-coming-to-jozi.png
 attachments: 
-- ./new-game-animation-design-incubator-coming-to-jozi.png
+- ../../images/new-game-animation-design-incubator-coming-to-jozi.png
 abstract: ""
 tags: ['3D','Animation','Design','funding','Game Developers','Incubation','jcse','Maxum','mLab','Support']
 timeStamp: 2014-09-18T17:04:47

@@ -3,9 +3,9 @@ path: /international-space-apps-challenge-2014
 date: 15 Mar 2014
 title: international-space-apps-challenge-2014
 author: mlab
-featureImage: ./international-space-apps-challenge-2014.png
+featureImage: ../../images/international-space-apps-challenge-2014.png
 attachments: 
-- ./international-space-apps-challenge-2014.png
+- ../../images/international-space-apps-challenge-2014.png
 abstract: ""
 tags: ['Africa','bandwidth barn','cape town','mLab','mobile','NASA','pretoria','south africa','space apps challenge','spaceapps']
 timeStamp: 2014-03-15T09:52:24

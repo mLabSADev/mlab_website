@@ -3,9 +3,10 @@ path: /ericsson-aapplication-award-2014-winners
 date: 26 May 2014
 title: ericsson-aapplication-award-2014-winners
 author: mlab
-featureImage: ./ericsson-aapplication-award-2014-winners.png
+featureImage: ../../images/ericsson-aapplication-award-2014-winners.png
+thumb: ../../images/ericsson-aapplication-award-2014-winners.png
 attachments: 
-- ./ericsson-aapplication-award-2014-winners.png
+- ../../images/ericsson-aapplication-award-2014-winners.png
 abstract: ""
 tags: ['Aftarobot','ericsson','mobile apps','sowertech']
 timeStamp: 2014-05-26T13:26:28

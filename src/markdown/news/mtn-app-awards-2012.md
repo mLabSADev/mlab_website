@@ -3,9 +3,10 @@ path: /mtn-app-awards-2012
 date: 13 Aug 2012
 title: mtn-app-awards-2012
 author: mlab
-featureImage: ./mtn-app-awards-2012.png
+featureImage: ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
+thumb: ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
 attachments: 
-- ./mtn-app-awards-2012.png
+- ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
 abstract: ""
 tags: ['App of the Year','Best Garage Developer','mLab','MTN']
 timeStamp: 2012-08-13T14:53:40

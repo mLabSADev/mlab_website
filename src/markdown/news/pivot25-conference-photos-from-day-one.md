@@ -3,9 +3,10 @@ path: /pivot25-conference-photos-from-day-one
 date: 15 Jun 2011
 title: pivot25-conference-photos-from-day-one
 author: mlab
-featureImage: ./.png
+featureImage: ../../images/pe-think-tank-2014.png
+thumb: ../../images/pe-think-tank-2014.png
 attachments: 
-- ./.png
+- ../../images/pe-think-tank-2014.png
 abstract: ""
 tags: ['kenya','mlab east africa','pivot25']
 timeStamp: 2011-06-15T09:10:41

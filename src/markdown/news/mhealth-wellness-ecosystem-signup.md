@@ -3,9 +3,10 @@ path: /mhealth-wellness-ecosystem-signup
 date: 26 May 2016
 title: mhealth-wellness-ecosystem-signup
 author: mlab
-featureImage: ./.png
+featureImage: ../../images/nokiax-port-weekly-coming-to-your-city-.png
+thumb: ../../images/nokiax-port-weekly-coming-to-your-city-.png
 attachments: 
-- ./.png
+- ../../images/nokiax-port-weekly-coming-to-your-city-.png
 abstract: ""
 tags: ['apps','csir','DEMOLA','medical','mHealth','mLab','technology','wearables','Wellness']
 timeStamp: 2016-05-26T11:33:53

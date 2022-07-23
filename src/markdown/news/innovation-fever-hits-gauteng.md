@@ -3,9 +3,10 @@ path: /innovation-fever-hits-gauteng
 date: 21 Aug 2012
 title: innovation-fever-hits-gauteng
 author: mlab
-featureImage: ./innovation-fever-hits-gauteng.png
+featureImage: ../../images/nokiax-port-weekly-coming-to-your-city-.png
+thumb: ../../images/nokiax-port-weekly-coming-to-your-city-.png
 attachments: 
-- ./innovation-fever-hits-gauteng.png
+- ../../images/nokiax-port-weekly-coming-to-your-city-.png
 abstract: ""
 tags: ['Gauteng','Gauteng Innovation Competition','Innovation','mobile']
 timeStamp: 2012-08-21T12:28:01

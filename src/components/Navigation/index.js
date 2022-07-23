@@ -3,7 +3,7 @@ import "./style.scss";
 import { Link } from "gatsby";
 import Typography from "../Typography/Typography";
 
-const Item = ({ label, url }) => {
+export const Item = ({ label, url }) => {
   return (
     <Link to={url} activeClassName="active" className="item">
       <Typography color="light" variant="overline">
@@ -82,7 +82,7 @@ const MobileDropdown = ({ label, items, open, onClick }) => {
     </div>
   );
 };
-const links = [
+export const links = [
   {
     label: "Home",
     url: "",

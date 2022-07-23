@@ -3,9 +3,10 @@ path: /global-learning-xprize
 date: 26 Jan 2015
 title: global-learning-xprize
 author: mlab
-featureImage: ./global-learning-xprize.png
+featureImage: ../../images/global-learning-xprize.png
+thumb: ../../images/global-learning-xprize.png
 attachments: 
-- ./global-learning-xprize.png
+- ../../images/global-learning-xprize.png
 abstract: ""
 tags: ['Challenge','education','xprize']
 timeStamp: 2015-01-26T16:05:23

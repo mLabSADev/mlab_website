@@ -3,9 +3,10 @@ path: /microsoft-dev-camp-kwazulu-natal
 date: 28 Feb 2014
 title: microsoft-dev-camp-kwazulu-natal
 author: mlab
-featureImage: ./microsoft-dev-camp-kwazulu-natal.png
+featureImage: ../../images/microsoft-dev-camp-kwazulu-natal.png
+thumb: ../../images/microsoft-dev-camp-kwazulu-natal.png
 attachments: 
-- ./microsoft-dev-camp-kwazulu-natal.png
+- ../../images/microsoft-dev-camp-kwazulu-natal.png
 abstract: ""
 tags: ['dev camp','KZN','Microsoft','mLab','training','windows']
 timeStamp: 2014-02-28T08:33:35

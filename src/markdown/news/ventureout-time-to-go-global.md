@@ -3,9 +3,10 @@ path: /ventureout-time-go-global
 date: 18 Sep 2013
 title: ventureout-time-to-go-global
 author: mlab
-featureImage: ./ventureout-time-to-go-global.png
+featureImage: ../../images/ventureout-time-to-go-global.png
+thumb: ../../images/ventureout-time-to-go-global.png
 attachments: 
-- ./ventureout-time-to-go-global.png
+- ../../images/ventureout-time-to-go-global.png
 abstract: ""
 tags: ['apps','global','infodev','mlabsa']
 timeStamp: 2013-09-18T10:40:14

@@ -3,9 +3,10 @@ path: /setting-up-the-mlab-before-the-launch
 date: 14 Sep 2011
 title: setting-up-the-mlab-before-the-launch
 author: mlab
-featureImage: ./.png
+featureImage: ../../images/rhok-pretoria-is-back-for-2015.png
+thumb: ../../images/rhok-pretoria-is-back-for-2015.png
 attachments: 
-- ./.png
+- ../../images/rhok-pretoria-is-back-for-2015.png
 abstract: ""
 tags: ['launch']
 timeStamp: 2011-09-14T23:52:19

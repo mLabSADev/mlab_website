@@ -3,9 +3,10 @@ path: /midnight-developers-its-time
 date: 05 Dec 2012
 title: midnight-developers-it-8217-s-time-
 author: mlab
-featureImage: ./midnight-developers-it-8217-s-time-.png
+featureImage: ../../images/midnight-developers-it-8217-s-time-.png
+thumb: ../../images/midnight-developers-it-8217-s-time-.png
 attachments: 
-- ./midnight-developers-it-8217-s-time-.png
+- ../../images/midnight-developers-it-8217-s-time-.png
 abstract: ""
 tags: ['developers','midnight developers','nokia','Windows Phone','wp8']
 timeStamp: 2012-12-05T12:07:42

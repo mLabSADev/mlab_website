@@ -3,9 +3,10 @@ path: /mobile-web-africa-returns-johannesburg
 date: 27 Aug 2014
 title: mobile-web-africa-returns-to-johannesburg
 author: mlab
-featureImage: ./mobile-web-africa-returns-to-johannesburg.png
+featureImage: ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
+thumb: ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
 attachments: 
-- ./mobile-web-africa-returns-to-johannesburg.png
+- ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
 abstract: ""
 tags: ['all amber','developers','mLab','mobile','mobile web africa','randlords']
 timeStamp: 2014-08-27T08:29:26

@@ -3,9 +3,10 @@ path: /the-urban-app-challenge-r230000-r810000-grants-up-for-grabs
 date: 09 Oct 2012
 title: the-urban-app-challenge-grants-from-r230-000-to-r810-000-up-for-grabs
 author: mlab
-featureImage: ./the-urban-app-challenge-grants-from-r230-000-to-r810-000-up-for-grabs.png
+featureImage: ../../images/the-urban-app-challenge-grants-from-r230-000-to-r810-000-up-for-grabs.png
+thumb: ../../images/the-urban-app-challenge-grants-from-r230-000-to-r810-000-up-for-grabs.png
 attachments: 
-- ./the-urban-app-challenge-grants-from-r230-000-to-r810-000-up-for-grabs.png
+- ../../images/the-urban-app-challenge-grants-from-r230-000-to-r810-000-up-for-grabs.png
 abstract: ""
 tags: ['AppCampus','cape town','design capital','grants','helsinki','Microsoft','nokia','urban','urban app','urban transformation']
 timeStamp: 2012-10-09T21:52:55

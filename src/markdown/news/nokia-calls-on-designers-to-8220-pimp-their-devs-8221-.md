@@ -3,9 +3,10 @@ path: /nokia-calls-designers-pimp-devs
 date: 18 Jun 2012
 title: nokia-calls-on-designers-to-8220-pimp-their-devs-8221-
 author: mlab
-featureImage: ./nokia-calls-on-designers-to-8220-pimp-their-devs-8221-.png
+featureImage: ../../images/nokia-calls-on-designers-to-8220-pimp-their-devs-8221-.png
+thumb: ../../images/nokia-calls-on-designers-to-8220-pimp-their-devs-8221-.png
 attachments: 
-- ./nokia-calls-on-designers-to-8220-pimp-their-devs-8221-.png
+- ../../images/nokia-calls-on-designers-to-8220-pimp-their-devs-8221-.png
 abstract: ""
 tags: ['competition']
 timeStamp: 2012-06-18T15:28:30

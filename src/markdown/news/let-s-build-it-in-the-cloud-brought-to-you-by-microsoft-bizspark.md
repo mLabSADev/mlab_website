@@ -3,9 +3,10 @@ path: /lets-build-cloud-brought-microsoft-bizspark
 date: 19 Nov 2013
 title: let-s-build-it-in-the-cloud-brought-to-you-by-microsoft-bizspark
 author: mlab
-featureImage: ./.png
+featureImage: ../../images/nokiax-port-weekly-coming-to-your-city-.png
+thumb: ../../images/nokiax-port-weekly-coming-to-your-city-.png
 attachments: 
-- ./.png
+- ../../images/nokiax-port-weekly-coming-to-your-city-.png
 abstract: ""
 tags: []
 timeStamp: 2013-11-19T08:08:18

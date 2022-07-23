@@ -3,9 +3,10 @@ path: /internationalization-mobile-apps
 date: 08 Jan 2014
 title: internationalization-of-mobile-apps
 author: mlab
-featureImage: ./internationalization-of-mobile-apps.png
+featureImage: ../../images/internationalization-of-mobile-apps.png
+thumb: ../../images/internationalization-of-mobile-apps.png
 attachments: 
-- ./internationalization-of-mobile-apps.png
+- ../../images/internationalization-of-mobile-apps.png
 abstract: ""
 tags: ['apps','internationalization','pitching','startups','training','workshop']
 timeStamp: 2014-01-08T09:21:57

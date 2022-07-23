@@ -3,9 +3,10 @@ path: /ericsson-ahub-to-connect-african-innovators-business
 date: 02 Sep 2015
 title: ericsson-ahub-to-connect-african-innovators-business
 author: mlab
-featureImage: ./ericsson-ahub-to-connect-african-innovators-business.png
+featureImage: ../../images/ericsson-ahub-to-connect-african-innovators-business.png
+thumb: ../../images/ericsson-ahub-to-connect-african-innovators-business.png
 attachments: 
-- ./ericsson-ahub-to-connect-african-innovators-business.png
+- ../../images/ericsson-ahub-to-connect-african-innovators-business.png
 abstract: ""
 tags: ['africa com','africa hub','ahub','ericsson','Intel','mLab','SiliconCape']
 timeStamp: 2015-09-02T10:40:21

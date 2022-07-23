@@ -3,9 +3,10 @@ path: /enabling-growth-northern-cape-using-technology
 date: 11 Feb 2015
 title: enabling-growth-in-the-northern-cape-using-technology
 author: mlab
-featureImage: ./enabling-growth-in-the-northern-cape-using-technology.png
+featureImage: ../../images/enabling-growth-in-the-northern-cape-using-technology.png
+thumb: ../../images/enabling-growth-in-the-northern-cape-using-technology.png
 attachments: 
-- ./enabling-growth-in-the-northern-cape-using-technology.png
+- ../../images/enabling-growth-in-the-northern-cape-using-technology.png
 abstract: ""
 tags: ['codeX','DST','Economic Development','feature','featured','Kimberley','mLab','mobile','Northern Cape','SKA']
 timeStamp: 2015-02-11T13:08:09

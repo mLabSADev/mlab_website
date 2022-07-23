@@ -3,9 +3,10 @@ path: /nokias-open-innovation-challenge-2016-develop-internet-things-connected-a
 date: 10 Jun 2016
 title: nokia-s-open-innovation-challenge-2016-to-develop-the-internet-of-things-for-connected-automotive-digital-health-and-more
 author: mlab
-featureImage: ./nokia-s-open-innovation-challenge-2016-to-develop-the-internet-of-things-for-connected-automotive-digital-health-and-more.png
+featureImage: ../../images/nokia-s-open-innovation-challenge-2016-to-develop-the-internet-of-things-for-connected-automotive-digital-health-and-more.png
+thumb: ../../images/nokia-s-open-innovation-challenge-2016-to-develop-the-internet-of-things-for-connected-automotive-digital-health-and-more.png
 attachments: 
-- ./nokia-s-open-innovation-challenge-2016-to-develop-the-internet-of-things-for-connected-automotive-digital-health-and-more.png
+- ../../images/nokia-s-open-innovation-challenge-2016-to-develop-the-internet-of-things-for-connected-automotive-digital-health-and-more.png
 abstract: ""
 tags: ['5G','featured','Innovation Challenge','IoT','Marc Roxanne','nokia','Open Innovation','Prize']
 timeStamp: 2016-06-10T11:47:19

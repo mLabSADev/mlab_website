@@ -3,9 +3,10 @@ path: /startup-knight-2013
 date: 02 Oct 2013
 title: startup-knight-2013
 author: mlab
-featureImage: ./startup-knight-2013.png
+featureImage: ../../images/startup-knight-2013.png
+thumb: ../../images/startup-knight-2013.png
 attachments: 
-- ./startup-knight-2013.png
+- ../../images/startup-knight-2013.png
 abstract: ""
 tags: ['Byte Orbit','competition','funding','Startup Knight']
 timeStamp: 2013-10-02T17:36:33

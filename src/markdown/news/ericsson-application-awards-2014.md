@@ -3,9 +3,10 @@ path: /ericsson-application-awards-2014-now-open
 date: 29 Jan 2014
 title: ericsson-application-awards-2014
 author: mlab
-featureImage: ./ericsson-application-awards-2014.png
+featureImage: ../../images/ericsson-application-awards-2014.png
+thumb: ../../images/ericsson-application-awards-2014.png
 attachments: 
-- ./ericsson-application-awards-2014.png
+- ../../image/ericsson-application-awards-2014.png
 abstract: ""
 tags: ['application','awards','competition','ericsson','mLab','mobile apps']
 timeStamp: 2014-01-29T11:34:31

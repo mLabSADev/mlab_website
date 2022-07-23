@@ -3,9 +3,10 @@ path: /join-ionic-developer-community
 date: 13 Jun 2017
 title: join-our-ionic-developer-community
 author: mlab
-featureImage: ./join-our-ionic-developer-community.png
+featureImage: ../../images/join-our-ionic-developer-community.png
+thumb: ../../images/join-our-ionic-developer-community.png
 attachments: 
-- ./join-our-ionic-developer-community.png
+- ../../images/join-our-ionic-developer-community.png
 abstract: ""
 tags: ['community','developers','Ionic','mobile','south africa']
 timeStamp: 2017-06-13T09:58:08

@@ -3,9 +3,10 @@ path: /mlab-jobs
 date: 20 Apr 2015
 title: mlab-jobs
 author: mlab
-featureImage: ./mlab-jobs.png
+featureImage: ../../images/mlab-jobs.png
+thumb: ../../images/mlab-jobs.png
 attachments: 
-- ./mlab-jobs.png
+- ../../images/mlab-jobs.png
 abstract: ""
 tags: ['android','Android Developer','Java','jobs','mLab']
 timeStamp: 2015-04-20T08:31:38

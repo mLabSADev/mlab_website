@@ -3,9 +3,10 @@ path: /request-for-proposals
 date: 06 Apr 2016
 title: request-for-proposals
 author: mlab
-featureImage: ./request-for-proposals.png
+featureImage: ../../images/request-for-proposals.png
+thumb: ../../images/request-for-proposals.png
 attachments: 
-- ./request-for-proposals.png
+- ../../images/request-for-proposals.png
 abstract: ""
 tags: []
 timeStamp: 2016-04-06T13:41:21

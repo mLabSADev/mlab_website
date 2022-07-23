@@ -3,9 +3,10 @@ path: /20-raizcorp-bursaries-ict-entrepreneurs
 date: 10 Jun 2014
 title: 20-raizcorp-bursaries-for-ict-entrepreneurs
 author: mlab
-featureImage: ./20-raizcorp-bursaries-for-ict-entrepreneurs.png
+featureImage: ../../images/20-raizcorp-bursaries-for-ict-entrepreneurs.png
+thumb: ../../images/20-raizcorp-bursaries-for-ict-entrepreneurs.png
 attachments: 
-- ./20-raizcorp-bursaries-for-ict-entrepreneurs.png
+- ../../images/20-raizcorp-bursaries-for-ict-entrepreneurs.png
 abstract: ""
 tags: ['beee','entrepreneurs','ict','mLab','raizcorp']
 timeStamp: 2014-06-10T17:03:39

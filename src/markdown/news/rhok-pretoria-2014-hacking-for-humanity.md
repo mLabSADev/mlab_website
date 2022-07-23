@@ -3,9 +3,10 @@ path: /rhok-pretoria-2014-hacking-humanity
 date: 05 Jun 2014
 title: rhok-pretoria-2014-hacking-for-humanity
 author: mlab
-featureImage: ./rhok-pretoria-2014-hacking-for-humanity.png
+featureImage: ../../images/rhok-pretoria-2014-hacking-for-humanity.png
+thumb: ../../images/rhok-pretoria-2014-hacking-for-humanity.png
 attachments: 
-- ./rhok-pretoria-2014-hacking-for-humanity.png
+- ../../images/rhok-pretoria-2014-hacking-for-humanity.png
 abstract: ""
 tags: ['Geekulcha','Microsoft','mLab','mobile','pretoria','Random Hack of Kindness','RHoK','Social good','Unisa']
 timeStamp: 2014-06-05T08:58:37

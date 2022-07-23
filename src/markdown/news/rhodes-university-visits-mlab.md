@@ -3,9 +3,10 @@ path: /rhodes-university-visits-mlab
 date: 13 Aug 2012
 title: rhodes-university-visits-mlab
 author: mlab
-featureImage: ./rhodes-university-visits-mlab.png
+featureImage: ../../images/rhodes-university-visits-mlab.png
+thumb: ../../images/rhodes-university-visits-mlab.png
 attachments: 
-- ./rhodes-university-visits-mlab.png
+- ../../images/rhodes-university-visits-mlab.png
 abstract: ""
 tags: ['Couch lab','csir','Maxum','mLab','nokia','theinnovationhub']
 timeStamp: 2012-08-13T12:58:09

@@ -3,9 +3,10 @@ path: /tedxcapetown-21-july-official-simulcast-at-mlab
 date: 13 Jul 2012
 title: tedxcapetown-21-july-official-simulcast-at-mlab
 author: mlab
-featureImage: ./tedxcapetown-21-july-official-simulcast-at-mlab.png
+featureImage: ../../images/tedxcapetown-21-july-official-simulcast-at-mlab.png
+thumb: ../../images/tedxcapetown-21-july-official-simulcast-at-mlab.png
 attachments: 
-- ./tedxcapetown-21-july-official-simulcast-at-mlab.png
+- ../../images/tedxcapetown-21-july-official-simulcast-at-mlab.png
 abstract: ""
 tags: ['TED','TEDxCapeTown']
 timeStamp: 2012-07-13T12:08:13

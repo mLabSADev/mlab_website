@@ -3,9 +3,10 @@ path: /m2work-hackathon-south-africa
 date: 31 Aug 2012
 title: m2work-hackathon-8211-south-africa
 author: mlab
-featureImage: ./m2work-hackathon-8211-south-africa.png
+featureImage: ../../images/m2work-hackathon-8211-south-africa.png
+thumb: ../../images/m2work-hackathon-8211-south-africa.png
 attachments: 
-- ./m2work-hackathon-8211-south-africa.png
+- ../../images/m2work-hackathon-8211-south-africa.png
 abstract: ""
 tags: ['Black Berry','csir','event','Gauteng','Hackathon','infodev','m2work','Microsoft','mLab','nokia']
 timeStamp: 2012-08-31T13:16:08

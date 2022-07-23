@@ -7,6 +7,7 @@ import Section from "../components/Section/Section";
 import CategoryStats from "../components/CategoryStats/CategoryStats";
 import NewsCard from "../components/NewsCard/NewsCard";
 import SectionTitle from "../components/SectionTitle/SectionTitle";
+import Typography from "../components/Typography/Typography";
 const IndexPage = () => {
   const stats = [
     {
@@ -40,10 +41,12 @@ const IndexPage = () => {
       label: "impacted by our tech",
     },
   ];
+  let width = window.screen.width;
   return (
     <Layout>
       <CarouselSlider />
       <Section>
+        <SectionTitle> Impact Statistics</SectionTitle>
         <div className="responsive-column">
           <div>
             {stats.map((item, i) => {
@@ -56,7 +59,7 @@ const IndexPage = () => {
               );
             })}
           </div>
-          <div>
+          <div className="cs-stats">
             {categoryStats.map((item, i) => {
               return (
                 <CategoryStats
@@ -70,10 +73,7 @@ const IndexPage = () => {
           </div>
         </div>
       </Section>
-      <Section>
-        <SectionTitle text="Hello world" />
-        <NewsCard />
-      </Section>
+
       {/* dont't remove */}
       <div className="video-i">
         <iframe
@@ -86,6 +86,29 @@ const IndexPage = () => {
         ></iframe>
       </div>
       {/* ... */}
+      <Section>
+        <SectionTitle>latest news</SectionTitle>
+        <Typography center={true} variant="b1">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at eros
+          rutrum, tempus dui quis, vulputate nisi. Donec ut ex suscipit,
+          venenatis neque at, pulvinar quam.{" "}
+        </Typography>
+        <div className="hs">
+          <NewsCard />
+          <NewsCard />
+          <NewsCard />
+          <NewsCard />
+          <NewsCard />
+          <NewsCard />
+          <NewsCard />
+          <NewsCard />
+          <NewsCard />
+        </div>
+        <div className=""></div>
+      </Section>
+      <Section>
+        <SectionTitle>our tech</SectionTitle>
+      </Section>
     </Layout>
   );
 };

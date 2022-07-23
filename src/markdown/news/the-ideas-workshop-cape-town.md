@@ -3,9 +3,10 @@ path: /ideas-workshop-cape-town
 date: 19 Feb 2014
 title: the-ideas-workshop-cape-town
 author: mlab
-featureImage: ./the-ideas-workshop-cape-town.png
+featureImage: ../../images/the-ideas-workshop-cape-town.png
+thumb: ../../images/the-ideas-workshop-cape-town.png
 attachments: 
-- ./the-ideas-workshop-cape-town.png
+- ../../images/the-ideas-workshop-cape-town.png
 abstract: ""
 tags: ['cape town','Ideas Workshop','mLab','Neil Hindrichsen','startups','The Barn']
 timeStamp: 2014-02-19T21:55:41

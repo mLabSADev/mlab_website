@@ -3,9 +3,10 @@ path: /govhacksa
 date: 26 May 2014
 title: govhacksa
 author: mlab
-featureImage: ./govhacksa.png
+featureImage: ../../images/govhacksa.png
+thumb: ../../images/govhacksa.png
 attachments: 
-- ./govhacksa.png
+- ../../images/govhacksa.png
 abstract: ""
 tags: ['22Seven','apps','cape town','Citizens','Google Africa','GovHackSA','Hackathon','mLab','mobile','World Design Capital 2014']
 timeStamp: 2014-05-26T13:15:21

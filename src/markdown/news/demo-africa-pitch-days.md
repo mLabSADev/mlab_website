@@ -3,9 +3,10 @@ path: /demo-africa-pitch-days
 date: 13 Aug 2012
 title: demo-africa-pitch-days
 author: mlab
-featureImage: ./demo-africa-pitch-days.png
+featureImage: ../../images/demo-africa-pitch-days.png
+thumb: ../../images/demo-africa-pitch-days.png
 attachments: 
-- ./demo-africa-pitch-days.png
+- ../../images/demo-africa-pitch-days.png
 abstract: ""
 tags: ['DEMO','pitch days']
 timeStamp: 2012-08-13T15:20:32

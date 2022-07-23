@@ -3,9 +3,10 @@ path: /snapdragon-sdk-for-android-webinar
 date: 05 Dec 2012
 title: snapdragon-sdk-for-android-webinar
 author: mlab
-featureImage: ./snapdragon-sdk-for-android-webinar.png
+featureImage: ../../images/snapdragon-sdk-for-android-webinar.png
+thumb: ../../images/snapdragon-sdk-for-android-webinar.png
 attachments: 
-- ./snapdragon-sdk-for-android-webinar.png
+- ../../images/snapdragon-sdk-for-android-webinar.png
 abstract: ""
 tags: ['android','qdevnet','qualcomm','snapdragon','webinar']
 timeStamp: 2012-12-05T13:44:51

@@ -3,9 +3,10 @@ path: /demo-africa-investor-roundtable-cape-town-2012
 date: 05 Oct 2012
 title: demo-africa-investor-roundtable-cape-town-2012
 author: mlab
-featureImage: ./demo-africa-investor-roundtable-cape-town-2012.png
+featureImage: ../../images/demo-africa-investor-roundtable-cape-town-2012.png
+thumb: ../../images/demo-africa-investor-roundtable-cape-town-2012.png
 attachments: 
-- ./demo-africa-investor-roundtable-cape-town-2012.png
+- ../../images/demo-africa-investor-roundtable-cape-town-2012.png
 abstract: ""
 tags: ['88mph','angle hub','bandwidth barn','DEMO Africa','dot jam','evly','innovators.it','invention','investment','presence']
 timeStamp: 2012-10-05T13:35:23

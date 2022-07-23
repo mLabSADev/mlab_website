@@ -3,9 +3,10 @@ path: /2015-app-developer-skill-census
 date: 26 May 2015
 title: 2015-app-developer-skill-census
 author: mlab
-featureImage: ./2015-app-developer-skill-census.png
+featureImage: ../../images/2015-app-developer-skill-census.png
+thumb: ../../images/2015-app-developer-skill-census.png
 attachments: 
-- ./2015-app-developer-skill-census.png
+- ../../images/2015-app-developer-skill-census.png
 abstract: ""
 tags: ['Africa','developers','Internet of things','mLab','survey']
 timeStamp: 2015-05-26T08:03:39

@@ -3,9 +3,10 @@ path: /boost-up-way-to-slush-2019
 date: 26 Jun 2019
 title: boost-up-your-business-2019
 author: Melvin Musehani
-featureImage: ./boost-up-your-business-2019.png
+featureImage: ../../images/boost-up-your-business-2019.png
+thumb: ../../images/boost-up-your-business-2019.png
 attachments: 
-- ./boost-up-your-business-2019.png
+- ../../images/boost-up-your-business-2019.png
 abstract: ""
 tags: []
 timeStamp: 2019-06-26T09:25:15

@@ -3,9 +3,10 @@ path: /jatamobile-at-the-global-forum
 date: 14 Jun 2013
 title: jatamobile-global-forum-experience
 author: mlab
-featureImage: ./.png
+featureImage: ../../images/nokiax-port-weekly-coming-to-your-city-.png
+thumb: ../../images/nokiax-port-weekly-coming-to-your-city-.png
 attachments: 
-- ./.png
+- ../../images/nokiax-port-weekly-coming-to-your-city-.png
 abstract: ""
 tags: ['Africanmobileawards','GlobalForum','JataMobile']
 timeStamp: 2013-06-14T13:09:59

@@ -3,9 +3,10 @@ path: /how-mobiles-can-support-proven-education-approaches
 date: 20 Aug 2011
 title: how-mobiles-can-support-proven-education-approaches
 author: mlab
-featureImage: ./.png
+featureImage: ../../images/nokiax-port-weekly-coming-to-your-city-.png
+thumb: ../../images/nokiax-port-weekly-coming-to-your-city-.png
 attachments: 
-- ./.png
+- ../../images/nokiax-port-weekly-coming-to-your-city-.png
 abstract: ""
 tags: ['m4ed4dev','mlearning','yoza']
 timeStamp: 2011-08-20T12:27:00

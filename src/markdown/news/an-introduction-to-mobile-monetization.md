@@ -3,9 +3,10 @@ path: /introduction-mobile-monetization
 date: 27 Aug 2014
 title: an-introduction-to-mobile-monetization
 author: mlab
-featureImage: ./an-introduction-to-mobile-monetization.png
+featureImage: ../../images/an-introduction-to-mobile-monetization.png
+thumb: ../../images/an-introduction-to-mobile-monetization.png
 attachments: 
-- ./an-introduction-to-mobile-monetization.png
+- ../../images/an-introduction-to-mobile-monetization.png
 abstract: ""
 tags: ['BuzzCity','event','mLab','mobile','Mobile Monetization']
 timeStamp: 2014-08-27T11:52:43

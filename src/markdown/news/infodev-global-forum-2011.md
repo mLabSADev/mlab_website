@@ -3,9 +3,10 @@ path: /infodev-global-forum-in-helsinki
 date: 31 May 2011
 title: infodev-global-forum-2011
 author: mlab
-featureImage: ./infodev-global-forum-2011.png
+featureImage: ../../images/nokiax-port-weekly-coming-to-your-city-.png
+thumb: ../../images/nokiax-port-weekly-coming-to-your-city-.png
 attachments: 
-- ./infodev-global-forum-2011.png
+- ../../images/nokiax-port-weekly-coming-to-your-city-.png
 abstract: ""
 tags: []
 timeStamp: 2011-05-31T09:19:39

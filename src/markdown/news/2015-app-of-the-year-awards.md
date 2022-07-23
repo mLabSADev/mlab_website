@@ -3,9 +3,10 @@ path: /2015-app-year-awards
 date: 19 May 2015
 title: 2015-app-of-the-year-awards
 author: mlab
-featureImage: ./2015-app-of-the-year-awards.png
+featureImage: ../../images/2015-app-of-the-year-awards.png
+thumb: ../../images/2015-app-of-the-year-awards.png
 attachments: 
-- ./2015-app-of-the-year-awards.png
+- ../../images/2015-app-of-the-year-awards.png
 abstract: ""
 tags: ['app awards','apps','Intel','Microsoft','mLab','MTN','mtn business']
 timeStamp: 2015-05-19T08:35:07

@@ -3,9 +3,10 @@ path: /one-mobile-per-school
 date: 14 Apr 2011
 title: one-mobile-per-school
 author: mlab
-featureImage: ./.png
+featureImage: ../../images/nxtgen-coding-camp.png
+thumb: ../../images/nxtgen-coding-camp.png
 attachments: 
-- ./.png
+- ../../images/nxtgen-coding-camp.png
 abstract: ""
 tags: []
 timeStamp: 2011-04-14T16:56:16

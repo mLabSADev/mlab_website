@@ -3,9 +3,10 @@ path: /international-space-apps-challenge-2014-2
 date: 15 May 2014
 title: the-international-space-apps-challenge-2014
 author: mlab
-featureImage: ./the-international-space-apps-challenge-2014.png
+featureImage: ../../images/the-international-space-apps-challenge-2014.png
+thumb: ../../images/the-international-space-apps-challenge-2014.png
 attachments: 
-- ./the-international-space-apps-challenge-2014.png
+- ../../images/the-international-space-apps-challenge-2014.png
 abstract: ""
 tags: ['Innovation','mLab','mobile','NASA','robotics','spaceapps','The Innovation Hub','vodacom']
 timeStamp: 2014-05-15T12:40:18

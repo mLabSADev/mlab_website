@@ -3,9 +3,10 @@ path: /aftarobot-pilot-launch
 date: 27 Mar 2013
 title: aftarobot-pilot-launch
 author: mlab
-featureImage: ./aftarobot-pilot-launch.png
+featureImage: ../../images/aftarobot-pilot-launch.png
+thumb: ../../images/aftarobot-pilot-launch.png
 attachments: 
-- ./aftarobot-pilot-launch.png
+- ../../images/aftarobot-pilot-launch.png
 abstract: ""
 tags: ['armsta','mLab','sowertech','taxi','ussd']
 timeStamp: 2013-03-27T15:44:21

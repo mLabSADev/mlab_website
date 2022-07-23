@@ -3,9 +3,10 @@ path: /hiring-nc
 date: 21 Apr 2017
 title: we-are-hiring-northern-cape
 author: mlab
-featureImage: ./we-are-hiring-northern-cape.png
+featureImage: ../../images/we-are-hiring-northern-cape.png
+thumb: ../../images/we-are-hiring-northern-cape.png
 attachments: 
-- ./we-are-hiring-northern-cape.png
+- ../../images/we-are-hiring-northern-cape.png
 abstract: ""
 tags: []
 timeStamp: 2017-04-21T12:02:54

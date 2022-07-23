@@ -3,9 +3,10 @@ path: /preparing-african-mobile-entrepreneurs-for-their-big-pitch-insights-from-
 date: 08 Jul 2011
 title: preparing-african-mobile-entrepreneurs-for-their-big-pitch-insights-from-ryan-delk
 author: mlab
-featureImage: ./.png
+featureImage: ../../images/pe-think-tank-2014.png
+thumb: ../../images/pe-think-tank-2014.png
 attachments: 
-- ./.png
+- ../../images/pe-think-tank-2014.png
 abstract: ""
 tags: ['pivot25','startup']
 timeStamp: 2011-07-08T15:12:13

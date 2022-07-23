@@ -3,9 +3,10 @@ path: /intel-software-launch-joburg-cape-town
 date: 18 Mar 2015
 title: intel-developer-zone-launch-joburg-cape-town
 author: mlab
-featureImage: ./intel-developer-zone-launch-joburg-cape-town.png
+featureImage: ../../images/nokiax-port-weekly-coming-to-your-city-.png
+thumb: ../../images/nokiax-port-weekly-coming-to-your-city-.png
 attachments: 
-- ./intel-developer-zone-launch-joburg-cape-town.png
+- ../../images/nokiax-port-weekly-coming-to-your-city-.png
 abstract: ""
 tags: ['Accelerators','cape town','Developer Zone','developers','Hubs','Incubators','Intel','Johannesburg','launch','mLab']
 timeStamp: 2015-03-18T13:06:32

@@ -3,9 +3,10 @@ path: /nxtgen-coding-camp
 date: 26 Nov 2014
 title: nxtgen-coding-camp
 author: mlab
-featureImage: ./nxtgen-coding-camp.png
+featureImage: ../../images/nxtgen-coding-camp.png
+thumb: ../../images/nxtgen-coding-camp.png
 attachments: 
-- ./nxtgen-coding-camp.png
+- ../../images/nxtgen-coding-camp.png
 abstract: ""
 tags: ['cape town','coding','developers','games','nxtgen','robots']
 timeStamp: 2014-11-26T14:02:05

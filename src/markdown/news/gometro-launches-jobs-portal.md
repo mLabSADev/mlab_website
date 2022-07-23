@@ -3,9 +3,10 @@ path: /gometro-launches-jobs-portal
 date: 13 Sep 2013
 title: gometro-launches-jobs-portal
 author: mlab
-featureImage: ./gometro-launches-jobs-portal.png
+featureImage: ../../images/gometro-launches-jobs-portal.png
+thumb: ../../images/gometro-launches-jobs-portal.png
 attachments: 
-- ./gometro-launches-jobs-portal.png
+- ../../images/gometro-launches-jobs-portal.png
 abstract: ""
 tags: ['apps','GoJobs','Gometro','Justin Coetzee','mLab']
 timeStamp: 2013-09-13T09:16:00

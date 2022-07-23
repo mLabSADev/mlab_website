@@ -3,9 +3,10 @@ path: /healthtech
 date: 23 Jul 2018
 title: healthtech
 author: mlab
-featureImage: ./healthtech.png
+featureImage: ../../images/HealthTech.png
+thumb: ../../images/HealthTech.png
 attachments: 
-- ./healthtech.png
+- ../../images/HealthTech.png
 abstract: ""
 tags: ['csir','ecosystem','Health Tech','mHealth','mLab','research','south africa','startups']
 timeStamp: 2018-07-23T10:54:23

@@ -1,6 +1,7 @@
 ---
 date: "6 April 2016"
-featureImage: ../images/resources/do_mlabs_still_make_a_difference.png
+featureImage: ../../../images/resources/do_mlabs_still_make_a_difference.png
+thumb: ../../../images/resources/do_mlabs_still_make_a_difference.png
 link: "https://www.infodev.org/sites/default/files/do_mlabs_still_make_a_difference_-_a_second_assessment_-_full_report_-_digital_entrepreneurship_program_-_infodev_2017_1.pdf"
 title: "2015-2016 Report"
 order: 2

@@ -3,9 +3,10 @@ path: /demo-africa-investor-roundtable-comes-to-cape-town
 date: 26 Sep 2012
 title: demo-africa-investor-roundtable-coming-to-cape-town
 author: mlab
-featureImage: ./demo-africa-investor-roundtable-coming-to-cape-town.png
+featureImage: ../../images/demo-africa-investor-roundtable-coming-to-cape-town.png
+thumb: ../../images/demo-africa-investor-roundtable-coming-to-cape-town.png
 attachments: 
-- ./demo-africa-investor-roundtable-coming-to-cape-town.png
+- ../../images/demo-africa-investor-roundtable-coming-to-cape-town.png
 abstract: ""
 tags: ['bandwidth barn','cape town','DEMO','DEMO Africa','investors','mlab southern africa','silicon cape','usaid']
 timeStamp: 2012-09-26T17:27:32

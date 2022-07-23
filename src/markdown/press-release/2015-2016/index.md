@@ -1,6 +1,7 @@
 ---
 date: "7 June 2017"
-featureImage: ../images/resources/femintech.jpeg
+featureImage: ../../../images/resources/femintech.jpeg
+thumb: ../../../images/resources/femintech.jpeg
 link: "https://img.freepik.com/free-vector/red-annual-report-cover-template_23-2147850627.jpg"
 title: "Females in Tech 2017"
 ---

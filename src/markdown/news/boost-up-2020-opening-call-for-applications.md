@@ -3,10 +3,12 @@ path: /boost-up-2020-opening-call-for-applications
 date: 14 May 2020
 title: boost-up-2020-opening-call-for-applications
 author: Melvin Musehani
-featureImage: ./boost-up-2020-opening-call-for-applications.png
+featureImage: ../../images/boost-up-2020-opening-call-for-applications.png
+thumb: ../../images/boost-up-2020-opening-call-for-applications.png
 attachments: 
-- ./boost-up-2020-opening-call-for-applications.png
+- ../../images/boost-up-2020-opening-call-for-applications.png
 abstract: ""
+name: "Sky"
 tags: []
 timeStamp: 2020-05-14T11:09:08
 ---

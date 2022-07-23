@@ -3,9 +3,10 @@ path: /pivot25-mobile-apps-and-developer-conference-kicks-off-in-nairobi
 date: 14 Jun 2011
 title: pivot25-mobile-apps-and-developer-conference-kicks-off-in-nairobi
 author: mlab
-featureImage: ./.png
+featureImage: ../../images/pe-think-tank-2014.png
+thumb: ../../images/pe-think-tank-2014.png
 attachments: 
-- ./.png
+- ../../images/pe-think-tank-2014.png
 abstract: ""
 tags: ['kenya','mlab east africa','pivot25']
 timeStamp: 2011-06-14T14:59:48

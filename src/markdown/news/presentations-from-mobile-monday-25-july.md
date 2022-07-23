@@ -3,9 +3,10 @@ path: /presentations-from-mobile-monday-25-july
 date: 26 Jul 2011
 title: presentations-from-mobile-monday-25-july
 author: mlab
-featureImage: ./.png
+featureImage: ../../images/pe-think-tank-2014.png
+thumb: ../../images/pe-think-tank-2014.png
 attachments: 
-- ./.png
+- ../../images/pe-think-tank-2014.png
 abstract: ""
 tags: ['momo','momojoburg','nokia']
 timeStamp: 2011-07-26T21:24:10

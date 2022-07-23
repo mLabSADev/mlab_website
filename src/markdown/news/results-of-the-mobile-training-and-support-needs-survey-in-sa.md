@@ -3,9 +3,10 @@ path: /results-of-the-mobile-training-and-support-needs-survey
 date: 26 Jul 2011
 title: results-of-the-mobile-training-and-support-needs-survey-in-sa
 author: mlab
-featureImage: ./.png
+featureImage: ../../images/request-for-proposals.png
+thumb: ../../images/request-for-proposals.png
 attachments: 
-- ./.png
+- ../../images/request-for-proposals.png
 abstract: ""
 tags: ['survey','training']
 timeStamp: 2011-07-26T12:15:54

@@ -3,9 +3,10 @@ path: /international-space-apps-challenge-coming-to-south-africa
 date: 08 Mar 2013
 title: international-space-apps-challenge-coming-to-south-africa
 author: mlab
-featureImage: ./international-space-apps-challenge-coming-to-south-africa.png
+featureImage: ../../images/international-space-apps-challenge-coming-to-south-africa.png
+thumb: ../../images/international-space-apps-challenge-coming-to-south-africa.png
 attachments: 
-- ./international-space-apps-challenge-coming-to-south-africa.png
+- ../../images/international-space-apps-challenge-coming-to-south-africa.png
 abstract: ""
 tags: ['cloud','Hackathon','NASA','Space','Spaceappschallenge']
 timeStamp: 2013-03-08T12:50:19

@@ -3,9 +3,10 @@ path: /mlabsa-launch
 date: 15 Sep 2011
 title: mlab-southern-africa-officially-opens-doors-in-pretoria
 author: mlab
-featureImage: ./mlab-southern-africa-officially-opens-doors-in-pretoria.png
+featureImage: ../../images/mlab-southern-africa-officially-opens-doors-in-pretoria.png
+thumb: ../../images/mlab-southern-africa-officially-opens-doors-in-pretoria.png
 attachments: 
-- ./mlab-southern-africa-officially-opens-doors-in-pretoria.png
+- ../../images/mlab-southern-africa-officially-opens-doors-in-pretoria.png
 abstract: ""
 tags: ['launch']
 timeStamp: 2011-09-15T12:00:33

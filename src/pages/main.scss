@@ -1,4 +1,5 @@
 @import url("./colors.scss");
+@import url("../components/Typography/style.scss");
 html,
 body {
   margin: 0px;
@@ -26,8 +27,10 @@ body {
 }
 .responsive-column {
   display: grid;
-  grid-template-columns: auto auto;
-  column-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  column-gap: 30px;
+  row-gap: 30px;
 }
 @media only screen and (max-width: 880px) {
   .responsive-column {
@@ -46,9 +49,33 @@ body {
   justify-content: center;
   .play-video {
     box-sizing: border-box;
-    margin: auto; 
+    margin: auto;
     width: 90%;
     height: 100%;
     border-radius: 10px;
+  }
+}
+.vs {
+  padding: 50px 0px;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-y: auto;
+}
+.hs {
+  display: flex;
+  align-items: center;
+  padding: 90px 0px;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: auto;
+}
+@media only screen and (max-width: 880px) {
+  .video-i {
+    padding: 0px;
+    height: 200px;
+    .play-video {
+      border-radius: 0px;
+      width: 100%;
+    }
   }
 }

@@ -3,9 +3,10 @@ path: /mlab-east-africa-launch
 date: 17 Jun 2011
 title: m-lab-east-africa-launch
 author: mlab
-featureImage: ./.png
+featureImage: ../../images/nokiax-port-weekly-coming-to-your-city-.png
+thumb: ../../images/nokiax-port-weekly-coming-to-your-city-.png
 attachments: 
-- ./.png
+- ../../images/nokiax-port-weekly-coming-to-your-city-.png
 abstract: ""
 tags: ['kenya','mlab east africa','mobile','nairobi']
 timeStamp: 2011-06-17T10:13:37

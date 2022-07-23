@@ -3,9 +3,10 @@ path: /talking-mobile-monetisation-in-cape-town
 date: 24 Aug 2011
 title: talking-mobile-monetisation
 author: mlab
-featureImage: ./.png
+featureImage: ../../images/startup-knight-competition.png
+thumb: ../../images/startup-knight-competition.png
 attachments: 
-- ./.png
+- ../../images/startup-knight-competition.png
 abstract: ""
 tags: ['cape town','inmobi','monetisation']
 timeStamp: 2011-08-24T13:18:15

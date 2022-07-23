@@ -3,9 +3,10 @@ path: /mtn-sa-foundation-community-app-challenge-break-new-ground
 date: 01 Oct 2014
 title: mtn-sa-foundation-community-app-challenge
 author: mlab
-featureImage: ./mtn-sa-foundation-community-app-challenge.png
+featureImage: ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
+thumb: ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
 attachments: 
-- ./mtn-sa-foundation-community-app-challenge.png
+- ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
 abstract: ""
 tags: ['Community Challenge','Hackathon','mLab','mobile apps','MTN','MTN Foundation','south africa','Upliftment']
 timeStamp: 2014-10-01T12:10:45

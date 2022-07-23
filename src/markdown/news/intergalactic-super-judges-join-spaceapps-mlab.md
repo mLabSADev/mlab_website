@@ -3,9 +3,10 @@ path: /spaceapps-judges-mlab
 date: 28 Mar 2014
 title: intergalactic-super-judges-join-spaceapps-mlab
 author: mlab
-featureImage: ./intergalactic-super-judges-join-spaceapps-mlab.png
+featureImage: ../../images/intergalactic-super-judges-join-spaceapps-mlab.png
+thumb: ../../images/intergalactic-super-judges-join-spaceapps-mlab.png
 attachments: 
-- ./intergalactic-super-judges-join-spaceapps-mlab.png
+- ../../images/intergalactic-super-judges-join-spaceapps-mlab.png
 abstract: ""
 tags: ['BandwidthBarn','Mandla Maseko','mLab','NASA','spaceapps','vodacom']
 timeStamp: 2014-03-28T17:11:27

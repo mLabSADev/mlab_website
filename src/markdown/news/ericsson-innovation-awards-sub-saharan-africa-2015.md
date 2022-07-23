@@ -3,9 +3,10 @@ path: /ericsson-innovation-awards-sub-saharan-africa-2015
 date: 28 Oct 2015
 title: ericsson-innovation-awards-sub-saharan-africa-2015
 author: mlab
-featureImage: ./ericsson-innovation-awards-sub-saharan-africa-2015.png
+featureImage: ../../images/ericsson-innovation-awards-sub-saharan-africa-2015.png
+thumb: ../../images/ericsson-innovation-awards-sub-saharan-africa-2015.png
 attachments: 
-- ./ericsson-innovation-awards-sub-saharan-africa-2015.png
+- ../../images/ericsson-innovation-awards-sub-saharan-africa-2015.png
 abstract: ""
 tags: []
 timeStamp: 2015-10-28T07:37:59

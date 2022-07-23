@@ -1,4 +1,4 @@
 ---
 name: "Finish Ministry"
-featureImage: ../images/active-partners/ministry.png
+thumb: ../../images/active-partners/ministry.png
 ---

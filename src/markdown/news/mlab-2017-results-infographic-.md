@@ -3,9 +3,10 @@ path: /infographic-mlab-2017-results
 date: 12 Sep 2017
 title: mlab-2017-results-infographic-
 author: Lebogang Madise
-featureImage: ./mlab-2017-results-infographic-.png
+featureImage: ../../images/mlab-2017-results-infographic-.png
+thumb: ../../images/mlab-2017-results-infographic-.png
 attachments: 
-- ./mlab-2017-results-infographic-.png
+- ../../images/mlab-2017-results-infographic-.png
 abstract: ""
 tags: ['about mlab','entrepreneurs','Infographic','Innovation','mLab results','mLab SA','mlab southern africa','seed funding','skills development']
 timeStamp: 2017-09-12T22:36:48

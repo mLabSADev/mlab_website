@@ -3,9 +3,10 @@ path: /demola-south-africa-coming-july-2016
 date: 24 May 2016
 title: demola-south-africa-coming-july-2016
 author: mlab
-featureImage: ./demola-south-africa-coming-july-2016.png
+featureImage: ../../images/demola-south-africa-coming-july-2016.png
+thumb: ../../images/demola-south-africa-coming-july-2016.png
 attachments: 
-- ./demola-south-africa-coming-july-2016.png
+- ../../images/demola-south-africa-coming-july-2016.png
 abstract: ""
 tags: ['cape town','DEMOLA','derrick kotze','featured','mLab','R&amp;D','research','research &amp; development','students','universities']
 timeStamp: 2016-05-24T11:28:39

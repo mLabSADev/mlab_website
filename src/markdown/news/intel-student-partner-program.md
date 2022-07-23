@@ -3,9 +3,10 @@ path: /intel-student-partner-program
 date: 06 Nov 2014
 title: intel-student-partner-program
 author: mlab
-featureImage: ./intel-student-partner-program.png
+featureImage: ../../images/intel-student-partner-program.png
+thumb: ../../images/intel-student-partner-program.png
 attachments: 
-- ./intel-student-partner-program.png
+- ../../images/intel-student-partner-program.png
 abstract: ""
 tags: ['Android Developer','Intel Student Partner','mLab','students','University']
 timeStamp: 2014-11-06T17:17:27

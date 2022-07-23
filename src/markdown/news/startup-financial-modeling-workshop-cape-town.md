@@ -3,9 +3,10 @@ path: /startup-financial-modeling-workshop-cape-town
 date: 02 Oct 2015
 title: startup-financial-modeling-workshop-cape-town
 author: mlab
-featureImage: ./startup-financial-modeling-workshop-cape-town.png
+featureImage: ../../images/startup-financial-modeling-workshop-cape-town.png
+thumb: ../../images/startup-financial-modeling-workshop-cape-town.png
 attachments: 
-- ./startup-financial-modeling-workshop-cape-town.png
+- ../../images/startup-financial-modeling-workshop-cape-town.png
 abstract: ""
 tags: ['Financial Modeling','Justin Coetzee','mLab','Newtown Partners','SiliconCape','startups','Workshop17']
 timeStamp: 2015-10-02T17:06:23

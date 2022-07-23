@@ -3,9 +3,10 @@ path: /new-app-fund-launched
 date: 28 Apr 2016
 title: new-app-fund-launched
 author: mlab
-featureImage: ./new-app-fund-launched.png
+featureImage: ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
+thumb: ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
 attachments: 
-- ./new-app-fund-launched.png
+- ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
 abstract: ""
 tags: ['Africa','App Fund','Early Stage Funding','featured','IoT Apps','mLab SA','mobile','TIA']
 timeStamp: 2016-04-28T11:24:17

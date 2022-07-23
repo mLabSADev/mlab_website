@@ -3,9 +3,10 @@ path: /the-harambe-entrepreneur-alliance
 date: 10 Dec 2012
 title: the-harambe-entrepreneur-alliance
 author: mlab
-featureImage: ./the-harambe-entrepreneur-alliance.png
+featureImage: ../../images/the-harambe-entrepreneur-alliance.png
+thumb: ../../images/the-harambe-entrepreneur-alliance.png
 attachments: 
-- ./the-harambe-entrepreneur-alliance.png
+- ../../images/the-harambe-entrepreneur-alliance.png
 abstract: ""
 tags: ['Africa','Bretton Woods Symposium','Harambe Advantage','Harvard University','Scholarship']
 timeStamp: 2012-12-10T10:42:41

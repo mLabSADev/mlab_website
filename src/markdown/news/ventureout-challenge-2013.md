@@ -3,9 +3,10 @@ path: /ventureout
 date: 20 Aug 2013
 title: ventureout-challenge-2013
 author: mlab
-featureImage: ./ventureout-challenge-2013.png
+featureImage: ../../images/ventureout-challenge-2013.png
+thumb: ../../images/ventureout-challenge-2013.png
 attachments: 
-- ./ventureout-challenge-2013.png
+- ../../images/ventureout-challenge-2013.png
 abstract: ""
 tags: ['competition','infodev','internationalization','seed funding','Ventureout']
 timeStamp: 2013-08-20T18:02:00

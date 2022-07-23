@@ -3,9 +3,10 @@ path: /register-now-for-the-qualcomm-html5-mobile-webinar
 date: 29 Aug 2012
 title: register-now-for-the-qualcomm-html5-mobile-webinar
 author: mlab
-featureImage: ./register-now-for-the-qualcomm-html5-mobile-webinar.png
+featureImage: ../../images/register-now-for-the-qualcomm-html5-mobile-webinar.png
+thumb: ../../images/register-now-for-the-qualcomm-html5-mobile-webinar.png
 attachments: 
-- ./register-now-for-the-qualcomm-html5-mobile-webinar.png
+- ../../images/register-now-for-the-qualcomm-html5-mobile-webinar.png
 abstract: ""
 tags: ['HTML5','qdevnet','qualcomm','training']
 timeStamp: 2012-08-29T10:34:01

@@ -3,9 +3,10 @@ path: /cape-town-pretoria-get-smarter-android-get-started-intel-realsense
 date: 13 Feb 2015
 title: cape-town-pretoria-get-smarter-about-android-and-get-started-with-intel-realsense
 author: mlab
-featureImage: ./cape-town-pretoria-get-smarter-about-android-and-get-started-with-intel-realsense.png
+featureImage: ../../images/cape-town-pretoria-get-smarter-about-android-and-get-started-with-intel-realsense.png
+thumb: ../../images/cape-town-pretoria-get-smarter-about-android-and-get-started-with-intel-realsense.png
 attachments: 
-- ./cape-town-pretoria-get-smarter-about-android-and-get-started-with-intel-realsense.png
+- ../../images/cape-town-pretoria-get-smarter-about-android-and-get-started-with-intel-realsense.png
 abstract: ""
 tags: ['android','Developer Zone','feature','Intel','mLab','windows']
 timeStamp: 2015-02-13T05:21:16

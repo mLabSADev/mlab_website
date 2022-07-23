@@ -3,9 +3,10 @@ path: /vodacom-launches-first-multi-plaform-app-developer-workshop
 date: 21 Aug 2012
 title: vodacom-launches-first-multi-plaform-app-developer-workshop
 author: mlab
-featureImage: ./vodacom-launches-first-multi-plaform-app-developer-workshop.png
+featureImage: ../../images/vodacom-launches-first-multi-plaform-app-developer-workshop.png
+thumb: ../../images/vodacom-launches-first-multi-plaform-app-developer-workshop.png
 attachments: 
-- ./vodacom-launches-first-multi-plaform-app-developer-workshop.png
+- ../../images/vodacom-launches-first-multi-plaform-app-developer-workshop.png
 abstract: ""
 tags: ['training','vodacom','workshop']
 timeStamp: 2012-08-21T13:36:43

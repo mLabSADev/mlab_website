@@ -3,9 +3,10 @@ path: /tedx-stellenbosch-presentation-people-connectedness-and-mobiles
 date: 29 Jul 2011
 title: tedx-stellenbosch-presentation-people-connectedness-and-mobiles
 author: mlab
-featureImage: ./.png
+featureImage: ../../images/tedxcapetown-21-july-official-simulcast-at-mlab.png
+thumb: ../../images/tedxcapetown-21-july-official-simulcast-at-mlab.png
 attachments: 
-- ./.png
+- ../../images/tedxcapetown-21-july-official-simulcast-at-mlab.png
 abstract: ""
 tags: ['clay shirky','jan chipchase','mobile','steven johnson','tedx','tedx stellenbosch']
 timeStamp: 2011-07-29T11:00:16

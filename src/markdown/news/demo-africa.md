@@ -3,9 +3,10 @@ path: /demo-africa
 date: 05 Jun 2014
 title: demo-africa
 author: mlab
-featureImage: ./demo-africa.png
+featureImage: ../../images/demo-africa.png
+thumb: ../../images/demo-africa.png
 attachments: 
-- ./demo-africa.png
+- ../../images/demo-africa.png
 abstract: ""
 tags: ['DEMO Africa','mLab','mLab South Africa','startups','VC4Africa']
 timeStamp: 2014-06-05T15:34:00

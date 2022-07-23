@@ -3,9 +3,10 @@ path: /make-the-world-a-more-user-friendly-place
 date: 03 Sep 2015
 title: make-the-world-a-more-user-friendly-place
 author: mlab
-featureImage: ./make-the-world-a-more-user-friendly-place.png
+featureImage: ../../images/make-the-world-a-more-user-friendly-place.png
+thumb: ../../images/make-the-world-a-more-user-friendly-place.png
 attachments: 
-- ./make-the-world-a-more-user-friendly-place.png
+- ../../images/make-the-world-a-more-user-friendly-place.png
 abstract: ""
 tags: ['app testing','bugs','mobile','Testing','the testing house','user experience']
 timeStamp: 2015-09-03T09:58:09

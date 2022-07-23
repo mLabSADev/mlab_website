@@ -3,9 +3,10 @@ path: /essential-questions-that-every-startup-should-consider
 date: 04 Aug 2011
 title: essential-questions-that-every-startup-should-consider
 author: mlab
-featureImage: ./.png
+featureImage: ../../images/startup-financial-modeling-workshop-cape-town.png
+thumb: ../../images/startup-financial-modeling-workshop-cape-town.png
 attachments: 
-- ./.png
+- ../../images/startup-financial-modeling-workshop-cape-town.png
 abstract: ""
 tags: ['startup']
 timeStamp: 2011-08-04T14:04:17

@@ -1,4 +1,4 @@
 ---
 name: "ARC"
-featureImage: ../images/active-partners/arc.png
+thumb: ../../images/active-partners/arc.png
 ---

@@ -3,9 +3,10 @@ path: /etisalat-prize-for-innovation-2012
 date: 10 Sep 2012
 title: etisalat-prize-for-innovation-2012
 author: mlab
-featureImage: ./etisalat-prize-for-innovation-2012.png
+featureImage: ../../images/etisalat-prize-for-innovation-2012.png
+thumb: ../../images/etisalat-prize-for-innovation-2012.png
 attachments: 
-- ./etisalat-prize-for-innovation-2012.png
+- ../../images/etisalat-prize-for-innovation-2012.png
 abstract: ""
 tags: ['etisalat','Innovation','mobile broadband']
 timeStamp: 2012-09-10T14:58:48

@@ -3,9 +3,9 @@ path: /2016-space-apps-challenge
 date: 13 Apr 2016
 title: 2016-space-apps-challenge
 author: Lebogang Madise
-featureImage: ./2016-space-apps-challenge.png
+featureImage: ../../images/2016-space-apps-challenge.png
 attachments: 
-- ./2016-space-apps-challenge.png
+- ../../images/2016-space-apps-challenge.png
 abstract: ""
 tags: []
 timeStamp: 2016-04-13T12:02:44

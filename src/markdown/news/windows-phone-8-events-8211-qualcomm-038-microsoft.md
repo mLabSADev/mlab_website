@@ -3,9 +3,10 @@ path: /windows-8-events-qualcomm-microsoft
 date: 28 Jan 2013
 title: windows-phone-8-events-8211-qualcomm-038-microsoft
 author: mlab
-featureImage: ./windows-phone-8-events-8211-qualcomm-038-microsoft.png
+featureImage: ../../images/windows-phone-8-events-8211-qualcomm-038-microsoft.png
+thumb: ../../images/windows-phone-8-events-8211-qualcomm-038-microsoft.png
 attachments: 
-- ./windows-phone-8-events-8211-qualcomm-038-microsoft.png
+- ../../images/windows-phone-8-events-8211-qualcomm-038-microsoft.png
 abstract: ""
 tags: ['Microsoft','qualcomm','Windows 8','Windows Phone 8']
 timeStamp: 2013-01-28T07:48:09

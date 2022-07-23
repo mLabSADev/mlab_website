@@ -3,9 +3,10 @@ path: /world
 date: 13 Mar 2014
 title: my-world
 author: mlab
-featureImage: ./my-world.png
+featureImage: ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
+thumb: ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
 attachments: 
-- ./my-world.png
+- ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
 abstract: ""
 tags: ['android','education','games','mfactory','mLab','mobile','preschool','tablet education']
 timeStamp: 2014-03-13T02:42:06

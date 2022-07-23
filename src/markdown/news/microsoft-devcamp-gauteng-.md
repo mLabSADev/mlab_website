@@ -3,9 +3,10 @@ path: /microsoft-devcamp-gauteng
 date: 12 Jun 2014
 title: microsoft-devcamp-gauteng-
 author: mlab
-featureImage: ./microsoft-devcamp-gauteng-.png
+featureImage: ../../images/microsoft-devcamp-gauteng-.png
+thumb: ../../images/microsoft-devcamp-gauteng-.png
 attachments: 
-- ./microsoft-devcamp-gauteng-.png
+- ../../images/microsoft-devcamp-gauteng-.png
 abstract: ""
 tags: ['devcamp','developers','Microsoft','mLab','software engineers']
 timeStamp: 2014-06-12T15:31:26

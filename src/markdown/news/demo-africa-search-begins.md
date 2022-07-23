@@ -3,9 +3,10 @@ path: /demo-africa-search-begins
 date: 11 Jul 2012
 title: demo-africa-search-begins
 author: mlab
-featureImage: ./demo-africa-search-begins.png
+featureImage: ../../images/demo-africa-search-begins.png
+thumb: ../../images/demo-africa-search-begins.png
 attachments: 
-- ./demo-africa-search-begins.png
+- ../../images/demo-africa-search-begins.png
 abstract: ""
 tags: ['Africa','DEMO Africa','mLab','nokia','VC']
 timeStamp: 2012-07-11T09:54:51

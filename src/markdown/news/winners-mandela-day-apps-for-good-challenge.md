@@ -3,9 +3,10 @@ path: /mandela-day-apps-for-good-challenge-winners
 date: 13 Aug 2012
 title: winners-mandela-day-apps-for-good-challenge
 author: mlab
-featureImage: ./winners-mandela-day-apps-for-good-challenge.png
+featureImage: ../../images/winners-mandela-day-apps-for-good-challenge.png
+thumb: ../../images/winners-mandela-day-apps-for-good-challenge.png
 attachments: 
-- ./winners-mandela-day-apps-for-good-challenge.png
+- ../../images/winners-mandela-day-apps-for-good-challenge.png
 abstract: ""
 tags: ['Apps for Good','Mandela Day','mLab']
 timeStamp: 2012-08-13T13:30:18

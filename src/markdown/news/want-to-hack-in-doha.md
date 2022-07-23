@@ -3,9 +3,10 @@ path: /want-hack-doha
 date: 18 Sep 2014
 title: want-to-hack-in-doha
 author: mlab
-featureImage: ./want-to-hack-in-doha.png
+featureImage: ../../images/want-to-hack-in-doha.png
+thumb: ../../images/want-to-hack-in-doha.png
 attachments: 
-- ./want-to-hack-in-doha.png
+- ../../images/want-to-hack-in-doha.png
 abstract: ""
 tags: ['Al Jazeera','Canvas','Designers','developers','Doha','Hackathon','Media Hack','mLab','Software']
 timeStamp: 2014-09-18T17:43:57

@@ -3,9 +3,10 @@ path: /microsoft-dev-camp-western-cape
 date: 28 Feb 2014
 title: microsoft-dev-camp-western-cape
 author: mlab
-featureImage: ./microsoft-dev-camp-western-cape.png
+featureImage: ../../images/microsoft-dev-camp-western-cape.png
+thumb: ../../images/microsoft-dev-camp-western-cape.png
 attachments: 
-- ./microsoft-dev-camp-western-cape.png
+- ../../images/microsoft-dev-camp-western-cape.png
 abstract: ""
 tags: ['dev camp','Microsoft','mLab','training','windows']
 timeStamp: 2014-02-28T08:29:02

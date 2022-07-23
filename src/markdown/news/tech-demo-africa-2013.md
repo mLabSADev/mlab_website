@@ -3,9 +3,10 @@ path: /tech-demo-africa-2013
 date: 27 May 2013
 title: tech-demo-africa-2013
 author: mlab
-featureImage: ./.png
+featureImage: ../../images/startup-knight-competition.png
+thumb: ../../images/startup-knight-competition.png
 attachments: 
-- ./.png
+- ../../images/startup-knight-competition.png
 abstract: ""
 tags: ['Africanmobileawards','DEMO','IT News Africa','JataMobile','The Innovation Hub']
 timeStamp: 2013-05-27T10:10:13

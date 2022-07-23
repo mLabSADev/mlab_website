@@ -3,9 +3,10 @@ path: /mlab-member-profile-sowertech
 date: 30 Sep 2011
 title: mlab-member-profile-sowertech
 author: mlab
-featureImage: ./.png
+featureImage: ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
+thumb: ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
 attachments: 
-- ./.png
+- ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
 abstract: ""
 tags: []
 timeStamp: 2011-09-30T16:43:02

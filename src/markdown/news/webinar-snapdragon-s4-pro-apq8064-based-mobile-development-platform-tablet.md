@@ -3,9 +3,10 @@ path: /webinar-snapdragon-s4-pro-apq8064-based-mobile-development-platformtablet
 date: 14 Oct 2012
 title: webinar-snapdragon-s4-pro-apq8064-based-mobile-development-platform-tablet
 author: mlab
-featureImage: ./webinar-snapdragon-s4-pro-apq8064-based-mobile-development-platform-tablet.png
+featureImage: ../../images/webinar-snapdragon-s4-pro-apq8064-based-mobile-development-platform-tablet.png
+thumb: ../../images/webinar-snapdragon-s4-pro-apq8064-based-mobile-development-platform-tablet.png
 attachments: 
-- ./webinar-snapdragon-s4-pro-apq8064-based-mobile-development-platform-tablet.png
+- ../../images/webinar-snapdragon-s4-pro-apq8064-based-mobile-development-platform-tablet.png
 abstract: ""
 tags: ['ALLJOYN P2P','android','mlabsa','qualcomm','S4 PRO MPQ8064','snapdragon','training','webinar']
 timeStamp: 2012-10-14T07:49:26

@@ -3,9 +3,10 @@ path: /immedia-offers-ios-training-at-mlab-sa-2
 date: 13 Oct 2011
 title: immedia-offers-ios-training-at-mlab-sa
 author: mlab
-featureImage: ./immedia-offers-ios-training-at-mlab-sa.png
+featureImage: ../../images/nokiax-port-weekly-coming-to-your-city-.png
+thumb: ../../images/nokiax-port-weekly-coming-to-your-city-.png
 attachments: 
-- ./immedia-offers-ios-training-at-mlab-sa.png
+- ../../images/nokiax-port-weekly-coming-to-your-city-.png
 abstract: ""
 tags: []
 timeStamp: 2011-10-13T11:09:06

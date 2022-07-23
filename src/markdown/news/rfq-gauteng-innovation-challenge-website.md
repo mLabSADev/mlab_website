@@ -3,9 +3,10 @@ path: /rfq-gauteng-innovation-challenge-website
 date: 12 Oct 2011
 title: rfq-gauteng-innovation-challenge-website
 author: mlab
-featureImage: ./.png
+featureImage: ../../images/request-for-proposals.png
+thumb: ../../images/request-for-proposals.png
 attachments: 
-- ./.png
+- ../../images/request-for-proposals.png
 abstract: ""
 tags: []
 timeStamp: 2011-10-12T11:05:18

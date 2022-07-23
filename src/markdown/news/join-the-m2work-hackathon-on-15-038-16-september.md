@@ -3,9 +3,10 @@ path: /m2work-hackathon-15-16-september
 date: 21 Aug 2012
 title: join-the-m2work-hackathon-on-15-038-16-september
 author: mlab
-featureImage: ./join-the-m2work-hackathon-on-15-038-16-september.png
+featureImage: ../../images/join-the-m2work-hackathon-on-15-038-16-september.png
+thumb: ../../images/join-the-m2work-hackathon-on-15-038-16-september.png
 attachments: 
-- ./join-the-m2work-hackathon-on-15-038-16-september.png
+- ../../images/join-the-m2work-hackathon-on-15-038-16-september.png
 abstract: ""
 tags: ['Hackathon','infodev','m2work','mLab']
 timeStamp: 2012-08-21T13:23:45

@@ -3,9 +3,10 @@ path: /inventors-garage-competition
 date: 07 Aug 2014
 title: inventors-garage-competition
 author: mlab
-featureImage: ./inventors-garage-competition.png
+featureImage: ../../images/inventors-garage-competition.png
+thumb: ../../images/inventors-garage-competition.png
 attachments: 
-- ./inventors-garage-competition.png
+- ../../images/inventors-garage-competition.png
 abstract: ""
 tags: ['cape town','competition','Innovation Summit','Inventors','Japan','mLab South Africa']
 timeStamp: 2014-08-07T14:42:48

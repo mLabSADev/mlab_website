@@ -3,9 +3,10 @@ path: /rhok-pretoria-is-back-for-2015
 date: 28 May 2015
 title: rhok-pretoria-is-back-for-2015
 author: mlab
-featureImage: ./rhok-pretoria-is-back-for-2015.png
+featureImage: ../../images/rhok-pretoria-is-back-for-2015.png
+thumb: ../../images/rhok-pretoria-is-back-for-2015.png
 attachments: 
-- ./rhok-pretoria-is-back-for-2015.png
+- ../../images/rhok-pretoria-is-back-for-2015.png
 abstract: ""
 tags: ['apps','developers','Geekulcha','Hack','Intel','mLab','pretoria','RHoK','SAINE','Social good']
 timeStamp: 2015-05-28T09:46:41

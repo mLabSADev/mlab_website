@@ -3,9 +3,9 @@ path: /holiday-geeks
 date: 16 Oct 2014
 title: holiday-with-the-geeks
 author: mlab
-featureImage: ./holiday-with-the-geeks.png
+featureImage: ../../images/holiday-with-the-geeks.png
 attachments: 
-- ./holiday-with-the-geeks.png
+- ../../images/holiday-with-the-geeks.png
 abstract: ""
 tags: ['City of Tshwane','Electronics','Geekulcha','mLab','pretoria','schools','Youth']
 timeStamp: 2014-10-16T09:26:01

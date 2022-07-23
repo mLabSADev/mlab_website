@@ -3,9 +3,10 @@ path: /m2work-south-african-hackathon
 date: 17 Sep 2012
 title: m2work-south-african-hackathon
 author: mlab
-featureImage: ./m2work-south-african-hackathon.png
+featureImage: ../../images/m2work-south-african-hackathon.png
+thumb: ../../images/m2work-south-african-hackathon.png
 attachments: 
-- ./m2work-south-african-hackathon.png
+- ../../images/m2work-south-african-hackathon.png
 abstract: ""
 tags: ['blackberry','e skills','Hackathon','m2work','Microsoft','mlabsa','nokia','qualcomm','vodacom']
 timeStamp: 2012-09-17T14:53:49

@@ -1,4 +1,4 @@
 ---
 name: "CSIR"
-featureImage: ../images/active-partners/csir.png
+thumb: ../../images/active-partners/csir.png
 ---

@@ -3,9 +3,10 @@ path: /techconnect-live-broadcast-mlab
 date: 11 Sep 2013
 title: techconnect-live-broadcast-mlab
 author: mlab
-featureImage: ./techconnect-live-broadcast-mlab.png
+featureImage: ../../images/techconnect-live-broadcast-mlab.png
+thumb: ../../images/techconnect-live-broadcast-mlab.png
 attachments: 
-- ./techconnect-live-broadcast-mlab.png
+- ../../images/techconnect-live-broadcast-mlab.png
 abstract: ""
 tags: ['apps','internationalization','Live Stream','mLab','VentureOut Challenge']
 timeStamp: 2013-09-11T09:41:22

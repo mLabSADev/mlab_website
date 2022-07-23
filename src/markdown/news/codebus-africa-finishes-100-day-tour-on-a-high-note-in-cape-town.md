@@ -3,9 +3,10 @@ path: /codebus-africa-finishes-100-day-tour-high-note-cape-town
 date: 29 May 2017
 title: codebus-africa-finishes-100-day-tour-on-a-high-note-in-cape-town
 author: mlab
-featureImage: ./codebus-africa-finishes-100-day-tour-on-a-high-note-in-cape-town.png
+featureImage: ../../images/codebus-africa-finishes-100-day-tour-on-a-high-note-in-cape-town.png
+thumb: ../../images/codebus-africa-finishes-100-day-tour-on-a-high-note-in-cape-town.png
 attachments: 
-- ./codebus-africa-finishes-100-day-tour-on-a-high-note-in-cape-town.png
+- ../../images/codebus-africa-finishes-100-day-tour-on-a-high-note-in-cape-town.png
 abstract: ""
 tags: ['alexandra','codebus africa','coding','eersterevier','Finland','khayelitsha','mamelodi','mLab','nokia','skills development']
 timeStamp: 2017-05-29T15:16:17

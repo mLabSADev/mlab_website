@@ -3,9 +3,10 @@ path: /appcademy-2013-summer-batch
 date: 21 Jun 2013
 title: appcademy-2013-summer-batch
 author: mlab
-featureImage: ./.png
+featureImage: ../../images/applications-now-open-for-10x10-hackathon-in-croatia.png
+thumb: ../../images/applications-now-open-for-10x10-hackathon-in-croatia.png
 attachments: 
-- ./.png
+- ../../images/applications-now-open-for-10x10-hackathon-in-croatia.png
 abstract: ""
 tags: ['AppCampus','appchemy','mlabsa','nokia','Urban App challenge']
 timeStamp: 2013-06-21T11:32:52

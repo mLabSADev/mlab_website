@@ -3,9 +3,10 @@ path: /thank-awesome-2013
 date: 20 Dec 2013
 title: thank-you-for-an-awesome-2013
 author: mlab
-featureImage: ./thank-you-for-an-awesome-2013.png
+featureImage: ../../images/thank-you-for-an-awesome-2013.png
+thumb: ../../images/thank-you-for-an-awesome-2013.png
 attachments: 
-- ./thank-you-for-an-awesome-2013.png
+- ../../images/thank-you-for-an-awesome-2013.png
 abstract: ""
 tags: ['2013','blackberry','Gauteng','Geekulcha','Innovation','Microsoft','mLab','nokia','qualcomm','thank you']
 timeStamp: 2013-12-20T11:26:10

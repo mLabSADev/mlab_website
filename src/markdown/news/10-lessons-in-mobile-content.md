@@ -3,9 +3,10 @@ path: /10-lessons-in-mobile-content
 date: 29 Aug 2011
 title: 10-lessons-in-mobile-content
 author: mlab
-featureImage: ./.png
+featureImage: ../../images/codetribe-academy.png
+thumb: ../../images/codetribe-academy.png
 attachments: 
-- ./.png
+- ../../images/codetribe-academy.png
 abstract: ""
 tags: ['content','mobile']
 timeStamp: 2011-08-29T12:18:53

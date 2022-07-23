@@ -3,9 +3,10 @@ path: /codetribe-academy
 date: 08 Sep 2014
 title: codetribe-academy
 author: mlab
-featureImage: ./codetribe-academy.png
+featureImage: ../../images/codetribe-academy.png
+thumb: ../../images/codetribe-academy.png
 attachments: 
-- ./codetribe-academy.png
+- ../../images/codetribe-academy.png
 abstract: ""
 tags: ['code','CodeTribe','education','featured','Learn','mLab','mobile','pretoria','The Innovation Hub']
 timeStamp: 2014-09-08T14:33:39

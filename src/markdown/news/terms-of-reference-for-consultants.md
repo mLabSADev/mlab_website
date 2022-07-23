@@ -3,9 +3,10 @@ path: /terms-reference-consultants
 date: 14 Oct 2016
 title: terms-of-reference-for-consultants
 author: mlab
-featureImage: ./terms-of-reference-for-consultants.png
+featureImage: ../../images/terms-of-reference-for-consultants.png
+thumb: ../../images/terms-of-reference-for-consultants.png
 attachments: 
-- ./terms-of-reference-for-consultants.png
+- ../../images/terms-of-reference-for-consultants.png
 abstract: ""
 tags: []
 timeStamp: 2016-10-14T09:36:55

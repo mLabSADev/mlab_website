@@ -4,7 +4,8 @@ city: "Cape Town"
 province: "Western Cape"
 image: "https://images.unsplash.com/photo-1579772238266-8abd7531fea2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80"
 location: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13245.30265681491!2d18.417269!3d-33.907017!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x230a41d4c120d038!2smLab%20Southern%20Africa!5e0!3m2!1sen!2sza!4v1620139431891!5m2!1sen!2sza"
-featureImage: ../images/locations/CapeTown_mlab-1024x768.jpeg
+featureImage: ../../images/locations/CapeTown_mlab-1024x768.jpeg
+thumb: ../../images/locations/CapeTown_mlab-1024x768.jpeg
 programmes: ["codeX Academy", "Accelerator", "DEMOLA", "reHealthAfrica"]
 tel: ""
 physicalAddress: ["U8, Enterprise Building","The Innovation Hub","Mark Shuttleworth Street","Tshwane Pretoria","South Africa","0087"]
