@@ -2,4 +2,20 @@
   --primary-color: #94c73d;
   --secondary-color: #6b6b6b;
   --tertiary-color: #073f4e;
+
+  --shadow-color: 0deg 0% 80%;
+  --shadow-elevation-low: 0px 0.8px 0.6px hsl(var(--shadow-color) / 0.31),
+    0px 1px 0.8px -2.3px hsl(var(--shadow-color) / 0.21),
+    0px 2.4px 1.9px -4.6px hsl(var(--shadow-color) / 0.12);
+  --shadow-elevation-medium: 0px 0.8px 0.6px hsl(var(--shadow-color) / 0.32),
+    0px 1.4px 1.1px -1.5px hsl(var(--shadow-color) / 0.25),
+    0px 4.3px 3.5px -3.1px hsl(var(--shadow-color) / 0.18),
+    -0.1px 12.2px 9.9px -4.6px hsl(var(--shadow-color) / 0.1);
+  --shadow-elevation-high: 0px 0.8px 0.6px hsl(var(--shadow-color) / 0.34),
+    0px 1.3px 1.1px -0.8px hsl(var(--shadow-color) / 0.3),
+    0px 2.8px 2.3px -1.5px hsl(var(--shadow-color) / 0.25),
+    -0.1px 6.4px 5.2px -2.3px hsl(var(--shadow-color) / 0.21),
+    -0.1px 13.2px 10.7px -3.1px hsl(var(--shadow-color) / 0.16),
+    -0.2px 24.3px 19.7px -3.8px hsl(var(--shadow-color) / 0.12),
+    -0.4px 40.7px 33px -4.6px hsl(var(--shadow-color) / 0.07);
 }

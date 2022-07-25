@@ -11,7 +11,7 @@ function SectionTitle({ children = '' }) {
   return (
     <div className="main-st">
       <div className="underline-st">
-        <Typography variant={width > 880 ? "h3" : "h5"}>
+        <Typography variant={width > 880 ? "h4" : "h5"}>
           {children.toUpperCase()}
         </Typography>
       </div>

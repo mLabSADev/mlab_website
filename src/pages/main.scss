@@ -69,6 +69,13 @@ body {
   width: 100%;
   overflow-x: auto;
 }
+.techs-w {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 20px;
+  column-gap: 100px;
+}
 @media only screen and (max-width: 880px) {
   .video-i {
     padding: 0px;
@@ -77,5 +84,8 @@ body {
       border-radius: 0px;
       width: 100%;
     }
+  }
+  .techs-w {
+    grid-template-columns: 1fr;
   }
 }

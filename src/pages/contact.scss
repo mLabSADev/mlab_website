@@ -1,0 +1,41 @@
+.form-wraper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  .form-details {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .main-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+.locaton-wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  gap: 30px;
+  margin-bottom: 90px;
+  .location-image {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+  }
+  .location-details {
+    box-sizing: border-box;
+    width: 100%;
+    .map-locations {
+      box-sizing: border-box;
+      border: solid 0px black;
+    }
+  }
+}
+@media only screen and (max-width: 980px) {
+  .locaton-wrapper {
+    grid-template-columns: 1fr;
+  }
+}

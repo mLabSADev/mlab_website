@@ -145,6 +145,7 @@ module.exports = {
                 listItem: "b2",
                 "list[ordered=false]": "b2",
                 "list[ordered=true]": "b2",
+                span: "b2",
               },
             },
           },

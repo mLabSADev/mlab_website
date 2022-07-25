@@ -1,0 +1,13 @@
+.partner-p {
+  box-sizing: border-box;
+  background: red;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+}
+.list-partners {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}

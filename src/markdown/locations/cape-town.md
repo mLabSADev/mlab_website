@@ -8,11 +8,18 @@ featureImage: ../../images/locations/CapeTown_mlab-1024x768.jpeg
 thumb: ../../images/locations/CapeTown_mlab-1024x768.jpeg
 programmes: ["codeX Academy", "Accelerator", "DEMOLA", "reHealthAfrica"]
 tel: ""
-physicalAddress: ["U8, Enterprise Building","The Innovation Hub","Mark Shuttleworth Street","Tshwane Pretoria","South Africa","0087"]
+physicalAddress:
+  [
+    "U8, Enterprise Building",
+    "The Innovation Hub",
+    "Mark Shuttleworth Street",
+    "Tshwane Pretoria",
+    "South Africa",
+    "0087",
+  ]
 order: 4
 email: "capetown@gmail.com"
 ---
-Our Labs are dedicated spaces that provide a range of services to entrepreneurs, innovators, makers, developers and digital creatives through our different programmes. We also host a number of partner events, workshops and trainings within our labs and technology partners can select to run mLab facilitated activities or simply work with our events team to assist with setup and arrangements.
 
 mLab Western Cape provides primarily coaching, training and ecosystem consulting services. We are based at Workshop17 as part of a larger start-up ecosystem and does not directly provide dedicated work space. Interested parties are encouraged to visit [[](https://workshop17.co.za/va-waterfront) to learn more about their shared working services.
 mLab Western Cape is a proud partnership between mLab, the V&A Waterfront and The Department of Science and Technology

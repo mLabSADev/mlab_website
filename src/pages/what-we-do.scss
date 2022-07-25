@@ -1,0 +1,38 @@
+.wwd-section {
+  box-sizing: border-box;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 600px;
+  gap: 50px;
+  .wwd-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px;
+  }
+  .wwd-image {
+    box-sizing: border-box;
+    background: red;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+    .wwd-section {
+        grid-template-columns: 1fr 300px;
+        .wwd-image {
+            width: 100%;
+            height: 600px;
+        }
+    }
+}
+@media only screen and (max-width: 880px) {
+    .wwd-section {
+        grid-template-columns: 1fr;
+        .wwd-image {
+            width: 100%;
+            height: 600px;
+        }
+    }
+}

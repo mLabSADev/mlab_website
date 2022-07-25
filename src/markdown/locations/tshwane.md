@@ -13,6 +13,4 @@ order: 1
 email: "tshwane@gmail.com"
 ---
 
-Our Labs are dedicated spaces that provide a range of services to entrepreneurs, innovators, makers, developers and digital creatives through our different programmes. We also host a number of partner events, workshops and trainings within our labs and technology partners can select to run mLab facilitated activities or simply work with our events team to assist with setup and arrangements.
-
 mLab Tshwane is a proud partnership between mLab, The Innovation Hub and The Department of Science and Technology and represents the first mLab launched in South Africa in 2012 through the support of the current partners and the CSIR, the World Bank and the Finnish Ministry of Foreign Affairs.

@@ -1,0 +1,78 @@
+.main-wwd-c {
+  box-sizing: border-box;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+
+  .wwd-c {
+    box-sizing: border-box;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    .image-c {
+      box-sizing: border-box;
+      width: 100%;
+      height: 200px;
+      background: red;
+    }
+    .details-c {
+      box-sizing: border-box;
+      padding: 20px;
+    }
+  }
+}
+.about-page {
+  box-sizing: border-box;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+}
+.our-team-wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 50px 0px;
+  gap: 50px;
+  .card-tc {
+    box-sizing: border-box;
+    width: 100%;
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    .image-tc {
+      box-sizing: border-box;
+      width: 200px;
+      height: 200px;
+      background-color: red;
+    }
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .main-wwd-c {
+    .wwd-c {
+      grid-template-columns: 1fr;
+    }
+  }
+  .our-team-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+  .about-page {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (max-width: 880px) {
+  .main-wwd-c {
+    grid-template-columns: 1fr;
+    .wwd-c {
+      grid-template-columns: 1fr;
+    }
+  }
+  .our-team-wrapper {
+    grid-template-columns: 100%;
+  }
+}

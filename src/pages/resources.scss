@@ -1,0 +1,10 @@
+.mlab-report {
+  box-sizing: border-box;
+  width: 100%;
+  height: 900px;
+}
+@media only screen and (max-width: 880px) {
+    .mlab-report {
+        height: 600px;
+    }
+}

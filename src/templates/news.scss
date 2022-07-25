@@ -1,0 +1,99 @@
+.news-content {
+  box-sizing: border-box;
+  display: grid;
+  width: 100%;
+  grid-template-columns: calc(100% - 500px) 500px;
+  .stories-news {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+  .categories-news {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0px 0px;
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    .tags {
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      .tag-link {
+        border: solid 1px var(--secondary-color);
+        padding: 10px;
+      }
+    }
+  }
+}
+.pagination-link-news {
+  text-decoration: none;
+}
+.pagination-news {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 30px;
+}
+// i need to remve this
+@media only screen and (max-width: 20000px) {
+  .news-content {
+    grid-template-columns: 1fr;
+    .stories-news {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .categories-news {
+      padding: 20px 0px;
+      grid-row: 1;
+      .tags {
+        .tag-link {
+        }
+      }
+    }
+  }
+  .pagination-news {
+    padding: 50px 0px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .news-content {
+    grid-template-columns: 1fr;
+    .stories-news {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .categories-news {
+      padding: 20px 0px;
+      flex-direction: column;
+      .tags {
+        .tag-link {
+        }
+      }
+    }
+  }
+  .pagination-news {
+    padding: 50px 0px;
+  }
+}
+@media only screen and (max-width: 880px) {
+  .news-content {
+    grid-template-columns: 1fr;
+    .stories-news {
+      grid-template-columns: 1fr;
+    }
+
+    .categories-news {
+      padding: 20px 0px;
+      flex-direction: column;
+      .tags {
+        .tag-link {
+        }
+      }
+    }
+  }
+  .pagination-news {
+    padding: 50px 0px;
+  }
+}

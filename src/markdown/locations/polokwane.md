@@ -13,6 +13,4 @@ order: 2
 email: "limpopo@gmail.com"
 ---
 
-Our Labs are dedicated spaces that provide a range of services to entrepreneurs, innovators, makers, developers and digital creatives through our different programmes. We also host a number of partner events, workshops and trainings within our labs and technology partners can select to run mLab facilitated activities or simply work with our events team to assist with setup and arrangements.
-
 mLab Limpopo is a proud partnership between mLab, Limpopo Connexion and The Department of Science and Technology.
