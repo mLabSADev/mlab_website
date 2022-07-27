@@ -3,7 +3,8 @@ const { paginate } = require("gatsby-awesome-pagination");
 
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions;
-
+  const PostTemplate = path.resolve("src/templates/blog-post.js");
+  const TagsTemplate = path.resolve("src/templates/tags.js");
   const news = await graphql(`
     {
       allMarkdownRemark(
@@ -30,7 +31,67 @@ exports.createPages = async ({ actions, graphql }) => {
       }
     }
   `);
-
+  // Create pages from tags
+  const tags = await graphql(`
+    {
+      allMarkdownRemark(
+        filter: {
+          fileAbsolutePath: { regex: "/(news)/" }
+          frontmatter: { tags: { ne: null } }
+        }
+      ) {
+        edges {
+          node {
+            id
+            frontmatter {
+              tags
+            }
+          }
+        }
+      }
+    }
+  `);
+  const whatWeDo = await graphql(`
+    {
+      allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/(wwdSections)/" } }
+      ) {
+        edges {
+          node {
+            rawMarkdownBody
+            frontmatter {
+              path
+              title
+              link
+              thumb {
+                childImageSharp {
+                  gatsbyImageData(placeholder: DOMINANT_COLOR, width: 700)
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
+  news.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPage({
+      path: `/news${node.frontmatter.path}`,
+      component: PostTemplate,
+      context: { article: node.frontmatter.path },
+    });
+  });
+  tags.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    if (node.frontmatter.tags.length) {
+      node.frontmatter.tags.forEach((tag) => {
+        createPage({
+          path: `/news/tag/${tag.replaceAll(" ", "_")}`,
+          component: TagsTemplate,
+          context: { tag: tag },
+        });
+      });
+    }
+  });
   paginate({
     createPage, // The Gatsby `createPage` function
     items: news.data.allMarkdownRemark.edges, // An array of objects

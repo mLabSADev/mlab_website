@@ -9,6 +9,9 @@ module.exports = {
     youtube: "https://www.youtube.com/user/mLabSAStudio/videos",
     linkedin: "https://www.linkedin.com/company/mlab-south-africa/mycompany/",
     post: "https://mlab.co.za/wp-json/wp/v2/posts",
+    address:
+      "U8, Enterprise Building, The Innovation Hub, Mark Shuttleworth Street, Tshwane Pretoria, South Africa, 0087",
+    telephone: "+27 012 844 0240",
     description: `mLab Southern Africa is a registered Nonprofit organisation and Level 1 B-BBEE service provider focusing on Skills and Enterprise Development as well as Lean Innovation Facilitation and Supplier Development Support. We have proudly partnered with  founding partners The Ministry of Foreign Affairs of Finland, The Department of Science & Technology, The Innovation Hub, The CSIR, The V&A Waterfront and the World Bank`,
   },
   plugins: [

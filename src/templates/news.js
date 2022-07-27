@@ -3,20 +3,13 @@ import "./news.scss";
 import Layout from "../components/Layout/Layout";
 import Section from "../components/Section/Section";
 import Typography from "../components/Typography/Typography";
-import SectionTitle from "../components/SectionTitle/SectionTitle";
 import PageHeader from "../components/PageHeader/PageHeader";
 import NewsCard from "../components/NewsCard/NewsCard";
 import Modal from "../components/Modal/Modal";
 import Pagination from "@mui/material/Pagination";
-import Stack from "@mui/material/Stack";
 import { graphql, Link } from "gatsby";
-const Tags = () => {
-  return (
-    <div>
-      <Typography variant="s2">tagname</Typography>
-    </div>
-  );
-};
+import { getImage } from "gatsby-plugin-image";
+import Tag from "../components/Tag/Tag";
 const News = ({ data, pageContext, numberOfAllPages = [] }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const close = () => setModalOpen(false);
@@ -25,32 +18,48 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
   for (let i = 0; i < numberOfPages; i++) {
     numberOfAllPages.push(i + 1);
   }
-  const dataarray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-  console.log(data, pageContext, numberOfAllPages);
+  const news = data.allMarkdownRemark.edges;
+  let tags = [];
+  news.forEach((element) => {
+    let tag = element.node.frontmatter.tags;
+    tags = tags.concat(tag);
+  });
   //   onClick={() => (modalOpen ? close() : open())}
+
   return (
     <Layout>
       <PageHeader title="news" />
       <Section>
         {/* <SectionTitle>Articles</SectionTitle> */}
         <div className="news-content">
-          <div className="stories-news">
-            {data.allMarkdownRemark.edges.map((entry) => {
-              if (entry.node.frontmatter.path) {
-                return <NewsCard />;
-              } else return null;
-            })}
+          <div className="stories-n">
+            <Typography variant="h3">Articles</Typography>
+            <div className="stories-news">
+              {data.allMarkdownRemark.edges.map((entry, i) => {
+                const img = getImage(entry.node.frontmatter.featureImage);
+                const title = entry.node.frontmatter.title;
+                const excerpt = entry.node.excerpt;
+                const path = entry.node.frontmatter.path;
+                if (entry.node.frontmatter.path) {
+                  return (
+                    <NewsCard
+                      key={i}
+                      image={img}
+                      title={title}
+                      excerpt={excerpt}
+                      url={path}
+                    />
+                  );
+                } else return null;
+              })}
+            </div>
           </div>
 
           <div className="categories-news">
-            <Typography variant="h6">CATEGORIES</Typography>
+            <Typography variant="h6">Tags</Typography>
             <div className="tags">
-              {dataarray.map((item, i) => {
-                return (
-                  <Link className="tag-link">
-                    <Tags />
-                  </Link>
-                );
+              {tags.map((item, i) => {
+                return <Tag key={i} label={item} url={item} />;
               })}
             </div>
           </div>
@@ -62,19 +71,19 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
             const page = "/news";
             var url = typeof window !== "undefined" && window.location.pathname;
             var current = number === "" ? page : `/news/${number}`;
-            console.log({ url, current, number });
             if (url == current) {
               return (
-                <Link to={current}>
-                  <Pagination
-                    page={number === "" ? 1 : number}
-                    showFirstButton
-                    showLastButton
-                    variant="outlined"
-                    color="secondary"
-                    count={numberOfAllPages.length}
-                  />
-                </Link>
+                <Pagination
+                  page={number === "" ? 1 : number}
+                  showFirstButton
+                  showLastButton
+                  variant="outlined"
+                  color="secondary"
+                  count={numberOfAllPages.length}
+                  onChange={(elements, n) => {
+                    window.location.href = n === 1 ? "/news" : `/news/${n}`;
+                  }}
+                />
               );
             }
           })}

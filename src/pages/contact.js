@@ -1,16 +1,141 @@
-import React from "react";
+import React, { useState } from "react";
 import Layout from "../components/Layout/Layout";
 import PageHeader from "../components/PageHeader/PageHeader";
 import Section from "../components/Section/Section";
-import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Typography from "../components/Typography/Typography";
 import { graphql } from "gatsby";
-
-import { Formik } from "formik";
+import FormControl from "@mui/material/FormControl";
+import InputLabel from "@mui/material/InputLabel";
+import Input from "@mui/material/Input";
+import FormHelperText from "@mui/material/FormHelperText";
+import Button from "@mui/material/Button";
+import { useFormik } from "formik";
 import "./contact.scss";
-function contact({ data }) {
+const SignupForm = () => {
+  const validate = (values) => {
+    const errors = {};
+
+    if (!values.firstName) {
+      errors.firstName = "Required";
+    } else if (values.firstName.length > 15) {
+      errors.firstName = "Must be 15 characters or less";
+    }
+
+    if (!values.email) {
+      errors.email = "Required";
+    } else if (
+      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
+    ) {
+      errors.email = "Invalid email address";
+    }
+    if (!values.topic) {
+      errors.topic = "Required";
+    } else if (values.topic.length > 30) {
+      errors.topic = "Must be 30 characters or less";
+    }
+
+    if (!values.message) {
+      errors.message = "Required";
+    } else if (values.message.length > 500) {
+      errors.message = "Must be 500 characters or less";
+    }
+    return errors;
+  };
+
+  const formik = useFormik({
+    initialValues: {
+      firstName: "",
+      email: "",
+      topic: "",
+      message: "",
+    },
+    validate,
+    onSubmit: async (val) => {
+      console.log(val);
+    },
+  });
+
+  return (
+    <form className="form-formik" onSubmit={formik.handleSubmit}>
+      <FormControl>
+        <InputLabel htmlFor="firstName">Full Name</InputLabel>
+        <Input
+          id="firstName"
+          name="firstName"
+          type="text"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.firstName}
+        />
+        {formik.errors.firstName ? (
+          <Typography variant="caption" color="gray">
+            {formik.errors.firstName}
+          </Typography>
+        ) : null}
+      </FormControl>
+
+      <FormControl>
+        {" "}
+        <InputLabel htmlFor="email">Email Address</InputLabel>
+        <Input
+          id="email"
+          name="email"
+          type="email"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.email}
+        />
+        {formik.errors.email ? (
+          <Typography variant="caption" color="gray">
+            {formik.errors.email}
+          </Typography>
+        ) : null}
+      </FormControl>
+      <FormControl>
+        {" "}
+        <InputLabel htmlFor="topic">Topic</InputLabel>
+        <Input
+          id="topic"
+          name="topic"
+          type="text"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.topic}
+        />
+        {formik.errors.topic ? (
+          <Typography variant="caption" color="gray">
+            {formik.errors.topic}
+          </Typography>
+        ) : null}
+      </FormControl>
+      <FormControl>
+        {" "}
+        <InputLabel htmlFor="message">Message</InputLabel>
+        <Input
+          id="message"
+          name="message"
+          type="text"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.message}
+        />
+        {formik.errors.mesWsage ? (
+          <Typography variant="caption" color="gray">
+            {formik.errors.message}
+          </Typography>
+        ) : null}
+      </FormControl>
+      <Button type="submit" variant="contained" color="success">
+        Submit
+      </Button>
+    </form>
+  );
+};
+
+const Contact = ({ data }) => {
   const locations = data.allMarkdownRemark.edges;
-  console.log(locations);
+  const contactUs = data.site.siteMetadata;
   return (
     <Layout>
       <PageHeader title="Contact Us" />
@@ -19,69 +144,17 @@ function contact({ data }) {
           <div className="form-details">
             <Typography variant="h4">Contact Us</Typography>
             <div>
-              <Typography variant="h5">Our Addresses</Typography>
-              <Typography variant="b2">Our Addresses</Typography>
+              <Typography variant="h5">Address</Typography>
+              <Typography variant="b2">{contactUs.address}</Typography>
             </div>
             <div>
-              <Typography variant="h5">Our Addresses</Typography>
-              <Typography variant="b2">Our Addresses</Typography>
+              <Typography variant="h5">Phone</Typography>
+              <Typography variant="b2">{contactUs.telephone}</Typography>
             </div>
           </div>
           <div className="main-form">
-            <Typography variant="h4">Contact Us</Typography>
-            <Formik
-              initialValues={{ email: "", password: "" }}
-              validate={(values) => {
-                const errors = {};
-                if (!values.email) {
-                  errors.email = "Required";
-                } else if (
-                  !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-                ) {
-                  errors.email = "Invalid email address";
-                }
-                return errors;
-              }}
-              onSubmit={(values, { setSubmitting }) => {
-                setTimeout(() => {
-                  alert(JSON.stringify(values, null, 2));
-                  setSubmitting(false);
-                }, 400);
-              }}
-            >
-              {({
-                values,
-                errors,
-                touched,
-                handleChange,
-                handleBlur,
-                handleSubmit,
-                isSubmitting,
-                /* and other goodies */
-              }) => (
-                <form onSubmit={handleSubmit}>
-                  <input
-                    type="email"
-                    name="email"
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    value={values.email}
-                  />
-                  {errors.email && touched.email && errors.email}
-                  <input
-                    type="password"
-                    name="password"
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    value={values.password}
-                  />
-                  {errors.password && touched.password && errors.password}
-                  <button type="submit" disabled={isSubmitting}>
-                    Submit
-                  </button>
-                </form>
-              )}
-            </Formik>
+            <Typography variant="h4">We'd love to hear from you</Typography>
+            <SignupForm />
           </div>
         </div>
       </Section>
@@ -123,12 +196,18 @@ function contact({ data }) {
       })}
     </Layout>
   );
-}
+};
 
-export default contact;
+export default Contact;
 
 export const query = graphql`
   query ContactUs($title: String = "Contact Us") {
+    site(siteMetadata: {}) {
+      siteMetadata {
+        address
+        telephone
+      }
+    }
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/(locations)/" } }
       sort: { fields: [frontmatter___order], order: ASC }

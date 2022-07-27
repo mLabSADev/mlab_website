@@ -51,7 +51,7 @@ const Dropdown = ({ label, items, url }) => {
       </svg>
       <div className="dropdown--items">
         {items.map((item, i) => {
-          return <Item key={i} label={item.label}></Item>;
+          return <Item key={i} label={item.label} url={item.url}></Item>;
         })}
       </div>
     </Link>
@@ -95,19 +95,19 @@ export const links = [
   },
   {
     label: "What we do",
-    url: "/what-we-do",
+    url: null,
     items: [
       {
-        label: "Creating",
-        url: "/creating",
+        label: "Impact Through Technology",
+        url: "/what-we-do",
       },
       {
-        label: "Talent",
-        url: "",
+        label: "Unleashing Talent",
+        url: "/what-we-do",
       },
       {
-        label: "Startups",
-        url: "",
+        label: "Accelerating Startups",
+        url: "/what-we-do",
       },
     ],
   },

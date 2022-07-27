@@ -18,8 +18,7 @@
     background-color: white;
     position: relative;
     .closemodal {
-      position: absolute;
-      bottom: 0px;
+      position: fixed;
       right: 0px;
       background-color: red;
       button {

@@ -1,60 +1,92 @@
 import React from "react";
-import PageContainer from "../components/page-container";
 import { graphql } from "gatsby";
-import "./style.scss";
-import NewsEntry from "../components/news-entry";
+import "./news.scss";
+import Layout from "../components/Layout/Layout";
+import Typography from "../components/Typography/Typography";
+import Section from "../components/Section/Section";
+import PageHeader from "../components/PageHeader/PageHeader";
+import NewsCard from "../components/NewsCard/NewsCard";
+import { getImage } from "gatsby-plugin-image";
+import Tag from "../components/Tag/Tag";
 
 export default function TaggedPosts({ data, pageContext }) {
   const { tag } = pageContext;
+  const news = data.allMarkdownRemark.nodes;
+  let tags = [];
+  news.forEach((element) => {
+    let tag = element.frontmatter.tags;
+    tags = tags.concat(tag);
+  });
   return (
-    <PageContainer>
-      <div className="w-100 d-flex justify-content-start align-items-center bg-light mb-5 text-secondary pl-5">
-        <h2 className="h3 font-weight-bold m-4 p-4">
-          {tag ? `Articles Associated To: ${tag}` : "The Tag"}
-        </h2>
-      </div>
-      {data.allMarkdownRemark.nodes &&
-        data.allMarkdownRemark.nodes.map((entry) => (
-          <NewsEntry
-            key={entry.id}
-            excerpt={entry.excerpt}
-            {...entry.frontmatter}
-          />
-        ))}
-    </PageContainer>
+    <Layout>
+      <PageHeader title={tag.toUpperCase()} />
+      <Section>
+        {/* <SectionTitle>Articles</SectionTitle> */}
+        <div className="news-content">
+          <div className="stories-n">
+            <Typography variant="h5">Articles tagged - {tag}</Typography>
+            <div className="stories-news">
+              {news.map((entry, i) => {
+                const img = getImage(entry.frontmatter.featureImage);
+                const title = entry.frontmatter.title;
+                const excerpt = entry.excerpt;
+                const path = entry.frontmatter.path;
+                if (entry.frontmatter.path) {
+                  return (
+                    <NewsCard
+                      key={i}
+                      image={img}
+                      title={title}
+                      excerpt={excerpt}
+                      url={path}
+                    />
+                  );
+                } else return null;
+              })}
+            </div>
+          </div>
+
+          <div className="categories-news">
+            <Typography variant="h6">Tags</Typography>
+            <div className="tags">
+              {tags.map((item, i) => {
+                return <Tag key={i} label={item} url={item} />;
+              })}
+            </div>
+          </div>
+        </div>
+      </Section>
+    </Layout>
   );
 }
 
-const fun = () => {
-  // export
-  const query = graphql`
-    query TagPostsByPath($tag: [String]) {
-      allMarkdownRemark(filter: { frontmatter: { tags: { in: $tag } } }) {
-        nodes {
-          id
-          frontmatter {
-            author
-            date
-            title
-            path
-            abstract
-            tags
-            featureImage {
-              childImageSharp {
-                id
-                gatsbyImageData(formats: [AUTO, WEBP], width: 350)
-              }
-            }
-            attachments {
-              childImageSharp {
-                id
-                gatsbyImageData(formats: [AUTO, WEBP], width: 350)
-              }
+export const query = graphql`
+  query TagPostsByPath($tag: [String]) {
+    allMarkdownRemark(filter: { frontmatter: { tags: { in: $tag } } }) {
+      nodes {
+        id
+        frontmatter {
+          author
+          date
+          title
+          path
+          abstract
+          tags
+          featureImage {
+            childImageSharp {
+              id
+              gatsbyImageData(formats: [AUTO, WEBP], width: 350)
             }
           }
-          excerpt
+          attachments {
+            childImageSharp {
+              id
+              gatsbyImageData(formats: [AUTO, WEBP], width: 350)
+            }
+          }
         }
+        excerpt
       }
     }
-  `;
-};
+  }
+`;

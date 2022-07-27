@@ -1,15 +1,24 @@
 .form-wraper {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 50px;
   .form-details {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
   }
   .main-form {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
+    .form-formik {
+      box-sizing: border-box;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
   }
 }
 .locaton-wrapper {
@@ -35,6 +44,14 @@
   }
 }
 @media only screen and (max-width: 980px) {
+  .form-wraper {
+    grid-template-columns: 1fr;
+    .main-form {
+      .form-formik {
+        margin: 90px 0px;
+      }
+    }
+  }
   .locaton-wrapper {
     grid-template-columns: 1fr;
   }

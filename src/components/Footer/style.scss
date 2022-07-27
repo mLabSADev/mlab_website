@@ -1,11 +1,11 @@
-.footer {
+.footer-f {
   box-sizing: border-box;
   width: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.884)),
     url("../../images/backgrounds/download.png");
   padding: 70px 100px 40px 100px;
   background-size: cover;
-  .sections {
+  .sections-f{
     box-sizing: border-box;
     width: 100%;
     display: grid;
@@ -57,9 +57,9 @@
 
 }
 @media only screen and (max-width: 880px) {
-  .footer {
+  .footer-f {
     padding: 90px 20px;
-    .sections {
+    .sections-f {
       grid-template-columns: 1fr;
       div {
         border-bottom: solid 1px var(--secondary-color);

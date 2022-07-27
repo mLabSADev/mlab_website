@@ -4,7 +4,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
-
   .wwd-c {
     box-sizing: border-box;
     width: 100%;
@@ -13,15 +12,18 @@
     .image-c {
       box-sizing: border-box;
       width: 100%;
-      height: 200px;
-      background: red;
+      min-height: 200px;
     }
     .details-c {
       box-sizing: border-box;
       padding: 20px;
     }
   }
+  .wwd-c:hover {
+    box-shadow: var(--shadow-elevation-medium);
+  }
 }
+
 .about-page {
   box-sizing: border-box;
   width: 100%;
@@ -46,9 +48,11 @@
     align-items: center;
     .image-tc {
       box-sizing: border-box;
+      margin: auto;
       width: 200px;
       height: 200px;
-      background-color: red;
+      border-radius: 50%;
+      overflow: hidden;
     }
   }
 }

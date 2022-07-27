@@ -2,31 +2,54 @@ import React from "react";
 import "./style.scss";
 import Typography from "../Typography/Typography";
 import { Link } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
+import Button from "../Button/Button";
+/**
+ *
+ * @param {obj} image result from getImage
+ * @param {title} title title
+ * @param {string} excerpt excerpt
+ * @returns
+ */
+const NewsCard = ({ image, title, excerpt, url }) => {
+  let titleFix = "";
+  if (title) {
+    titleFix = title.replaceAll("-", " ");
+  } else {
+    if (title === undefined || title === "undefined") {
+      titleFix = "";
+    } else {
+      titleFix = title;
+    }
+  }
 
-const Button = () => {
-  return (
-    <div className="button-nc">
-      <div className="line-nc"></div>
-      <Link className="btn-nc">
-        <Typography variant="button">read more</Typography>
-      </Link>
-      <div className="line-nc"></div>
-    </div>
-  );
-};
-const NewsCard = () => {
   return (
     <div className="main-nc">
-      <div className="image-nc"></div>
+      {image ? (
+        <GatsbyImage
+          objectFit="cover"
+          image={image}
+          alt={title}
+          className="image-nc"
+        ></GatsbyImage>
+      ) : (
+        <div className="image-nc">
+          <iframe
+            src="https://my.spline.design/macbookprocopy-882fa58dd63ca60c52f69be266786223/"
+            frameborder="0"
+            width="100%"
+            height="100%"
+          ></iframe>
+        </div>
+      )}
+
       <div className="details-nc">
-        <Typography variant="h5">
-          Winners of the AgriTourZA programme
-        </Typography>
+        <Typography variant="h5">{titleFix.toUpperCase()}</Typography>
         <Typography color="gray" variant="b2">
-          It’s a win/win for these entrepreneurs and tourism and agricultural
+          {excerpt}
         </Typography>
       </div>
-      <Button />
+      <Button label="read more" type="link" url={`/news${url}`} />
     </div>
   );
 };

@@ -26,7 +26,7 @@ a {
   content: "";
   box-sizing: border-box;
   position: absolute;
-  top: 90%;
+  top: 95%;
   left: 0;
   right: 0;
   height: 2px;
@@ -46,7 +46,7 @@ a {
   margin: 0px 5px 0px 0px;
   position: relative;
   transition: ease-in-out 0.3s;
-  border-bottom: solid 1px rgba(0, 0, 0, 0);
+  border-bottom: solid 2px var(--primary-color);
 }
 .inactive {
   border-bottom: solid 1px rgba(0, 0, 0, 0);

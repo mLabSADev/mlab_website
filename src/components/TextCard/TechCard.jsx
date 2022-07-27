@@ -1,30 +1,39 @@
 import React from "react";
 import Button from "../Button/Button";
-import { StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import Typography from "../Typography/Typography";
 import "./style.scss";
-const TechCard = () => {
+const TechCard = ({ image, icon, title, description, handleClick }) => {
   return (
     <div className="main-tc">
       <div className="image-w">
         <div className="image">
-          <StaticImage
-          className="img"
-            src="../../images/qualcomm-snapdragon-sdk-for-android.png"
+          <GatsbyImage
+            objectFit="cover"
+            className="img"
+            image={image}
             alt=""
           />
         </div>
       </div>
       <div className="details">
-        <Typography variant="caption">27 Jan, 202x</Typography>
-        <Typography variant="h4">Tech Name</Typography>
+        <div className="details-text">
+          <div>
+            {/* <Typography variant="caption">27 Jan, 202x</Typography> */}
+            <Typography variant="h4">{title}</Typography>
+          </div>
+          <div className="icon-w">
+            <GatsbyImage
+              objectFit="cover"
+              className="icon-img"
+              image={icon}
+              alt=""
+            />
+          </div>
+        </div>
         <br></br>
-        <Typography variant="b2">
-          Complete details on each type of Personal Data collected are provided
-          in the dedicated sections of this privacy policy or by specific
-          explanation texts displayed prior to the Data collection.
-        </Typography>
-        <Button></Button>
+        <Typography variant="b2">{description}</Typography>
+        {/* <Button type="button" onClick={handleClick}></Button> */}
       </div>
     </div>
   );

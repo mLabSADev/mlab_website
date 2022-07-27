@@ -36,6 +36,21 @@ const dropIn = {
   },
 };
 
+/**
+ * @param {func} import
+ * import { AnimatePresence } from "framer-motion";
+ * @param {import} state
+ * const [modalOpen, setModalOpen] = useState(false);
+ * @param {func} close
+ * const close = () => setModalOpen(false);
+ * @param {func} open
+ * const open = () => setModalOpen(true);
+ * @param {string} presenseAttributes
+ * initial={false} exitBeforeEnter={true}
+ * @param {string} modalAttributes
+ *  modalOpen={modalOpen} handleClose={close}
+ */
+
 const Modal = ({ handleClose, children }) => {
   return (
     <Backdrop>
@@ -49,7 +64,9 @@ const Modal = ({ handleClose, children }) => {
       >
         {children}
         <div className="closemodal">
-          <button onClick={handleClose}><Typography variant="button">Close</Typography></button>
+          <button onClick={handleClose}>
+            <Typography variant="button">Close</Typography>
+          </button>
         </div>
       </motion.div>
     </Backdrop>

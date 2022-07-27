@@ -10,10 +10,11 @@ import SectionTitle from "../components/SectionTitle/SectionTitle";
 import Typography from "../components/Typography/Typography";
 import TechCard from "../components/TextCard/TechCard";
 import Modal from "../components/Modal/Modal";
-import { AnimatePresence, motion } from "framer-motion";
-const IndexPage = () => {
+import { graphql } from "gatsby";
+import { AnimatePresence } from "framer-motion";
+import { getImage } from "gatsby-plugin-image";
+const IndexPage = ({ data }) => {
   const [modalOpen, setModalOpen] = useState(false);
-
   const close = () => setModalOpen(false);
   const open = () => setModalOpen(true);
   const stats = [
@@ -49,33 +50,8 @@ const IndexPage = () => {
     },
   ];
   let width = window.screen.width;
-  const techs = [
-    {
-      title: "Tech Name 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget elit in ipsum auctor tempor. Nullam vestibulum metus quis arcu pulvinar, non rutrum arcu tristique. Nullam commodo accumsan porttitor. Phasellus condimentum maximus arcu, a bibendum nulla lobortis at. Aenean maximus auctor dolor at sodales. Pellentesque id lectus velit. Pellentesque eu purus non magna egestas pretium. Nunc eget mi consequat, mollis leo efficitur, faucibus ipsum. Nullam efficitur consequat condimentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;",
-    },
-    {
-      title: "Tech Name 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget elit in ipsum auctor tempor. Nullam vestibulum metus quis arcu pulvinar, non rutrum arcu tristique. Nullam commodo accumsan porttitor. Phasellus condimentum maximus arcu, a bibendum nulla lobortis at. Aenean maximus auctor dolor at sodales. Pellentesque id lectus velit. Pellentesque eu purus non magna egestas pretium. Nunc eget mi consequat, mollis leo efficitur, faucibus ipsum. Nullam efficitur consequat condimentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;",
-    },
-    {
-      title: "Tech Name 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget elit in ipsum auctor tempor. Nullam vestibulum metus quis arcu pulvinar, non rutrum arcu tristique. Nullam commodo accumsan porttitor. Phasellus condimentum maximus arcu, a bibendum nulla lobortis at. Aenean maximus auctor dolor at sodales. Pellentesque id lectus velit. Pellentesque eu purus non magna egestas pretium. Nunc eget mi consequat, mollis leo efficitur, faucibus ipsum. Nullam efficitur consequat condimentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;",
-    },
-    {
-      title: "Tech Name 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget elit in ipsum auctor tempor. Nullam vestibulum metus quis arcu pulvinar, non rutrum arcu tristique. Nullam commodo accumsan porttitor. Phasellus condimentum maximus arcu, a bibendum nulla lobortis at. Aenean maximus auctor dolor at sodales. Pellentesque id lectus velit. Pellentesque eu purus non magna egestas pretium. Nunc eget mi consequat, mollis leo efficitur, faucibus ipsum. Nullam efficitur consequat condimentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;",
-    },
-    {
-      title: "Tech Name 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget elit in ipsum auctor tempor. Nullam vestibulum metus quis arcu pulvinar, non rutrum arcu tristique. Nullam commodo accumsan porttitor. Phasellus condimentum maximus arcu, a bibendum nulla lobortis at. Aenean maximus auctor dolor at sodales. Pellentesque id lectus velit. Pellentesque eu purus non magna egestas pretium. Nunc eget mi consequat, mollis leo efficitur, faucibus ipsum. Nullam efficitur consequat condimentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;",
-    },
-  ];
+  const news = data.news.edges;
+  const techs = data.theTech.edges;
   return (
     <Layout>
       <CarouselSlider />
@@ -148,30 +124,45 @@ const IndexPage = () => {
           venenatis neque at, pulvinar quam.{" "}
         </Typography>
         <div className="hs">
-          <NewsCard />
-          <NewsCard />
-          <NewsCard />
-          <NewsCard />
-          <NewsCard />
-          <NewsCard />
-          <NewsCard />
-          <NewsCard />
-          <NewsCard />
+          {news.map((item, i) => {
+            const image = getImage(item.node.frontmatter.thumb);
+            return (
+              <NewsCard
+                image={image}
+                excerpt={item.node.excerpt}
+                title={item.node.frontmatter.title.replace("-", " ")}
+                url={item.node.frontmatter.path}
+              />
+            );
+          })}
         </div>
         <div className=""></div>
       </Section>
       <Section>
         <SectionTitle>our tech</SectionTitle>
-        <Typography center={true} variant="b1">
+        {/* <Typography center={true} variant="b1">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at eros
           rutrum, tempus dui quis, vulputate nisi. Donec ut ex suscipit,
           venenatis neque at, pulvinar quam.{" "}
-        </Typography>
+        </Typography> */}
         <br></br>
         <br></br>
         <div className="techs-w">
           {techs.map((item, i) => {
-            return <TechCard key={i} />;
+            const img = getImage(item.node.frontmatter.screenshot);
+            const icon = getImage(item.node.frontmatter.icon);
+            const title = item.node.frontmatter.appName;
+            const description = item.node.frontmatter.description;
+            return (
+              <TechCard
+                key={i}
+                title={title}
+                image={img}
+                icon={icon}
+                description={description}
+                handleClick={open}
+              />
+            );
           })}
         </div>
       </Section>
@@ -180,3 +171,57 @@ const IndexPage = () => {
 };
 
 export default IndexPage;
+
+export const query = graphql`
+  query HomeQuery {
+    news: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/(news)/" } }
+      limit: 5
+    ) {
+      edges {
+        node {
+          frontmatter {
+            tags
+            path
+            title
+            date
+            author
+            thumb {
+              childImageSharp {
+                id
+                gatsbyImageData(layout: FULL_WIDTH, quality: 100, width: 300)
+              }
+            }
+          }
+          excerpt
+        }
+      }
+    }
+    theTech: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/(theTech)/" } }
+      limit: 5
+    ) {
+      edges {
+        node {
+          frontmatter {
+            appName
+            description
+            screenshot {
+              childImageSharp {
+                gatsbyImageData(width: 700, quality: 100, placeholder: BLURRED)
+                id
+              }
+            }
+            icon {
+              childImageSharp {
+                gatsbyImageData(width: 700, quality: 100, placeholder: BLURRED)
+                id
+              }
+            }
+          }
+          excerpt
+        }
+      }
+    }
+  }
+`;

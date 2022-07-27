@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./who-we-are.scss";
 import { graphql } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
+import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
 import Section from "../components/Section/Section";
 import SectionTitle from "../components/SectionTitle/SectionTitle";
 import Typography from "../components/Typography/Typography";
@@ -9,22 +9,22 @@ import { navigate } from "gatsby";
 import Link from "gatsby-link";
 import Layout from "../components/Layout/Layout";
 import PageHeader from "../components/PageHeader/PageHeader";
+import Button from "../components/Button/Button";
+import { AnimatePresence } from "framer-motion";
+import Modal from "../components/Modal/Modal";
 const WhatWeDoCard = ({ image, title, description }) => {
   return (
     <div className="wwd-c">
-      <div className="image-c"></div>
+      <GatsbyImage
+        objectFit="cover"
+        image={image}
+        className="image-c"
+        alt=""
+      ></GatsbyImage>
       <div className="details-c">
-        <Typography variant="h4">Nurturing Talent</Typography>
-        <Typography variant="b2">
-          Blender is a work of passion. We do this with great satisfaction
-          because it has meaning for many people all over the world. It’s a
-          special treat to work for a project that is highly appreciated by top
-          industry professionals as well as by hobbyists. It’s a very special
-          treat to work for a company that has no sales department or investors.
-          And it’s especially a treat to work on Free Software, on a public open
-          source project which has a strong connection with an amazing community
-          of online contributors.
-        </Typography>
+        <Typography variant="h4">{title}</Typography>
+        <Typography variant="b2">{description}</Typography>
+        <Button label="read more" type="link" url="/what-we-do" />
       </div>
     </div>
   );
@@ -33,12 +33,16 @@ const TeamCard = ({ fullName, position, image }) => {
   return (
     <div className="card-tc">
       <Typography variant="h5" center>
-        Keketso Matsuma
+        {fullName}
       </Typography>
       <Typography variant="s2" center color="gray">
-        UI/UX designer
+        {position}
       </Typography>
-      <div className="image-tc"></div>
+      <GatsbyImage
+        image={image}
+        alt={fullName}
+        className="image-tc"
+      ></GatsbyImage>
     </div>
   );
 };
@@ -46,15 +50,15 @@ const WhoWeAre = ({ data }) => {
   // controls which team to show per location
   const [locations, setLocations] = useState({});
   const [currentLocation, setCurrentLocation] = useState("gauteng");
-
-  // sets the teams
+  const [modalOpen, setModalOpen] = useState(false);
+  // sets the locations
   const locs = data.team.edges.reduce((acc, cur) => {
     if (!acc[cur.node.frontmatter.location])
       acc[cur.node.frontmatter.location] = [];
     acc[cur.node.frontmatter.location].push({ ...cur });
     return acc;
   }, {});
-
+  const team = data.team.edges;
   // triggers the setting
   useEffect(() => {
     setLocations(locs);
@@ -62,6 +66,8 @@ const WhoWeAre = ({ data }) => {
 
   return (
     <Layout>
+      <AnimatePresence>{modalOpen && <Modal></Modal>}</AnimatePresence>
+
       <PageHeader title="WHO WE ARE" />
       <Section>
         <div className="about-page">
@@ -92,7 +98,11 @@ const WhoWeAre = ({ data }) => {
             </Typography>
           </div>
           <div>
-            <StaticImage src="../images/mlabstaff.png" />
+            <StaticImage
+              objectFit="cover"
+              src="../images/mlabstaff.png"
+              alt="mlab team"
+            />
           </div>
         </div>
       </Section>
@@ -106,10 +116,16 @@ const WhoWeAre = ({ data }) => {
       <Section>
         <SectionTitle>what we do</SectionTitle>
         <div className="main-wwd-c">
-          <WhatWeDoCard></WhatWeDoCard>
-          <WhatWeDoCard></WhatWeDoCard>
-          <WhatWeDoCard></WhatWeDoCard>
-          <WhatWeDoCard></WhatWeDoCard>
+          {data.whatWeDo.edges.map((card, i) => {
+            const img = getImage(card.node.frontmatter.featureImage);
+            return (
+              <WhatWeDoCard
+                title={card.node.frontmatter.title}
+                description={card.node.excerpt}
+                image={img}
+              />
+            );
+          })}
         </div>
       </Section>
       <Section>
@@ -128,10 +144,16 @@ const WhoWeAre = ({ data }) => {
           quality monitoring to agricultural empowerment apps.
         </Typography>
         <div className="our-team-wrapper">
-          <TeamCard />
-          <TeamCard />
-          <TeamCard />
-          <TeamCard />
+          {team.map((t, i) => {
+            const img = getImage(t.node.frontmatter.thumb);
+            return (
+              <TeamCard
+                image={img}
+                fullName={t.node.frontmatter.name}
+                position={t.node.frontmatter.position}
+              />
+            );
+          })}
         </div>
       </Section>
     </Layout>
@@ -156,7 +178,6 @@ export const query = graphql`
     ) {
       edges {
         node {
-          id
           frontmatter {
             name
             position
@@ -164,6 +185,12 @@ export const query = graphql`
             location
             tags
             path
+            thumb {
+              childImageSharp {
+                id
+                gatsbyImageData(layout: FULL_WIDTH, quality: 100, width: 300)
+              }
+            }
           }
           excerpt
         }

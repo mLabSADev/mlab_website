@@ -66,8 +66,8 @@ const Footer = () => {
   const { facebook, linkedin, twitter, youtube, description } =
     data.site.siteMetadata;
   return (
-    <div className="footer">
-      <div className="sections">
+    <div className="footer-f">
+      <div className="sections-f">
         <div className="logo-w">
           <Logo />
           <br />
@@ -110,7 +110,11 @@ const Footer = () => {
           </Typography>
           <br />
           {links.map((item, i) => {
-            return <Item key={i} label={item.label} url={item.url} />;
+            if (item.url) {
+              return <Item key={i} label={item.label} url={item.url} />;
+            } else {
+              return null;
+            }
           })}
         </div>
         <div className="address-w">
