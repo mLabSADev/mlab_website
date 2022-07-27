@@ -52,9 +52,10 @@ const IndexPage = ({ data }) => {
   let width = window.screen.width;
   const news = data.news.edges;
   const techs = data.theTech.edges;
+  const banners = data.banners.edges;
   return (
     <Layout>
-      <CarouselSlider />
+      <CarouselSlider data={banners} />
       <AnimatePresence
         initial={false}
         exitBeforeEnter={true}
@@ -68,14 +69,6 @@ const IndexPage = ({ data }) => {
       </AnimatePresence>
 
       <Section>
-        {/* <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          className="save-button"
-          onClick={() => (modalOpen ? close() : open())}
-        >
-          Launch modal
-        </motion.button> */}
         <SectionTitle> Impact Statistics</SectionTitle>
         <div className="responsive-column">
           <div>
@@ -194,6 +187,24 @@ export const query = graphql`
             }
           }
           excerpt
+        }
+      }
+    }
+    banners: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/(banners)/" } }
+    ) {
+      edges {
+        node {
+          rawMarkdownBody
+          frontmatter {
+            title
+            registration
+            thumb {
+              childImageSharp {
+                gatsbyImageData(width: 700,  quality: 100,)
+              }
+            }
+          }
         }
       }
     }
