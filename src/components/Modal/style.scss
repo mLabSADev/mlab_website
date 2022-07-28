@@ -20,6 +20,9 @@
     .closemodal {
       position: fixed;
       right: 0px;
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
       background-color: red;
       button {
         background-color: red;

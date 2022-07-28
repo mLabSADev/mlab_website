@@ -81,9 +81,8 @@ const SubPage = ({ title, data }) => {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </Section>
-      <Section>
-        <CodeTribe />
-      </Section>
+
+      <CodeTribe />
     </div>
   );
 };
