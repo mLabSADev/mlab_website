@@ -85,7 +85,7 @@ exports.createPages = async ({ actions, graphql }) => {
     if (node.frontmatter.tags.length) {
       node.frontmatter.tags.forEach((tag) => {
         createPage({
-          path: `/news/tag/${tag.replace(" ", "_")}`,
+          path: `/news/tag/${tag.replaceAll(" ", "_")}`,
           component: TagsTemplate,
           context: { tag: tag },
         });
