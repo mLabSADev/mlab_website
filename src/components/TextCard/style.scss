@@ -28,7 +28,7 @@
       }
     }
   }
-  .details {
+  .details-w {
     .details-text {
       box-sizing: border-box;
       width: 100%;
@@ -48,9 +48,11 @@
 }
 @media only screen and (max-width: 1400px) {
   .main-tc {
-    grid-template-columns: 100%;
+    grid-template-columns: 1fr;
     padding: 20px 0px 0px 0px;
     .image-w {
+      width: 100%;
+      height: 100%;
       .image {
         width: 100%;
         height: 300px;
@@ -58,7 +60,7 @@
         margin: auto;
       }
     }
-    .details {
+    .details-w {
       padding: 20px;
     }
   }

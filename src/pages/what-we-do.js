@@ -161,7 +161,7 @@ export const query = graphql`
             video
             thumb {
               childImageSharp {
-                gatsbyImageData(placeholder: DOMINANT_COLOR, width: 700)
+                gatsbyImageData(placeholder: DOMINANT_COLOR, width: 500)
               }
             }
           }

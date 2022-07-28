@@ -16,7 +16,7 @@ const TechCard = ({ image, icon, title, description, handleClick }) => {
           />
         </div>
       </div>
-      <div className="details">
+      <div className="details-w">
         <div className="details-text">
           <div>
             {/* <Typography variant="caption">27 Jan, 202x</Typography> */}
