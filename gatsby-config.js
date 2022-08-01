@@ -40,19 +40,37 @@ module.exports = {
             siteUrl
           }
         }
-        allSitePage {
+
+        nodePaths: allSitePage {
           nodes {
             path
           }
         }
+        edgesPath: allSitePage {
+          edges {
+            node {
+              path
+            }
+          }
+        }
       }`,
         resolveSiteUrl: ({ site }) => site.siteMetadata.siteUrl,
-        serialize: ({ site, allSitePage }) =>
-          allSitePage.nodes.map((node, i) => ({
-            url: site.siteMetadata.siteUrl + node.path,
-            changefreq: `weekly`,
-            priority: 0.7,
-          })),
+        serialize: ({ site, nodePaths }) => {
+          if (nodePaths?.nodes) {
+            nodePaths.nodes.map((node, i) => ({
+              url: site.siteMetadata.siteUrl + node.path,
+              changefreq: `weekly`,
+              priority: 0.7,
+            }));
+          }
+          if (edgesPath?.edges) {
+            nodePaths.nodes.map((node, i) => ({
+              url: site.siteMetadata.siteUrl + node.path,
+              changefreq: `weekly`,
+              priority: 0.7,
+            }));
+          }
+        },
       },
     },
 
