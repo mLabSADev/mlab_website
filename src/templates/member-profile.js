@@ -21,7 +21,15 @@ export default function MemberProfile({ data }) {
                   <button
                     type="button"
                     className="button"
-                    onClick={() => window.history.back()}
+                    onClick={() => {
+                      if (typeof window.history !== "undefined") {
+                        window.history.back();
+                      } else {
+                        if (typeof history !== "undefined") {
+                          history.back();
+                        }
+                      }
+                    }}
                   >
                     Back
                   </button>
@@ -77,26 +85,25 @@ export default function MemberProfile({ data }) {
 const fun = () => {
   // export
   const query = graphql`
-  query MemberByPath($member: String!) {
-    markdownRemark(frontmatter: { path: { eq: $member } }) {
-      id
-      frontmatter {
-        path
-        name
-        position
-        department
-        since
-        tags
-        profilePicture {
-          childImageSharp {
-            id
-            gatsbyImageData(formats: [AUTO, WEBP], width: 350)
+    query MemberByPath($member: String!) {
+      markdownRemark(frontmatter: { path: { eq: $member } }) {
+        id
+        frontmatter {
+          path
+          name
+          position
+          department
+          since
+          tags
+          profilePicture {
+            childImageSharp {
+              id
+              gatsbyImageData(formats: [AUTO, WEBP], width: 350)
+            }
           }
         }
+        html
       }
-      html
     }
-  }
-`;
-
-}
+  `;
+};

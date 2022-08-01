@@ -7,7 +7,10 @@ import Typography from "../Typography/Typography";
  * @returns
  */
 function SectionTitle({ children = '' }) {
-  let width = window.screen.width;
+  let width =
+  typeof window.screen.width !== "undefined"
+    ? window.screen.width
+    : 1000;
   return (
     <div className="main-st">
       <div className="underline-st">

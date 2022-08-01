@@ -3,7 +3,10 @@ import { StaticImage } from "gatsby-plugin-image";
 import Typography from "../Typography/Typography";
 import "./style.scss";
 const CategoryStats = ({ number, label, image }) => {
-  let width = window.screen.width;
+  let width =
+  typeof window.screen.width !== "undefined"
+    ? typeof window.screen.width
+    : 1000;
   return (
     <div className="main-sc">
       {/* <GatsbyImage className="image-cs" image={} alt={label} /> */}

@@ -81,7 +81,11 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
                   color="secondary"
                   count={numberOfAllPages.length}
                   onChange={(elements, n) => {
-                    window.location.href = n === 1 ? "/news" : `/news/${n}`;
+                    if (typeof window !== "undefined") {
+                      window.location.href = n === 1 ? "/news" : `/news/${n}`;
+                    } else {
+                      console.log("Server cannot execute");
+                    }
                   }}
                 />
               );

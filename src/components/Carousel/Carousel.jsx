@@ -4,7 +4,10 @@ import Typography from "../Typography/Typography";
 import "./style.scss";
 import Carousel from "react-material-ui-carousel";
 const CarouselItem = ({ title, text, image, reg }) => {
-  let width = window.screen.width;
+  let width =
+    typeof window.screen.width !== "undefined"
+      ? typeof window.screen.width
+      : 1000;
   return (
     <div className="item-c">
       <GatsbyImage className="item-img" image={image} alt={title} />

@@ -49,7 +49,10 @@ const IndexPage = ({ data }) => {
       label: "impacted by our tech",
     },
   ];
-  let width = window.screen.width;
+  let width =
+  typeof window.screen.width !== "undefined"
+    ? typeof window.screen.width
+    : 1000;
   const news = data.news.edges;
   const techs = data.theTech.edges;
   const banners = data.banners.edges;
