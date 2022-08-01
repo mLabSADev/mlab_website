@@ -49,10 +49,7 @@ const IndexPage = ({ data }) => {
       label: "impacted by our tech",
     },
   ];
-  let width =
-  typeof window !== "undefined"
-    ?  window.screen.width
-    : 1000;
+  let width = typeof window !== "undefined" ? window.screen.width : 1000;
   const news = data.news.edges;
   const techs = data.theTech.edges;
   const banners = data.banners.edges;
@@ -204,7 +201,7 @@ export const query = graphql`
             registration
             thumb {
               childImageSharp {
-                gatsbyImageData(width: 700,  quality: 100,)
+                gatsbyImageData(width: 700, quality: 100)
               }
             }
           }

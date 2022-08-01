@@ -6,12 +6,12 @@ import Typography from "../Typography/Typography";
  * @param {children} string text
  * @returns
  */
-function SectionTitle({ children = '' }) {
-  let width = 0
-  if (typeof window !== 'undefined') {
-    width = window.screen.width
+function SectionTitle({ children = "" }) {
+  let width = 0;
+  if (typeof window !== "undefined") {
+    width = window.screen.width;
   } else {
-    width = 1000
+    width = 1000;
   }
   return (
     <div className="main-st">
