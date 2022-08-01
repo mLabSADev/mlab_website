@@ -40,37 +40,19 @@ module.exports = {
             siteUrl
           }
         }
-
-        nodePaths: allSitePage {
+        allSitePage {
           nodes {
             path
           }
         }
-        edgesPath: allSitePage {
-          edges {
-            node {
-              path
-            }
-          }
-        }
       }`,
-        resolveSiteUrl: ({ site }) => site.siteMetadata.siteUrl,
-        serialize: ({ site, nodePaths }) => {
-          if (nodePaths?.nodes) {
-            nodePaths.nodes.map((node, i) => ({
-              url: site.siteMetadata.siteUrl + node.path,
-              changefreq: `weekly`,
-              priority: 0.7,
-            }));
-          }
-          if (edgesPath?.edges) {
-            nodePaths.nodes.map((node, i) => ({
-              url: site.siteMetadata.siteUrl + node.path,
-              changefreq: `weekly`,
-              priority: 0.7,
-            }));
-          }
-        },
+        resolveSiteUrl: async ({ site }) => await site.siteMetadata.siteUrl,
+        serialize: async ({ site, allSitePage }) =>
+          await allSitePage.nodes.map((node) => ({
+            url: site.siteMetadata.siteUrl + node.path,
+            changefreq: `weekly`,
+            priority: 0.7,
+          })),
       },
     },
 
