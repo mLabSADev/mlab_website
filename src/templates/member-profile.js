@@ -22,7 +22,7 @@ export default function MemberProfile({ data }) {
                     type="button"
                     className="button"
                     onClick={() => {
-                      if (typeof window.history !== "undefined") {
+                      if (typeof window !== "undefined") {
                         window.history.back();
                       } else {
                         if (typeof history !== "undefined") {

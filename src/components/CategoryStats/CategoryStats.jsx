@@ -4,8 +4,8 @@ import Typography from "../Typography/Typography";
 import "./style.scss";
 const CategoryStats = ({ number, label, image }) => {
   let width =
-  typeof window.screen.width !== "undefined"
-    ? typeof window.screen.width
+  typeof window !== "undefined"
+    ? window.screen.width
     : 1000;
   return (
     <div className="main-sc">

@@ -50,8 +50,8 @@ const IndexPage = ({ data }) => {
     },
   ];
   let width =
-  typeof window.screen.width !== "undefined"
-    ? typeof window.screen.width
+  typeof window !== "undefined"
+    ?  window.screen.width
     : 1000;
   const news = data.news.edges;
   const techs = data.theTech.edges;
