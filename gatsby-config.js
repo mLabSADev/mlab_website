@@ -47,12 +47,13 @@ module.exports = {
         }
       }`,
         resolveSiteUrl: async ({ site }) => await site.siteMetadata.siteUrl,
-        serialize: async ({ site, allSitePage }) =>
-          await allSitePage.nodes.map((node) => ({
-            url: site.siteMetadata.siteUrl + node.path,
-            changefreq: `weekly`,
-            priority: 0.7,
-          })),
+        serialize: async ({ site, allSitePage }) => {
+          // await allSitePage.nodes.map((node) => ({
+          //   url: site.siteMetadata.siteUrl + node.path,
+          //   changefreq: `weekly`,
+          //   priority: 0.7,
+          // }));
+        },
       },
     },
 
