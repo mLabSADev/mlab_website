@@ -41,16 +41,14 @@ module.exports = {
           }
         }
         allSitePage {
-          edges {
-            node {
-              path
-            }
+          nodes {
+            path
           }
         }
       }`,
         resolveSiteUrl: ({ site }) => site.siteMetadata.siteUrl,
         serialize: ({ site, allSitePage }) =>
-          allSitePage.edges.map((node) => ({
+          allSitePage.nodes.map((node, i) => ({
             url: site.siteMetadata.siteUrl + node.path,
             changefreq: `weekly`,
             priority: 0.7,
