@@ -7,6 +7,11 @@
   "keywords": [
     "gatsby"
   ],
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  },
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
@@ -22,9 +27,13 @@
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "@reduxjs/toolkit": "^1.8.3",
+    "@sendgrid/mail": "7.4.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
     "firebase": "^9.9.1",
     "firebase-tools": "^11.3.0",
     "formik": "^2.2.9",
+    "fs": "^0.0.1-security",
     "gatsby": "^4.19.0",
     "gatsby-awesome-pagination": "^0.3.8",
     "gatsby-plugin-disqus": "^1.2.4",
@@ -49,6 +58,7 @@
     "gatsby-transformer-sharp": "^4.19.0",
     "install": "^0.13.0",
     "netlify-cms-app": "^2.15.72",
+    "path-browserify": "^1.0.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-helmet": "^6.1.0",

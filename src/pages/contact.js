@@ -12,8 +12,9 @@ import FormHelperText from "@mui/material/FormHelperText";
 import Button from "@mui/material/Button";
 import { useFormik } from "formik";
 import "./contact.scss";
-
-
+// import * as sgMail from "@sendgrid/mail";
+const { SENDGRID_API } = require("../../keys");
+// sgMail.setApiKey(SENDGRID_API);
 const SignupForm = () => {
   const validate = (values) => {
     const errors = {};
@@ -45,6 +46,14 @@ const SignupForm = () => {
     return errors;
   };
 
+  const PostData = (val) => {
+    const send = {
+      To: "keketsomatsuma88@gmail.com",
+      from: val.email,
+      subject: val.topic,
+      text: val.message,
+    };
+  };
   const formik = useFormik({
     initialValues: {
       firstName: "",

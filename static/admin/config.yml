@@ -1,0 +1,27 @@
+backend:
+  name: git-gateway
+  branch: master
+
+site_url: https://mlab.netlify.app/
+
+media_folder: src/images
+public_folder: src/markdown
+
+collections:
+  - name: "news"
+    label: "News"
+    folder: "src/markdown/news"
+    create: true
+    path: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Date", name: "date", widget: "date", format: 'MMM D, YY' }
+      - { label: "Image", name: "thumb", widget: "image" }
+      - {
+          label: "Category",
+          name: "category",
+          widget: "select",
+          options: ["Talent", "Startup", "Entrepreneurship"],
+        }
+      - { label: "Body", name: "body", widget: "markdown" }

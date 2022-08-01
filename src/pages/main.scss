@@ -5,23 +5,19 @@ body {
   margin: 0px;
 }
 
-/* width */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: #ffffff;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--primary-color);
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: var(--secondary-color);
 }
