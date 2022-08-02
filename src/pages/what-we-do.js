@@ -1,22 +1,23 @@
 import React, { useState } from "react";
 import "./what-we-do.scss";
+import Layout from "../components/Layout/Layout";
 import { graphql } from "gatsby";
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import Button from "../components/Button/Button";
 import Typography from "../components/Typography/Typography";
-import Layout from "../components/Layout/Layout";
 import PageHeader from "../components/PageHeader/PageHeader";
 import Section from "../components/Section/Section";
 import Modal from "../components/Modal/Modal";
 import { AnimatePresence } from "framer-motion";
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 const CodeTribe = ({ state = true }) => {
   return (
     <div className="codeTribe">
       <div className="codeTribe-bg">
         <iframe
+          title="bg"
           className="ct-bg"
           src="https://my.spline.design/interactivespherescopy-9c716a85bc147c41a41c8e55bf0dfd1e/"
-          frameborder="0"
+          frameBorder="0"
         ></iframe>
       </div>
       <div className="codeTribe-details">
@@ -66,7 +67,7 @@ const SubPage = ({ title, data }) => {
           <Typography variant="h3" color="light" center>
             {title}
           </Typography>
-          <Typography variant="b2" center color="light">
+          <Typography variant="b2" center="true" color="light">
             {data.node.rawMarkdownBody}
           </Typography>
         </div>
@@ -101,7 +102,7 @@ const WhatWeDo = ({ data }) => {
           </Modal>
         )}
       </AnimatePresence>
-      <PageHeader title={"WHAT WE DO"} />
+      <PageHeader title={"WHAT WE DO"} index={2}/>
       {sectionData.map((item, i) => {
         const title = item.node.frontmatter.title;
         const excerpt = item.node.excerpt;

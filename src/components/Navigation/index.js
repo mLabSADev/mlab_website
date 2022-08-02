@@ -5,7 +5,11 @@ import Typography from "../Typography/Typography";
 
 export const Item = ({ label, url }) => {
   return (
-    <Link to={url} activeClassName="active" className="item">
+    <Link
+      to={url === "undefined" ? "" : url}
+      activeClassName="active"
+      className="item"
+    >
       <Typography color="light" variant="overline">
         {label}
       </Typography>
@@ -36,7 +40,7 @@ const MenuToggle = (props) => {
 };
 const Dropdown = ({ label, items, url }) => {
   return (
-    <Link to={url} className="dropdown">
+    <div className="dropdown">
       <Typography variant="overline">{label}</Typography>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +58,7 @@ const Dropdown = ({ label, items, url }) => {
           return <Item key={i} label={item.label} url={item.url}></Item>;
         })}
       </div>
-    </Link>
+    </div>
   );
 };
 const MobileDropdown = ({ label, items, open, onClick }) => {
@@ -193,6 +197,7 @@ const Navigation = ({ title, route }) => {
           <a
             href="http://codetribe.co.za/"
             target="_blank"
+            rel="noreferrer"
             className="codetribe-link"
           >
             <Typography variant="s2" color="light">

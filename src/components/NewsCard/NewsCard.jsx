@@ -1,7 +1,6 @@
 import React from "react";
 import "./style.scss";
 import Typography from "../Typography/Typography";
-import { Link } from "gatsby";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import Button from "../Button/Button";
 /**
@@ -33,7 +32,7 @@ const NewsCard = ({ image, title, excerpt, url }) => {
           className="image-nc"
         ></GatsbyImage>
       ) : (
-        <StaticImage src="../../assets/placeholder.jpg" className="image-nc" />
+        <StaticImage src="../../assets/placeholder.jpg" className="image-nc" alt="no image" />
       )}
 
       <div className="details-nc">

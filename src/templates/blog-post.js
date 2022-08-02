@@ -1,9 +1,8 @@
 import React from "react";
 import { graphql } from "gatsby";
 import "./style.scss";
-import GatsbyLink from "gatsby-link";
 import DisqusTemplate from "../components/disqus/index";
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout/Layout";
 import Section from "../components/Section/Section";
 import Tag from "../components/Tag/Tag";
@@ -32,6 +31,7 @@ export default function BlogPost({ data }) {
           <div></div>
           <div className="article-blog">
             <div>
+              <Typography variant="caption">{date}</Typography>
               <Typography variant="h3">{title.toUpperCase()}</Typography>
               <Typography variant="s1" color="gray">
                 <Typography variant="caption">author</Typography> {author}
@@ -40,7 +40,7 @@ export default function BlogPost({ data }) {
             <p dangerouslySetInnerHTML={{ __html: html }} />
           </div>
           <div className="tag-section">
-          <Typography variant="h6">Tags</Typography>
+            <Typography variant="h6">Tags</Typography>
             <div className="tag-w">
               {tags.map((t, i) => {
                 return <Tag key={i} label={t} url={t} />;

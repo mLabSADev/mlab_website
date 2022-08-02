@@ -12,7 +12,7 @@ const Typography = (props) => {
       {...props}
       className={[
         `main-t ${props.variant} ${props.color} ${
-          props.center === true ? "center" : null
+          props.center == true ? "center" : null
         }`,
       ]}
     >

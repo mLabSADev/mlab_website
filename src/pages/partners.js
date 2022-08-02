@@ -1,18 +1,15 @@
 import React from "react";
 import "./partners.scss";
 import Layout from "../components/Layout/Layout";
+import { StaticImage } from "gatsby-plugin-image";
 import Section from "../components/Section/Section";
 import SectionTitle from "../components/SectionTitle/SectionTitle";
 import PageHeader from "../components/PageHeader/PageHeader";
-import { StaticImage } from "gatsby-plugin-image";
 
-const Partner = ({ image }) => {
-  return;
-};
 const Partners = () => {
   return (
     <Layout>
-      <PageHeader title="Partners" />
+      <PageHeader title="Partners" index={3} />
       <Section>
         <SectionTitle>Founding Partners</SectionTitle>
       </Section>

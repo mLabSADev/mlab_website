@@ -76,32 +76,32 @@ const Footer = () => {
             {description}
           </Typography>
           <div className="links-f">
-            <Link className="social-link" to={`${youtube}`} target="_blank">
+            <a className="social-link" href={`${youtube}`} target="_blank">
               <FontAwesomeIcon
                 alt="Our Youtube"
                 icon={faYoutube}
               ></FontAwesomeIcon>
-            </Link>
-            <Link className="social-link" to={`${linkedin}`} target="_blank">
+            </a>
+            <a className="social-link" href={`${linkedin}`} target="_blank">
               <FontAwesomeIcon
                 alt="Our Linkedin"
                 icon={faLinkedin}
               ></FontAwesomeIcon>
-            </Link>
+            </a>
 
-            <Link className="social-link" to={`${facebook}`} target="_blank">
+            <a className="social-link" href={`${facebook}`} target="_blank">
               <FontAwesomeIcon
                 alt="Our Facebook"
                 icon={faFacebook}
               ></FontAwesomeIcon>
-            </Link>
+            </a>
 
-            <Link className="social-link" to={`${twitter}`} target="_blank">
+            <a className="social-link" href={`${twitter}`} target="_blank">
               <FontAwesomeIcon
                 alt="Our Twitter"
                 icon={faTwitter}
               ></FontAwesomeIcon>
-            </Link>
+            </a>
           </div>
         </div>
         <div className="links-w">

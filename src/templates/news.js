@@ -1,20 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import "./news.scss";
 import Layout from "../components/Layout/Layout";
 import Section from "../components/Section/Section";
 import Typography from "../components/Typography/Typography";
 import PageHeader from "../components/PageHeader/PageHeader";
 import NewsCard from "../components/NewsCard/NewsCard";
-import Modal from "../components/Modal/Modal";
 import Pagination from "@mui/material/Pagination";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 import Tag from "../components/Tag/Tag";
 const News = ({ data, pageContext, numberOfAllPages = [] }) => {
-  const [modalOpen, setModalOpen] = useState(false);
-  const close = () => setModalOpen(false);
-  const open = () => setModalOpen(true);
-  const { humanPageNumber, numberOfPages } = pageContext;
+  const { numberOfPages } = pageContext;
   for (let i = 0; i < numberOfPages; i++) {
     numberOfAllPages.push(i + 1);
   }
@@ -28,7 +24,7 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
 
   return (
     <Layout>
-      <PageHeader title="news" />
+      <PageHeader title="news" index={4} />
       <Section>
         {/* <SectionTitle>Articles</SectionTitle> */}
         <div className="news-content">
@@ -67,11 +63,11 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
 
         <div className="pagination-news">
           {numberOfAllPages.map((number, i) => {
-            if (number == 1) number = "";
+            if (number === 1) number = "";
             const page = "/news";
             var url = typeof window !== "undefined" && window.location.pathname;
             var current = number === "" ? page : `/news/${number}`;
-            if (url == current) {
+            if (url === current) {
               return (
                 <Pagination
                   page={number === "" ? 1 : number}
@@ -90,6 +86,7 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
                 />
               );
             }
+            return true;
           })}
         </div>
       </Section>

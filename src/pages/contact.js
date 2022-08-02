@@ -1,19 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
+import "./contact.scss";
 import Layout from "../components/Layout/Layout";
+import { graphql } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import PageHeader from "../components/PageHeader/PageHeader";
 import Section from "../components/Section/Section";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Typography from "../components/Typography/Typography";
-import { graphql } from "gatsby";
 import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
 import Input from "@mui/material/Input";
-import FormHelperText from "@mui/material/FormHelperText";
-import Button from "@mui/material/Button";
 import { useFormik } from "formik";
-import "./contact.scss";
+import Button from "../components/Button/Button";
 // import * as sgMail from "@sendgrid/mail";
-const { SENDGRID_API } = require("../../keys");
+// const { SENDGRID_API } = require("../../keys");
 // sgMail.setApiKey(SENDGRID_API);
 const SignupForm = () => {
   const validate = (values) => {
@@ -45,15 +44,16 @@ const SignupForm = () => {
     }
     return errors;
   };
-
-  const PostData = (val) => {
-    const send = {
-      To: "keketsomatsuma88@gmail.com",
-      from: val.email,
-      subject: val.topic,
-      text: val.message,
-    };
-  };
+  // use this when sendgrid starts working vvv
+  // const PostData = (val) => {
+  //   const send = {
+  //     To: "keketsomatsuma88@gmail.com",
+  //     from: val.email,
+  //     subject: val.topic,
+  //     text: val.message,
+  //   };
+  // };
+  // ^^^
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -149,7 +149,7 @@ const Contact = ({ data }) => {
   const contactUs = data.site.siteMetadata;
   return (
     <Layout>
-      <PageHeader title="Contact Us" />
+      <PageHeader index={6} title="Contact Us" />
       <Section>
         <div className="form-wraper">
           <div className="form-details">
@@ -196,7 +196,7 @@ const Contact = ({ data }) => {
                   src={l.node.frontmatter.location}
                   width="100%"
                   height="450"
-                  allowFullScreen=""
+                  allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>

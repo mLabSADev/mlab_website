@@ -1,19 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
+import "./resources.scss";
 import Layout from "../components/Layout/Layout";
 import PageHeader from "../components/PageHeader/PageHeader";
 import Section from "../components/Section/Section";
-import Modal from "../components/Modal/Modal";
-import Typography from "../components/Typography/Typography";
-import "./resources.scss";
-import { AnimatePresence, motion } from "framer-motion";
 const Resources = () => {
-  const [modalOpen, setModalOpen] = useState(false);
-  const close = () => setModalOpen(false);
-  const open = () => setModalOpen(true);
-  //   onClick={() => (modalOpen ? close() : open())}
   return (
     <Layout>
-      <PageHeader title="resources" />
+      <PageHeader index={5} title="resources" />
       <Section>
         <iframe
           className="mlab-report"

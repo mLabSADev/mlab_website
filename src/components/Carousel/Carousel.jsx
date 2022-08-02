@@ -15,7 +15,7 @@ const CarouselItem = ({ title, text, image, reg }) => {
           <Typography
             className="header-text-c"
             color="light"
-            variant={width > 880 ? "h1" : "h2"}
+            variant={width > 880 ? "h1" : "h3"}
           >
             {title.toUpperCase()}
           </Typography>

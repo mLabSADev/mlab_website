@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "../Button/Button";
 import { GatsbyImage } from "gatsby-plugin-image";
 import Typography from "../Typography/Typography";
 import "./style.scss";

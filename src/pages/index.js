@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./main.scss";
 import Layout from "../components/Layout/Layout";
+import { graphql } from "gatsby";
+import { getImage } from "gatsby-plugin-image";
 import CarouselSlider from "../components/Carousel/Carousel";
 import ProgressStatistic from "../components/ProgressStatistic/ProgressStatistic";
 import Section from "../components/Section/Section";
@@ -10,34 +12,17 @@ import SectionTitle from "../components/SectionTitle/SectionTitle";
 import Typography from "../components/Typography/Typography";
 import TechCard from "../components/TextCard/TechCard";
 import Modal from "../components/Modal/Modal";
-import { graphql } from "gatsby";
 import { AnimatePresence } from "framer-motion";
-import { getImage } from "gatsby-plugin-image";
 const IndexPage = ({ data }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const close = () => setModalOpen(false);
   const open = () => setModalOpen(true);
-
-  const categoryStats = [
-    {
-      number: 200,
-      label: "Startups",
-    },
-    {
-      number: 400,
-      label: "graduates",
-    },
-    {
-      number: 600,
-      label: "impacted by our tech",
-    },
-  ];
-  let width = typeof window !== "undefined" ? window.screen.width : 1000;
   const news = data.news.edges;
   const techs = data.theTech.edges;
   const banners = data.banners.edges;
   const impactBarStats = data.impactBarStats.edges;
   const stats = data.stats.edges;
+  const newsHeader = data.newsHeader.frontmatter.position;
   return (
     <Layout>
       <CarouselSlider data={banners} />
@@ -90,24 +75,23 @@ const IndexPage = ({ data }) => {
           className="play-video"
           src="https://www.youtube.com/embed/z4C5HVz_wu4"
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
       </div>
       {/* ... */}
       <Section>
         <SectionTitle>latest news</SectionTitle>
-        <Typography center={true} variant="b1">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at eros
-          rutrum, tempus dui quis, vulputate nisi. Donec ut ex suscipit,
-          venenatis neque at, pulvinar quam.{" "}
+        <Typography center="true" variant="b1">
+          {newsHeader}
         </Typography>
         <div className="hs">
           {news.map((item, i) => {
             const image = getImage(item.node.frontmatter.thumb);
             return (
               <NewsCard
+                key={i}
                 image={image}
                 excerpt={item.node.excerpt}
                 title={item.node.frontmatter.title.replace("-", " ")}
@@ -243,6 +227,13 @@ export const query = graphql`
             }
           }
         }
+      }
+    }
+    newsHeader: markdownRemark(
+      fileAbsolutePath: { regex: "/(seo-headers/news)/" }
+    ) {
+      frontmatter {
+        position
       }
     }
   }

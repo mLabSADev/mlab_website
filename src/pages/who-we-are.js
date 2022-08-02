@@ -1,17 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./who-we-are.scss";
+import Layout from "../components/Layout/Layout";
 import { graphql } from "gatsby";
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
 import Section from "../components/Section/Section";
 import SectionTitle from "../components/SectionTitle/SectionTitle";
 import Typography from "../components/Typography/Typography";
-import { navigate } from "gatsby";
-import Link from "gatsby-link";
-import Layout from "../components/Layout/Layout";
 import PageHeader from "../components/PageHeader/PageHeader";
 import Button from "../components/Button/Button";
-import { AnimatePresence } from "framer-motion";
-import Modal from "../components/Modal/Modal";
 const WhatWeDoCard = ({ image, title, description }) => {
   return (
     <div className="wwd-c">
@@ -32,10 +28,10 @@ const WhatWeDoCard = ({ image, title, description }) => {
 const TeamCard = ({ fullName, position, image }) => {
   return (
     <div className="card-tc">
-      <Typography variant="h5" center>
+      <Typography variant="h5" center="true">
         {fullName}
       </Typography>
-      <Typography variant="s2" center color="gray">
+      <Typography variant="s2" center="true" color="gray">
         {position}
       </Typography>
       <GatsbyImage
@@ -47,28 +43,11 @@ const TeamCard = ({ fullName, position, image }) => {
   );
 };
 const WhoWeAre = ({ data }) => {
-  // controls which team to show per location
-  const [locations, setLocations] = useState({});
-  const [currentLocation, setCurrentLocation] = useState("gauteng");
-  const [modalOpen, setModalOpen] = useState(false);
-  // sets the locations
-  const locs = data.team.edges.reduce((acc, cur) => {
-    if (!acc[cur.node.frontmatter.location])
-      acc[cur.node.frontmatter.location] = [];
-    acc[cur.node.frontmatter.location].push({ ...cur });
-    return acc;
-  }, {});
   const team = data.team.edges;
-  // triggers the setting
-  useEffect(() => {
-    setLocations(locs);
-  }, []);
 
   return (
     <Layout>
-      <AnimatePresence>{modalOpen && <Modal></Modal>}</AnimatePresence>
-
-      <PageHeader title="WHO WE ARE" />
+      <PageHeader title="WHO WE ARE" index={1} />
       <Section>
         <div className="about-page">
           <div>
@@ -108,7 +87,7 @@ const WhoWeAre = ({ data }) => {
       </Section>
       <Section>
         {/* <SectionTitle>we believe</SectionTitle> */}
-        <Typography variant="h2" center={true}>
+        <Typography variant="h2" center="true">
           When our youth are empowered, they create innovative solutions that
           drive our society.
         </Typography>
