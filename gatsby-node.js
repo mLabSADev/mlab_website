@@ -99,6 +99,7 @@ exports.createPages = async ({ actions, graphql }) => {
     pathPrefix: "/news", // Creates pages like `/blog`, `/blog/2`, etc
     component: path.resolve("src/templates/news.js"), // Just like `createPage()`
   });
+
 };
 
 const { createFilePath } = require(`gatsby-source-filesystem`);

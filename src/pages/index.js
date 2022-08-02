@@ -17,24 +17,7 @@ const IndexPage = ({ data }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const close = () => setModalOpen(false);
   const open = () => setModalOpen(true);
-  const stats = [
-    {
-      label: "Students employed after studies",
-      percentage: 10,
-    },
-    {
-      label: "Participants between 10 - 35",
-      percentage: 30,
-    },
-    {
-      label: "Female Participants",
-      percentage: 50,
-    },
-    {
-      label: "Startups founded by SA Youth",
-      percentage: 70,
-    },
-  ];
+
   const categoryStats = [
     {
       number: 200,
@@ -53,6 +36,8 @@ const IndexPage = ({ data }) => {
   const news = data.news.edges;
   const techs = data.theTech.edges;
   const banners = data.banners.edges;
+  const impactBarStats = data.impactBarStats.edges;
+  const stats = data.stats.edges;
   return (
     <Layout>
       <CarouselSlider data={banners} />
@@ -72,24 +57,26 @@ const IndexPage = ({ data }) => {
         <SectionTitle> Impact Statistics</SectionTitle>
         <div className="responsive-column">
           <div>
-            {stats.map((item, i) => {
+            {impactBarStats.map((item, i) => {
               return (
                 <ProgressStatistic
                   key={i}
-                  percentage={item.percentage}
-                  label={item.label}
+                  percentage={item.node.frontmatter.percentage}
+                  label={item.node.frontmatter.label}
                 />
               );
             })}
           </div>
           <div className="cs-stats">
-            {categoryStats.map((item, i) => {
+            {stats.map((item, i) => {
+              const img = getImage(item.node.frontmatter.icon);
+
               return (
                 <CategoryStats
                   key={i}
-                  number={item.number}
-                  label={item.label}
-                  image={item.image}
+                  number={item.node.frontmatter.number}
+                  label={item.node.frontmatter.label}
+                  image={img}
                 />
               );
             })}
@@ -133,11 +120,6 @@ const IndexPage = ({ data }) => {
       </Section>
       <Section>
         <SectionTitle>our tech</SectionTitle>
-        {/* <Typography center={true} variant="b1">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at eros
-          rutrum, tempus dui quis, vulputate nisi. Donec ut ex suscipit,
-          venenatis neque at, pulvinar quam.{" "}
-        </Typography> */}
         <br></br>
         <br></br>
         <div className="techs-w">
@@ -231,6 +213,35 @@ export const query = graphql`
             }
           }
           excerpt
+        }
+      }
+    }
+    impactBarStats: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/(impactBarStats)/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            label
+            percentage
+          }
+        }
+      }
+    }
+    stats: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/(stats)/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            label
+            number
+            icon {
+              childImageSharp {
+                gatsbyImageData(width: 400)
+              }
+            }
+          }
         }
       }
     }

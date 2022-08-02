@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: master
 
-site_url: https://mlab.netlify.app/
+site_url: https://new-mlab.netlify.app/
 
 media_folder: src/images
 public_folder: src/markdown
