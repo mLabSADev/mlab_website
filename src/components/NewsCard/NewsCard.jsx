@@ -2,7 +2,7 @@ import React from "react";
 import "./style.scss";
 import Typography from "../Typography/Typography";
 import { Link } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import Button from "../Button/Button";
 /**
  *
@@ -33,14 +33,7 @@ const NewsCard = ({ image, title, excerpt, url }) => {
           className="image-nc"
         ></GatsbyImage>
       ) : (
-        <div className="image-nc">
-          <iframe
-            src="https://my.spline.design/macbookprocopy-882fa58dd63ca60c52f69be266786223/"
-            frameborder="0"
-            width="100%"
-            height="100%"
-          ></iframe>
-        </div>
+        <StaticImage src="../../assets/placeholder.jpg" className="image-nc" />
       )}
 
       <div className="details-nc">

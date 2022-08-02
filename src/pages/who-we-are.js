@@ -188,7 +188,7 @@ export const query = graphql`
             thumb {
               childImageSharp {
                 id
-                gatsbyImageData(layout: FULL_WIDTH, quality: 100, width: 300)
+                gatsbyImageData(quality: 100, width: 300)
               }
             }
           }

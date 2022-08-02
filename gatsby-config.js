@@ -21,41 +21,7 @@ module.exports = {
     "gatsby-plugin-mdx", //
     "gatsby-plugin-sharp", //
     "gatsby-transformer-sharp", //
-    // {
-    //   resolve: "gatsby-plugin-sitemap", //
-    //   options: {
-    //     output: `/sitemap.xml`,
-    //     // Exclude specific pages or groups of pages using glob parameters
-    //     // See: https://github.com/isaacs/minimatch
-    //     // The example below will exclude the single `path/to/page` and all routes beginning with `category`
-    //     excludes: [
-    //       `/team/*`,
-    //       `/author/*`,
-    //       `/offline-plugin-app-shell-fallback`,
-    //       `/404`,
-    //     ],
-    //     query: `{
-    //     site {
-    //       siteMetadata {
-    //         siteUrl
-    //       }
-    //     }
-    //     allSitePage {
-    //       nodes {
-    //         path
-    //       }
-    //     }
-    //   }`,
-    //     resolveSiteUrl: async ({ site }) => await site.siteMetadata.siteUrl,
-    //     serialize: async ({ site, allSitePage }) => {
-    //       await allSitePage.nodes.map((node) => ({
-    //        url: site.siteMetadata.siteUrl + node.path,
-    //        changefreq: `weekly`,
-    //         priority: 0.7,
-    //        }));
-    //     },
-    //   },
-    // },
+    `gatsby-plugin-sitemap`,
 
     {
       resolve: "gatsby-plugin-manifest", //
