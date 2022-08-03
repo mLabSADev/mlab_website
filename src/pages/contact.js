@@ -137,9 +137,12 @@ const SignupForm = () => {
           </Typography>
         ) : null}
       </FormControl>
-      <Button type="submit" variant="contained" color="success">
-        Submit
-      </Button>
+      <Button
+        label="Submit"
+        type="submit"
+        variant="contained"
+        color="success"
+      />
     </form>
   );
 };

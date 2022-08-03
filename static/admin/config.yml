@@ -16,7 +16,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Author", name: "author", widget: "string" }
-      - { label: "Date", name: "date", widget: "date", format: 'MMM D, YY' }
+      - { label: "Date", name: "date", widget: "date", format: "MMM D, YY" }
       - { label: "Image", name: "thumb", widget: "image" }
       - {
           label: "Category",
@@ -25,3 +25,18 @@ collections:
           options: ["Talent", "Startup", "Entrepreneurship"],
         }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "theTech"
+    label: "theTech"
+    folder: "src/markdown/theTech"
+    create: true
+    fields:
+      - { label: "App Name", name: "appName", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "App Icon", name: "icon", widget: "image", choose_url: true }
+      - {
+          label: "Screenshot",
+          name: "screenshot",
+          widget: "image",
+          allow_multiple: false,
+          choose_url: true,
+        }

@@ -10,10 +10,10 @@ import "./style.scss";
  * @param {string} url if type = link, url must be provided
  */
 
-function Button({ label = "read more", onClick, type = "button", url, color }) {
+function Button(props, { label = "read more", type = "button", url, color }) {
   if (type === "button") {
     return (
-      <button onClick={onClick} className="button-nc">
+      <button {...props} className="button-nc">
         <div className="line-nc"></div>
         <div className="btn-nc">
           <Typography color={color ? color : null} variant="button">
@@ -28,7 +28,9 @@ function Button({ label = "read more", onClick, type = "button", url, color }) {
       <Link to={url} className="button-nc">
         <div className="line-nc"></div>
         <div className="btn-nc">
-          <Typography color={color ? color : null} variant="button">{label}</Typography>
+          <Typography color={color ? color : null} variant="button">
+            {label}
+          </Typography>
         </div>
         <div className="line-nc"></div>
       </Link>
