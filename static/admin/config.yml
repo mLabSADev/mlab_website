@@ -26,7 +26,7 @@ collections:
         }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "theTech"
-    label: "theTech"
+    label: "Tech"
     folder: "src/markdown/theTech"
     create: true
     fields:
@@ -40,3 +40,23 @@ collections:
           allow_multiple: false,
           choose_url: true,
         }
+  - name: "locations"
+    label: "Locations"
+    folder: "src/markdown/locations"
+    create: true
+    fields:
+      - { label: "Path", name: "path", widget: "string" }
+      - { label: "City", name: "city", widget: "string" }
+      - { label: "Image", name: "featureImage", widget: "image" }
+      - { label: "Location", name: "location", widget: "map" }
+      - {
+          label: "Programmes",
+          name: "programmes",
+          widget: "list",
+          field:
+            { label: "Program Name", name: "programName", widget: "string" },
+        }
+      - { label: "Telephone", name: "tel", widget: "String" }
+      - { label: "Physical Address", name: "physicalAddress", widget: "string" }
+      - { label: "Order", name: "order", widget: "number" }
+      - { label: "Email", name: "email", widget: "string" }
