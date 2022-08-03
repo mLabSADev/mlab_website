@@ -12,9 +12,9 @@ const Resources = () => {
           className="mlab-report"
           src="https://online.fliphtml5.com/cloph/uyxw/#p=1"
           title="mlab"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
       </Section>
     </Layout>
