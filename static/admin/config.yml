@@ -49,13 +49,7 @@ collections:
       - { label: "City", name: "city", widget: "string" }
       - { label: "Image", name: "featureImage", widget: "image" }
       - { label: "Location", name: "location", widget: "map" }
-      - {
-          label: "Programmes",
-          name: "programmes",
-          widget: "list",
-          field:
-            { label: "Program Name", name: "programName", widget: "string" },
-        }
+      - { label: "Programmes", name: "programmes", widget: "list" }
       - { label: "Telephone", name: "tel", widget: "String" }
       - { label: "Physical Address", name: "physicalAddress", widget: "string" }
       - { label: "Order", name: "order", widget: "number" }
