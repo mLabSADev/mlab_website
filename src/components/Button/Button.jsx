@@ -11,13 +11,13 @@ import "./style.scss";
  */
 
 const Button = (
-  { label = "read more", type = "button", url, color },
+  { label = "read more", type = "button", url, color, onClick },
   props
 ) => {
   console.log(type);
   if (type === "button") {
     return (
-      <button {...props} className="button-nc">
+      <button onClick={onClick} {...props} className="button-nc">
         <div className="line-nc"></div>
         <div className="btn-nc">
           <Typography color={color ? color : null} variant="button">

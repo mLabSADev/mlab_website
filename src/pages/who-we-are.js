@@ -28,10 +28,10 @@ const WhatWeDoCard = ({ image, title, description }) => {
 const TeamCard = ({ fullName, position, image }) => {
   return (
     <div className="card-tc">
-      <Typography variant="h5" center="true">
+      <Typography variant="h5" center>
         {fullName}
       </Typography>
-      <Typography variant="s2" center="true" color="gray">
+      <Typography variant="s2" center color="gray">
         {position}
       </Typography>
       <GatsbyImage
@@ -87,7 +87,7 @@ const WhoWeAre = ({ data }) => {
       </Section>
       <Section>
         {/* <SectionTitle>we believe</SectionTitle> */}
-        <Typography variant="h2" center="true">
+        <Typography variant="h2" center>
           When our youth are empowered, they create innovative solutions that
           drive our society.
         </Typography>

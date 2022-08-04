@@ -83,7 +83,7 @@ const IndexPage = ({ data }) => {
       {/* ... */}
       <Section>
         <SectionTitle>latest news</SectionTitle>
-        <Typography center="true" variant="b1">
+        <Typography center variant="b1">
           {newsHeader}
         </Typography>
         <div className="hs">

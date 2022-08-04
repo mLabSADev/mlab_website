@@ -67,7 +67,7 @@ const SubPage = ({ title, data }) => {
           <Typography variant="h3" color="light" center>
             {title}
           </Typography>
-          <Typography variant="b2" center="true" color="light">
+          <Typography variant="b2" center color="light">
             {data.node.rawMarkdownBody}
           </Typography>
         </div>
@@ -102,7 +102,7 @@ const WhatWeDo = ({ data }) => {
           </Modal>
         )}
       </AnimatePresence>
-      <PageHeader title={"WHAT WE DO"} index={2}/>
+      <PageHeader title={"WHAT WE DO"} index={2} />
       {sectionData.map((item, i) => {
         const title = item.node.frontmatter.title;
         const excerpt = item.node.excerpt;
