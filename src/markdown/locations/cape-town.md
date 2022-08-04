@@ -7,7 +7,6 @@ featureImage: ../../images/locations/CapeTown_mlab-1024x768.jpeg
 programmes: ["codeX Academy", "Accelerator", "DEMOLA", "reHealthAfrica"]
 tel: ""
 physicalAddress: "U8, Enterprise Building, The Innovation Hub, Mark Shuttleworth Street, Tshwane Pretoria, South Africa, 0087"
-
 order: 4
 email: "capetown@gmail.com"
 ---

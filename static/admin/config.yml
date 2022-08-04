@@ -53,3 +53,11 @@ collections:
       - { label: "Physical Address", name: "physicalAddress", widget: "string" }
       - { label: "Email", name: "email", widget: "string" }
       - { label: "Description", name: "description", widget: "markdown" }
+  - name: "About Us"
+    label: "aboutUs"
+    folder: "src/markdown/about-mlab"
+    creae: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image", name: "thumb", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
