@@ -77,4 +77,19 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Thumb", name: "thumb", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
-  
+  - name: "barStats"
+    label: "Impact Bar Stats"
+    folder: "src/markdown/impactBarStats"
+    create: true
+    fields:
+      - { label: "Label", name: "label", widget: "string" }
+      - {
+          label: "Percentage",
+          name: "percentage",
+          widget: "number",
+          value_type: "int",
+          default: 1,
+          min: 1,
+          max: 100,
+          step: 1,
+        }
