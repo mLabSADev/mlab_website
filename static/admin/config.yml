@@ -93,3 +93,12 @@ collections:
           max: 100,
           step: 1,
         }
+  - name: "banners"
+    label: "Banners"
+    folder: "src/markdown/banners"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image", name: "thumb", widget: "image" }
+      - { label: "Registration", name: "registration", widget: "string" }
+      - { label: "Body", name: "body", widget: "string" }
