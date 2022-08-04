@@ -1,5 +1,10 @@
 @import url("./colors.scss");
 @import url("../components/Typography/style.scss");
+
+* {
+  font-family: "Source_Regular";
+}
+
 html,
 body {
   margin: 0px;

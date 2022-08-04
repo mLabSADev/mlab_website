@@ -10,7 +10,11 @@ import "./style.scss";
  * @param {string} url if type = link, url must be provided
  */
 
-function Button(props, { label = "read more", type = "button", url, color }) {
+const Button = (
+  { label = "read more", type = "button", url, color },
+  props
+) => {
+  console.log(type);
   if (type === "button") {
     return (
       <button {...props} className="button-nc">
@@ -36,6 +40,6 @@ function Button(props, { label = "read more", type = "button", url, color }) {
       </Link>
     );
   }
-}
+};
 
 export default Button;

@@ -16,6 +16,14 @@
     grid-template-columns: 1fr;
     gap: 50px;
     width: 100%;
+    .controlImage {
+      box-sizing: border-box;
+      width: 100%;
+      img {
+        box-sizing: border-box;
+        width: 100%;
+      }
+    }
   }
   .tag-section {
     box-sizing: border-box;

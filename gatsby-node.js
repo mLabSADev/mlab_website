@@ -75,10 +75,13 @@ exports.createPages = async ({ actions, graphql }) => {
     }
   `);
   news.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    const title = node.frontmatter.title;
+    const lowerCase = title.toLowerCase();
+    const _path = lowerCase.replaceAll(" ", "-");
     createPage({
-      path: `/news${node.frontmatter.path}`,
+      path: `/news/${_path}`,
       component: PostTemplate,
-      context: { article: node.frontmatter.path },
+      context: { article: title },
     });
   });
   tags.data.allMarkdownRemark.edges.forEach(({ node }) => {
@@ -99,7 +102,6 @@ exports.createPages = async ({ actions, graphql }) => {
     pathPrefix: "/news", // Creates pages like `/blog`, `/blog/2`, etc
     component: path.resolve("src/templates/news.js"), // Just like `createPage()`
   });
-
 };
 
 const { createFilePath } = require(`gatsby-source-filesystem`);

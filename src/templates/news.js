@@ -21,7 +21,7 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
     tags = tags.concat(tag);
   });
   //   onClick={() => (modalOpen ? close() : open())}
-
+  console.log(data);
   return (
     <Layout>
       <PageHeader title="news" index={4} />
@@ -36,6 +36,8 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
                 const title = entry.node.frontmatter.title;
                 const excerpt = entry.node.excerpt;
                 const path = entry.node.frontmatter.path;
+                const lowerCase = title.toLowerCase();
+                const _path = lowerCase.replaceAll(" ", "-");
                 if (entry.node.frontmatter.path) {
                   return (
                     <NewsCard
@@ -43,7 +45,7 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
                       image={img}
                       title={title}
                       excerpt={excerpt}
-                      url={path}
+                      url={`/${_path}`}
                     />
                   );
                 } else return null;

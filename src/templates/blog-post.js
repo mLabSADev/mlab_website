@@ -37,7 +37,7 @@ export default function BlogPost({ data }) {
                 <Typography variant="caption">author</Typography> {author}
               </Typography>
             </div>
-            <p dangerouslySetInnerHTML={{ __html: html }} />
+            <p className="controlImage" dangerouslySetInnerHTML={{ __html: html }} />
           </div>
           <div className="tag-section">
             <Typography variant="h6">Tags</Typography>
@@ -56,7 +56,7 @@ export default function BlogPost({ data }) {
             <DisqusTemplate
               url={data.markdownRemark.frontmatter.path}
               title={data.markdownRemark.frontmatter.title}
-              identifier={data.markdownRemark.frontmatter.path}
+              identifier={data.markdownRemark.frontmatter.title}
             ></DisqusTemplate>
           </div>
 
@@ -68,7 +68,7 @@ export default function BlogPost({ data }) {
 }
 export const query = graphql`
   query BlogPostByPath($article: String!) {
-    markdownRemark(frontmatter: { path: { eq: $article } }) {
+    markdownRemark(frontmatter: { title: { eq: $article } }) {
       frontmatter {
         path
         title
