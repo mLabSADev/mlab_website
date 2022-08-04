@@ -45,7 +45,6 @@ collections:
     folder: "src/markdown/locations"
     create: true
     fields:
-      - { label: "Path", name: "path", widget: "string" }
       - { label: "City", name: "city", widget: "string" }
       - { label: "Image", name: "featureImage", widget: "image" }
       - { label: "Location", name: "location", widget: "map" }
