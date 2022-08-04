@@ -4,7 +4,7 @@ title: "Unleashing Talent"
 featureImage: ../../../images/backgrounds/unleashing_talent.png
 thumb: ../../../images/backgrounds/unleashing_talent.png
 sectionImage: ../../../images/whatWeDo/nurturingtalent.png
-link: 'unleashing-talent'
+link: "unleashing-talent"
 excerpt: "mLab runs the CodeTribe Academy which aims to drive inclusive digital innovation in South Africa."
 video: "https://www.youtube.com/embed/e2mEltIWcAg"
 ---
