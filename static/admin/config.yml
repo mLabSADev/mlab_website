@@ -47,10 +47,9 @@ collections:
     fields:
       - { label: "City", name: "city", widget: "string" }
       - { label: "Image", name: "featureImage", widget: "image" }
-      - { label: "Location", name: "location", widget: "map" }
+      - { label: "Location", name: "location", widget: "string" }
       - { label: "Programmes", name: "programmes", widget: "list" }
       - { label: "Telephone", name: "tel", widget: "string" }
       - { label: "Physical Address", name: "physicalAddress", widget: "string" }
-      - { label: "Order", name: "order", widget: "number" }
       - { label: "Email", name: "email", widget: "string" }
       - { label: "Description", name: "description", widget: "markdown" }
