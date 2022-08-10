@@ -9,7 +9,13 @@ html,
 body {
   margin: 0px;
 }
-
+.index-form {
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+  height: 0px !important;
+  opacity: 0px;
+}
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;

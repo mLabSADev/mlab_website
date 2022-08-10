@@ -127,7 +127,7 @@ export const query = graphql`
               name
               childImageSharp {
                 id
-                gatsbyImageData(formats: [AUTO, WEBP], width: 350)
+                gatsbyImageData(formats: [AUTO, WEBP], width: 1024)
               }
             }
             attachments {

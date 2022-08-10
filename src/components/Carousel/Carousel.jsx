@@ -42,7 +42,7 @@ const CarouselItem = ({ title, text, image, reg }) => {
 
 const CarouselSlider = ({ data = [] }) => {
   return (
-    <Carousel autoPlay={true}>
+    <Carousel className="carousel-main" autoPlay={true}>
       {data.map((item, i) => {
         const title = item.node.frontmatter.title;
         const registration = item.node.frontmatter.registration;

@@ -11,10 +11,11 @@ import InputLabel from "@mui/material/InputLabel";
 import Input from "@mui/material/Input";
 import { useFormik } from "formik";
 import Button from "../components/Button/Button";
-// import * as sgMail from "@sendgrid/mail";
+
+// const sgMail = require("@sendgrid/mail"); Has error about fs not being found
 // const { SENDGRID_API } = require("../../keys");
 // sgMail.setApiKey(SENDGRID_API);
-const SignupForm = () => {
+export const SignupForm = (resetForm) => {
   const validate = (values) => {
     const errors = {};
 
@@ -64,11 +65,27 @@ const SignupForm = () => {
     validate,
     onSubmit: async (val) => {
       console.log(val);
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: val,
+      })
+        .then(() => {
+          alert("Form successfully submitted");
+        })
+        .catch((error) => alert(error));
     },
   });
 
   return (
-    <form className="form-formik" onSubmit={formik.handleSubmit}>
+    <form
+      className="form-formik"
+      netlify
+      data-netlify="true"
+      name="websiteMessage"
+      method="post"
+      onSubmit={formik.handleSubmit}
+    >
       <FormControl>
         <InputLabel htmlFor="firstName">Full Name</InputLabel>
         <Input
@@ -139,7 +156,7 @@ const SignupForm = () => {
       </FormControl>
       <Button
         label="Submit"
-        type="submit"
+        type="button"
         variant="contained"
         color="success"
       />

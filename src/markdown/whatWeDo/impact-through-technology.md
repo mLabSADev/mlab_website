@@ -1,7 +1,7 @@
 ---
 path: "/impact-through-technology"
 title: "Impact Through Technology"
-featureImage: ../../../images/backgrounds/impact_through.png
+featureImage: ../../images/backgrounds/impact_through.png
 thumb: ../../../images/backgrounds/impact_through.png
 sectionImage: ../../../images/whatWeDo/creating.png
 link: 'impact-through-technology'

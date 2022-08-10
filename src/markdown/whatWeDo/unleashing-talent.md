@@ -1,7 +1,7 @@
 ---
 path: "/unleashing-talent"
 title: "Unleashing Talent"
-featureImage: ../../../images/backgrounds/unleashing_talent.png
+featureImage: ../../images/backgrounds/unleashing_talent.png
 thumb: ../../../images/backgrounds/unleashing_talent.png
 sectionImage: ../../../images/whatWeDo/nurturingtalent.png
 link: "unleashing-talent"

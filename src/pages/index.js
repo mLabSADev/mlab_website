@@ -12,6 +12,7 @@ import SectionTitle from "../components/SectionTitle/SectionTitle";
 import Typography from "../components/Typography/Typography";
 import TechCard from "../components/TextCard/TechCard";
 import Modal from "../components/Modal/Modal";
+import { SignupForm } from "./contact";
 import { AnimatePresence } from "framer-motion";
 const IndexPage = ({ data }) => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -25,7 +26,6 @@ const IndexPage = ({ data }) => {
   const newsHeader = data.newsHeader.frontmatter.position;
   return (
     <Layout>
-      <CarouselSlider data={banners} />
       <AnimatePresence
         initial={false}
         exitBeforeEnter={true}
@@ -37,6 +37,7 @@ const IndexPage = ({ data }) => {
           </Modal>
         )}
       </AnimatePresence>
+      <CarouselSlider data={banners} />
 
       <Section>
         <SectionTitle> Impact Statistics</SectionTitle>
@@ -125,6 +126,9 @@ const IndexPage = ({ data }) => {
           })}
         </div>
       </Section>
+      <div className="index-form">
+        <SignupForm></SignupForm>
+      </div>
     </Layout>
   );
 };
@@ -148,7 +152,7 @@ export const query = graphql`
             thumb {
               childImageSharp {
                 id
-                gatsbyImageData(quality: 100, width: 300)
+                gatsbyImageData(quality: 100, width: 1000)
               }
             }
           }
@@ -167,7 +171,7 @@ export const query = graphql`
             registration
             thumb {
               childImageSharp {
-                gatsbyImageData(width: 700, quality: 90)
+                gatsbyImageData(width: 1100, quality: 100)
               }
             }
           }
@@ -185,7 +189,7 @@ export const query = graphql`
             description
             screenshot {
               childImageSharp {
-                gatsbyImageData(width: 700, quality: 100, placeholder: BLURRED)
+                gatsbyImageData(width: 1000, quality: 100, placeholder: BLURRED)
                 id
               }
             }

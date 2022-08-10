@@ -17,7 +17,7 @@ const Button = (
   console.log(type);
   if (type === "button") {
     return (
-      <button onClick={onClick} {...props} className="button-nc">
+      <button type="submit" onClick={onClick} {...props} className="button-nc">
         <div className="line-nc"></div>
         <div className="btn-nc">
           <Typography color={color ? color : null} variant="button">

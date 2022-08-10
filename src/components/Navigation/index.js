@@ -99,21 +99,8 @@ export const links = [
   },
   {
     label: "What we do",
-    url: null,
-    items: [
-      {
-        label: "Impact Through Technology",
-        url: "/what-we-do",
-      },
-      {
-        label: "Unleashing Talent",
-        url: "/what-we-do",
-      },
-      {
-        label: "Accelerating Startups",
-        url: "/what-we-do",
-      },
-    ],
+    url: "/what-we-do",
+    items: [],
   },
   {
     label: "Partners",

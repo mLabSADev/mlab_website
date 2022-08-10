@@ -1,7 +1,7 @@
 ---
 path: "/accelerating-startups"
 title: "Accelerating Startups"
-featureImage: ../../../images/backgrounds/accelerating_startups.png
+featureImage: ../../images/backgrounds/accelerating_startups.png
 thumb: ../../../images/backgrounds/accelerating_startups.png
 sectionImage: ../../../images/whatWeDo/accelerating.png
 link: 'accelerating-startups'
