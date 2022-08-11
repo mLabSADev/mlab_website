@@ -21,7 +21,6 @@ const Button = (
   },
   props
 ) => {
-  console.log(type);
   if (type === "button") {
     return (
       <button

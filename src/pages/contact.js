@@ -70,8 +70,21 @@ export const SignupForm = (main) => {
         .catch((error) => alert(error));
     },
   });
-  const handleChange = (e) =>
+  const handleChange = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
+    console.log(e.target.name);
+    if (e.target.name === "email") {
+      if (
+        /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(formValues.email)
+      ) {
+        setStatusMessage("");
+        setSentStatus("");
+      } else {
+        setStatusMessage("Email is invalid");
+        setSentStatus("error");
+      }
+    }
+  };
 
   const [formValues, setFormValues] = useState({
     firstName: "",
@@ -84,8 +97,11 @@ export const SignupForm = (main) => {
   const open = () => setModalOpen(true);
   const postSubmit = () => {
     if (main) {
-      setStatusMessage("Thank you for your submission.")
-      setSentStatus("success")
+      setStatusMessage("Thank you for your submission.");
+      setSentStatus("success");
+      setTimeout(() => {
+        setSentStatus("");
+      }, 2000);
     }
     setFormValues({
       firstName: "",
@@ -159,7 +175,7 @@ export const SignupForm = (main) => {
       />
       <div className={`form-message status-${sentStatus}`}>
         <Typography variant="b2" color="light">
-          Message sent.
+          {statusMessage}
         </Typography>
       </div>
     </NetlifyForm>
