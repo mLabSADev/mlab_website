@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./contact.scss";
 import Layout from "../components/Layout/Layout";
 import { graphql } from "gatsby";
@@ -11,7 +11,8 @@ import InputLabel from "@mui/material/InputLabel";
 import Input from "@mui/material/Input";
 import { useFormik } from "formik";
 import Button from "../components/Button/Button";
-
+import NetlifyForm from "react-ssg-netlify-forms";
+import { navigate } from "gatsby";
 // const sgMail = require("@sendgrid/mail"); Has error about fs not being found
 // const { SENDGRID_API } = require("../../keys");
 // sgMail.setApiKey(SENDGRID_API);
@@ -76,15 +77,23 @@ export const SignupForm = (resetForm) => {
         .catch((error) => alert(error));
     },
   });
+  const handleChange = (e) =>
+    setFormValues({ ...formValues, [e.target.name]: e.target.value });
+  const [formValues, setFormValues] = useState({
+    firstName: "",
+    email: "",
+    topic: "",
+    message: "",
+  });
+  const postSubmit = () => {
+    navigate("/hooray");
+  };
 
   return (
-    <form
-      className="form-formik"
-      netlify
-      data-netlify="true"
-      name="websiteMessage"
-      method="post"
-      onSubmit={formik.handleSubmit}
+    <NetlifyForm
+      formName="Very Simple Form"
+      formValues={formValues}
+      postSubmit={postSubmit}
     >
       <FormControl>
         <InputLabel htmlFor="firstName">Full Name</InputLabel>
@@ -92,9 +101,8 @@ export const SignupForm = (resetForm) => {
           id="firstName"
           name="firstName"
           type="text"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.firstName}
+          value={formValues.firstName}
+          onChange={handleChange}
         />
         {formik.errors.firstName ? (
           <Typography variant="caption" color="gray">
@@ -110,9 +118,8 @@ export const SignupForm = (resetForm) => {
           id="email"
           name="email"
           type="email"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.email}
+          value={formValues.email}
+          onChange={handleChange}
         />
         {formik.errors.email ? (
           <Typography variant="caption" color="gray">
@@ -127,9 +134,8 @@ export const SignupForm = (resetForm) => {
           id="topic"
           name="topic"
           type="text"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.topic}
+          value={formValues.topic}
+          onChange={handleChange}
         />
         {formik.errors.topic ? (
           <Typography variant="caption" color="gray">
@@ -144,9 +150,8 @@ export const SignupForm = (resetForm) => {
           id="message"
           name="message"
           type="text"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.message}
+          value={formValues.message}
+          onChange={handleChange}
         />
         {formik.errors.mesWsage ? (
           <Typography variant="caption" color="gray">
@@ -160,7 +165,7 @@ export const SignupForm = (resetForm) => {
         variant="contained"
         color="success"
       />
-    </form>
+    </NetlifyForm>
   );
 };
 
