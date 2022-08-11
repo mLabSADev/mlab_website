@@ -18,6 +18,15 @@
       display: grid;
       grid-template-columns: 1fr;
       gap: 30px;
+      .form-message {
+        padding: 20px;
+      }
+      .status-success {
+        background-color: var(--primary-color);
+      }
+      .status-error {
+        background-color: red;
+      }
     }
   }
 }

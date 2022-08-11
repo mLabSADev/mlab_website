@@ -13,10 +13,13 @@ import { useFormik } from "formik";
 import Button from "../components/Button/Button";
 import NetlifyForm from "react-ssg-netlify-forms";
 import { navigate } from "gatsby";
-// const sgMail = require("@sendgrid/mail"); Has error about fs not being found
-// const { SENDGRID_API } = require("../../keys");
-// sgMail.setApiKey(SENDGRID_API);
-export const SignupForm = (resetForm) => {
+import Modal from "../components/Modal/Modal";
+import { AnimatePresence } from "framer-motion";
+export const SignupForm = (main) => {
+  const [sentStatus, setSentStatus] = useState("");
+  const [statusMessage, setStatusMessage] = useState("");
+
+  const [modalOpen, setModalOpen] = useState(false);
   const validate = (values) => {
     const errors = {};
 
@@ -46,16 +49,6 @@ export const SignupForm = (resetForm) => {
     }
     return errors;
   };
-  // use this when sendgrid starts working vvv
-  // const PostData = (val) => {
-  //   const send = {
-  //     To: "keketsomatsuma88@gmail.com",
-  //     from: val.email,
-  //     subject: val.topic,
-  //     text: val.message,
-  //   };
-  // };
-  // ^^^
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -79,16 +72,28 @@ export const SignupForm = (resetForm) => {
   });
   const handleChange = (e) =>
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
+
   const [formValues, setFormValues] = useState({
     firstName: "",
     email: "",
     topic: "",
     message: "",
   });
-  const postSubmit = () => {
-    navigate("/contact");
-  };
+  const close = () => setModalOpen(false);
 
+  const open = () => setModalOpen(true);
+  const postSubmit = () => {
+    if (main) {
+      setStatusMessage("Thank you for your submission.")
+      setSentStatus("success")
+    }
+    setFormValues({
+      firstName: "",
+      email: "",
+      topic: "",
+      message: "",
+    });
+  };
   return (
     <NetlifyForm
       formName="Very Simple Form"
@@ -96,6 +101,15 @@ export const SignupForm = (resetForm) => {
       postSubmit={postSubmit}
       className="main-form"
     >
+      <AnimatePresence initial={false} exitBeforeEnter={true}>
+        {modalOpen && (
+          <Modal modalOpen={modalOpen} handleClose={close}>
+            <div>
+              <Typography variant="h5">Success</Typography>
+            </div>
+          </Modal>
+        )}
+      </AnimatePresence>
       <FormControl fullWidth>
         <InputLabel htmlFor="firstName">Full Name</InputLabel>
         <Input
@@ -105,14 +119,8 @@ export const SignupForm = (resetForm) => {
           value={formValues.firstName}
           onChange={handleChange}
         />
-        {formik.errors.firstName ? (
-          <Typography variant="caption" color="gray">
-            {formik.errors.firstName}
-          </Typography>
-        ) : null}
       </FormControl>
       <FormControl fullWidth>
-        {" "}
         <InputLabel htmlFor="email">Email Address</InputLabel>
         <Input
           id="email"
@@ -121,14 +129,8 @@ export const SignupForm = (resetForm) => {
           value={formValues.email}
           onChange={handleChange}
         />
-        {formik.errors.email ? (
-          <Typography variant="caption" color="gray">
-            {formik.errors.email}
-          </Typography>
-        ) : null}
       </FormControl>
       <FormControl fullWidth>
-        {" "}
         <InputLabel htmlFor="topic">Topic</InputLabel>
         <Input
           id="topic"
@@ -137,11 +139,6 @@ export const SignupForm = (resetForm) => {
           value={formValues.topic}
           onChange={handleChange}
         />
-        {formik.errors.topic ? (
-          <Typography variant="caption" color="gray">
-            {formik.errors.topic}
-          </Typography>
-        ) : null}
       </FormControl>
       <FormControl fullWidth>
         {" "}
@@ -153,11 +150,6 @@ export const SignupForm = (resetForm) => {
           value={formValues.message}
           onChange={handleChange}
         />
-        {formik.errors.mesWsage ? (
-          <Typography variant="caption" color="gray">
-            {formik.errors.message}
-          </Typography>
-        ) : null}
       </FormControl>
       <Button
         label="Submit"
@@ -165,6 +157,11 @@ export const SignupForm = (resetForm) => {
         variant="contained"
         color="success"
       />
+      <div className={`form-message status-${sentStatus}`}>
+        <Typography variant="b2" color="light">
+          Message sent.
+        </Typography>
+      </div>
     </NetlifyForm>
   );
 };
@@ -190,7 +187,7 @@ const Contact = ({ data }) => {
           </div>
           <div className="main-form">
             <Typography variant="h4">We'd love to hear from you</Typography>
-            <SignupForm />
+            <SignupForm main={true} />
           </div>
         </div>
       </Section>

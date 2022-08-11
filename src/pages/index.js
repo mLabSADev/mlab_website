@@ -127,7 +127,7 @@ const IndexPage = ({ data }) => {
         </div>
       </Section>
       <div className="index-form">
-        <SignupForm></SignupForm>
+        <SignupForm main={false}></SignupForm>
       </div>
     </Layout>
   );
