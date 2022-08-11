@@ -72,14 +72,14 @@ const IndexPage = ({ data }) => {
 
       {/* dont't remove */}
       <div className="video-i">
-        <iframereact-ssg-netlify-forms
+        <iframe
           className="play-video"
           src="https://www.youtube.com/embed/z4C5HVz_wu4"
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
-        ></iframereact-ssg-netlify-forms>
+        ></iframe>
       </div>
       {/* ... */}
       <Section>

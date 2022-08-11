@@ -72,7 +72,7 @@ const Footer = () => {
           <Logo />
           <br />
           <br />
-          <Typography color="light" variant="caption">
+          <Typography color="light" variant="b2">
             {description}
           </Typography>
           <div className="links-f">

@@ -13,12 +13,12 @@ const CodeTribe = ({ state = true }) => {
   return (
     <div className="codeTribe">
       <div className="codeTribe-bg">
-        {/* <iframe
+        <iframe
           title="bg"
           className="ct-bg"
           src="https://my.spline.design/interactivespherescopy-9c716a85bc147c41a41c8e55bf0dfd1e/"
           frameBorder="0"
-        ></iframe> */}
+        ></iframe>
       </div>
       <div className="codeTribe-details">
         {state ? (
@@ -46,7 +46,7 @@ const CodeTribe = ({ state = true }) => {
             color="light"
             label="Apply Now"
             type="link"
-            url="https://www.w3schools.com/"
+            url="http://codetribe.co.za/"
           />
         ) : null}
       </div>
