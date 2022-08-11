@@ -86,7 +86,7 @@ export const SignupForm = (resetForm) => {
     message: "",
   });
   const postSubmit = () => {
-    navigate("/hooray");
+    navigate("/contact");
   };
 
   return (
@@ -94,8 +94,9 @@ export const SignupForm = (resetForm) => {
       formName="Very Simple Form"
       formValues={formValues}
       postSubmit={postSubmit}
+      className="main-form"
     >
-      <FormControl>
+      <FormControl fullWidth>
         <InputLabel htmlFor="firstName">Full Name</InputLabel>
         <Input
           id="firstName"
@@ -110,8 +111,7 @@ export const SignupForm = (resetForm) => {
           </Typography>
         ) : null}
       </FormControl>
-
-      <FormControl>
+      <FormControl fullWidth>
         {" "}
         <InputLabel htmlFor="email">Email Address</InputLabel>
         <Input
@@ -127,7 +127,7 @@ export const SignupForm = (resetForm) => {
           </Typography>
         ) : null}
       </FormControl>
-      <FormControl>
+      <FormControl fullWidth>
         {" "}
         <InputLabel htmlFor="topic">Topic</InputLabel>
         <Input
@@ -143,7 +143,7 @@ export const SignupForm = (resetForm) => {
           </Typography>
         ) : null}
       </FormControl>
-      <FormControl>
+      <FormControl fullWidth>
         {" "}
         <InputLabel htmlFor="message">Message</InputLabel>
         <Input
