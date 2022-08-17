@@ -6,6 +6,16 @@
 .list-partners {
   box-sizing: border-box;
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+@media only screen and (max-width: 1600px) {
+  .list-partners {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 880px) {
+  .list-partners {
+    grid-template-columns: 1fr;
+  }
 }

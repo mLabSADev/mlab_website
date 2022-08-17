@@ -90,13 +90,15 @@ const IndexPage = ({ data }) => {
         <div className="hs">
           {news.map((item, i) => {
             const image = getImage(item.node.frontmatter.thumb);
+            const lowerCase = item.node.frontmatter.title.toLowerCase();
+            const _path = lowerCase.replaceAll(" ", "-");
             return (
               <NewsCard
                 key={i}
                 image={image}
                 excerpt={item.node.excerpt}
                 title={item.node.frontmatter.title.replace("-", " ")}
-                url={item.node.frontmatter.path}
+                url={`/${_path}`}
               />
             );
           })}
@@ -152,7 +154,7 @@ export const query = graphql`
             thumb {
               childImageSharp {
                 id
-                gatsbyImageData(quality: 100, width: 1000)
+                gatsbyImageData(quality: 100, width: 1020)
               }
             }
           }
@@ -171,7 +173,7 @@ export const query = graphql`
             registration
             thumb {
               childImageSharp {
-                gatsbyImageData(width: 1100, quality: 100)
+                gatsbyImageData(width: 1020, quality: 100)
               }
             }
           }
@@ -189,13 +191,13 @@ export const query = graphql`
             description
             screenshot {
               childImageSharp {
-                gatsbyImageData(width: 1000, quality: 100, placeholder: BLURRED)
+                gatsbyImageData(width: 1020, quality: 100, placeholder: BLURRED)
                 id
               }
             }
             icon {
               childImageSharp {
-                gatsbyImageData(width: 700, quality: 100, placeholder: BLURRED)
+                gatsbyImageData(width: 1020, quality: 100, placeholder: BLURRED)
                 id
               }
             }
@@ -226,7 +228,7 @@ export const query = graphql`
             number
             icon {
               childImageSharp {
-                gatsbyImageData(width: 400)
+                gatsbyImageData(width: 1020)
               }
             }
           }

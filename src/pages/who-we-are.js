@@ -8,6 +8,8 @@ import SectionTitle from "../components/SectionTitle/SectionTitle";
 import Typography from "../components/Typography/Typography";
 import PageHeader from "../components/PageHeader/PageHeader";
 import Button from "../components/Button/Button";
+
+
 const WhatWeDoCard = ({ image, title, description }) => {
   return (
     <div className="wwd-c">
@@ -34,17 +36,12 @@ const TeamCard = ({ fullName, position, image }) => {
       <Typography variant="s2" center color="gray">
         {position}
       </Typography>
-      <GatsbyImage
-        image={image}
-        alt={fullName}
-        className="image-tc"
-      ></GatsbyImage>
+      <GatsbyImage image={image} alt={fullName} className={fullName} />
     </div>
   );
 };
 const WhoWeAre = ({ data }) => {
   const team = data.team.edges;
-
   return (
     <Layout>
       <PageHeader title="WHO WE ARE" index={1} />

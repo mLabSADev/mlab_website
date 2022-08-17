@@ -1,6 +1,6 @@
 .carousel-main {
   box-sizing: border-box;
-  width: 100vw;
+  width: 100%;
   height: calc(100vh - 80px);
 }
 .main-c {
@@ -14,6 +14,7 @@
   width: 100%;
   height: calc(100vh - 150px);
   position: relative;
+  overflow: hidden;
   .item-img {
     position: absolute;
     top: 0;
@@ -29,19 +30,44 @@
     height: 100%;
     z-index: 10;
     display: grid;
+    position: relative;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-content: center;
     padding: 90px;
+    z-index: 3;
+    div {
+      :nth-child(0) {
+        font-size: 90px;
+      }
+    }
     .header-text-c {
       text-transform: uppercase;
     }
+    .silentDiv {
+      height: 0px;
+    }
   }
 }
-@media only screen and (max-width: 1200px) {
+.item-c::after {
+  content: "";
+  position: absolute;
+  width: 1000px;
+  height: 750px;
+  border-radius: 0px;
+  background-color: rgba(13, 77, 88, 0.726);
+  box-sizing: border-box;
+  top: -40px;
+  right: -500px;
+  transform: rotate(-45deg);
+  z-index: 0;
+}
+@media only screen and (max-width: 1600px) {
   .item-c {
     .details-c {
-      grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
       padding: 20px;
     }
   }
@@ -49,7 +75,8 @@
 @media only screen and (max-width: 880px) {
   .item-c {
     .details-c {
-      grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column;
       padding: 20px;
     }
   }

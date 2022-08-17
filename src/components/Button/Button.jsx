@@ -10,17 +10,14 @@ import "./style.scss";
  * @param {string} url if type = link, url must be provided
  */
 
-const Button = (
-  {
+const Button = ({
     label = "read more",
     type = "button",
     url,
     color,
     onClick,
     disabled = false,
-  },
-  props
-) => {
+  }, props) => {
   if (type === "button") {
     return (
       <button

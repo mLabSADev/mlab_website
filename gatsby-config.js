@@ -21,8 +21,7 @@ module.exports = {
     "gatsby-plugin-mdx", //
     "gatsby-plugin-sharp", //
     "gatsby-transformer-sharp", //
-    `gatsby-plugin-sitemap`,
-
+    "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest", //
       options: {
@@ -141,13 +140,13 @@ module.exports = {
       resolve: "gatsby-plugin-firebase",
       options: {
         credentials: {
-          apiKey: "AIzaSyCSvPQ3-fpuAYGljNEBCrWTVO-yO9tepaU",
-          authDomain: "mlab-22bb9.firebaseapp.com",
-          databaseURL: "https://mlab-22bb9.firebaseio.com",
-          projectId: "mlab-22bb9",
-          storageBucket: "mlab-22bb9.appspot.com",
-          messagingSenderId: "479164571450",
-          appId: "1:479164571450:web:3610b81d1c921714927a03",
+          apiKey: "AIzaSyD115GptMK3aCUu3pu0hFqNJuStQ_ctRKI",
+          authDomain: "mlabwebsite.firebaseapp.com",
+          projectId: "mlabwebsite",
+          storageBucket: "mlabwebsite.appspot.com",
+          messagingSenderId: "870711052956",
+          appId: "1:870711052956:web:6dde9253bc6a5129cafb59",
+          measurementId: "G-VEM9BZWE33",
         },
       },
     },

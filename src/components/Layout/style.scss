@@ -13,16 +13,16 @@
     z-index: 200;
   }
   .children-l {
-    height: calc(100% - 54px);
-    width: 100%;
-    overflow-y: auto;
     box-sizing: border-box;
+    height: calc(100% - 54px);
+    width: calc(100%);
+    overflow-y: auto;
   }
 }
 @media only screen and (max-width: 880px) {
   .main-l {
     .children-l {
-      height: calc(100% - 80px);
+      // height: calc(100% - 80px);
     }
   }
 }

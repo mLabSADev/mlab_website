@@ -4,8 +4,8 @@ import Typography from "../Typography/Typography";
 import "./style.scss";
 import Carousel from "react-material-ui-carousel";
 const CarouselItem = ({ title, text, image, reg }) => {
-  let width =
-    typeof window !== "undefined" ? window.screen.width : 1000;
+  let width = typeof window !== "undefined" ? window.screen.width : 800;
+  console.log(width);
   return (
     <div className="item-c">
       <GatsbyImage className="item-img" image={image} alt={title} />
@@ -15,7 +15,7 @@ const CarouselItem = ({ title, text, image, reg }) => {
           <Typography
             className="header-text-c"
             color="light"
-            variant={width > 880 ? "h1" : "h3"}
+            variant={width > 980 ? "h1" : "h3"}
           >
             {title.toUpperCase()}
           </Typography>
@@ -26,7 +26,7 @@ const CarouselItem = ({ title, text, image, reg }) => {
             {reg}
           </Typography>
         </div>
-        <div></div>
+        <div className="silentDiv"></div>
       </div>
     </div>
   );

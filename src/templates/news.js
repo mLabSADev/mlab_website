@@ -35,7 +35,6 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
                 const img = getImage(entry.node.frontmatter.featureImage);
                 const title = entry.node.frontmatter.title;
                 const excerpt = entry.node.excerpt;
-                const path = entry.node.frontmatter.path;
                 const lowerCase = title.toLowerCase();
                 const _path = lowerCase.replaceAll(" ", "-");
                 if (entry.node.frontmatter.path) {
@@ -54,7 +53,9 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
           </div>
 
           <div className="categories-news">
-            <Typography variant="h6">Tags</Typography>
+            {tags.length > 0 ? (
+              <Typography variant="h6">Tags</Typography>
+            ) : null}
             <div className="tags">
               {tags.map((item, i) => {
                 return <Tag key={i} label={item} url={item} />;

@@ -37,10 +37,15 @@ export default function BlogPost({ data }) {
                 <Typography variant="caption">author</Typography> {author}
               </Typography>
             </div>
-            <p className="controlImage" dangerouslySetInnerHTML={{ __html: html }} />
+            <p
+              className="controlImage"
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
           </div>
           <div className="tag-section">
-            <Typography variant="h6">Tags</Typography>
+            {tags.length > 0 ? (
+              <Typography variant="h6">Tags</Typography>
+            ) : null}
             <div className="tag-w">
               {tags.map((t, i) => {
                 return <Tag key={i} label={t} url={t} />;

@@ -47,7 +47,10 @@ export default function TaggedPosts({ data, pageContext }) {
           </div>
 
           <div className="categories-news">
-            <Typography variant="h6">Tags</Typography>
+            {tags.length > 0 ? (
+              <Typography variant="h6">Tags</Typography>
+            ) : null}
+
             <div className="tags">
               {tags.map((item, i) => {
                 return <Tag key={i} label={item} url={item} />;

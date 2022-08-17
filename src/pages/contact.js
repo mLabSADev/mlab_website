@@ -9,7 +9,6 @@ import Typography from "../components/Typography/Typography";
 import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
 import Input from "@mui/material/Input";
-import { useFormik } from "formik";
 import Button from "../components/Button/Button";
 import NetlifyForm from "react-ssg-netlify-forms";
 import { navigate } from "gatsby";
@@ -20,56 +19,35 @@ export const SignupForm = (main) => {
   const [statusMessage, setStatusMessage] = useState("");
 
   const [modalOpen, setModalOpen] = useState(false);
-  const validate = (values) => {
-    const errors = {};
+  // const validate = (values) => {
+  //   const errors = {};
 
-    if (!values.firstName) {
-      errors.firstName = "Required";
-    } else if (values.firstName.length > 15) {
-      errors.firstName = "Must be 15 characters or less";
-    }
+  //   if (!values.firstName) {
+  //     errors.firstName = "Required";
+  //   } else if (values.firstName.length > 15) {
+  //     errors.firstName = "Must be 15 characters or less";
+  //   }
 
-    if (!values.email) {
-      errors.email = "Required";
-    } else if (
-      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
-    ) {
-      errors.email = "Invalid email address";
-    }
-    if (!values.topic) {
-      errors.topic = "Required";
-    } else if (values.topic.length > 30) {
-      errors.topic = "Must be 30 characters or less";
-    }
+  //   if (!values.email) {
+  //     errors.email = "Required";
+  //   } else if (
+  //     !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
+  //   ) {
+  //     errors.email = "Invalid email address";
+  //   }
+  //   if (!values.topic) {
+  //     errors.topic = "Required";
+  //   } else if (values.topic.length > 30) {
+  //     errors.topic = "Must be 30 characters or less";
+  //   }
 
-    if (!values.message) {
-      errors.message = "Required";
-    } else if (values.message.length > 500) {
-      errors.message = "Must be 500 characters or less";
-    }
-    return errors;
-  };
-  const formik = useFormik({
-    initialValues: {
-      firstName: "",
-      email: "",
-      topic: "",
-      message: "",
-    },
-    validate,
-    onSubmit: async (val) => {
-      console.log(val);
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: val,
-      })
-        .then(() => {
-          alert("Form successfully submitted");
-        })
-        .catch((error) => alert(error));
-    },
-  });
+  //   if (!values.message) {
+  //     errors.message = "Required";
+  //   } else if (values.message.length > 500) {
+  //     errors.message = "Must be 500 characters or less";
+  //   }
+  //   return errors;
+  // };
   const handleChange = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
     console.log(e.target.name);
@@ -94,7 +72,7 @@ export const SignupForm = (main) => {
   });
   const close = () => setModalOpen(false);
 
-  const open = () => setModalOpen(true);
+  // const open = () => setModalOpen(true);
   const postSubmit = () => {
     if (main) {
       setStatusMessage("Thank you for your submission.");
@@ -281,7 +259,11 @@ export const query = graphql`
               name
               childImageSharp {
                 id
-                gatsbyImageData(formats: [AUTO, WEBP], width: 350, quality: 100)
+                gatsbyImageData(
+                  formats: [AUTO, WEBP]
+                  width: 1020
+                  quality: 100
+                )
               }
             }
           }
