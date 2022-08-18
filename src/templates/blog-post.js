@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { graphql } from "gatsby";
 import "./style.scss";
 import DisqusTemplate from "../components/disqus/index";
@@ -8,7 +8,15 @@ import Section from "../components/Section/Section";
 import Tag from "../components/Tag/Tag";
 import "./blog-post.scss";
 import Typography from "../components/Typography/Typography";
+import { AnimatePresence } from "framer-motion";
+import ImageModal from "../components/ImageModal/ImageModal";
+
 export default function BlogPost({ data }) {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const close = () => setModalOpen(false);
+  const open = () => setModalOpen(true);
+
   const image = getImage(
     data.markdownRemark.frontmatter.featureImage &&
       data.markdownRemark.frontmatter.featureImage
@@ -20,12 +28,29 @@ export default function BlogPost({ data }) {
   const author = data.markdownRemark.frontmatter.author;
   return (
     <Layout>
-      <GatsbyImage
-        class="image-bog"
-        image={image}
-        alt={title}
-        objectFit="cover"
-      />
+      <AnimatePresence>
+        {modalOpen && (
+          <ImageModal modalOpen={modalOpen} handleClose={close}>
+            <div className="f-w">
+              <GatsbyImage
+                className="fullscreen"
+                image={image}
+                alt={title}
+                objectFit="contain"
+              />
+            </div>
+          </ImageModal>
+        )}
+      </AnimatePresence>
+      <div onClick={() => open()} class="image-b">
+        <GatsbyImage
+          class="image-bog"
+          image={image}
+          alt={title}
+          objectFit="cover"
+        />
+      </div>
+
       <Section>
         <div className="main-blog">
           <div></div>
@@ -86,7 +111,7 @@ export const query = graphql`
           childImageSharp {
             gatsbyImageData(
               formats: [AUTO, WEBP]
-              width: 550
+              width: 1020
               placeholder: BLURRED
             )
           }

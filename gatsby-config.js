@@ -22,6 +22,7 @@ module.exports = {
     "gatsby-plugin-sharp", //
     "gatsby-transformer-sharp", //
     "gatsby-plugin-sitemap",
+    `gatsby-plugin-offline`,
     {
       resolve: "gatsby-plugin-manifest", //
       options: {
@@ -35,16 +36,6 @@ module.exports = {
         background_color: `#f1f1f1`,
         theme_color: `#91dd09`,
         cache_busting_mode: "none",
-      },
-    },
-    {
-      resolve: `gatsby-plugin-offline`,
-      options: {
-        appendScript: require.resolve(`./custom-sw-code.js`),
-        workboxConfig: {
-          importWorkboxFrom: `cdn`,
-          globPatterns: ["**/images/icons/*"],
-        },
       },
     },
     {
