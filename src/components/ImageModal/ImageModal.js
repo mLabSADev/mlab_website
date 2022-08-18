@@ -5,7 +5,7 @@ const Backdrop = ({ children, onClick }) => {
   return (
     <motion.div
       onClick={onClick}
-      className="backdrop"
+      className="image-backdrop"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -37,8 +37,11 @@ const ImageModal = ({ handleClose, children }) => {
   return (
     <Backdrop onClick={handleClose}>
       <motion.div
-        onClick={(e) => e.stopPropagation()}
-        className="modal orange-gradient"
+        onClick={(e) => {
+          e.stopPropagation();
+          handleClose();
+        }}
+        className="image-modal orange-gradient"
         variants={dropIn}
         initial="hidden"
         animate="visible"

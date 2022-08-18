@@ -17,7 +17,7 @@ const Backdrop = ({ children, onClick }) => {
 };
 const dropIn = {
   hidden: {
-    y: "-100vh",
+    y: "100vh",
     opacity: 0,
   },
   visible: {
