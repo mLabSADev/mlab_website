@@ -59,6 +59,7 @@ export const SignupForm = (main) => {
         setSentStatus("");
       } else {
         setStatusMessage("Email is invalid");
+
         setSentStatus("error");
       }
     }
@@ -125,7 +126,7 @@ export const SignupForm = (main) => {
         />
       </FormControl>
       <FormControl fullWidth>
-        <InputLabel htmlFor="topic">Topic</InputLabel>
+        <InputLabel htmlFor="topic">Subject</InputLabel>
         <Input
           id="topic"
           name="topic"
@@ -138,6 +139,9 @@ export const SignupForm = (main) => {
         {" "}
         <InputLabel htmlFor="message">Message</InputLabel>
         <Input
+          multiline={true}
+          minRows={3}
+          maxRows={10}
           id="message"
           name="message"
           type="text"
@@ -151,11 +155,13 @@ export const SignupForm = (main) => {
         variant="contained"
         color="success"
       />
-      <div className={`form-message status-${sentStatus}`}>
-        <Typography variant="b2" color="light">
-          {statusMessage}
-        </Typography>
-      </div>
+      {sentStatus && (
+        <div className={`form-message status-${sentStatus}`}>
+          <Typography variant="b2" color="light">
+            {statusMessage}
+          </Typography>
+        </div>
+      )}
     </NetlifyForm>
   );
 };
@@ -180,7 +186,8 @@ const Contact = ({ data }) => {
             </div>
           </div>
           <div className="main-form">
-            <Typography variant="h4">We'd love to hear from you</Typography>
+            <Typography variant="h4">Email Us</Typography>
+            <Typography variant="b1">We'd love to hear from you</Typography>
             <SignupForm main={true} />
           </div>
         </div>

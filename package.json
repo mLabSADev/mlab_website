@@ -33,6 +33,7 @@
     "firebase": "^9.9.2",
     "firebase-tools": "^11.6.0",
     "formik": "^2.2.9",
+    "framer-motion-carousel": "^2.0.1",
     "fs": "^0.0.1-security",
     "gatsby": "^4.19.0",
     "gatsby-awesome-pagination": "^0.3.8",

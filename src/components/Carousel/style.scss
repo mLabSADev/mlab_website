@@ -3,6 +3,19 @@
   width: 100%;
   height: calc(100vh - 80px);
 }
+.dot {
+  box-sizing: border-box;
+  width: 5px;
+  height: 5px;
+  background-color: rgb(241, 241, 241);
+  transition: ease-in-out 0.3s;
+}
+.active-dot {
+  box-sizing: border-box;
+  transition: ease-in-out 0.3s;
+  width: 10px;
+  background-color: var(--primary-color);
+}
 .main-c {
   box-sizing: border-box;
   width: 100vw;
