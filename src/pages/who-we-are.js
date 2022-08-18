@@ -9,7 +9,6 @@ import Typography from "../components/Typography/Typography";
 import PageHeader from "../components/PageHeader/PageHeader";
 import Button from "../components/Button/Button";
 
-
 const WhatWeDoCard = ({ image, title, description }) => {
   return (
     <div className="wwd-c">
@@ -36,7 +35,12 @@ const TeamCard = ({ fullName, position, image }) => {
       <Typography variant="s2" center color="gray">
         {position}
       </Typography>
-      <GatsbyImage image={image} alt={fullName} className={fullName} />
+      <GatsbyImage
+        image={image}
+        alt={fullName}
+        objectFit="contain"
+        className="image-tc"
+      />
     </div>
   );
 };
@@ -164,7 +168,7 @@ export const query = graphql`
             thumb {
               childImageSharp {
                 id
-                gatsbyImageData(quality: 100, width: 300)
+                gatsbyImageData(quality: 100, width: 1020)
               }
             }
           }
