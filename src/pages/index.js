@@ -154,7 +154,7 @@ export const query = graphql`
             thumb {
               childImageSharp {
                 id
-                gatsbyImageData(quality: 100, width: 1020)
+                gatsbyImageData(quality: 100, width: 1920)
               }
             }
           }
@@ -173,7 +173,7 @@ export const query = graphql`
             registration
             thumb {
               childImageSharp {
-                gatsbyImageData(width: 1020, quality: 100)
+                gatsbyImageData(width: 1920, quality: 100)
               }
             }
           }
@@ -191,13 +191,13 @@ export const query = graphql`
             description
             screenshot {
               childImageSharp {
-                gatsbyImageData(width: 1020, quality: 100, placeholder: BLURRED)
+                gatsbyImageData(width: 1920, quality: 100, placeholder: BLURRED)
                 id
               }
             }
             icon {
               childImageSharp {
-                gatsbyImageData(width: 1020, quality: 100, placeholder: BLURRED)
+                gatsbyImageData(width: 1920, quality: 100, placeholder: BLURRED)
                 id
               }
             }
@@ -228,7 +228,7 @@ export const query = graphql`
             number
             icon {
               childImageSharp {
-                gatsbyImageData(width: 1020)
+                gatsbyImageData(width: 1920)
               }
             }
           }

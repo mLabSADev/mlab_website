@@ -202,7 +202,7 @@ const Navigation = ({ title, route }) => {
       <div className={`expandingMenu ${menu ? "ex-open" : "ex-close"}`}>
         {links.map((item, i) => {
           if (item.items.length === 0) {
-            return <Item key={i} label={item.label}></Item>;
+            return <Item key={i} label={item.label} url={item.url}></Item>;
           } else {
             return (
               <MobileDropdown
