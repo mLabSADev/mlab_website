@@ -10,7 +10,7 @@ import Button from "../Button/Button";
  * @param {string} excerpt excerpt
  * @returns
  */
-const NewsCard = ({ image, title, excerpt, url }) => {
+const NewsCard = ({ image, title, excerpt, url, date }) => {
   let titleFix = "";
   if (title) {
     titleFix = title.replaceAll("-", " ");
@@ -32,10 +32,15 @@ const NewsCard = ({ image, title, excerpt, url }) => {
           className="image-nc"
         ></GatsbyImage>
       ) : (
-        <StaticImage src="../../assets/placeholder.jpg" className="image-nc" alt="no image" />
+        <StaticImage
+          src="../../assets/placeholder.jpg"
+          className="image-nc"
+          alt="no image"
+        />
       )}
 
       <div className="details-nc">
+        <Typography variant="b1">{date}</Typography>
         <Typography variant="h5">{titleFix.toUpperCase()}</Typography>
         <Typography color="gray" variant="b2">
           {excerpt}

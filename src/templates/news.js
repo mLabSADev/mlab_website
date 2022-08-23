@@ -9,19 +9,20 @@ import Pagination from "@mui/material/Pagination";
 import { graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 import Tag from "../components/Tag/Tag";
+import moment from "moment";
 const News = ({ data, pageContext, numberOfAllPages = [] }) => {
   const { numberOfPages } = pageContext;
   for (let i = 0; i < numberOfPages; i++) {
     numberOfAllPages.push(i + 1);
   }
+
   const news = data.allMarkdownRemark.edges;
   let tags = [];
   news.forEach((element) => {
     let tag = element.node.frontmatter.tags;
     tags = tags.concat(tag);
   });
-  //   onClick={() => (modalOpen ? close() : open())}
-  console.log(data);
+
   return (
     <Layout>
       <PageHeader title="news" index={4} />
@@ -37,9 +38,11 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
                 const excerpt = entry.node.excerpt;
                 const lowerCase = title.toLowerCase();
                 const _path = lowerCase.replaceAll(" ", "-");
+                const date = entry.node.frontmatter.timeStamp;
                 if (entry.node.frontmatter.path) {
                   return (
                     <NewsCard
+                      date={moment(date).format("DD MMMM, YYYY")}
                       key={i}
                       image={img}
                       title={title}
@@ -109,7 +112,7 @@ export const query = graphql`
         fileAbsolutePath: { regex: "/(news)/" }
         frontmatter: { path: { ne: null } }
       }
-      sort: { fields: [frontmatter___timeStamp], order: DESC }
+      sort: { fields: [frontmatter___timeStamp], order: ASC }
       limit: $limit
       skip: $skip
     ) {

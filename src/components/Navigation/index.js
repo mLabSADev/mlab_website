@@ -182,7 +182,7 @@ const Navigation = ({ title, route }) => {
             }
           })}
           <a
-            href="http://codetribe.co.za/"
+            href="https://codetribe.mlab.co.za/"
             target="_blank"
             rel="noreferrer"
             className="codetribe-link"
