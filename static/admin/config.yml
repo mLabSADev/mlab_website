@@ -91,7 +91,7 @@ collections:
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "thumb", widget: "image" }
+      - { label: "Image", name: "image", widget: "image" }
       - { label: "Registration", name: "registration", widget: "string" }
       - { label: "Body", name: "body", widget: "string" }
   - name: "whatWeDo"

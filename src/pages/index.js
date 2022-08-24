@@ -197,7 +197,7 @@ export const query = graphql`
             }
             icon {
               childImageSharp {
-                gatsbyImageData(width: 1920, quality: 100, placeholder: BLURRED)
+                gatsbyImageData(width: 1920 placeholder: BLURRED)
                 id
               }
             }
@@ -228,7 +228,7 @@ export const query = graphql`
             number
             icon {
               childImageSharp {
-                gatsbyImageData(width: 1920)
+                gatsbyImageData(width: 1920, quality: 100,)
               }
             }
           }
