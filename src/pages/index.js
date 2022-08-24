@@ -171,7 +171,7 @@ export const query = graphql`
           frontmatter {
             title
             registration
-            thumb {
+            image {
               childImageSharp {
                 gatsbyImageData(width: 1920, quality: 100)
               }

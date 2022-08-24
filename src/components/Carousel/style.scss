@@ -3,10 +3,14 @@
   width: 100%;
   height: calc(100vh - 80px);
 }
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
 .arrow {
   width: 50px;
   .left {
-
   }
   .right {
     transform: rotate(180deg);
@@ -31,12 +35,20 @@
   height: calc(100vh - 80px);
   display: flex;
 }
+.mySwiper {
+  box-sizing: border-box;
+  width: 100%;
+  height: calc(100vh - 150px);
+}
 .item-c {
   box-sizing: border-box;
   width: 100%;
   height: calc(100vh - 150px);
   position: relative;
   overflow: hidden;
+
+  text-align: center;
+  font-size: 18px;
   .item-img {
     position: absolute;
     top: 0;
