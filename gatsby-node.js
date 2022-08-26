@@ -74,6 +74,9 @@ exports.createPages = async ({ actions, graphql }) => {
       }
     }
   `);
+  /*
+    
+  */
   news.data.allMarkdownRemark.edges.forEach(({ node }) => {
     const title = node.frontmatter.title;
     const lowerCase = title.toLowerCase();

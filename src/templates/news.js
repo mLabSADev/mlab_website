@@ -100,13 +100,7 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
   );
 };
 export const query = graphql`
-  query NewsQuery($title: String! = "News", $skip: Int, $limit: Int) {
-    markdownRemark(frontmatter: { title: { eq: $title } }) {
-      frontmatter {
-        title
-        abstract
-      }
-    }
+  query NewsQuery($skip: Int, $limit: Int) {
     allMarkdownRemark(
       filter: {
         fileAbsolutePath: { regex: "/(news)/" }
