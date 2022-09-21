@@ -1,13 +1,16 @@
 ---
-path: "/it-was-life-changing-the-codetribe-academy" 
-date: 2022-01-10T12:59:21 
-title: "&#8220;It was life changing&#8221; &#8211; Impacts of the CodeTribe Academy" 
-featureImage: "../../images/placeholder.png" 
-thumb: "../../images/placeholder.png" 
-abstract:  
-tags: [] 
-timeStamp: 2022-01-10T12:59:21 
-categories: ['News'] 
+abstract: null
+featureImage: ../../images/placeholder.png
+path: /it-was-life-changing-the-codetribe-academy
+title: '"It was life changing" - Impacts of the CodeTribe Academy'
+author: Zukanye Madakana
+date: Jan 10, 22
+timeStamp: 2022-01-10T12:59:21
+thumb: sinoxolo.jpg
+tags: []
+categories:
+  - News
+category: Talent
 ---
 
 <figure id="attachment_3704" style="width: 864px" class="wp-caption aligncenter"><a href="https://mlab.co.za/wp-content/uploads/2022/01/Sinoxolo.jpg"><img class="wp-image-3704 size-full" src="https://mlab.co.za/wp-content/uploads/2022/01/Sinoxolo.jpg" alt="Former CodeTriber, Sinoxolo Malisa. " width="864" height="1152" /></a><figcaption class="wp-caption-text">Sinoxolo Malisa, a former CodeTriber who is now a Jr. Cyber Security Analyst.</figcaption></figure>
