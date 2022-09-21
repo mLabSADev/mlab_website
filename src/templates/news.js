@@ -28,22 +28,13 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
       <PageHeader title="news" index={4} />
       <Section>
         {/* <SectionTitle>Articles</SectionTitle> */}
-        <div
-          className={
-            tags.length > 0
-              ? "news-content"
-              : "news-content news-content-notags"
-          }
-        >
+        <div className="news-content">
           <div className="stories-n">
-            <Typography variant="h3">Articles</Typography>
-            <div
-              className={
-                tags.length > 0
-                  ? "stories-news"
-                  : "stories-news stories-news-notags"
-              }
-            >
+            <div className="article-title">
+              <Typography variant="h3">Articles</Typography>
+            </div>
+
+            <div className="stories-news">
               {data.allMarkdownRemark.edges.map((entry, i) => {
                 const img = getImage(entry.node.frontmatter.featureImage);
                 const title = entry.node.frontmatter.title;
@@ -66,18 +57,25 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
               })}
             </div>
           </div>
-          {tags.length > 0 ? (
-            <div className="categories-news">
-              {tags.length > 0 ? (
-                <Typography variant="h6">Tags</Typography>
-              ) : null}
-              <div className="tags">
+
+          <div className="categories-news">
+            <div className="tag-tittle">
+              <Typography variant="h5">Tags</Typography>
+            </div>
+
+            <div className="tags">
+              {tags.length == 0 && (
+                <div className="empty-tags">
+                  <Typography variant="b1">No tags for this page.</Typography>
+                </div>
+              )}
+              <div className="tag-list">
                 {tags.map((item, i) => {
                   return <Tag key={i} label={item} url={item} />;
                 })}
               </div>
             </div>
-          ):(null)}
+          </div>
         </div>
 
         <div className="pagination-news">
