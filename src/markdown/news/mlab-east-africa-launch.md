@@ -1,0 +1,28 @@
+---
+path: "/mlab-east-africa-launch" 
+date: 2011-06-17T10:13:37 
+title: "m:lab East Africa launch" 
+featureImage: "../../images/placeholder.png" 
+thumb: "../../images/placeholder.png" 
+abstract:  
+tags: [] 
+timeStamp: 2011-06-17T10:13:37 
+categories: ['News'] 
+---
+
+<p><a title="Launch of m:lab East Africa by mLabSA, on Flickr" href="http://www.flickr.com/photos/mlabsa/5839602441/"><img src="http://farm4.static.flickr.com/3430/5839602441_4fc8590809.jpg" alt="Launch of m:lab East Africa" width="500" height="335" /></a></p>
+<p>On June 16, 2011, the <a href="http://mlab.co.ke/">m:lab East Africa</a> was <a href="http://www.ihub.co.ke/blog/2011/06/mlab-is-officially-launched/">officially launched</a> in Nairobi at the <a href="http://ihub.co.ke/">*iHub_</a>. m:lab East Africa is the sister organisation of the mLab Southern Africa (SA), and the first in the global family of mLabs to open it&#8217;s doors. (mLab SA will be next on the 2nd of August in Pretoria &#8212; save the date!)</p>
+<p>We were there to share in the excitement and promise of the region’s new incubation facility for mobile tech entrepreneurs and innovators. There was a tangible feeling that this is Africa&#8217;s time, that mobile is her tech, and that with the support provided by the mLabs of the world, great things are destined to happen there.</p>
+<p>m:lab East Africa is really a consortium of four organisations :-</p>
+<ul>
+<li><a href="http://www.emobilis.org/">eMobilis</a>, responsible for education, training, accredition and certification;</li>
+<li><a href="http://www.webfoundation.org/">World Wide Web Foundation</a>, responsible for curriculum and content, training and education;</li>
+<li>The <a href="http://sci.uonbi.ac.ke/">University of Nairobi School of Computing and Informatics</a>, responsible for rigorous academic research; and the</li>
+<li><a href="http://ihub.co.ke/">iHub</a> for community interaction, development space, events and access to capital and markets.</li>
+</ul>
+<p>We wish m:lab East Africa all the best of luck in its aim to help make the East Africa region a global hub for mobile innovation. As Erik Hersman, co-founder of the *iHub_ has <a href="http://whiteafrican.com/2010/11/27/finding-africas-innovators/">said</a>, &#8220;Until we own this narrative about our continent, we will forever be slaves to those that do.&#8221;</p>
+<div style="padding: 0;overflow: hidden;margin: 0;width: 500px"><a title="Launch of m:lab East Africa" href="http://www.flickr.com/photos/mlabsa/5839602441/in/set-72157626852400339/"><img style="padding: 0 10px 10px 0;width: 75px;height: 75px;float: left" src="http://farm4.static.flickr.com/3430/5839602441_4fc8590809_s.jpg" alt="Launch of m:lab East Africa" /></a><a title="Launch of m:lab East Africa" href="http://www.flickr.com/photos/mlabsa/5840150242/in/set-72157626852400339/"><img style="padding: 0 10px 10px 0;width: 75px;height: 75px;float: left" src="http://farm4.static.flickr.com/3651/5840150242_9673428b7f_s.jpg" alt="Launch of m:lab East Africa" /></a><a title="Launch of m:lab East Africa" href="http://www.flickr.com/photos/mlabsa/5839600855/in/set-72157626852400339/"><img style="padding: 0 10px 10px 0;width: 75px;height: 75px;float: left" src="http://farm6.static.flickr.com/5073/5839600855_b587268a95_s.jpg" alt="Launch of m:lab East Africa" /></a><a title="Launch of m:lab East Africa" href="http://www.flickr.com/photos/mlabsa/5840148190/in/set-72157626852400339/"><img style="padding: 0 10px 10px 0;width: 75px;height: 75px;float: left" src="http://farm4.static.flickr.com/3108/5840148190_fc051d74df_s.jpg" alt="Launch of m:lab East Africa" /></a><a title="Launch of m:lab East Africa" href="http://www.flickr.com/photos/mlabsa/5839599105/in/set-72157626852400339/"><img style="padding: 0 10px 10px 0;width: 75px;height: 75px;float: left" src="http://farm3.static.flickr.com/2632/5839599105_d65f9a8b23_s.jpg" alt="Launch of m:lab East Africa" /></a><a title="Launch of m:lab East Africa" href="http://www.flickr.com/photos/mlabsa/5840146414/in/set-72157626852400339/"><img style="padding: 0 0 10px 0;width: 75px;height: 75px;float: left" src="http://farm4.static.flickr.com/3642/5840146414_7bd64bc912_s.jpg" alt="Launch of m:lab East Africa" /></a><br />
+<a title="Launch of m:lab East Africa" href="http://www.flickr.com/photos/mlabsa/5839597365/in/set-72157626852400339/"><img style="padding: 0 10px 10px 0;width: 75px;height: 75px;float: left" src="http://farm4.static.flickr.com/3628/5839597365_0c9a38e1c2_s.jpg" alt="Launch of m:lab East Africa" /></a><a title="Launch of m:lab East Africa" href="http://www.flickr.com/photos/mlabsa/5840144570/in/set-72157626852400339/"><img style="padding: 0 10px 10px 0;width: 75px;height: 75px;float: left" src="http://farm3.static.flickr.com/2800/5840144570_e7965dec0e_s.jpg" alt="Launch of m:lab East Africa" /></a><a title="Launch of m:lab East Africa" href="http://www.flickr.com/photos/mlabsa/5840143540/in/set-72157626852400339/"><img style="padding: 0 10px 10px 0;width: 75px;height: 75px;float: left" src="http://farm6.static.flickr.com/5077/5840143540_684a6b500c_s.jpg" alt="Launch of m:lab East Africa" /></a><a title="Launch of m:lab East Africa" href="http://www.flickr.com/photos/mlabsa/5839594145/in/set-72157626852400339/"><img style="padding: 0 10px 10px 0;width: 75px;height: 75px;float: left" src="http://farm4.static.flickr.com/3354/5839594145_f568e5a433_s.jpg" alt="Launch of m:lab East Africa" /></a></div>
+<div style="font-size: 0.8em;margin-top: 0px;margin-bottom: 5px">
+<p><a href="http://www.flickr.com/photos/mlabsa/sets/72157626852400339/">m:lab East Africa launch</a>, a set on Flickr.</p>
+</div>

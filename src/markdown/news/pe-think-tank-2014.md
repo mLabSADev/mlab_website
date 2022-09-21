@@ -1,36 +1,15 @@
 ---
-path: /pe-think-tank-2014
-date: 20 Nov 2014
-title: pe-think-tank-2014
-author: mlab
-featureImage: ../../images/pe-think-tank-2014.png
-thumb: ../../images/pe-think-tank-2014.png
-attachments: 
-- ../../images/pe-think-tank-2014.png
-abstract: ""
-tags: ['developers','Entrepreneurship','GEW2014','Hub','ict','mLab','mobile','PE','Port Elizabeth','silicon cape']
-timeStamp: 2014-11-20T16:40:20
+path: "/pe-think-tank-2014" 
+date: 2014-11-20T16:40:20 
+title: "PE Think Tank 2014" 
+featureImage: "../../images/Screen-Shot-2014-11-20-at-4.33.59-PM.png"
+thumb: "../../images/placeholder.png" 
+abstract:  
+tags: [] 
+timeStamp: 2014-11-20T16:40:20 
+categories: ['News'] 
 ---
 
-You are cordially invited to the inaugural Port Elizabeth Think Tank opening, sponsored by mLab Southern Africa,  which will be held on 27th of November 2014 at Nelson Mandela Metropolitan University in Port Elizabeth. This is an open function, meaning it’s free to attend the event but [registration is required](https:&#x2F;&#x2F;www.quicket.co.za&#x2F;events&#x2F;7194-pe-think-tank).  
-   
-Port Elizabeth has a lot of opportunities and potential in ICT led initiatives, the challenge is how to harness that potential and nurture it in a well crowd sourced and sustainable way. This event is the first step on that journey. The aim of the function is to bring together people with a passion for technology &amp; business and a desire to impact community development, to discuss how to contribute to the growing Port Elizabeth ICT environment. Inspiring examples such as Silicone Valley in California, Silicone Cape in the Western Cape and various formations with this focus have led us to believe this is possible in our city.  
-  
-The Event:   
-  
-Will showcase inspiring success stories of different cities in South Africa and what they are doing to enable growth using technology. Another objective is to connect people with the intention of sparking innovation and new business synergies.  
-  
-Proceedings:  
-17:30 Drinks and reception  
-   
-18:00 – Keynote addresses by: Nirvesh Sooful, Mixo Ngoveni, Nkululeko Mthembu,  Mapaseka Dipale, Rulani Nevhufumba, Surprise Speaker.  
-   
-19:30 – Q&amp;A audience participation  
-   
-20:00 – Closure &amp; networking  
-  
-If you are have trouble any question please contact event organizer by calling 0738449102 or emailing [mapaseka@africanideas.co.za](mailto:%20mapaseka@africanideas.co.za).  
-   
-[REGISTER HERE](https:&#x2F;&#x2F;www.quicket.co.za&#x2F;events&#x2F;7194-pe-think-tank)
-
-
+<p style="text-align: justify;"><span style="color: #666666;">You are cordially invited to the inaugural Port Elizabeth Think Tank opening, sponsored by mLab Southern Africa,  which will be held on </span><span style="font-weight: 600; color: #666666;">27</span><span style="font-weight: 600; color: #666666;">th</span><span style="font-weight: 600; color: #666666;"> of November 2014 </span><span style="color: #666666;">at Nelson Mandela Metropolitan University in Port Elizabeth. This is an open function, meaning itâ€™s free to attend the event but <a href="https://www.quicket.co.za/events/7194-pe-think-tank">registration is required</a>.</span><br style="color: #666666;" /><span style="color: #666666;"> </span><br style="color: #666666;" /><span style="color: #666666;">Port Elizabeth has a lot of opportunities and potential in ICT led initiatives, the challenge is how to harness that potential and nurture it in a well crowd sourced and sustainable way. This event is the first step on that journey. The aim of the function is to bring together people with a passion for technology &amp; business and a desire to impact community development, to discuss how to contribute to the growing Port Elizabeth ICT environment. Inspiring examples such as Silicone Valley in California, Silicone Cape in the Western Cape and various formations with this focus have led us to believe this is possible in our city.</span><br style="color: #666666;" /><br style="color: #666666;" /><span style="font-weight: 600; color: #666666;">The Event: </span><br style="color: #666666;" /><br style="color: #666666;" /><span style="color: #666666;">Will showcase inspiring success stories of different cities in South Africa and what they are doing to enable growth using technology. Another objective is to connect people with the intention of sparking innovation and new business synergies.</span><br style="color: #666666;" /><br style="color: #666666;" /><span style="font-weight: 600; color: #666666;">Proceedings:<br />
+17:30</span><span style="color: #666666;"> &#8211; Drinks and reception</span><br style="color: #666666;" /><span style="color: #666666;"> </span><br style="color: #666666;" /><span style="font-weight: 600; color: #666666;">18:00</span><span style="color: #666666;"> â€“ Keynote addresses by: </span>Nirvesh Sooful, Mixo Ngoveni, Nkululeko Mthembu,  Mapaseka Dipale, Rulani Nevhufumba, Surprise Speaker.<br style="color: #666666;" /><span style="color: #666666;"> </span><br style="color: #666666;" /><span style="font-weight: 600; color: #666666;">19:30 </span><span style="color: #666666;">â€“ Q&amp;A audience participation</span><br style="color: #666666;" /><span style="color: #666666;"> </span><br style="color: #666666;" /><span style="font-weight: 600; color: #666666;">20:00 </span><span style="color: #666666;">â€“ Closure &amp; networking</span><br style="color: #666666;" /><br style="color: #666666;" /><span style="color: #666666;">If you are have trouble any question please contact event organizer by calling 0738449102 or emailing </span><a style="color: #5aac0f;" href="mailto:%20mapaseka@africanideas.co.za">mapaseka@africanideas.co.za</a><span style="color: #666666;">.</span><br style="color: #666666;" /><span style="color: #666666;"> </span><br style="color: #666666;" /><span style="color: #666666;"><a href="https://www.quicket.co.za/events/7194-pe-think-tank">REGISTER HERE</a><br />
+</span></p>

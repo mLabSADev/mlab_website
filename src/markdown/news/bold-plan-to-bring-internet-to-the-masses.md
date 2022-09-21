@@ -1,17 +1,13 @@
 ---
-path: /bold-plan-to-bring-internet-to-the-masses
-date: 29 Aug 2011
-title: bold-plan-to-bring-internet-to-the-masses
-author: mlab
-featureImage: ../../images/launch-of-digital-lab-africa-platform-at-discop-africa-abidjan-a-springboard-for-african-talent-in-multimedia.png
-thumb: ../../images/launch-of-digital-lab-africa-platform-at-discop-africa-abidjan-a-springboard-for-african-talent-in-multimedia.png
-attachments: 
-- ../../images/launch-of-digital-lab-africa-platform-at-discop-africa-abidjan-a-springboard-for-african-talent-in-multimedia.png
-abstract: ""
-tags: ['ben zaaiman','laurens cloete','meraka']
-timeStamp: 2011-08-29T12:52:44
+path: "/bold-plan-to-bring-internet-to-the-masses" 
+date: 2011-08-29T12:52:44 
+title: "Bold plan to bring internet to the masses" 
+featureImage: "../../images/placeholder.png" 
+thumb: "../../images/placeholder.png" 
+abstract:  
+tags: [] 
+timeStamp: 2011-08-29T12:52:44 
+categories: ['News'] 
 ---
 
-[![Business Day logo](https:&#x2F;&#x2F;mlab.co.za&#x2F;wp-content&#x2F;uploads&#x2F;2011&#x2F;08&#x2F;bd_logo.png)](http:&#x2F;&#x2F;www.businessday.co.za&#x2F;articles&#x2F;Content.aspx?id&#x3D;151243)[Bold plan to bring internet to the masses](http:&#x2F;&#x2F;www.businessday.co.za&#x2F;articles&#x2F;Content.aspx?id&#x3D;151243) is an article in the Business Day, written by Sarah Wild, about the mLab SA’s future plans. Both Ben Zaaiman, CEO of the mLab SA, and Laurens Cloete, Executive Director of the CSIR Meraka Institute, are interviewed.
-
-
+<p><a href="http://www.businessday.co.za/articles/Content.aspx?id=151243"><img class="alignright size-full wp-image-436" src="http://mlab/wp-content/uploads/2011/08/bd_logo.png" alt="Business Day logo" width="296" height="96" /></a><a href="http://www.businessday.co.za/articles/Content.aspx?id=151243">Bold plan to bring internet to the masses</a> is an article in the Business Day, written by Sarah Wild, about the mLab SA&#8217;s future plans. Both Ben Zaaiman, CEO of the mLab SA, and Laurens Cloete, Executive Director of the CSIR Meraka Institute, are interviewed.</p>

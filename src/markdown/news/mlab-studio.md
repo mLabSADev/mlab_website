@@ -1,17 +1,12 @@
 ---
-path: /mlab-studio
-date: 11 Feb 2013
-title: mlab-studio
-author: mlab
-featureImage: ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
-thumb: ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
-attachments: 
-- ../../images/mlab-hosts-first-tedxcapetown-simulcast.png
-abstract: ""
-tags: ['featured']
-timeStamp: 2013-02-11T18:08:15
+path: "/mlab-studio" 
+date: 2013-02-11T18:08:15 
+title: "mLab Studio" 
+featureImage: "../../images/Screen-Shot-2013-02-11-at-5.45.16-PM.png"
+thumb: "../../images/placeholder.png" 
+abstract:  
+tags: [] 
+timeStamp: 2013-02-11T18:08:15 
+categories: ['News'] 
 ---
-
-
-
 

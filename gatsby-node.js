@@ -12,6 +12,7 @@ exports.createPages = async ({ actions, graphql }) => {
           fileAbsolutePath: { regex: "/(news)/" }
           frontmatter: { path: { ne: null } }
         }
+        sort: { fields: [frontmatter___timeStamp], order: DESC }
       ) {
         edges {
           node {
@@ -80,9 +81,12 @@ exports.createPages = async ({ actions, graphql }) => {
   news.data.allMarkdownRemark.edges.forEach(({ node }) => {
     const title = node.frontmatter.title;
     const lowerCase = title.toLowerCase();
-    const _path = lowerCase.replaceAll(" ", "-");
+    const remove_invalid_1 = lowerCase.replaceAll(":", "");
+    const remove_invalid_2 = remove_invalid_1.replaceAll("|", "");
+    const remove_invalid_3 = remove_invalid_2.replaceAll("#", "");
+    const _path = remove_invalid_3.replaceAll(" ", "-");
     createPage({
-      path: `/news/${_path}`,
+      path: `/news${node.frontmatter.path}`,
       component: PostTemplate,
       context: { article: title },
     });

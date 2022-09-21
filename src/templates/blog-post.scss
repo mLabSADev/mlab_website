@@ -57,9 +57,18 @@
     .controlImage {
       box-sizing: border-box;
       width: 100%;
+      overflow: hidden;
+      p {
+        display: inline-block;
+      }
+      span {
+        width: 100% !important;
+      }
       img {
         box-sizing: border-box;
         width: 100%;
+        height: auto !important;
+        margin: 50px 0px;
       }
     }
   }

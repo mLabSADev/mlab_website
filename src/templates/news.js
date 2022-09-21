@@ -28,10 +28,22 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
       <PageHeader title="news" index={4} />
       <Section>
         {/* <SectionTitle>Articles</SectionTitle> */}
-        <div className="news-content">
+        <div
+          className={
+            tags.length > 0
+              ? "news-content"
+              : "news-content news-content-notags"
+          }
+        >
           <div className="stories-n">
             <Typography variant="h3">Articles</Typography>
-            <div className="stories-news">
+            <div
+              className={
+                tags.length > 0
+                  ? "stories-news"
+                  : "stories-news stories-news-notags"
+              }
+            >
               {data.allMarkdownRemark.edges.map((entry, i) => {
                 const img = getImage(entry.node.frontmatter.featureImage);
                 const title = entry.node.frontmatter.title;
@@ -47,24 +59,25 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
                       image={img}
                       title={title}
                       excerpt={excerpt}
-                      url={`/${_path}`}
+                      url={`${entry.node.frontmatter.path}`}
                     />
                   );
                 } else return null;
               })}
             </div>
           </div>
-
-          <div className="categories-news">
-            {tags.length > 0 ? (
-              <Typography variant="h6">Tags</Typography>
-            ) : null}
-            <div className="tags">
-              {tags.map((item, i) => {
-                return <Tag key={i} label={item} url={item} />;
-              })}
+          {tags.length > 0 ? (
+            <div className="categories-news">
+              {tags.length > 0 ? (
+                <Typography variant="h6">Tags</Typography>
+              ) : null}
+              <div className="tags">
+                {tags.map((item, i) => {
+                  return <Tag key={i} label={item} url={item} />;
+                })}
+              </div>
             </div>
-          </div>
+          ):(null)}
         </div>
 
         <div className="pagination-news">
@@ -106,7 +119,7 @@ export const query = graphql`
         fileAbsolutePath: { regex: "/(news)/" }
         frontmatter: { path: { ne: null } }
       }
-      sort: { fields: [frontmatter___timeStamp], order: ASC }
+      sort: { fields: [frontmatter___timeStamp], order: DESC }
       limit: $limit
       skip: $skip
     ) {

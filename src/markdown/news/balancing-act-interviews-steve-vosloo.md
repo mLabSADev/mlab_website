@@ -1,21 +1,15 @@
 ---
-path: /balancing-act-interviews-steve-vosloo
-date: 29 Aug 2011
-title: balancing-act-interviews-steve-vosloo
-author: mlab
-featureImage: ../../images/bg.jpg
-thumb: ../../images/bg.jpg
-attachments: 
-- ../../images/bg.jpg
-abstract: ""
-tags: ['yoza']
-timeStamp: 2011-08-29T12:42:19
+path: "/balancing-act-interviews-steve-vosloo" 
+date: 2011-08-29T12:42:19 
+title: "Balancing Act interviews Steve Vosloo" 
+featureImage: "../../images/placeholder.png" 
+thumb: "../../images/placeholder.png" 
+abstract:  
+tags: [] 
+timeStamp: 2011-08-29T12:42:19 
+categories: ['News'] 
 ---
 
-Russell Southwood, editor of [Balancing Act](http:&#x2F;&#x2F;www.balancingact-africa.com&#x2F;), conducted a short [interview](http:&#x2F;&#x2F;youtu.be&#x2F;3JLD-ssdfvQ) with Steve Vosloo, mLab SA’s Mobile Impact Evangelist, on how mLab SA will encourage mobile innovation, on mobile content and also on the minimum price point for charging for content in South Africa.
-
-The interview took place at the [Mobile Entertainment Africa](http:&#x2F;&#x2F;entertainment-africa.com&#x2F;wp&#x2F;) conference in Cape Town, where Steve was a judge in the AppCircus competition.
-
-\[youtube http:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v&#x3D;3JLD-ssdfvQ\]
-
-
+<p>Russell Southwood, editor of <a href="http://www.balancingact-africa.com/">Balancing Act</a>, conducted a short <a href="http://youtu.be/3JLD-ssdfvQ">interview</a> with Steve Vosloo, mLab SA&#8217;s Mobile Impact Evangelist, on how mLab SA will encourage mobile innovation, on mobile content and also on the minimum price point for charging for content in South Africa.</p>
+<p>The interview took place at the <a href="http://entertainment-africa.com/wp/">Mobile Entertainment Africa</a> conference in Cape Town, where Steve was a judge in the AppCircus competition.</p>
+<p>[youtube http://www.youtube.com/watch?v=3JLD-ssdfvQ]</p>
