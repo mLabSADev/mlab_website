@@ -86,7 +86,7 @@ exports.createPages = async ({ actions, graphql }) => {
     const remove_invalid_3 = remove_invalid_2.replaceAll("#", "");
     const _path = remove_invalid_3.replaceAll(" ", "-");
     createPage({
-      path: `/news${node.frontmatter.path}`,
+      path: `/news${node.frontmatter.path ? node.frontmatter.path : _path}`,
       component: PostTemplate,
       context: { article: title },
     });
