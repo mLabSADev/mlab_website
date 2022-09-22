@@ -5,7 +5,7 @@ backend:
 site_url: https://new-mlab.netlify.app/
 
 media_folder: src/images
-public_folder: src/images
+public_folder: ../../images
 
 collections:
   - name: "news"
