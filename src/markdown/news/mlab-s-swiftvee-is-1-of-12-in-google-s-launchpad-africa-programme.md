@@ -6,7 +6,7 @@ author: Lebogang Madise
 featureImage: ../../images/swiftVEE-background.png
 thumb: ../../images/swiftVEE-background.png
 attachments:
-- ../../images/docs/a.pdf
+    - ../../images/docs/a.pdf
 abstract: ""
 tags: ['Accelerator','African startups','agri-Tech','Google launchpad','swift vee']
 timeStamp: 2018-03-19T16:22:56

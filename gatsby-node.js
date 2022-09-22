@@ -1,6 +1,6 @@
 const path = require("path");
 const { paginate } = require("gatsby-awesome-pagination");
-
+const { createFilePath } = require(`gatsby-source-filesystem`);
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions;
   const PostTemplate = path.resolve("src/templates/blog-post.js");
@@ -75,18 +75,17 @@ exports.createPages = async ({ actions, graphql }) => {
       }
     }
   `);
-  /*
-    
-  */
+
   news.data.allMarkdownRemark.edges.forEach(({ node }) => {
     const title = node.frontmatter.title;
     const lowerCase = title.toLowerCase();
     const remove_invalid_1 = lowerCase.replaceAll(":", "");
     const remove_invalid_2 = remove_invalid_1.replaceAll("|", "");
     const remove_invalid_3 = remove_invalid_2.replaceAll("#", "");
-    const _path = remove_invalid_3.replaceAll(" ", "-");
+    const remove_invalid_4 = remove_invalid_3.replaceAll("&", "");
+    const _path = remove_invalid_4.replaceAll(" ", "-");
     createPage({
-      path: `/news/${_path}`,
+      path: `/news${_path}`,
       component: PostTemplate,
       context: { article: title },
     });
@@ -110,8 +109,6 @@ exports.createPages = async ({ actions, graphql }) => {
     component: path.resolve("src/templates/news.js"), // Just like `createPage()`
   });
 };
-
-const { createFilePath } = require(`gatsby-source-filesystem`);
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
