@@ -2,8 +2,8 @@
 path: "/healthtech" 
 date: 2018-07-23T10:54:23 
 title: "HealthTech" 
-featureImage: "../../images/placeholder.png" 
-thumb: "../../images/placeholder.png" 
+featureImage: "../../images/11.png" 
+thumb: "../../images/11.png" 
 abstract:  
 tags: [] 
 timeStamp: 2018-07-23T10:54:23 

@@ -2,9 +2,10 @@
 path: "/women-in-tech-palesa-antony-on-taking-up-space-and-women-empowerment" 
 date: 2021-12-14T13:04:50 
 title: "Women in Tech: Palesa Antony on taking up space and women empowerment" 
-featureImage: "../../images/placeholder.png" 
-thumb: "../../images/placeholder.png" 
+featureImage: "../../images/Palesa-2-2.jpg" 
+thumb: "../../images/Palesa-2-2.jpg" 
 abstract:  
+author: Zukanye Madakana
 tags: [] 
 timeStamp: 2021-12-14T13:04:50 
 categories: ['News'] 

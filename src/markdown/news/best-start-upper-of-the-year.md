@@ -1,10 +1,11 @@
 ---
 path: "/best-start-upper-of-the-year" 
 date: 2022-05-11T01:42:44 
-title: "South Africa&#8217;s best start-upper of the year: Matome Motalane" 
-featureImage: "../../images/placeholder.png" 
-thumb: "../../images/placeholder.png" 
+title: "South Africa's best start-upper of the year: Matome Motalane" 
+featureImage: "../../images/Matome-1.jpeg" 
+thumb: "../../images/Matome-1.jpeg" 
 abstract:  
+author: Zukanye Madakana
 tags: [] 
 timeStamp: 2022-05-11T01:42:44 
 categories: ['News'] 

@@ -2,9 +2,10 @@
 path: "/mpowa-an-app-for-sa-youth-heres-why-its-a-must-have" 
 date: 2022-05-20T11:49:16 
 title: "mPowa, an app for SA youth: here’s why it&#8217;s a must have" 
-featureImage: "../../images/placeholder.png" 
-thumb: "../../images/placeholder.png" 
+featureImage: "../../images/Male-hand-mPowa-removebg-preview.jpg" 
+thumb: "../../images/Male-hand-mPowa-removebg-preview.jpg" 
 abstract:  
+author: Zukanye Madakana
 tags: [] 
 timeStamp: 2022-05-20T11:49:16 
 categories: ['News'] 

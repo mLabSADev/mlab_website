@@ -2,9 +2,10 @@
 path: "/codetribe-academy-graduate-becomes-the-youngest-professional-to-join-the-biggest-it-services-company" 
 date: 2022-03-17T15:42:20 
 title: "Codetribe Academy Graduate becomes the youngest professional to join the biggest IT services company" 
-featureImage: "../../images/placeholder.png" 
-thumb: "../../images/placeholder.png" 
+featureImage: "../../images/IMG-20211126-WA0039.jpg" 
+thumb: "../../images/IMG-20211126-WA0039.jpg" 
 abstract:  
+author: Zukanye Madakana
 tags: [] 
 timeStamp: 2022-03-17T15:42:20 
 categories: ['News'] 

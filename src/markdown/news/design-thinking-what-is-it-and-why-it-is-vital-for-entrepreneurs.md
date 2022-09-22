@@ -1,10 +1,11 @@
 ---
 path: "/design-thinking-what-is-it-and-why-it-is-vital-for-entrepreneurs" 
 date: 2022-08-08T12:43:07 
-title: "Design Thinking &#8211; what is it and why should entrepreneurs adopt this tool." 
-featureImage: "../../images/placeholder.png" 
-thumb: "../../images/placeholder.png" 
+title: "Design Thinking - what is it and why should entrepreneurs adopt this tool." 
+featureImage: "../../images/test-image.png" 
+thumb: "../../images/test-image.png" 
 abstract:  
+author: Zukanye Madakana
 tags: [] 
 timeStamp: 2022-08-08T12:43:07 
 categories: ['News'] 

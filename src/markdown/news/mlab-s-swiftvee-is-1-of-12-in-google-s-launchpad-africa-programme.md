@@ -3,8 +3,8 @@ path: /swiftvee-google-launchpad-africa-programme
 date: 19 Mar 2018
 title: mlab-s-swiftvee-is-1-of-12-in-google-s-launchpad-africa-programme
 author: Lebogang Madise
-featureImage: ../../images/international-space-apps-challenge-2014.png
-thumb: ../../images/international-space-apps-challenge-2014.png
+featureImage: ../../images/swiftVEE-background.png
+thumb: ../../images/swiftVEE-background.png
 attachments:
 - ../../images/docs/a.pdf
 abstract: ""

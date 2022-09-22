@@ -2,9 +2,10 @@
 path: "/partnership-aims-to-equip-south-africans-for-opportunities-and-challenges-of-4ir" 
 date: 2022-05-27T11:36:32 
 title: "Partnership aims to equip South Africans for opportunities and challenges of Industry 4.0" 
-featureImage: "../../images/placeholder.png" 
-thumb: "../../images/placeholder.png" 
+featureImage: "../../images/Partnership-pic-.jpeg" 
+thumb: "../../images/Partnership-pic-.jpeg" 
 abstract:  
+author: Zukanye Madakana
 tags: [] 
 timeStamp: 2022-05-27T11:36:32 
 categories: ['Press release'] 

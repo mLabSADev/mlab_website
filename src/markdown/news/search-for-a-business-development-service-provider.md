@@ -5,6 +5,7 @@ title: "Call for Proposals | AgriTourZA Limpopo is looking for a business develo
 featureImage: "../../images/Agritour-cover-1.png"
 thumb: "../../images/placeholder.png" 
 abstract:  
+author: Zukanye Madakana
 tags: [] 
 timeStamp: 2022-07-21T13:04:26 
 categories: ['News'] 

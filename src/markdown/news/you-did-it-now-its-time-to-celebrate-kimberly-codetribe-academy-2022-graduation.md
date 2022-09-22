@@ -1,10 +1,11 @@
 ---
 path: "/you-did-it-now-its-time-to-celebrate-kimberly-codetribe-academy-2022-graduation" 
 date: 2022-03-29T09:11:18 
-title: "You did it, now it&#8217;s time to celebrate: Kimberly Codetribe Academy 2022 Graduation" 
-featureImage: "../../images/placeholder.png" 
-thumb: "../../images/placeholder.png" 
+title: "You did it, now it's time to celebrate: Kimberly Codetribe Academy 2022 Graduation" 
+featureImage: "../../images/WhatsApp-Image-2022-03-25-at-2.21.58-PM.jpg" 
+thumb: "../author: Zukanye Madakana../images/WhatsApp-Image-2022-03-25-at-2.21.58-PM.jpg" 
 abstract:  
+author: Zukanye Madakana
 tags: [] 
 timeStamp: 2022-03-29T09:11:18 
 categories: ['News'] 

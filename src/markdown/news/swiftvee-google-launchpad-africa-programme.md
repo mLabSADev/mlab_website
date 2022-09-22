@@ -1,10 +1,11 @@
 ---
 path: "/swiftvee-google-launchpad-africa-programme" 
 date: 2018-03-19T16:22:56 
-title: "mLab&#8217;s SwiftVee is 1 of 12 in Google&#8217;s Launchpad Africa Programme" 
-featureImage: "../../images/placeholder.png" 
-thumb: "../../images/placeholder.png" 
+title: "mLab's SwiftVee is 1 of 12 in Google&#8217;s Launchpad Africa Programme" 
+featureImage: "../../images/swiftVEE-background.png" 
+thumb: "../../images/swiftVEE-background.png" 
 abstract:  
+author: Lebogang Madise
 tags: [] 
 timeStamp: 2018-03-19T16:22:56 
 categories: ['News'] 

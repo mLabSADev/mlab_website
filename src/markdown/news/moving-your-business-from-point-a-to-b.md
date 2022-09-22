@@ -2,9 +2,10 @@
 path: "/moving-your-business-from-point-a-to-b" 
 date: 2022-09-09T10:57:06 
 title: "Moving your business from point A to B: Amandla Didiza on becoming a holistic entrepreneur" 
-featureImage: "../../images/placeholder.png" 
-thumb: "../../images/placeholder.png" 
+featureImage: "../../images/Amandla-Didiza-cropped-headshot-2-1.jpeg" 
+thumb: "../../images/Amandla-Didiza-cropped-headshot-2-1.jpeg" 
 abstract:  
+author: Zukanye Madakana
 tags: [] 
 timeStamp: 2022-09-09T10:57:06 
 categories: ['News'] 

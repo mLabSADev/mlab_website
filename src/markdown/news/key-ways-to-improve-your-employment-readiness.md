@@ -2,9 +2,10 @@
 path: "/key-ways-to-improve-your-employment-readiness" 
 date: 2022-07-18T15:08:08 
 title: "Key ways to improve your employment readiness and job interview performance" 
-featureImage: "../../images/placeholder.png" 
-thumb: "../../images/placeholder.png" 
+featureImage: "../../images/pexels-andrea-piacquadio-3801426-1.jpg" 
+thumb: "../../images/pexels-andrea-piacquadio-3801426-1.jpg" 
 abstract:  
+author: Zukanye Madakana
 tags: [] 
 timeStamp: 2022-07-18T15:08:08 
 categories: ['News'] 

@@ -1,7 +1,7 @@
 ---
 path: "/spaceappshackathon2017" 
 date: 2017-04-26T16:47:07 
-title: "" 
+title: "Space Apps Hackathon" 
 featureImage: "../../images/ShortSpaceApp.png"
 thumb: "../../images/placeholder.png" 
 abstract:  
