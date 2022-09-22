@@ -85,7 +85,7 @@ exports.createPages = async ({ actions, graphql }) => {
     const remove_invalid_4 = remove_invalid_3.replaceAll("&", "");
     const _path = remove_invalid_4.replaceAll(" ", "-");
     createPage({
-      path: `/news${_path}`,
+      path: `/news/${_path}`,
       component: PostTemplate,
       context: { article: title },
     });
@@ -105,7 +105,7 @@ exports.createPages = async ({ actions, graphql }) => {
     createPage, // The Gatsby `createPage` function
     items: news.data.allMarkdownRemark.edges, // An array of objects
     itemsPerPage: 10, // How many items you want per page
-    pathPrefix: "/news/", // Creates pages like `/blog`, `/blog/2`, etc
+    pathPrefix: "/news", // Creates pages like `/blog`, `/blog/2`, etc
     component: path.resolve("src/templates/news.js"), // Just like `createPage()`
   });
 };

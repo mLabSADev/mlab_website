@@ -1,3 +1,12 @@
+.boc {
+  width: 50px;
+  height: 50px;
+  border: solid 1px var(--primary-color);
+  border-radius: 20px;
+  padding: 10px 15px;
+  margin: 2px;
+  color: var(--tertiary-color);
+}
 .news-content {
   box-sizing: border-box;
   display: grid;

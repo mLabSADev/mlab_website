@@ -8,6 +8,7 @@ import NewsCard from "../components/NewsCard/NewsCard";
 import Pagination from "@mui/material/Pagination";
 import { graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
+import { Link } from "gatsby";
 import Tag from "../components/Tag/Tag";
 import moment from "moment";
 const News = ({ data, pageContext, numberOfAllPages = [] }) => {
@@ -92,9 +93,15 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
                   showLastButton
                   variant="outlined"
                   color="secondary"
+                  // renderItem={() => {
+                  //   return (
+                  //     <Link className="boc">1</Link>
+                  //   )
+                  // }}
                   count={numberOfAllPages.length}
                   onChange={(elements, n) => {
                     if (typeof window !== "undefined") {
+                      // return <Link to={n === 1 ? "/news" : `/news/${n}`} />;
                       window.location.href = n === 1 ? "/news" : `/news/${n}`;
                     } else {
                       console.log("Server cannot execute");
