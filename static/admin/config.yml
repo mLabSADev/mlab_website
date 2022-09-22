@@ -12,11 +12,6 @@ collections:
     label: "News"
     folder: "src/markdown/news"
     create: true
-    slug:
-      encoding: 'utf-8'
-      clean_accents: true
-      sanitize_replacement: "-"
-    path: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Author", name: "author", widget: "string" }
