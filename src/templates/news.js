@@ -41,7 +41,11 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
                 const title = entry.node.frontmatter.title;
                 const excerpt = entry.node.excerpt;
                 const lowerCase = title.toLowerCase();
-                const _path = lowerCase.replaceAll(" ", "-");
+                const remove_invalid_1 = lowerCase.replaceAll(":", "");
+                const remove_invalid_2 = remove_invalid_1.replaceAll("|", "");
+                const remove_invalid_3 = remove_invalid_2.replaceAll("#", "");
+                const remove_invalid_4 = remove_invalid_3.replaceAll("&", "");
+                const _path = remove_invalid_4.replaceAll(" ", "-");
                 const date = entry.node.frontmatter.timeStamp;
                 if (entry.node.frontmatter.path) {
                   return (
@@ -51,7 +55,7 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
                       image={img}
                       title={title}
                       excerpt={excerpt}
-                      url={`${entry.node.frontmatter.path}`}
+                      url={`/news/${_path}`}
                     />
                   );
                 } else return null;

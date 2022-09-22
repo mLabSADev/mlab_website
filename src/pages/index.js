@@ -91,14 +91,18 @@ const IndexPage = ({ data }) => {
           {news.map((item, i) => {
             const image = getImage(item.node.frontmatter.thumb);
             const lowerCase = item.node.frontmatter.title.toLowerCase();
-            const _path = lowerCase.replaceAll(" ", "-");
+            const remove_invalid_1 = lowerCase.replaceAll(":", "");
+            const remove_invalid_2 = remove_invalid_1.replaceAll("|", "");
+            const remove_invalid_3 = remove_invalid_2.replaceAll("#", "");
+            const remove_invalid_4 = remove_invalid_3.replaceAll("&", "");
+            const _path = remove_invalid_4.replaceAll(" ", "-");
             return (
               <NewsCard
                 key={i}
                 image={image}
                 excerpt={item.node.excerpt}
                 title={item.node.frontmatter.title.replace("-", " ")}
-                url={`/${_path}`}
+                url={`/news/${_path}`}
               />
             );
           })}
@@ -197,7 +201,7 @@ export const query = graphql`
             }
             icon {
               childImageSharp {
-                gatsbyImageData(width: 1920 placeholder: BLURRED)
+                gatsbyImageData(width: 1920, placeholder: BLURRED)
                 id
               }
             }
@@ -228,7 +232,7 @@ export const query = graphql`
             number
             icon {
               childImageSharp {
-                gatsbyImageData(width: 1920, quality: 100,)
+                gatsbyImageData(width: 1920, quality: 100)
               }
             }
           }

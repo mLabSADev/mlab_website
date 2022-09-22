@@ -24,7 +24,10 @@ export default function TaggedPosts({ data, pageContext }) {
         {/* <SectionTitle>Articles</SectionTitle> */}
         <div className="news-content">
           <div className="stories-n">
-            <Typography variant="h5">Articles tagged - {tag}</Typography>
+            <div className="article-title">
+              <Typography variant="h5">Articles tagged - {tag}</Typography>
+            </div>
+
             <div className="stories-news">
               {news.map((entry, i) => {
                 const img = getImage(entry.frontmatter.featureImage);
@@ -52,9 +55,11 @@ export default function TaggedPosts({ data, pageContext }) {
             ) : null}
 
             <div className="tags">
-              {tags.map((item, i) => {
-                return <Tag key={i} label={item} url={item} />;
-              })}
+              <div className="tag-list">
+                {tags.map((item, i) => {
+                  return <Tag key={i} label={item} url={item} />;
+                })}
+              </div>
             </div>
           </div>
         </div>

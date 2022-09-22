@@ -46,7 +46,7 @@ const NewsCard = ({ image, title, excerpt, url, date }) => {
           {excerpt}
         </Typography>
       </div>
-      <Button label="read more" type="link" url={`/news${url}`} />
+      <Button label="read more" type="link" url={`${url}`} />
     </div>
   );
 };
