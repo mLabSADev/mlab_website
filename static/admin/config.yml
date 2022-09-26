@@ -15,7 +15,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Author", name: "author", widget: "string" }
-      - { label: "Date", name: "timeStamp", widget: "date", format: "D MMMM, YY" }
+      - { label: "Date", name: "timeStamp", widget: "date"}
       - { label: "Image", name: "featureImage", widget: "image" }
       - {
           label: "Category",
