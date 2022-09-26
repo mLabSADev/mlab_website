@@ -3,10 +3,9 @@ title: ' "IT WAS LIFE CHANGING" - IMPACTS OF THE CODETRIBE ACADEMY'
 author: ZUKANYE MADAKANA
 timeStamp: Jan 10, 22
 thumb: sinoxolo.jpg
+featureImage: ../../images/sinoxolo.jpg
 category: Talent
 ---
-
-
 <!--StartFragment-->
 
 Sinoxolo Malisa, a former CodeTriber who is now a Jr. Cyber Security Analyst.
@@ -67,7 +66,7 @@ Tshepo is currently a Junior Software Developer at Ambee, he secured this job af
 
 <!--EndFragment-->
 
-![Tshepo Moshabane, a former CodeTriber who is now a Jr. Software Developer.](tshepo-tears.jpg "Tshepo Moshabane")
+![Sinoxolo Malisa, a former CodeTriber who is now a Jr. Cyber Security Analyst.](../../images/sinoxolo.jpg)
 
 <!--StartFragment-->
 
