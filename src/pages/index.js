@@ -90,7 +90,7 @@ const IndexPage = ({ data }) => {
         </Typography>
         <div className="hs">
           {news.map((item, i) => {
-            const image = getImage(item.node.frontmatter.thumb);
+            const image = getImage(item.node.frontmatter.featureImage);
             const lowerCase = item.node.frontmatter.title.toLowerCase();
             const remove_invalid_1 = lowerCase.replaceAll(":", "");
             const remove_invalid_2 = remove_invalid_1.replaceAll("|", "");
