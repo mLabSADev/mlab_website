@@ -4,8 +4,8 @@ import Typography from "../Typography/Typography";
 import "./style.scss";
 const Tag = ({ label, url }) => {
   return (
-    <Link className="tag-link" to={`/news/tag/${url.replaceAll(" ", "-")}`}>
-      <Typography variant="caption">{label.toUpperCase()}</Typography>
+    <Link className="tag-link" to={`/news/tag/${ url ? url.replaceAll(" ", "-") : url}`}>
+      <Typography variant="caption">{label ? label.toUpperCase() : label}</Typography>
     </Link>
   );
 };

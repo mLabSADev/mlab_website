@@ -122,13 +122,15 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
   );
 };
 export const query = graphql`
-  query NewsQuery {
+  query NewsQuery($skip: Int, $limit: Int) {
     allMarkdownRemark(
       filter: {
         fileAbsolutePath: { regex: "/(news)/" }
-        frontmatter: { path: { ne: null } }
+        frontmatter: {title: {ne: "News"}}
       }
       sort: { fields: [frontmatter___timeStamp], order: DESC }
+      limit: $limit
+      skip: $skip
     ) {
       edges {
         node {
