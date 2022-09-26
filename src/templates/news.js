@@ -129,7 +129,7 @@ export const query = graphql`
         frontmatter: { path: { ne: null } }
       }
       sort: { fields: [frontmatter___timeStamp], order: DESC }
-9      limit: $limit
+      limit: $limit
       skip: $skip
     ) {
       edges {
