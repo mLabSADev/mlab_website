@@ -29,6 +29,7 @@ collections:
           label: "Timestamp",
           name: "timeStamp",
           hide: true,
+          required: false,
           default: "{{fields.date}}",
           widget: "date",
         }
