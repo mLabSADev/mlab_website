@@ -99,7 +99,9 @@ const IndexPage = ({ data }) => {
             const _path = remove_invalid_4.replaceAll(" ", "-");
             return (
               <NewsCard
-              date={moment(item.node.frontmatter.timeStamp).format("DD MMMM, YYYY")}
+                date={moment(item.node.frontmatter.timeStamp).format(
+                  "DD MMMM, YYYY"
+                )}
                 key={i}
                 image={image}
                 excerpt={item.node.excerpt}
@@ -161,7 +163,7 @@ export const query = graphql`
             title
             date
             author
-            thumb {
+            featureImage {
               childImageSharp {
                 id
                 gatsbyImageData(quality: 100, width: 1920)
