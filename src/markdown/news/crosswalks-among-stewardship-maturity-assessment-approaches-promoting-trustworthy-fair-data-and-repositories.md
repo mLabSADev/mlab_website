@@ -2,7 +2,7 @@
 title: Crosswalks among stewardship maturity assessment approaches promoting
   trustworthy FAIR data and repositories
 author: Keketso Testing
-timeStamp: 26 September, 22
+timeStamp: 2022-09-24T22:00:00.000Z
 featureImage: ../../images/axel-ruffini-iulnjpzywnc-unsplash.jpg
 category: Startup
 tags:
