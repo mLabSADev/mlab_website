@@ -28,9 +28,9 @@ collections:
       - {
           label: "Timestamp",
           name: "timeStamp",
-          hide: true,
+          hidden: true,
           required: false,
-          default: "{{fields.date}}",
+          default: "{{year}}-{{month}}-{{day}}",
           widget: "date",
         }
   - name: "theTech"
