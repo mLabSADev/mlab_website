@@ -10,6 +10,14 @@
     cursor: pointer;
   }
 }
+.line-hr {
+  background: #dbdbdb;
+  /* color: red; */
+  width: 100%;
+  height: 0.5px;
+  border: none;
+  margin: 0px;
+}
 .image-bog:hover {
   transition: ease-in-out 0.3s;
 }

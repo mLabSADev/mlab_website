@@ -64,6 +64,7 @@ export default function BlogPost({ data }) {
                 <Typography variant="caption">author</Typography> {author}
               </Typography>
             </div>
+            <hr className="line-hr" />
             <div
               className="controlImage"
               dangerouslySetInnerHTML={{ __html: html }}
@@ -76,7 +77,7 @@ export default function BlogPost({ data }) {
             <div className="tag-w">
               {tags &&
                 tags.map((t, i) => {
-                  return <Tag key={i} label={t} url={t} />;
+                  return t ? <Tag key={i} label={t} url={t} /> : null;
                 })}
             </div>
           </div>

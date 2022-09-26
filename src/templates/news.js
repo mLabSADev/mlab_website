@@ -76,7 +76,7 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
               )}
               <div className="tag-list">
                 {tags.map((item, i) => {
-                  return <Tag key={i} label={item} url={item} />;
+                  return item ? <Tag key={i} label={item} url={item} /> : null;
                 })}
               </div>
             </div>
@@ -107,6 +107,7 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
                     if (typeof window !== "undefined") {
                       // return <Link to={n === 1 ? "/news" : `/news/${n}`} />;
                       window.location.href = n === 1 ? "/news" : `/news/${n}`;
+                      return (<Link >{n}</Link>)
                     } else {
                       console.log("Server cannot execute");
                     }
