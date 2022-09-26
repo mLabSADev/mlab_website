@@ -25,14 +25,7 @@ collections:
         }
       - { label: "Tag(s)", name: "tags", widget: "list" }
       - { label: "Body", name: "body", widget: "markdown" }
-      - {
-          label: "Timestamp",
-          name: "timeStamp",
-          hidden: true,
-          required: false,
-          default: "{{year}}-{{month}}-{{day}}",
-          widget: "date",
-        }
+      - timeStamp: "{{year}}-{{month}}-{{day}}"
   - name: "theTech"
     label: "Tech"
     folder: "src/markdown/theTech"
