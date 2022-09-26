@@ -10,7 +10,7 @@ import "./blog-post.scss";
 import Typography from "../components/Typography/Typography";
 import { AnimatePresence } from "framer-motion";
 import ImageModal from "../components/ImageModal/ImageModal";
-
+import moment from "moment";
 export default function BlogPost({ data }) {
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -56,7 +56,9 @@ export default function BlogPost({ data }) {
           <div></div>
           <div className="article-blog">
             <div>
-              <Typography variant="caption">{date}</Typography>
+              <Typography variant="h6">
+                {moment(date).format("DD MMMM, YYYY")}
+              </Typography>
               <Typography variant="h3">{title.toUpperCase()}</Typography>
               <Typography variant="s1" color="gray">
                 <Typography variant="caption">author</Typography> {author}
@@ -72,9 +74,10 @@ export default function BlogPost({ data }) {
               <Typography variant="h6">Tags</Typography>
             ) : null}
             <div className="tag-w">
-              {tags && tags.map((t, i) => {
-                return <Tag key={i} label={t} url={t} />;
-              })}
+              {tags &&
+                tags.map((t, i) => {
+                  return <Tag key={i} label={t} url={t} />;
+                })}
             </div>
           </div>
         </div>

@@ -138,7 +138,7 @@ export const query = graphql`
           frontmatter {
             author
             date
-            timeStamp(formatString: "")
+            timeStamp
             title
             path
             abstract

@@ -145,6 +145,7 @@ export const query = graphql`
   query HomeQuery {
     news: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/(news)/" } }
+      sort: { fields: [frontmatter___timeStamp], order: DESC }
       limit: 5
     ) {
       edges {
