@@ -24,7 +24,7 @@ export default function BlogPost({ data }) {
   const tags = data.markdownRemark.frontmatter.tags;
   const title = data.markdownRemark.frontmatter.title.replaceAll("-", " ");
   const html = data.markdownRemark.html;
-  const date = data.markdownRemark.frontmatter.data;
+  const date = data.markdownRemark.frontmatter.timeStamp;
   const author = data.markdownRemark.frontmatter.author;
   return (
     <Layout>
@@ -103,7 +103,7 @@ export const query = graphql`
         path
         title
         author
-        date
+        timeStamp
         tags
         featureImage {
           id

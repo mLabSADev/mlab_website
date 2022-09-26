@@ -8,6 +8,7 @@ import Button from "../Button/Button";
  * @param {obj} image result from getImage
  * @param {title} title title
  * @param {string} excerpt excerpt
+ * @param {string} date date
  * @returns
  */
 const NewsCard = ({ image, title, excerpt, url, date }) => {
