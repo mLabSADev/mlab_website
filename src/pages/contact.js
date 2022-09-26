@@ -248,9 +248,6 @@ export const query = graphql`
     ) {
       edges {
         node {
-          fields {
-            slug
-          }
           id
           html
           frontmatter {

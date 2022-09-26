@@ -14,6 +14,7 @@ import TechCard from "../components/TextCard/TechCard";
 import Modal from "../components/Modal/Modal";
 import { SignupForm } from "./contact";
 import { AnimatePresence } from "framer-motion";
+import moment from "moment";
 const IndexPage = ({ data }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const close = () => setModalOpen(false);
@@ -98,6 +99,7 @@ const IndexPage = ({ data }) => {
             const _path = remove_invalid_4.replaceAll(" ", "-");
             return (
               <NewsCard
+              date={moment(item.node.frontmatter.timeStamp).format("DD MMMM, YYYY")}
                 key={i}
                 image={image}
                 excerpt={item.node.excerpt}
@@ -144,7 +146,10 @@ export default IndexPage;
 export const query = graphql`
   query HomeQuery {
     news: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/(news)/" } }
+      filter: {
+        fileAbsolutePath: { regex: "/(news)/" }
+        frontmatter: { path: { ne: null } }
+      }
       sort: { fields: [frontmatter___timeStamp], order: DESC }
       limit: 5
     ) {
