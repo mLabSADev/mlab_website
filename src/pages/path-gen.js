@@ -1,5 +1,5 @@
  const generatePath = (title) => {
-  const lowerCase = title ? title.toLowerCase() : title;
+  const lowerCase = title ;
   const remove_invalid_1 = lowerCase.replaceAll(":", "");
   const remove_invalid_2 = remove_invalid_1.replaceAll("|", "");
   const remove_invalid_3 = remove_invalid_2.replaceAll("#", "");
