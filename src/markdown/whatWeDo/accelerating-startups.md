@@ -1,6 +1,5 @@
 ---
-excerpt: The Enterprise Development programme supports early stage digital-tech
-  founders develop market ready offerings.
+excerpt: Events, Training, Workshops and Bootcamps
 featureImage: ../../images/startup.png
 path: /accelerating-startups
 sectionImage: ../../../images/whatWeDo/accelerating.png
