@@ -1,10 +1,10 @@
 ---
 excerpt: Events, Training, Workshops and Bootcamps
-featureImage: ../../images/startup.png
+featureImage: ../../images/tecg.png
 path: /accelerating-startups
 sectionImage: ../../../images/whatWeDo/accelerating.png
 thumb: ../../../images/backgrounds/accelerating_startups.png
-title: Accelerating Startups
+title: Tech Ecosystems
 link: accelerating-startups
 video: https://www.youtube.com/embed/kQpp-3lD-Dc
 ---
