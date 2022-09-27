@@ -131,7 +131,7 @@ export const query = graphql`
     news: allMarkdownRemark(
       filter: {
         fileAbsolutePath: { regex: "/(news)/" }
-        frontmatter: { path: { ne: null } }
+        frontmatter: { title: { ne: "News" } }
       }
       sort: { fields: [frontmatter___timeStamp], order: DESC }
       limit: 5
