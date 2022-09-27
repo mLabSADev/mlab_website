@@ -1,4 +1,4 @@
 ---
-label: "Participants between 10 - 35"
+label: R50m mLab’s GDP Contribution
 percentage: 60
 ---
