@@ -11,6 +11,7 @@ import { getImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 import Tag from "../components/Tag/Tag";
 import moment from "moment";
+import generatePath from "../pages/path-gen";
 const News = ({ data, pageContext, numberOfAllPages = [] }) => {
   const { numberOfPages } = pageContext;
   for (let i = 0; i < numberOfPages; i++) {
@@ -23,10 +24,14 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
     let tag = element.node.frontmatter.tags;
     tags = tags.concat(tag);
   });
-  console.log(news)
+  console.log(news);
   return (
     <Layout>
-      <PageHeader title="news" text="Keep up to date with our latest calls for applications, opportunities, projects and success stories" index={4} />
+      <PageHeader
+        title="news"
+        text="Keep up to date with our latest calls for applications, opportunities, projects and success stories"
+        index={4}
+      />
       <Section>
         {/* <SectionTitle>Articles</SectionTitle> */}
         <div className="news-content">
@@ -39,26 +44,20 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
               {data.allMarkdownRemark.edges.map((entry, i) => {
                 const img = getImage(entry.node.frontmatter.featureImage);
                 const title = entry.node.frontmatter.title;
+                const _path = generatePath(title);
                 const excerpt = entry.node.excerpt;
-                const lowerCase = title.toLowerCase();
-                const remove_invalid_1 = lowerCase.replaceAll(":", "");
-                const remove_invalid_2 = remove_invalid_1.replaceAll("|", "");
-                const remove_invalid_3 = remove_invalid_2.replaceAll("#", "");
-                const remove_invalid_4 = remove_invalid_3.replaceAll("&", "");
-                const _path = remove_invalid_4.replaceAll(" ", "-");
                 const date = entry.node.frontmatter.timeStamp;
-                if (entry.node.frontmatter.path) {
-                  return (
-                    <NewsCard
-                      date={moment(date).format("DD MMMM, YYYY")}
-                      key={i}
-                      image={img}
-                      title={title}
-                      excerpt={excerpt}
-                      url={`/news/${_path}`}
-                    />
-                  );
-                } else return null;
+
+                return (
+                  <NewsCard
+                    date={moment(date).format("DD MMMM, YYYY")}
+                    key={i}
+                    image={img}
+                    title={title}
+                    excerpt={excerpt}
+                    url={`/news/${_path}`}
+                  />
+                );
               })}
             </div>
           </div>
@@ -97,17 +96,12 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
                   showLastButton
                   variant="outlined"
                   color="secondary"
-                  // renderItem={() => {
-                  //   return (
-                  //     <Link className="boc">1</Link>
-                  //   )
-                  // }}
                   count={numberOfAllPages.length}
                   onChange={(elements, n) => {
                     if (typeof window !== "undefined") {
                       // return <Link to={n === 1 ? "/news" : `/news/${n}`} />;
                       window.location.href = n === 1 ? "/news" : `/news/${n}`;
-                      return (<Link >{n}</Link>)
+                      return <Link>{n}</Link>;
                     } else {
                       console.log("Server cannot execute");
                     }
@@ -127,7 +121,7 @@ export const query = graphql`
     allMarkdownRemark(
       filter: {
         fileAbsolutePath: { regex: "/(news)/" }
-        frontmatter: {title: {ne: "News"}}
+        frontmatter: { title: { ne: "News" } }
       }
       sort: { fields: [frontmatter___timeStamp], order: DESC }
       limit: $limit

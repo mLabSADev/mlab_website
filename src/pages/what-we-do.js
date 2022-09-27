@@ -111,7 +111,7 @@ const WhatWeDo = ({ data }) => {
       <PageHeader title={"WHAT WE DO"} index={2} />
 
       <Section>
-        <SectionTitle> Impact Statistics</SectionTitle>
+        <SectionTitle>Our Impact</SectionTitle>
         <div className="responsive-column">
           <div className="progress-stat-wrappr">
             {impactBarStats.map((item, i) => {
@@ -139,34 +139,40 @@ const WhatWeDo = ({ data }) => {
           </div> */}
         </div>
       </Section>
-      {sectionData.map((item, i) => {
-        const title = item.node.frontmatter.title;
-        const excerpt = item.node.excerpt;
-        const body = item.node.rawMarkdownBody;
-        const image = getImage(item.node.frontmatter.thumb);
-        return (
-          <div className="wwd-section">
-            <div className="wwd-details">
-              <Typography variant="h4">{title}</Typography>
-              <Typography variant="b1">{excerpt}</Typography>
-              <span className="b1" dangerouslySetInnerHTML={{ __html: body }} />
-              <Button
-                type="button"
-                onClick={async () => {
-                  setActiveSection(item);
-                  open(title);
-                }}
-                label="read more"
-              ></Button>
+      <div className="wwd-secton-wrapper">
+        {sectionData.map((item, i) => {
+          const title = item.node.frontmatter.title;
+          const excerpt = item.node.excerpt;
+          const body = item.node.rawMarkdownBody;
+          const image = getImage(item.node.frontmatter.thumb);
+          return (
+            <div className="wwd-section">
+              <div className="wwd-details">
+                <Typography variant="h4">{title}</Typography>
+                <Typography variant="b1">{excerpt}</Typography>
+                <span
+                  className="b1"
+                  dangerouslySetInnerHTML={{ __html: body }}
+                />
+                <Button
+                  type="button"
+                  onClick={async () => {
+                    setActiveSection(item);
+                    open(title);
+                  }}
+                  label="read more"
+                ></Button>
+              </div>
+              
+              <GatsbyImage
+                image={image}
+                alt="title"
+                className="wwd-image"
+              ></GatsbyImage>
             </div>
-            <GatsbyImage
-              image={image}
-              alt="title"
-              className="wwd-image"
-            ></GatsbyImage>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </Layout>
   );
 };

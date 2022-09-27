@@ -14,6 +14,7 @@ import { SignupForm } from "./contact";
 import { AnimatePresence } from "framer-motion";
 import moment from "moment";
 import { WhatWeDoCard } from "./who-we-are";
+import generatePath from "./path-gen";
 const IndexPage = ({ data }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const close = () => setModalOpen(false);
@@ -75,12 +76,8 @@ const IndexPage = ({ data }) => {
         <div className="hs">
           {news.map((item, i) => {
             const image = getImage(item.node.frontmatter.featureImage);
-            const lowerCase = item.node.frontmatter.title.toLowerCase();
-            const remove_invalid_1 = lowerCase.replaceAll(":", "");
-            const remove_invalid_2 = remove_invalid_1.replaceAll("|", "");
-            const remove_invalid_3 = remove_invalid_2.replaceAll("#", "");
-            const remove_invalid_4 = remove_invalid_3.replaceAll("&", "");
-            const _path = remove_invalid_4.replaceAll(" ", "-");
+            const title = item.node.frontmatter.title;
+            const _path = generatePath(title)
             return (
               <NewsCard
                 date={moment(item.node.frontmatter.timeStamp).format(
