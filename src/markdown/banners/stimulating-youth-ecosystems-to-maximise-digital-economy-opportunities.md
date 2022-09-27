@@ -1,5 +1,5 @@
 ---
-title: STIMULATING YOUTH ECOSYSTEMS TO MAXIMISE DIGITAL ECONOMY OPPORTUNITIES
+title: STIMULATING YOUTH ECOSYSTEMS
 image: ../../images/digitall-empowered.jpg.jpg
 registration: Registered Non-Profit (Mobile Applications Laboratory NPC) & Level
   1 B-BBEE Skills & ESD Provider
