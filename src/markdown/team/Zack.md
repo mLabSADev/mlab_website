@@ -1,7 +1,7 @@
 ---
-path: "/Zack"
-name: "ZACK TINGA"
-position: "Operations Coordinator"
+path: /Zack
+name: ZACK TINGA
+position: Skills Accelerator / Quality Facilitator
 profilePicture: ../../images/theTeam/Zack.png
 thumb: ../../images/theTeam/Zack.png
 ---
