@@ -8,8 +8,4 @@ title: Accelerating Startups
 link: accelerating-startups
 video: https://www.youtube.com/embed/kQpp-3lD-Dc
 ---
-<!--StartFragment-->
-
-**Short ICT-led interventions to stimulate vibrant ecosystems in which youth innovators can thrive**
-
-<!--EndFragment-->
+Short ICT-led interventions to stimulate vibrant ecosystems in which youth innovators can thrive
