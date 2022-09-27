@@ -42,12 +42,20 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
 
             <div className="stories-news">
               {data.allMarkdownRemark.edges.map((entry, i) => {
+                // clean later
                 const img = getImage(entry.node.frontmatter.featureImage);
                 const title = entry.node.frontmatter.title;
-                const _path = generatePath(title);
+
                 const excerpt = entry.node.excerpt;
                 const date = entry.node.frontmatter.timeStamp;
-
+                const lowerCase = title;
+                const remove_invalid_1 = lowerCase.replaceAll(":", "");
+                const remove_invalid_2 = remove_invalid_1.replaceAll("|", "");
+                const remove_invalid_3 = remove_invalid_2.replaceAll("#", "");
+                const remove_invalid_4 = remove_invalid_3.replaceAll("&", "");
+                const remove_invalid_5 = remove_invalid_4.replaceAll('"', "");
+                const remove_invalid_6 = remove_invalid_5.replaceAll('"', "");
+                const _path = remove_invalid_6.replaceAll(" ", "-");
                 return (
                   <NewsCard
                     date={moment(date).format("DD MMMM, YYYY")}
