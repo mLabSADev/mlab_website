@@ -8,8 +8,4 @@ title: Tech Skills
 link: impact-through-technology
 video: https://www.youtube.com/embed/50UGhZ5O7j8
 ---
-<!--StartFragment-->
-
-**Supports aspiring coders to develop Android, iOS and Web solutions**
-
-<!--EndFragment-->
+Supports aspiring coders to develop Android, iOS and Web solutions
