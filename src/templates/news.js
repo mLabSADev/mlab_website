@@ -11,7 +11,6 @@ import { getImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 import Tag from "../components/Tag/Tag";
 import moment from "moment";
-import generatePath from "../pages/path-gen";
 const News = ({ data, pageContext, numberOfAllPages = [] }) => {
   const { numberOfPages } = pageContext;
   for (let i = 0; i < numberOfPages; i++) {
