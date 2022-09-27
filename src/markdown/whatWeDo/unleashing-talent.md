@@ -1,6 +1,6 @@
 ---
 excerpt: Launching Viable Businesses
-featureImage: ../../images/backgrounds/unleashing_talent.png
+featureImage: ../../images/startup.png
 path: /unleashing-talent
 sectionImage: ../../../images/whatWeDo/nurturingtalent.png
 thumb: ../../../images/backgrounds/unleashing_talent.png
