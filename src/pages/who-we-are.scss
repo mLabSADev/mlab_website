@@ -2,23 +2,26 @@
   box-sizing: border-box;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 50px;
   .wwd-c {
     box-sizing: border-box;
     width: 100%;
     display: grid;
-    grid-template-columns: 200px 1fr;
+    grid-template-rows: 200px 1fr;
+    justify-content: center;
+    align-items: center;
     .image-c {
       box-sizing: border-box;
-      width: 100%;
-      min-height: 200px;
+      width: 200px;
+      height: auto;
+      margin: auto;
+      object-fit: cover;
     }
     .details-c {
       box-sizing: border-box;
       padding: 20px;
       display: grid;
-      gap: 20px;
     }
   }
   .wwd-c:hover {
@@ -60,6 +63,7 @@
 }
 @media only screen and (max-width: 1200px) {
   .main-wwd-c {
+    grid-template-columns: 1fr 1fr;
     .wwd-c {
       grid-template-columns: 1fr;
     }

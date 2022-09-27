@@ -4,9 +4,7 @@ import Layout from "../components/Layout/Layout";
 import { graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 import CarouselSlider from "../components/Carousel/Carousel";
-import ProgressStatistic from "../components/ProgressStatistic/ProgressStatistic";
 import Section from "../components/Section/Section";
-import CategoryStats from "../components/CategoryStats/CategoryStats";
 import NewsCard from "../components/NewsCard/NewsCard";
 import SectionTitle from "../components/SectionTitle/SectionTitle";
 import Typography from "../components/Typography/Typography";
@@ -40,37 +38,7 @@ const IndexPage = ({ data }) => {
         )}
       </AnimatePresence>
       <CarouselSlider data={banners} />
-      {/* 
-      <Section>
-        <SectionTitle> Impact Statistics</SectionTitle>
-        <div className="responsive-column">
-          <div>
-            {impactBarStats.map((item, i) => {
-              return (
-                <ProgressStatistic
-                  key={i}
-                  percentage={item.node.frontmatter.percentage}
-                  label={item.node.frontmatter.label}
-                />
-              );
-            })}
-          </div>
-          <div className="cs-stats">
-            {stats.map((item, i) => {
-              const img = getImage(item.node.frontmatter.icon);
 
-              return (
-                <CategoryStats
-                  key={i}
-                  number={item.node.frontmatter.number}
-                  label={item.node.frontmatter.label}
-                  image={img}
-                />
-              );
-            })}
-          </div>
-        </div>
-      </Section> */}
       <Section>
         <SectionTitle>what we do</SectionTitle>
         <div className="main-wwd-c">
@@ -245,7 +213,7 @@ export const query = graphql`
             title
             path
             excerpt
-            
+
             featureImage {
               name
               childImageSharp {
@@ -256,23 +224,7 @@ export const query = graphql`
         }
       }
     }
-    stats: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/(stats)/" } }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            label
-            number
-            icon {
-              childImageSharp {
-                gatsbyImageData(width: 1920, quality: 100)
-              }
-            }
-          }
-        }
-      }
-    }
+
     newsHeader: markdownRemark(
       fileAbsolutePath: { regex: "/(seo-headers/news)/" }
     ) {

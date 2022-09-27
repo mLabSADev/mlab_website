@@ -26,7 +26,7 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
   console.log(news)
   return (
     <Layout>
-      <PageHeader title="news" index={4} />
+      <PageHeader title="news" text="Keep up to date with our latest calls for applications, opportunities, projects and success stories" index={4} />
       <Section>
         {/* <SectionTitle>Articles</SectionTitle> */}
         <div className="news-content">

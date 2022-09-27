@@ -6,7 +6,10 @@ import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import Button from "../components/Button/Button";
 import Typography from "../components/Typography/Typography";
 import PageHeader from "../components/PageHeader/PageHeader";
+import SectionTitle from "../components/SectionTitle/SectionTitle";
 import Section from "../components/Section/Section";
+import CategoryStats from "../components/CategoryStats/CategoryStats";
+import ProgressStatistic from "../components/ProgressStatistic/ProgressStatistic";
 import Modal from "../components/Modal/Modal";
 import { AnimatePresence } from "framer-motion";
 const CodeTribe = ({ state = true }) => {
@@ -90,9 +93,11 @@ const SubPage = ({ title, data }) => {
 const WhatWeDo = ({ data }) => {
   const [modalOpen, setModalOpen] = useState({ title: "", state: false });
   const [activeSection, setActiveSection] = useState({});
-  const sectionData = data.allMarkdownRemark.edges;
+  const sectionData = data.wwdSections.edges;
   const close = () => setModalOpen({ state: false, title: "" });
   const open = (section) => setModalOpen({ state: true, title: section });
+  const impactBarStats = data.impactBarStats.edges;
+  const stats = data.stats.edges;
   return (
     <Layout>
       <AnimatePresence initial={false} exitBeforeEnter={true}>
@@ -102,7 +107,38 @@ const WhatWeDo = ({ data }) => {
           </Modal>
         )}
       </AnimatePresence>
+
       <PageHeader title={"WHAT WE DO"} index={2} />
+
+      <Section>
+        <SectionTitle> Impact Statistics</SectionTitle>
+        <div className="responsive-column">
+          <div className="progress-stat-wrappr">
+            {impactBarStats.map((item, i) => {
+              return (
+                <ProgressStatistic
+                  key={i}
+                  percentage={item.node.frontmatter.percentage}
+                  label={item.node.frontmatter.label}
+                />
+              );
+            })}
+          </div>
+          {/* <div className="cs-stats">
+            {stats.map((item, i) => {
+              const img = getImage(item.node.frontmatter.icon);
+              return (
+                <CategoryStats
+                  key={i}
+                  number={item.node.frontmatter.number}
+                  label={item.node.frontmatter.label}
+                  image={img}
+                />
+              );
+            })}
+          </div> */}
+        </div>
+      </Section>
       {sectionData.map((item, i) => {
         const title = item.node.frontmatter.title;
         const excerpt = item.node.excerpt;
@@ -147,7 +183,7 @@ export const query = graphql`
         position
       }
     }
-    allMarkdownRemark(
+    wwdSections: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/(wwdSections)/" } }
       limit: 5
     ) {
@@ -166,6 +202,38 @@ export const query = graphql`
               }
             }
           }
+        }
+      }
+    }
+    stats: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/(stats)/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            label
+            number
+            icon {
+              childImageSharp {
+                gatsbyImageData(width: 1920, quality: 100)
+              }
+            }
+          }
+        }
+      }
+    }
+    impactBarStats: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/(impactBarStats)/" } }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            label
+            percentage
+          }
+          rawMarkdownBody
         }
       }
     }

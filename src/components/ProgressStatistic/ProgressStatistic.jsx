@@ -5,10 +5,13 @@ const ProgressStatistic = ({ percentage, label }) => {
   return (
     <div className="main-ps">
       <div className="text-ps">
-        <Typography variant="s1">{label}</Typography>
-        <Typography variant="b1">{percentage}%</Typography>
+        <Typography variant="h5">{label}</Typography>
       </div>
-      <div style={{ width: `${percentage}%` }} className="progress-bar"></div>
+      {/* <div style={{ width: `${percentage}%` }} className="progress-bar">
+        <div className="knob">
+          <Typography  variant="caption">{percentage}%</Typography>
+        </div>
+      </div> */}
     </div>
   );
 };

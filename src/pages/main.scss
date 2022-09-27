@@ -32,13 +32,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--secondary-color);
 }
-.responsive-column {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  column-gap: 30px;
-  row-gap: 30px;
-}
+
 @media only screen and (max-width: 880px) {
   .responsive-column {
     grid-template-columns: auto;

@@ -2,7 +2,7 @@ import React from "react";
 import "./style.scss";
 import Typography from "../Typography/Typography";
 import { StaticImage } from "gatsby-plugin-image";
-const PageHeader = ({ image, title, page, index = 0 }) => {
+const PageHeader = ({ image, title, page, index = 0, text }) => {
   return (
     <div className="main-ph">
       {index === 1 && (
@@ -52,6 +52,7 @@ const PageHeader = ({ image, title, page, index = 0 }) => {
         <Typography variant="h3" color="light">
           {title.toUpperCase()}
         </Typography>
+        <Typography variant="b2" color="light">{text}</Typography>
       </div>
     </div>
   );

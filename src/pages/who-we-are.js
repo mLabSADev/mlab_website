@@ -16,12 +16,18 @@ export const WhatWeDoCard = ({ image, title, description, excerpt }) => {
         objectFit="cover"
         image={image}
         className="image-c"
-        alt=""
+        alt={title}
       ></GatsbyImage>
       <div className="details-c">
-        <Typography variant="caption">{excerpt}</Typography>
-        <Typography variant="h4">{title}</Typography>
-        <Typography color="gray" variant="b2">{description}</Typography>
+        <Typography center variant="caption">
+          {excerpt}
+        </Typography>
+        <Typography center variant="h4">
+          {title}
+        </Typography>
+        <Typography center color="gray" variant="b2">
+          {description}
+        </Typography>
         <Button label="read more" type="link" url="/what-we-do" />
       </div>
     </div>

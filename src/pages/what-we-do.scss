@@ -29,6 +29,17 @@
     background-color: #073f4eaf;
   }
 }
+.responsive-column {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  column-gap: 30px;
+  row-gap: 30px;
+  .progress-stat-wrappr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
 .subPage {
   box-sizing: border-box;
   width: 100%;
