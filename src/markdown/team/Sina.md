@@ -1,7 +1,7 @@
 ---
-path: "/Sina"
-name: "SINA LEGONG"
-position: "Programme Coordinator"
+path: /Sina
+name: SINA LEGONG
+position: Corporate Programmes Lead
 profilePicture: ../../images/theTeam/Sina.png
 thumb: ../../images/theTeam/Sina.png
 ---
