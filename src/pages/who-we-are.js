@@ -9,7 +9,7 @@ import Typography from "../components/Typography/Typography";
 import PageHeader from "../components/PageHeader/PageHeader";
 import Button from "../components/Button/Button";
 
-export const WhatWeDoCard = ({ image, title, description }) => {
+export const WhatWeDoCard = ({ image, title, description, excerpt }) => {
   return (
     <div className="wwd-c">
       <GatsbyImage
@@ -19,8 +19,9 @@ export const WhatWeDoCard = ({ image, title, description }) => {
         alt=""
       ></GatsbyImage>
       <div className="details-c">
+        <Typography variant="caption">{excerpt}</Typography>
         <Typography variant="h4">{title}</Typography>
-        <Typography variant="b2">{description}</Typography>
+        <Typography color="gray" variant="b2">{description}</Typography>
         <Button label="read more" type="link" url="/what-we-do" />
       </div>
     </div>
@@ -162,7 +163,7 @@ export const query = graphql`
         }
       }
     }
-    
+
     history: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/(history)/" } }
     ) {

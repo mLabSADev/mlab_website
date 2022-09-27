@@ -79,7 +79,8 @@ const IndexPage = ({ data }) => {
             return (
               <WhatWeDoCard
                 title={card.node.frontmatter.title}
-                description={card.node.frontmatter.excerpt}
+                excerpt={card.node.frontmatter.excerpt}
+                description={card.node.rawMarkdownBody}
                 image={img}
               />
             );
@@ -239,10 +240,12 @@ export const query = graphql`
       edges {
         node {
           id
+          rawMarkdownBody
           frontmatter {
             title
             path
             excerpt
+            
             featureImage {
               name
               childImageSharp {
