@@ -15,6 +15,7 @@ import Modal from "../components/Modal/Modal";
 import { SignupForm } from "./contact";
 import { AnimatePresence } from "framer-motion";
 import moment from "moment";
+import { WhatWeDoCard } from "./who-we-are";
 const IndexPage = ({ data }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const close = () => setModalOpen(false);
@@ -22,8 +23,8 @@ const IndexPage = ({ data }) => {
   const news = data.news.edges;
   const techs = data.theTech.edges;
   const banners = data.banners.edges;
-  const impactBarStats = data.impactBarStats.edges;
-  const stats = data.stats.edges;
+  // const impactBarStats = data.impactBarStats.edges;
+  // const stats = data.stats.edges;
   const newsHeader = data.newsHeader.frontmatter.position;
   return (
     <Layout>
@@ -39,7 +40,7 @@ const IndexPage = ({ data }) => {
         )}
       </AnimatePresence>
       <CarouselSlider data={banners} />
-
+      {/* 
       <Section>
         <SectionTitle> Impact Statistics</SectionTitle>
         <div className="responsive-column">
@@ -69,8 +70,22 @@ const IndexPage = ({ data }) => {
             })}
           </div>
         </div>
+      </Section> */}
+      <Section>
+        <SectionTitle>what we do</SectionTitle>
+        <div className="main-wwd-c">
+          {data.whatWeDo.edges.map((card, i) => {
+            const img = getImage(card.node.frontmatter.featureImage);
+            return (
+              <WhatWeDoCard
+                title={card.node.frontmatter.title}
+                description={card.node.frontmatter.excerpt}
+                image={img}
+              />
+            );
+          })}
+        </div>
       </Section>
-
       {/* dont't remove */}
       <div className="video-i">
         <iframe
@@ -218,14 +233,22 @@ export const query = graphql`
         }
       }
     }
-    impactBarStats: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/(impactBarStats)/" } }
+    whatWeDo: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/(whatWeDo)/" } }
     ) {
       edges {
         node {
+          id
           frontmatter {
-            label
-            percentage
+            title
+            path
+            excerpt
+            featureImage {
+              name
+              childImageSharp {
+                gatsbyImageData(formats: [AUTO, WEBP], width: 350)
+              }
+            }
           }
         }
       }

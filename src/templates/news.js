@@ -23,7 +23,7 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
     let tag = element.node.frontmatter.tags;
     tags = tags.concat(tag);
   });
-
+  console.log(news)
   return (
     <Layout>
       <PageHeader title="news" index={4} />
@@ -138,11 +138,8 @@ export const query = graphql`
           id
           frontmatter {
             author
-            date
             timeStamp
             title
-            path
-            abstract
             tags
             featureImage {
               name

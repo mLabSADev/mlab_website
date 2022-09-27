@@ -9,7 +9,7 @@ import Typography from "../components/Typography/Typography";
 import PageHeader from "../components/PageHeader/PageHeader";
 import Button from "../components/Button/Button";
 
-const WhatWeDoCard = ({ image, title, description }) => {
+export const WhatWeDoCard = ({ image, title, description }) => {
   return (
     <div className="wwd-c">
       <GatsbyImage
@@ -93,21 +93,7 @@ const WhoWeAre = ({ data }) => {
           drive our society.
         </Typography>
       </Section>
-      <Section>
-        <SectionTitle>what we do</SectionTitle>
-        <div className="main-wwd-c">
-          {data.whatWeDo.edges.map((card, i) => {
-            const img = getImage(card.node.frontmatter.featureImage);
-            return (
-              <WhatWeDoCard
-                title={card.node.frontmatter.title}
-                description={card.node.excerpt}
-                image={img}
-              />
-            );
-          })}
-        </div>
-      </Section>
+
       <Section>
         <SectionTitle>our team</SectionTitle>
         <Typography variant="b1" center={true}>
@@ -176,26 +162,7 @@ export const query = graphql`
         }
       }
     }
-    whatWeDo: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/(whatWeDo)/" } }
-    ) {
-      edges {
-        node {
-          id
-          excerpt
-          frontmatter {
-            title
-            path
-            featureImage {
-              name
-              childImageSharp {
-                gatsbyImageData(formats: [AUTO, WEBP], width: 350)
-              }
-            }
-          }
-        }
-      }
-    }
+    
     history: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/(history)/" } }
     ) {
