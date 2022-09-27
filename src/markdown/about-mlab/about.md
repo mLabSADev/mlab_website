@@ -1,9 +1,24 @@
 ---
-path: "/about-mlab"
-title: "ABOUT MLAB"
+path: /about-mlab
+title: ABOUT US
 thumb: ../../images/whoweare/mlabstaff.png
 ---
+Mobile Applications Laboratory NPC (mLab) is a tech-centred business that prepares innovators and entrepreneurs to maximise opportunities in the digital economy. mLab works alongside various partners to build a vibrant, robust innovation ecosystem. We have a strong focus on empowering youth, women and previously disadvantaged communities through digital skills training, enterprise support and technology development services.
 
- mLab is a tech-centred business that works towards preparing our youth for the digital economy. In only six years mLab has touched many lives. We’ve trained over 300 junior developers, mostly from South Africa’s townships, in mobile application development and Agile practice and helped to link them to employment and income opportunities. We’ve supported over 65 early-stage digital start-ups that have gone on to positively impact thousands of users through their technologies and created more than 300 new jobs. We’ve partnered with and supported the development of digital solutions with significant social impact, from cancer awareness to citizen water quality monitoring to agricultural empowerment apps. 
- 
- mLab has doubled in size in the last two years. Today our staff complement includes 18 passionate and dynamic young individuals who are determined to drive and transform South Africa’s ICT sector. We have expanded from our Gauteng based headquarters to have presence in Limpopo and the Northern Cape. We offer training in Soweto and Tembisa in Gauteng, and are planning expansion around South Africa and into the rest of the African continent.
+
+
+mLab was established in 2011 by a consortium of organisations that include the World Bank (InfoDev), Department of Science and Innovation (DSI), The Council for Scientific and Industrial Research in South Africa (CSIR) and The Innovation Hub (TIH) amongst other stakeholders to help open and expand the mobile applications economy in South Africa. 
+
+mLab is registered as a Not-for-Profit Company (NPC) with public benefit organisation (PBO) status and is a Level 1 B-BBEE service provider. 
+
+
+
+mLab has offices in Limpopo, Gauteng, and Northern Cape, and in Gauteng, it offers its CodeTribe Academy training in Soweto, Tembisa and Tshwane.
+
+
+
+**When our youth are empowered, they create innovative solutions that drive our society and economy forward.**
+
+
+
+<!--EndFragment-->
