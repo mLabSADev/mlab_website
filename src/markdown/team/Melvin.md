@@ -1,7 +1,7 @@
 ---
-path: "/Melvin"
-name: "MELVIN MUSEHANI"
-position: "Innovation Lab Lead"
+path: /Melvin
+name: MELVIN MUSEHANI
+position: Innovation Lab Technical Lead
 profilePicture: ../../images/theTeam/Melvin.png
 thumb: ../../images/theTeam/Melvin.png
 ---
