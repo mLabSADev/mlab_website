@@ -75,7 +75,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
   news.data.allMarkdownRemark.edges.forEach(({ node }) => {
     const title = node.frontmatter.title;
-    const lowerCase = title.toLowerCase();
+    const lowerCase = title;
     const remove_invalid_1 = lowerCase.replaceAll(":", "");
     const remove_invalid_2 = remove_invalid_1.replaceAll("|", "");
     const remove_invalid_3 = remove_invalid_2.replaceAll("#", "");
