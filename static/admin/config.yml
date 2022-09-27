@@ -40,6 +40,15 @@ collections:
           allow_multiple: false,
           choose_url: true,
         }
+  - name: "team"
+    label: "Team"
+    folder: "src/markdown/team"
+    create: true
+    fields:
+      - { label: "Full Name", name: "name", widget: "string" }
+      - { label: "Position", name: "position", widget: "string" }
+      - { label: "Picture", name: "profilePicture", widget: "image", choose_url: true }
+      - { label: "Body", name: "body", widget: "markdown" }
   - name: "locations"
     label: "Locations"
     folder: "src/markdown/locations"

@@ -53,36 +53,17 @@ const TeamCard = ({ fullName, position, image }) => {
 };
 const WhoWeAre = ({ data }) => {
   const team = data.team.edges;
+  const about = data.aboutMlab.rawMarkdownBody;
   return (
     <Layout>
       <PageHeader title="WHO WE ARE" index={1} />
       <Section>
         <div className="about-page">
           <div>
-            <Typography variant="h4">Who we are</Typography>
+            <Typography variant="h4">About Us</Typography>
             <br></br>
             <br></br>
-            <Typography variant="b1">
-              mLab is a tech-centred business that works towards preparing our
-              youth for the digital economy. In only six years mLab has touched
-              many lives. We’ve trained over 300 junior developers, mostly from
-              South Africa’s townships, in mobile application development and
-              Agile practice and helped to link them to employment and income
-              opportunities. We’ve supported over 65 early-stage digital
-              start-ups that have gone on to positively impact thousands of
-              users through their technologies and created more than 300 new
-              jobs. We’ve partnered with and supported the development of
-              digital solutions with significant social impact, from cancer
-              awareness to citizen water quality monitoring to agricultural
-              empowerment apps. mLab has doubled in size in the last two years.
-              Today our staff complement includes 18 passionate and dynamic
-              young individuals who are determined to drive and transform South
-              Africa’s ICT sector. We have expanded from our Gauteng based
-              headquarters to have presence in Limpopo and the Northern Cape. We
-              offer training in Soweto and Tembisa in Gauteng, and are planning
-              expansion around South Africa and into the rest of the African
-              continent.
-            </Typography>
+            <Typography variant="b1">{about}</Typography>
           </div>
           <div>
             <StaticImage
@@ -104,17 +85,9 @@ const WhoWeAre = ({ data }) => {
       <Section>
         <SectionTitle>our team</SectionTitle>
         <Typography variant="b1" center={true}>
-          mLab is a tech-centred business that works towards preparing our youth
-          for the digital economy. In only six years mLab has touched many
-          lives. We’ve trained over 300 junior developers, mostly from South
-          Africa’s townships, in mobile application development and Agile
-          practice and helped to link them to employment and income
-          opportunities. We’ve supported over 65 early-stage digital start-ups
-          that have gone on to positively impact thousands of users through
-          their technologies and created more than 300 new jobs. We’ve partnered
-          with and supported the development of digital solutions with
-          significant social impact, from cancer awareness to citizen water
-          quality monitoring to agricultural empowerment apps.
+          mLab has a staff complement of passionate and dynamic young
+          individuals who are determined to drive and transform South Africa’s
+          ICT sector.
         </Typography>
         <div className="our-team-wrapper">
           {team.map((t, i) => {
@@ -189,7 +162,7 @@ export const query = graphql`
         path
         title
       }
-      html
+      rawMarkdownBody
     }
   }
 `;
