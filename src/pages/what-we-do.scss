@@ -2,21 +2,24 @@
   box-sizing: border-box;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 600px;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
   gap: 50px;
   .wwd-details {
     display: flex;
     flex-direction: column;
+    z-index: 5;
     gap: 20px;
-    padding: 50px;
+    padding: 90px 50px;
   }
   .wwd-image {
     box-sizing: border-box;
     background: red;
     width: 100%;
     height: 100%;
-    position: relative;
+    position: absolute;
     filter: brightness(114%) contrast(114%) saturate(106%);
+    z-index: 1;
   }
   .wwd-image::before {
     content: "";

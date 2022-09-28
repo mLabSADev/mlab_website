@@ -76,7 +76,9 @@ collections:
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Thumb", name: "thumb", widget: "image" }
+      - { label: "Short Text", name: "shortText", widget: "string" }
+      - { label: "Icon", name: "icon", widget: "image" }
+      - { label: "Background", name: "featureImage", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "barStats"
     label: "Impact Bar Stats"

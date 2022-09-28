@@ -124,19 +124,6 @@ const WhatWeDo = ({ data }) => {
               );
             })}
           </div>
-          {/* <div className="cs-stats">
-            {stats.map((item, i) => {
-              const img = getImage(item.node.frontmatter.icon);
-              return (
-                <CategoryStats
-                  key={i}
-                  number={item.node.frontmatter.number}
-                  label={item.node.frontmatter.label}
-                  image={img}
-                />
-              );
-            })}
-          </div> */}
         </div>
       </Section>
       <div className="wwd-secton-wrapper">
@@ -148,13 +135,14 @@ const WhatWeDo = ({ data }) => {
           return (
             <div className="wwd-section">
               <div className="wwd-details">
-                <Typography variant="h4">{title}</Typography>
-                <Typography variant="b1">{excerpt}</Typography>
-                <span
-                  className="b1"
-                  dangerouslySetInnerHTML={{ __html: body }}
-                />
+                <Typography color="light" variant="h4">
+                  {title}
+                </Typography>
+                <Typography color="light" variant="b1">
+                  {excerpt}
+                </Typography>
                 <Button
+                  color="light"
                   type="button"
                   onClick={async () => {
                     setActiveSection(item);
@@ -163,7 +151,6 @@ const WhatWeDo = ({ data }) => {
                   label="read more"
                 ></Button>
               </div>
-              
               <GatsbyImage
                 image={image}
                 alt="title"
@@ -197,6 +184,8 @@ export const query = graphql`
         node {
           html
           rawMarkdownBody
+          excerpt
+
           frontmatter {
             path
             title
@@ -239,7 +228,9 @@ export const query = graphql`
             label
             percentage
           }
+          excerpt
           rawMarkdownBody
+          html
         }
       }
     }
