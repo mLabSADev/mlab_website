@@ -1,5 +1,5 @@
 ---
-featureImage: ../../images/archillect-on-twitter.jpg
+featureImage: ../../images/junior-developers-collaborating-on-group-project-c-2022-04-11-18-09-08-utc.jpg
 path: /impact-through-technology
 icon: ../../images/ecosystem.png
 summary: Events, Training, Workshops and Bootcamps
