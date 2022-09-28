@@ -1,10 +1,13 @@
 ---
-path: "/impact-through-technology"
-title: "Accelerating Startups"
-featureImage: ../../images/whatWeDo/accelerating.png
+featureImage: ../../images/archillect-on-twitter.jpg
+path: /impact-through-technology
+icon: ../../images/ecosystem.png
+summary: Events, Training, Workshops and Bootcamps
+shortText: Short ICT-led interventions to stimulate vibrant ecosystems in which
+  youth innovators can thrive
 thumb: ../../images/whatWeDo/accelerating.png
-link: 'impact-through-technology'
-video: "https://www.youtube.com/embed/kQpp-3lD-Dc"
+title: Tech Ecosystems
+link: impact-through-technology
+video: https://www.youtube.com/embed/kQpp-3lD-Dc
 ---
-
-A great business idea is a good start … but where to from there? mLab specialises in supporting early-stage start-ups through our various accelerator programmes. We have developed significant offerings and competencies over the past decade to deliver a value chain of support to entrepreneurs.including networking, mentorship and coaching, grant funding, technical support, business training and office resources.To date we have supported more than a 100 start-ups to become sustainable businesses. They in turn have added 320 jobs and counting to the economy. It's also interesting to note that 76% of our start-ups have a social impact focus which has made an impact on around 550 000 users.
+These training events and workshops are structured for various target audiences such as school students in science, technology, engineering, and mathematics (STEM) as well as youth Not in Education, Employment, or Training (NEETs). Initiatives under this programme include but not limited to; Digital Literacy i.e. Introduction to Computers, the Internet & Key Applications; Website Development; No Code Platforms and 4IR related workshops.
