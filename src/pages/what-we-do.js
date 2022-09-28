@@ -37,12 +37,10 @@ const CodeTribe = ({ state = true }) => {
           CodeTribe
         </Typography>
         <Typography variant="b2" color="light">
-          CodeTribe is a dedicated programme for developing the next generation
-          of software developers. While established startups are welcome to have
-          members participate in their own time and at own expense, they do not
-          qualify for bursaries as full time students. Startups and their staff
-          or members are advised to apply for incubation and acceleration
-          support through Maxum Business Incubator and mLab.
+          Calls for applications are as below. If currently closed, please
+          follow us on social media to find out when calls are open. You can
+          also register onto our database to be notified when calls are open and
+          to be kept informed of other exciting opportunities:
         </Typography>
         {state ? (
           <Button
@@ -131,11 +129,11 @@ const WhatWeDo = ({ data }) => {
           const title = item.node.frontmatter.title;
           const excerpt = item.node.excerpt;
           const body = item.node.rawMarkdownBody;
-          const image = getImage(item.node.frontmatter.thumb);
+          const image = getImage(item.node.frontmatter.featureImage);
           return (
             <div className="wwd-section">
               <div className="wwd-details">
-                <Typography color="light" variant="h4">
+                <Typography color="light" variant="h2">
                   {title}
                 </Typography>
                 <Typography color="light" variant="b1">
@@ -178,22 +176,23 @@ export const query = graphql`
     }
     wwdSections: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/(wwdSections)/" } }
-      limit: 5
     ) {
       edges {
         node {
           html
           rawMarkdownBody
           excerpt
-
           frontmatter {
-            path
             title
-            link
-            video
-            thumb {
+            summary
+            shortText
+            featureImage {
               childImageSharp {
-                gatsbyImageData(placeholder: DOMINANT_COLOR, width: 500)
+                gatsbyImageData(
+                  formats: AUTO
+                  placeholder: BLURRED
+                  quality: 100
+                )
               }
             }
           }

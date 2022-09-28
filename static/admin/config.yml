@@ -81,6 +81,12 @@ collections:
       - { label: "Short Text", name: "shortText", widget: "string" }
       - { label: "Background", name: "featureImage", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "partners"
+    label: Partners
+    folder: "src/markdown/partners"
+    create: false
+    fields:
+      - { label: "Body", name: "body", widget: "markdown" }
   - name: "barStats"
     label: "Impact Bar Stats"
     folder: "src/markdown/impactBarStats"
