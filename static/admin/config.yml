@@ -75,9 +75,10 @@ collections:
     folder: "src/markdown/wwdSections"
     create: true
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Short Text", name: "shortText", widget: "string" }
       - { label: "Icon", name: "icon", widget: "image" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Summary", name: "summary", widget: "string" }
+      - { label: "Short Text", name: "shortText", widget: "string" }
       - { label: "Background", name: "featureImage", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "barStats"
