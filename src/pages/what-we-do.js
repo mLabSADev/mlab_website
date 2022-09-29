@@ -79,8 +79,7 @@ const SubPage = ({ title, data, theTech = [] }) => {
           </div>
         </div>
       </div>
-      
-      
+
       {/* <Section>
         <iframe
           title={title}
@@ -127,7 +126,6 @@ const SubPage = ({ title, data, theTech = [] }) => {
           </div>
         </Section>
       )}
-
     </div>
   );
 };
@@ -154,20 +152,19 @@ const WhatWeDo = ({ data }) => {
       </AnimatePresence>
 
       <PageHeader title={"WHAT WE DO"} index={2} />
-<br />
-<br />
-<br />
+      <br />
+      <br />
+      <br />
       <Section>
-        <Typography variant="h3">
+        <Typography variant="s1">
           At the heart of mLab’s work is the belief that when our youth are
           empowered with the right skills to innovate and create solutions, they
           unlock opportunities for optimising existing, or establishing new
           businesses, that will drive our economy forward.{" "}
         </Typography>
         <br />
-        <br />
-        <br />
-        <Typography variant="h6">
+
+        <Typography variant="b2">
           We do this by offering programmes, projects and services under the
           following pillars;{" "}
         </Typography>
@@ -181,8 +178,8 @@ const WhatWeDo = ({ data }) => {
           return (
             <div className="wwd-section">
               <div className="wwd-details">
-                <Typography color="light" variant="h2">
-                  {title}
+                <Typography color="light" variant="h4">
+                  {title.toUpperCase()}
                 </Typography>
                 <Typography color="light" variant="b1">
                   {excerpt}

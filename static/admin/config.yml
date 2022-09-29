@@ -95,7 +95,7 @@ collections:
       - { label: "Employee Contact", name: "contact", widget: "string" }
   - name: "partnershipContacts"
     label: "Partnership Contacts"
-    folder: "src/markdown/mcollaboration"
+    folder: "src/markdown/partnershipContacts"
     create: false
     fields:
       - { label: "Body", name: "body", widget: "markdown" }

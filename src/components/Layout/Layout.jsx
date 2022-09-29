@@ -5,10 +5,14 @@ import Navigation from "../Navigation/index";
 import Typography from "../Typography/Typography";
 import NetlifyForm from "react-ssg-netlify-forms";
 import FormControl from "@mui/material/FormControl";
-import InputLabel from "@mui/material/InputLabel";
 import Input from "@mui/material/Input";
+import Box from "@mui/material/Box";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
 import { motion, AnimatePresence } from "framer-motion";
+import Select, { SelectChangeEvent } from "@mui/material/Select";
 import "./style.scss";
+import Button from "../Button/Button";
 const Layout = (props) => {
   const [openForm, setOpenForm] = useState(false);
   const [formValues, setFormValues] = useState({
@@ -30,10 +34,12 @@ const Layout = (props) => {
     }, 2000);
 
     setFormValues({
+      company: "",
       firstName: "",
       email: "",
       topic: "",
       message: "",
+      enquiry: "",
     });
   };
   const handleChange = (e) => {
@@ -52,6 +58,7 @@ const Layout = (props) => {
       }
     }
   };
+
   return (
     <div className="main-l">
       <Navigation />
@@ -79,18 +86,21 @@ const Layout = (props) => {
               className="feedback-ui"
             >
               <NetlifyForm
-                formName="Very Simple Form"
+                formName="Floating Form"
                 formValues={formValues}
                 postSubmit={postSubmit}
                 className="main-form"
               >
-                <FormControl fullWidth>
-                  <InputLabel id="demo-simple-select-label">Age</InputLabel>
+                <Typography variant="h4">Chat to us</Typography>
+                <Typography variant="b2">
+                  We'd love to hear from you.
+                </Typography>
+                <FormControl variant="standard" fullWidth>
+                  <InputLabel id="enquiry">What's your enquiry?</InputLabel>
                   <Select
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
-                    value={age}
-                    label="Age"
+                    name="enquiry"
+                    id="enquiry"
+                    value={formValues.enquiry}
                     onChange={handleChange}
                   >
                     <MenuItem value={10}>Ten</MenuItem>
@@ -138,16 +148,29 @@ const Layout = (props) => {
                     onChange={handleChange}
                   />
                 </FormControl>
+                <Button
+                  label="Submit"
+                  type="button"
+                  variant="contained"
+                  color="success"
+                />
               </NetlifyForm>
             </motion.div>
           )}
         </AnimatePresence>
-
-        <StaticImage
-          class="chat-icon"
-          src="../../images/icons/chat-icon.png"
-          alt="chat icon"
-        />
+        {openForm ? (
+          <StaticImage
+            class="chat-icon"
+            src="../../images/icons/close-chat-icon.png"
+            alt="chat icon"
+          />
+        ) : (
+          <StaticImage
+            class="chat-icon"
+            src="../../images/icons/chat-icon.png"
+            alt="chat icon"
+          />
+        )}
         <div
           onClick={() => {
             if (openForm) {
@@ -158,8 +181,9 @@ const Layout = (props) => {
           }}
           className={openForm ? "chat-label-show" : "chat-label-show"}
         >
+          {" "}
           <Typography color="light" variant="b2">
-            We'd love to hear from you
+            {openForm ? "close" : "Chat to us"}{" "}
           </Typography>
         </div>
       </div>
