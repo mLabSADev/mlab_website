@@ -19,7 +19,7 @@ const TechCard = ({ image, icon, title, description, handleClick }) => {
         <div className="details-text">
           <div>
             {/* <Typography variant="caption">27 Jan, 202x</Typography> */}
-            <Typography variant="h4">{title}</Typography>
+            <Typography variant="h4">{title}g</Typography>
           </div>
           <div className="icon-w">
             <GatsbyImage

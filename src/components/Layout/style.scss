@@ -19,10 +19,66 @@
     overflow-y: auto;
   }
 }
+
+.feedback-ui-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--primary-color);
+  z-index: 300;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  cursor: pointer;
+  .chat-icon {
+    width: 20px;
+  }
+  .chat-label-show {
+    z-index: 100;
+    width: auto;
+  }
+
+  .feedback-ui {
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 110%;
+    right: 0px;
+    background: white;
+    z-index: 300;
+    padding: 0px 0px 15px 15px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    width: 100%;
+    // padding: 30px 10px;
+    // height: 200px;
+    cursor: pointer;
+    .main-form {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      form {
+        box-sizing: border-box;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        .form-message {
+          padding: 20px;
+        }
+        .status-success {
+          background-color: var(--primary-color);
+        }
+        .status-error {
+          background-color: red;
+        }
+      }
+    }
+  }
+}
 @media only screen and (max-width: 880px) {
   .main-l {
-    .children-l {
-      // height: calc(100% - 80px);
-    }
   }
 }

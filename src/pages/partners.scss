@@ -3,6 +3,19 @@
   height: 200px;
   margin: 10px;
 }
+.partners-main {
+  span {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  p {
+    display: flex;
+    flex-direction: column;
+  }
+  img {
+    width: 100% !important;
+  }
+}
 .list-partners {
   box-sizing: border-box;
   width: 100%;

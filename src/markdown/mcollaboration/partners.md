@@ -25,6 +25,6 @@ mLab has a proven track record in delivering impact within all of its projects. 
 
 
 
-### **Activity Partners**
+### Activity Partners
 
 ![activity partners](../../images/unnamed-2-.png)

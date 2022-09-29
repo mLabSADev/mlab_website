@@ -12,6 +12,8 @@ import CategoryStats from "../components/CategoryStats/CategoryStats";
 import ProgressStatistic from "../components/ProgressStatistic/ProgressStatistic";
 import Modal from "../components/Modal/Modal";
 import { AnimatePresence } from "framer-motion";
+import TechCard from "../components/TextCard/TechCard";
+
 const CodeTribe = ({ state = true }) => {
   return (
     <div className="codeTribe">
@@ -54,26 +56,32 @@ const CodeTribe = ({ state = true }) => {
     </div>
   );
 };
-const SubPage = ({ title, data }) => {
+const SubPage = ({ title, data, theTech = [] }) => {
+  const icon = getImage(data.node.frontmatter.icon);
+  const background = getImage(data.node.frontmatter.featureImage);
   console.log(data);
+  let width = typeof window !== "undefined" ? window.screen.width : 800;
   return (
     <div className="subPage">
       <div className="subPage-header">
-        <StaticImage
-          className="image-sp"
-          src="../images/backgrounds/pexels-eberhard-grossgasteiger-1612461.jpg"
-          alt=""
-        />
+        <GatsbyImage className="image-sp" image={background} alt={title} />
         <div className="subPage-content">
-          <Typography variant="h3" color="light" center>
-            {title}
-          </Typography>
-          <Typography variant="b2" center color="light">
-            {data.node.rawMarkdownBody}
-          </Typography>
+          <div className="sp-c-details">
+            <Typography variant={width > 980 ? "h4" : "h6"} color="light">
+              {title.toUpperCase()}
+            </Typography>
+            <Typography variant={width > 980 ? "h2" : "h4"} color="light">
+              {data.node.frontmatter.shortText}
+            </Typography>
+          </div>
+          <div className="sp-c-icon">
+            <GatsbyImage objectFit="contain" image={icon} alt="" />
+          </div>
         </div>
       </div>
-      <Section>
+      
+      
+      {/* <Section>
         <iframe
           title={title}
           className="subPage-video"
@@ -82,9 +90,44 @@ const SubPage = ({ title, data }) => {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
+      </Section> */}
+      <Section>
+        <div className="reading">
+          <div></div>
+          <div
+            className="r-content"
+            dangerouslySetInnerHTML={{ __html: data.node.html }}
+          />
+          <div></div>
+        </div>
       </Section>
-
       <CodeTribe />
+      {title == "Tech Solutions" && (
+        <Section>
+          <SectionTitle>our tech</SectionTitle>
+          <br></br>
+          <br></br>
+          <div className="techs-w">
+            {theTech.map((item, i) => {
+              const img = getImage(item.node.frontmatter.screenshot);
+              const icon = getImage(item.node.frontmatter.icon);
+              const title = item.node.frontmatter.appName;
+              const description = item.node.frontmatter.description;
+              return (
+                <TechCard
+                  key={i}
+                  title={title}
+                  image={img}
+                  icon={icon}
+                  description={description}
+                  // handleClick={open}
+                />
+              );
+            })}
+          </div>
+        </Section>
+      )}
+
     </div>
   );
 };
@@ -101,28 +144,33 @@ const WhatWeDo = ({ data }) => {
       <AnimatePresence initial={false} exitBeforeEnter={true}>
         {modalOpen.state && (
           <Modal modalOpen={modalOpen.state} handleClose={close}>
-            <SubPage title={modalOpen.title} data={activeSection} />
+            <SubPage
+              theTech={data.theTech.edges}
+              title={modalOpen.title}
+              data={activeSection}
+            />
           </Modal>
         )}
       </AnimatePresence>
 
       <PageHeader title={"WHAT WE DO"} index={2} />
-
+<br />
+<br />
+<br />
       <Section>
-        <SectionTitle>Our Impact</SectionTitle>
-        <div className="responsive-column">
-          <div className="progress-stat-wrappr">
-            {impactBarStats.map((item, i) => {
-              return (
-                <ProgressStatistic
-                  key={i}
-                  percentage={item.node.frontmatter.percentage}
-                  label={item.node.frontmatter.label}
-                />
-              );
-            })}
-          </div>
-        </div>
+        <Typography variant="h3">
+          At the heart of mLab’s work is the belief that when our youth are
+          empowered with the right skills to innovate and create solutions, they
+          unlock opportunities for optimising existing, or establishing new
+          businesses, that will drive our economy forward.{" "}
+        </Typography>
+        <br />
+        <br />
+        <br />
+        <Typography variant="h6">
+          We do this by offering programmes, projects and services under the
+          following pillars;{" "}
+        </Typography>
       </Section>
       <div className="wwd-secton-wrapper">
         {sectionData.map((item, i) => {
@@ -146,7 +194,7 @@ const WhatWeDo = ({ data }) => {
                     setActiveSection(item);
                     open(title);
                   }}
-                  label="read more"
+                  label="MORE INFO / APPLY"
                 ></Button>
               </div>
               <GatsbyImage
@@ -158,6 +206,22 @@ const WhatWeDo = ({ data }) => {
           );
         })}
       </div>
+      <Section>
+        <SectionTitle>Our Impact</SectionTitle>
+        <div className="responsive-column">
+          <div className="progress-stat-wrappr">
+            {impactBarStats.map((item, i) => {
+              return (
+                <ProgressStatistic
+                  key={i}
+                  percentage={item.node.frontmatter.percentage}
+                  label={item.node.frontmatter.label}
+                />
+              );
+            })}
+          </div>
+        </div>
+      </Section>
     </Layout>
   );
 };
@@ -195,6 +259,15 @@ export const query = graphql`
                 )
               }
             }
+            icon {
+              childImageSharp {
+                gatsbyImageData(
+                  formats: AUTO
+                  placeholder: BLURRED
+                  quality: 100
+                )
+              }
+            }
           }
         }
       }
@@ -213,6 +286,31 @@ export const query = graphql`
               }
             }
           }
+        }
+      }
+    }
+    theTech: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/(theTech)/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            appName
+            description
+            screenshot {
+              childImageSharp {
+                gatsbyImageData(width: 1920, quality: 100, placeholder: BLURRED)
+                id
+              }
+            }
+            icon {
+              childImageSharp {
+                gatsbyImageData(width: 1920, placeholder: BLURRED)
+                id
+              }
+            }
+          }
+          excerpt
         }
       }
     }

@@ -19,7 +19,7 @@ const IndexPage = ({ data }) => {
   const close = () => setModalOpen(false);
   const open = () => setModalOpen(true);
   const news = data.news.edges;
-  const techs = data.theTech.edges;
+  
   const banners = data.banners.edges;
   // const impactBarStats = data.impactBarStats.edges;
   // const stats = data.stats.edges;
@@ -100,29 +100,7 @@ const IndexPage = ({ data }) => {
         </div>
         <div className=""></div>
       </Section>
-      <Section>
-        <SectionTitle>our tech</SectionTitle>
-        <br></br>
-        <br></br>
-        <div className="techs-w">
-          {techs.map((item, i) => {
-            const img = getImage(item.node.frontmatter.screenshot);
-            const icon = getImage(item.node.frontmatter.icon);
-            const title = item.node.frontmatter.appName;
-            const description = item.node.frontmatter.description;
-            return (
-              <TechCard
-                key={i}
-                title={title}
-                image={img}
-                icon={icon}
-                description={description}
-                handleClick={open}
-              />
-            );
-          })}
-        </div>
-      </Section>
+      
       <div className="index-form">
         <SignupForm main={false}></SignupForm>
       </div>

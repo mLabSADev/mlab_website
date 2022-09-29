@@ -31,20 +31,25 @@ export default function TaggedPosts({ data, pageContext }) {
             <div className="stories-news">
               {news.map((entry, i) => {
                 const img = getImage(entry.frontmatter.featureImage);
-                const title = entry.frontmatter.title;
                 const excerpt = entry.excerpt;
-                const path = entry.frontmatter.path;
-                if (entry.frontmatter.path) {
-                  return (
-                    <NewsCard
-                      key={i}
-                      image={img}
-                      title={title}
-                      excerpt={excerpt}
-                      url={path}
-                    />
-                  );
-                } else return null;
+                const title = entry.frontmatter.title;
+                const lowerCase = title;
+                const remove_invalid_1 = lowerCase.replaceAll(":", "");
+                const remove_invalid_2 = remove_invalid_1.replaceAll("|", "");
+                const remove_invalid_3 = remove_invalid_2.replaceAll("#", "");
+                const remove_invalid_4 = remove_invalid_3.replaceAll("&", "");
+                const remove_invalid_5 = remove_invalid_4.replaceAll('"', "");
+                const remove_invalid_6 = remove_invalid_5.replaceAll('"', "");
+                const _path = remove_invalid_6.replaceAll(" ", "-");
+                return (
+                  <NewsCard
+                    key={i}
+                    image={img}
+                    title={title}
+                    excerpt={excerpt}
+                    url={`/news/${_path}`}
+                  />
+                );
               })}
             </div>
           </div>

@@ -5,8 +5,10 @@ import { StaticImage } from "gatsby-plugin-image";
 import Section from "../components/Section/Section";
 import SectionTitle from "../components/SectionTitle/SectionTitle";
 import PageHeader from "../components/PageHeader/PageHeader";
-
-const Partners = () => {
+import { graphql } from "gatsby";
+const Partners = ({ data }) => {
+  const partners = data.partners;
+  console.log(partners);
   return (
     <Layout>
       <PageHeader title="Partners" index={3} />
@@ -54,8 +56,20 @@ const Partners = () => {
           ></StaticImage>
         </div>
       </Section>
+      <Section>
+        <div className="partners-main" dangerouslySetInnerHTML={{ __html: partners.html }} />
+      </Section>
     </Layout>
   );
 };
 
 export default Partners;
+export const query = graphql`
+  query PartnersQuery {
+    partners: markdownRemark(
+      fileAbsolutePath: { regex: "/(mcollaboration)/" }
+    ) {
+      html
+    }
+  }
+`;

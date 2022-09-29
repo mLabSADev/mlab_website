@@ -15,7 +15,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Author", name: "author", widget: "string" }
-      - { label: "Date", name: "timeStamp", widget: "date"}
+      - { label: "Date", name: "timeStamp", widget: "date" }
       - { label: "Image", name: "featureImage", widget: "image" }
       - {
           label: "Category",
@@ -47,7 +47,12 @@ collections:
     fields:
       - { label: "Full Name", name: "name", widget: "string" }
       - { label: "Position", name: "position", widget: "string" }
-      - { label: "Picture", name: "profilePicture", widget: "image", choose_url: true }
+      - {
+          label: "Picture",
+          name: "profilePicture",
+          widget: "image",
+          choose_url: true,
+        }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "locations"
     label: "Locations"
@@ -81,9 +86,16 @@ collections:
       - { label: "Short Text", name: "shortText", widget: "string" }
       - { label: "Background", name: "featureImage", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
-  - name: "partners"
+  - name: "mcollaboration"
     label: Partners
-    folder: "src/markdown/partners"
+    folder: "src/markdown/partnershipContacts"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Employee Contact", name: "contact", widget: "string" }
+  - name: "partnershipContacts"
+    label: "Partnership Contacts"
+    folder: "src/markdown/mcollaboration"
     create: false
     fields:
       - { label: "Body", name: "body", widget: "markdown" }
