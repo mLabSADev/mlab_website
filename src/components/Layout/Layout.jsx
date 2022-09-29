@@ -112,7 +112,7 @@ const Layout = (props) => {
                   <InputLabel htmlFor="company">Company</InputLabel>
                   <Input
                     id="company"
-                    name="Company"
+                    name="company"
                     type="text"
                     value={formValues.company}
                     onChange={handleChange}
