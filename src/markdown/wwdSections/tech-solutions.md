@@ -1,5 +1,5 @@
 ---
-icon: ../../images/solutions.png
+icon: ../../images/solutions-white-icon.png
 title: Tech Solutions
 summary: Impact through Technology
 shortText: We help co-create digital solutions that address social and economic challenges
