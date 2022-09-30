@@ -15,7 +15,7 @@ import { StaticQuery, graphql } from "gatsby";
 import "./style.scss";
 import Button from "../Button/Button";
 
-export const ChatForm = () => {
+export const ChatForm = ({ formState }) => {
   const [sentStatus, setSentStatus] = useState("");
   const [statusMessage, setStatusMessage] = useState("");
   const [enquiry, setInquiry] = useState([]);
@@ -31,6 +31,7 @@ export const ChatForm = () => {
     setSentStatus("success");
     setTimeout(() => {
       setSentStatus("");
+      formState();
     }, 2000);
 
     setFormValues({
@@ -97,8 +98,8 @@ export const ChatForm = () => {
               setInquiry(data.q.edges);
             }}
           />
-          {enquiry.map((node) => (
-            <MenuItem value={node.node.frontmatter.contact}>
+          {enquiry.map((node, i) => (
+            <MenuItem key={i} value={node.node.frontmatter.contact}>
               {node.node.frontmatter.enquiry}
             </MenuItem>
           ))}
@@ -150,6 +151,13 @@ export const ChatForm = () => {
         variant="contained"
         color="success"
       />
+      {sentStatus && (
+        <div className={`form-message status-${sentStatus}`}>
+          <Typography variant="b2" color="light">
+            {statusMessage}
+          </Typography>
+        </div>
+      )}
     </NetlifyForm>
   );
 };
@@ -185,7 +193,7 @@ const Layout = (props) => {
               }}
               className="feedback-ui"
             >
-              <ChatForm />
+              <ChatForm formState={() => close()} />
             </motion.div>
           )}
         </AnimatePresence>
