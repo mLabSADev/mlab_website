@@ -11,11 +11,14 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import { motion, AnimatePresence } from "framer-motion";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
+import { StaticQuery, graphql } from "gatsby";
 import "./style.scss";
 import Button from "../Button/Button";
+
 export const ChatForm = () => {
   const [sentStatus, setSentStatus] = useState("");
   const [statusMessage, setStatusMessage] = useState("");
+  const [enquiry, setInquiry] = useState([]);
   const [formValues, setFormValues] = useState({
     company: "",
     fullName: "",
@@ -71,9 +74,34 @@ export const ChatForm = () => {
           value={formValues.enquiry}
           onChange={handleChange}
         >
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
+          <StaticQuery
+            query={graphql`
+              query Enquiry {
+                q: allMarkdownRemark(
+                  filter: {
+                    fileAbsolutePath: { regex: "/(partnershipContacts)/" }
+                  }
+                ) {
+                  edges {
+                    node {
+                      frontmatter {
+                        enquiry
+                        contact
+                      }
+                    }
+                  }
+                }
+              }
+            `}
+            render={(data) => {
+              setInquiry(data.q.edges);
+            }}
+          />
+          {enquiry.map((node) => (
+            <MenuItem value={node.node.frontmatter.contact}>
+              {node.node.frontmatter.enquiry}
+            </MenuItem>
+          ))}
         </Select>
       </FormControl>
       <FormControl fullWidth>

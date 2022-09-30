@@ -19,7 +19,7 @@ const IndexPage = ({ data }) => {
   const close = () => setModalOpen(false);
   const open = () => setModalOpen(true);
   const news = data.news.edges;
-
+  
   const banners = data.banners.edges;
   // const impactBarStats = data.impactBarStats.edges;
   // const stats = data.stats.edges;
@@ -76,7 +76,7 @@ const IndexPage = ({ data }) => {
           {news.map((item, i) => {
             const image = getImage(item.node.frontmatter.featureImage);
             const title = item.node.frontmatter.title;
-            const lowerCase = title;
+            const lowerCase = title ;
             const remove_invalid_1 = lowerCase.replaceAll(":", "");
             const remove_invalid_2 = remove_invalid_1.replaceAll("|", "");
             const remove_invalid_3 = remove_invalid_2.replaceAll("#", "");
@@ -100,7 +100,7 @@ const IndexPage = ({ data }) => {
         </div>
         <div className=""></div>
       </Section>
-
+      
       <div className="index-form">
         <SignupForm main={false}></SignupForm>
         <ChatForm />

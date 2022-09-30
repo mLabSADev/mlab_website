@@ -218,9 +218,7 @@ const Contact = ({ data }) => {
                 <Typography variant="h3">
                   mLab | {l.node.frontmatter.province}
                 </Typography>
-                <Typography variant="s2">
-                  {l.node.frontmatter.city}
-                </Typography>
+                <Typography variant="s2">{l.node.frontmatter.city}</Typography>
                 <br></br>
                 <p dangerouslySetInnerHTML={{ __html: l.node.html }} />
                 <br></br>
