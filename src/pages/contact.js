@@ -175,7 +175,19 @@ const Contact = ({ data }) => {
       <Section>
         <div className="form-wraper">
           <div className="form-details">
-            <Typography variant="h4">Contact Us</Typography>
+            <div>
+              <Typography variant="h4">Contact Us</Typography>
+              <Typography variant="b1">
+                Our Labs are dedicated spaces that provide a range of services
+                to entrepreneurs, innovators, makers, developers and digital
+                creatives through our different programmes. We also host a
+                number of partner events, workshops and training within our labs
+                and technology partners can select to run mLab facilitated
+                activities or simply work with our events team to assist with
+                setup and arrangements.{" "}
+              </Typography>
+            </div>
+
             <div>
               <Typography variant="h5">Address</Typography>
               <Typography variant="b2">{contactUs.address}</Typography>
@@ -204,10 +216,10 @@ const Contact = ({ data }) => {
               ></GatsbyImage>
               <div className="location-details">
                 <Typography variant="h3">
-                  mLab | {l.node.frontmatter.city}
+                  mLab | {l.node.frontmatter.province}
                 </Typography>
                 <Typography variant="s2">
-                  {l.node.frontmatter.province}
+                  {l.node.frontmatter.city}
                 </Typography>
                 <br></br>
                 <p dangerouslySetInnerHTML={{ __html: l.node.html }} />

@@ -13,8 +13,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import "./style.scss";
 import Button from "../Button/Button";
-const Layout = (props) => {
-  const [openForm, setOpenForm] = useState(false);
+export const ChatForm = () => {
+  const [sentStatus, setSentStatus] = useState("");
+  const [statusMessage, setStatusMessage] = useState("");
   const [formValues, setFormValues] = useState({
     company: "",
     fullName: "",
@@ -22,10 +23,6 @@ const Layout = (props) => {
     phoneNumber: "",
     message: "",
   });
-  const [sentStatus, setSentStatus] = useState("");
-  const [statusMessage, setStatusMessage] = useState("");
-  const open = () => setOpenForm(true);
-  const close = () => setOpenForm(false);
   const postSubmit = () => {
     setStatusMessage("Thank you for your submission.");
     setSentStatus("success");
@@ -35,11 +32,10 @@ const Layout = (props) => {
 
     setFormValues({
       company: "",
-      firstName: "",
+      fullName: "",
       email: "",
-      topic: "",
+      phoneNumber: "",
       message: "",
-      enquiry: "",
     });
   };
   const handleChange = (e) => {
@@ -58,6 +54,82 @@ const Layout = (props) => {
       }
     }
   };
+  return (
+    <NetlifyForm
+      formName="Floating Form"
+      formValues={formValues}
+      postSubmit={postSubmit}
+      className="main-form"
+    >
+      <Typography variant="h4">Chat to us</Typography>
+      <Typography variant="b2">We'd love to hear from you.</Typography>
+      <FormControl variant="standard" fullWidth>
+        <InputLabel id="enquiry">How can we help you?</InputLabel>
+        <Select
+          name="enquiry"
+          id="enquiry"
+          value={formValues.enquiry}
+          onChange={handleChange}
+        >
+          <MenuItem value={10}>Ten</MenuItem>
+          <MenuItem value={20}>Twenty</MenuItem>
+          <MenuItem value={30}>Thirty</MenuItem>
+        </Select>
+      </FormControl>
+      <FormControl fullWidth>
+        <InputLabel id="company">Company</InputLabel>
+        <Input
+          id="company"
+          name="company"
+          type="text"
+          value={formValues.company}
+          onChange={handleChange}
+        />
+      </FormControl>
+      <FormControl fullWidth>
+        <InputLabel id="firstName">Full Name</InputLabel>
+        <Input
+          id="firstName"
+          name="firstName"
+          type="text"
+          value={formValues.firstName}
+          onChange={handleChange}
+        />
+      </FormControl>
+      <FormControl fullWidth>
+        <InputLabel id="email">Email Address</InputLabel>
+        <Input
+          id="email"
+          name="email"
+          type="email"
+          value={formValues.email}
+          onChange={handleChange}
+        />
+      </FormControl>
+      <FormControl fullWidth>
+        <InputLabel id="message">Message</InputLabel>
+        <Input
+          id="message"
+          name="message"
+          type="text"
+          value={formValues.message}
+          onChange={handleChange}
+        />
+      </FormControl>
+      <Button
+        label="Submit"
+        type="button"
+        variant="contained"
+        color="success"
+      />
+    </NetlifyForm>
+  );
+};
+const Layout = (props) => {
+  const [openForm, setOpenForm] = useState(false);
+
+  const open = () => setOpenForm(true);
+  const close = () => setOpenForm(false);
 
   return (
     <div className="main-l">
@@ -72,7 +144,7 @@ const Layout = (props) => {
           {openForm && (
             <motion.div
               initial={{
-                x: 90,
+                x: 500,
                 opacity: 0,
               }}
               animate={{
@@ -80,81 +152,12 @@ const Layout = (props) => {
                 opacity: 1,
               }}
               exit={{
-                x: 300,
+                x: 900,
                 opacity: 0,
               }}
               className="feedback-ui"
             >
-              <NetlifyForm
-                formName="Floating Form"
-                formValues={formValues}
-                postSubmit={postSubmit}
-                className="main-form"
-              >
-                <Typography variant="h4">Chat to us</Typography>
-                <Typography variant="b2">
-                  We'd love to hear from you.
-                </Typography>
-                <FormControl variant="standard" fullWidth>
-                  <InputLabel id="enquiry">What's your enquiry?</InputLabel>
-                  <Select
-                    name="enquiry"
-                    id="enquiry"
-                    value={formValues.enquiry}
-                    onChange={handleChange}
-                  >
-                    <MenuItem value={10}>Ten</MenuItem>
-                    <MenuItem value={20}>Twenty</MenuItem>
-                    <MenuItem value={30}>Thirty</MenuItem>
-                  </Select>
-                </FormControl>
-                <FormControl fullWidth>
-                  <InputLabel htmlFor="company">Company</InputLabel>
-                  <Input
-                    id="company"
-                    name="company"
-                    type="text"
-                    value={formValues.company}
-                    onChange={handleChange}
-                  />
-                </FormControl>
-                <FormControl fullWidth>
-                  <InputLabel htmlFor="firstName">Full Name</InputLabel>
-                  <Input
-                    id="firstName"
-                    name="firstName"
-                    type="text"
-                    value={formValues.firstName}
-                    onChange={handleChange}
-                  />
-                </FormControl>
-                <FormControl fullWidth>
-                  <InputLabel htmlFor="email">Email Address</InputLabel>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formValues.email}
-                    onChange={handleChange}
-                  />
-                </FormControl>
-                <FormControl fullWidth>
-                  <InputLabel htmlFor="phoneNumber">Phone Number</InputLabel>
-                  <Input
-                    id="phoneNumber"
-                    name="phoneNumber"
-                    type="tel"
-                    value={formValues.phoneNumber}
-                    onChange={handleChange}
-                  />
-                </FormControl>
-                <Button
-                  label="Submit"
-                  type="button"
-                  variant="contained"
-                  color="success"
-                />
-              </NetlifyForm>
+              <ChatForm />
             </motion.div>
           )}
         </AnimatePresence>

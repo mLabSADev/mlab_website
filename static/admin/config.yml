@@ -60,6 +60,7 @@ collections:
     create: true
     fields:
       - { label: "City", name: "city", widget: "string" }
+      - { label: "Province", name: "province", widget: "string" }
       - { label: "Image", name: "featureImage", widget: "image" }
       - { label: "Location", name: "location", widget: "string" }
       - { label: "Programmes", name: "programmes", widget: "list" }

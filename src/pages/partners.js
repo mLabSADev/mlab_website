@@ -19,7 +19,7 @@ const Partners = ({ data }) => {
         <div className="list-partners">
           <StaticImage
             objectFit="contain"
-            src="../images/active-partners/science-and-tech.png"
+            src="../images/active-partners/DSI-Logo.png"
             alt=""
             className="partner-p"
           ></StaticImage>
@@ -31,13 +31,13 @@ const Partners = ({ data }) => {
           ></StaticImage>
           <StaticImage
             objectFit="contain"
-            src="../images/active-partners/csir.png"
+            src="../images/active-partners/csir_logo.jpg"
             alt=""
             className="partner-p"
           ></StaticImage>
           <StaticImage
             objectFit="contain"
-            src="../images/active-partners/infoDev.png"
+            src="../images/active-partners/worldbank_logo.jpg"
             alt=""
             className="partner-p"
           ></StaticImage>
@@ -50,7 +50,7 @@ const Partners = ({ data }) => {
 
           <StaticImage
             objectFit="contain"
-            src="../images/active-partners/tech-innovation.png"
+            src="../images/active-partners/the-innovation-hub_1_orig.png"
             alt=""
             className="partner-p"
           ></StaticImage>
