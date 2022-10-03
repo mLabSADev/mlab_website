@@ -1,7 +1,7 @@
 ---
 title: ' "IT WAS LIFE CHANGING" - IMPACTS OF THE CODETRIBE ACADEMY'
 author: ZUKANYE MADAKANA
-timeStamp: Jan 10, 22
+timeStamp: 2022-01-09T22:00:00.000Z
 thumb: sinoxolo.jpg
 featureImage: ../../images/sinoxolo.jpg
 category: Talent
