@@ -108,6 +108,12 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Link", name: "link", widget: "link" }
+      - {
+          label: "Can embed?",
+          name: "embed",
+          widget: "boolean",
+          default: false,
+        }
   - name: "barStats"
     label: "Impact Bar Stats"
     folder: "src/markdown/impactBarStats"

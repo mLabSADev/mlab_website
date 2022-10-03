@@ -74,7 +74,7 @@ export const ChatForm = ({ formState }) => {
       >
         <div className="main-form-header">
           <Typography variant="h4">Chat to us</Typography>
-          <div className="main-form-icons">
+          {/* <div className="main-form-icons">
             <div onClick={() => minimize()}>
               <StaticImage
                 className="minimize"
@@ -91,7 +91,7 @@ export const ChatForm = ({ formState }) => {
                 alt="maximize"
               />
             </div>
-          </div>
+          </div> */}
         </div>
 
         <Typography variant="b2">We'd love to hear from you.</Typography>
