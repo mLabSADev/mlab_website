@@ -51,15 +51,17 @@
     grid-template-columns: 1fr;
     gap: 20px;
     width: 500%;
+    border: solid 1px var(--primary-color);
     // padding: 30px 10px;
     // height: 200px;
-    cursor: pointer;
-    .main-form {
+    cursor: default;
+    .main-form,
+    .motion-class {
       box-sizing: border-box;
       width: 100%;
-      display: flex;
-      // grid-template-columns: 1fr;
-      gap: 50px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
     }
     form {
       box-sizing: border-box;
@@ -67,6 +69,25 @@
       display: grid;
       grid-template-columns: 1fr;
       gap: 20px;
+      .main-form-header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        img {
+          width: 20px;
+          height: 20px;
+          margin: 10px;
+        }
+        .maximize,
+        .minimize {
+          cursor: pointer;
+          // background-color: red;
+          margin: 2px;
+          // border: solid 1px var(--primary-color);
+        }
+        .main-form-icons {
+          display: flex;
+        }
+      }
       .form-message {
         padding: 20px;
         position: absolute;

@@ -23,7 +23,6 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
     let tag = element.node.frontmatter.tags;
     tags = tags.concat(tag);
   });
-  console.log(news);
   return (
     <Layout>
       <PageHeader

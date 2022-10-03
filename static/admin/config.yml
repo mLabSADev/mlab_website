@@ -101,7 +101,13 @@ collections:
     fields:
       - { label: "Enquiry", name: "enquiry", widget: "string" }
       - { label: "Employee Contact", name: "contact", widget: "string" }
-
+  - name: "publications"
+    label: "Publications"
+    folder: "src/markdown/publications"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Link", name: "link", widget: "link" }
   - name: "barStats"
     label: "Impact Bar Stats"
     folder: "src/markdown/impactBarStats"

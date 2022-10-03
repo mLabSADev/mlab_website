@@ -10,10 +10,8 @@ export const subPageSlice = createSlice({
   initialState,
   reducers: {
     open: (state) => {
-      console.log("to open");
     },
     close: (state) => {
-      console.log("to close");
     },
   },
 });

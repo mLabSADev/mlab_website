@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./contact.scss";
 import Layout from "../components/Layout/Layout";
-import { graphql } from "gatsby";
+import { graphql, StaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import PageHeader from "../components/PageHeader/PageHeader";
 import Section from "../components/Section/Section";
@@ -11,49 +11,64 @@ import InputLabel from "@mui/material/InputLabel";
 import Input from "@mui/material/Input";
 import Button from "../components/Button/Button";
 import NetlifyForm from "react-ssg-netlify-forms";
+import MenuItem from "@mui/material/MenuItem";
 import { navigate } from "gatsby";
 import Modal from "../components/Modal/Modal";
 import { AnimatePresence } from "framer-motion";
-export const SignupForm = (main) => {
+import Select, { SelectChangeEvent } from "@mui/material/Select";
+
+
+export const SignupForm = ({ main, interests = [] }) => {
   const [sentStatus, setSentStatus] = useState("");
   const [statusMessage, setStatusMessage] = useState("");
-
+  const fv = {
+    interest: "",
+    firstName: "",
+    email: "",
+    topic: "",
+    message: "",
+  };
+  const [formValues, setFormValues] = useState(fv);
   const [modalOpen, setModalOpen] = useState(false);
-  // const validate = (values) => {
-  //   const errors = {};
+  /*
+ const validate = (values) => {
+    const errors = {};
 
-  //   if (!values.firstName) {
-  //     errors.firstName = "Required";
-  //   } else if (values.firstName.length > 15) {
-  //     errors.firstName = "Must be 15 characters or less";
-  //   }
+    if (!values.firstName) {
+      errors.firstName = "Required";
+    } else if (values.firstName.length > 15) {
+      errors.firstName = "Must be 15 characters or less";
+    }
 
-  //   if (!values.email) {
-  //     errors.email = "Required";
-  //   } else if (
-  //     !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
-  //   ) {
-  //     errors.email = "Invalid email address";
-  //   }
-  //   if (!values.topic) {
-  //     errors.topic = "Required";
-  //   } else if (values.topic.length > 30) {
-  //     errors.topic = "Must be 30 characters or less";
-  //   }
+    if (!values.email) {
+      errors.email = "Required";
+    } else if (
+      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
+    ) {
+      errors.email = "Invalid email address";
+    }
+    if (!values.topic) {
+      errors.topic = "Required";
+    } else if (values.topic.length > 30) {
+      errors.topic = "Must be 30 characters or less";
+    }
 
-  //   if (!values.message) {
-  //     errors.message = "Required";
-  //   } else if (values.message.length > 500) {
-  //     errors.message = "Must be 500 characters or less";
-  //   }
-  //   return errors;
-  // };
+    if (!values.message) {
+      errors.message = "Required";
+    } else if (values.message.length > 500) {
+      errors.message = "Must be 500 characters or less";
+    }
+    return errors;
+  };
+  */
+
+  const close = () => setModalOpen(false);
   const handleChange = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
-    console.log(e.target.name);
+
     if (e.target.name === "email") {
       if (
-        /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(formValues.email)
+        /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(formValues.email)
       ) {
         setStatusMessage("");
         setSentStatus("");
@@ -64,16 +79,6 @@ export const SignupForm = (main) => {
       }
     }
   };
-
-  const [formValues, setFormValues] = useState({
-    firstName: "",
-    email: "",
-    topic: "",
-    message: "",
-  });
-  const close = () => setModalOpen(false);
-
-  // const open = () => setModalOpen(true);
   const postSubmit = () => {
     if (main) {
       setStatusMessage("Thank you for your submission.");
@@ -82,13 +87,11 @@ export const SignupForm = (main) => {
         setSentStatus("");
       }, 2000);
     }
-    setFormValues({
-      firstName: "",
-      email: "",
-      topic: "",
-      message: "",
-    });
+    setFormValues(fv);
   };
+  useEffect(() => {
+    setFormValues(fv);
+  }, []);
   return (
     <NetlifyForm
       formName="Very Simple Form"
@@ -105,6 +108,20 @@ export const SignupForm = (main) => {
           </Modal>
         )}
       </AnimatePresence>
+      <FormControl variant="standard" fullWidth>
+        <InputLabel id="interest">What interests you?</InputLabel>
+        <Select
+          name="interest"
+          id="interest"
+          value={formValues.interest}
+          onChange={handleChange}
+        >
+          {interests.map((node) => {
+            const title = node.node.frontmatter.title;
+            return <MenuItem value={title}>{title}</MenuItem>;
+          })}
+        </Select>
+      </FormControl>
       <FormControl fullWidth>
         <InputLabel htmlFor="firstName">Full Name</InputLabel>
         <Input
@@ -167,8 +184,9 @@ export const SignupForm = (main) => {
 };
 
 const Contact = ({ data }) => {
-  const locations = data.allMarkdownRemark.edges;
+  const locations = data.locations.edges;
   const contactUs = data.site.siteMetadata;
+  const interest = data.wwdSections.edges;
   return (
     <Layout>
       <PageHeader index={6} title="Contact Us" />
@@ -200,7 +218,7 @@ const Contact = ({ data }) => {
           <div className="main-form">
             <Typography variant="h4">Email Us</Typography>
             <Typography variant="b1">We'd love to hear from you</Typography>
-            <SignupForm main={true} />
+            <SignupForm main={true} interests={interest} />
           </div>
         </div>
       </Section>
@@ -252,7 +270,18 @@ export const query = graphql`
         telephone
       }
     }
-    allMarkdownRemark(
+    wwdSections: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/(wwdSections)/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
+    locations: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/(locations)/" } }
       sort: { fields: [frontmatter___order], order: ASC }
     ) {
@@ -284,6 +313,7 @@ export const query = graphql`
         }
       }
     }
+
     markdownRemark(frontmatter: { title: { eq: $title } }) {
       html
       frontmatter {

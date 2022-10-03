@@ -59,7 +59,7 @@ const CodeTribe = ({ state = true }) => {
 const SubPage = ({ title, data, theTech = [] }) => {
   const icon = getImage(data.node.frontmatter.icon);
   const background = getImage(data.node.frontmatter.featureImage);
-  console.log(data);
+
   let width = typeof window !== "undefined" ? window.screen.width : 800;
   return (
     <div className="subPage">

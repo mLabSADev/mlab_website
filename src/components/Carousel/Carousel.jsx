@@ -68,8 +68,6 @@ const CarouselItem = ({ title, text, image, reg }) => {
 
 const CarouselSlider = ({ data = [] }) => {
   let _data = [1, 2, 3, 4, 5, 6, 7];
-  console.log(data);
-
   return (
     <Swiper
       cssMode={true}

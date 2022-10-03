@@ -8,7 +8,6 @@ import PageHeader from "../components/PageHeader/PageHeader";
 import { graphql } from "gatsby";
 const Partners = ({ data }) => {
   const partners = data.partners;
-  console.log(partners);
   return (
     <Layout>
       <PageHeader title="Partners" index={3} />

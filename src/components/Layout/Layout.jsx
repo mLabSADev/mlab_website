@@ -19,6 +19,9 @@ export const ChatForm = ({ formState }) => {
   const [sentStatus, setSentStatus] = useState("");
   const [statusMessage, setStatusMessage] = useState("");
   const [enquiry, setInquiry] = useState([]);
+  const [enlarge, setEnlarge] = useState(false);
+  const maximize = () => setEnlarge(true);
+  const minimize = () => setEnlarge(false);
   const [formValues, setFormValues] = useState({
     company: "",
     fullName: "",
@@ -44,7 +47,7 @@ export const ChatForm = ({ formState }) => {
   };
   const handleChange = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
-    console.log(e.target.name);
+
     if (e.target.name === "email") {
       if (
         /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(formValues.email)
@@ -65,99 +68,125 @@ export const ChatForm = ({ formState }) => {
       postSubmit={postSubmit}
       className="main-form"
     >
-      <Typography variant="h4">Chat to us</Typography>
-      <Typography variant="b2">We'd love to hear from you.</Typography>
-      <FormControl variant="standard" fullWidth>
-        <InputLabel id="enquiry">How can we help you?</InputLabel>
-        <Select
-          name="enquiry"
-          id="enquiry"
-          value={formValues.enquiry}
-          onChange={handleChange}
-        >
-          <StaticQuery
-            query={graphql`
-              query Enquiry {
-                q: allMarkdownRemark(
-                  filter: {
-                    fileAbsolutePath: { regex: "/(partnershipContacts)/" }
-                  }
-                ) {
-                  edges {
-                    node {
-                      frontmatter {
-                        enquiry
-                        contact
+      <motion.div
+        style={{ width: enlarge ? "500%" : "auto" }}
+        className="motion-class"
+      >
+        <div className="main-form-header">
+          <Typography variant="h4">Chat to us</Typography>
+          <div className="main-form-icons">
+            <div onClick={() => minimize()}>
+              <StaticImage
+                className="minimize"
+                objectFit="contain"
+                src="../../images/icons/minimize.png"
+                alt="minimize"
+              />
+            </div>
+            <div onClick={() => maximize()}>
+              <StaticImage
+                className="maximize"
+                objectFit="contain"
+                src="../../images/icons/maximize.png"
+                alt="maximize"
+              />
+            </div>
+          </div>
+        </div>
+
+        <Typography variant="b2">We'd love to hear from you.</Typography>
+        <FormControl variant="standard" fullWidth>
+          <InputLabel id="enquiry">How can we help you?</InputLabel>
+          <Select
+            name="enquiry"
+            id="enquiry"
+            value={formValues.enquiry}
+            onChange={handleChange}
+          >
+            <StaticQuery
+              query={graphql`
+                query Enquiry {
+                  q: allMarkdownRemark(
+                    filter: {
+                      fileAbsolutePath: { regex: "/(partnershipContacts)/" }
+                    }
+                  ) {
+                    edges {
+                      node {
+                        frontmatter {
+                          enquiry
+                          contact
+                        }
                       }
                     }
                   }
                 }
-              }
-            `}
-            render={(data) => {
-              setInquiry(data.q.edges);
-            }}
+              `}
+              render={(data) => {
+                setInquiry(data.q.edges);
+              }}
+            />
+            {enquiry.map((node, i) => (
+              <MenuItem key={i} value={node.node.frontmatter.contact}>
+                {node.node.frontmatter.enquiry}
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+        <FormControl fullWidth>
+          <InputLabel id="company">Company</InputLabel>
+          <Input
+            id="company"
+            name="company"
+            type="text"
+            value={formValues.company}
+            onChange={handleChange}
           />
-          {enquiry.map((node, i) => (
-            <MenuItem key={i} value={node.node.frontmatter.contact}>
-              {node.node.frontmatter.enquiry}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
-      <FormControl fullWidth>
-        <InputLabel id="company">Company</InputLabel>
-        <Input
-          id="company"
-          name="company"
-          type="text"
-          value={formValues.company}
-          onChange={handleChange}
+        </FormControl>
+        <FormControl fullWidth>
+          <InputLabel id="firstName">Full Name</InputLabel>
+          <Input
+            id="firstName"
+            name="firstName"
+            type="text"
+            value={formValues.firstName}
+            onChange={handleChange}
+          />
+        </FormControl>
+        <FormControl fullWidth>
+          <InputLabel id="email">Email Address</InputLabel>
+          <Input
+            id="email"
+            name="email"
+            type="email"
+            value={formValues.email}
+            onChange={handleChange}
+          />
+        </FormControl>
+        <FormControl fullWidth>
+          <InputLabel id="message">Message</InputLabel>
+          <Input
+            id="message"
+            name="message"
+            type="text"
+            value={formValues.message}
+            onChange={handleChange}
+          />
+        </FormControl>
+        <Button
+          label="Submit"
+          type="button"
+          variant="contained"
+          color="success"
         />
-      </FormControl>
-      <FormControl fullWidth>
-        <InputLabel id="firstName">Full Name</InputLabel>
-        <Input
-          id="firstName"
-          name="firstName"
-          type="text"
-          value={formValues.firstName}
-          onChange={handleChange}
-        />
-      </FormControl>
-      <FormControl fullWidth>
-        <InputLabel id="email">Email Address</InputLabel>
-        <Input
-          id="email"
-          name="email"
-          type="email"
-          value={formValues.email}
-          onChange={handleChange}
-        />
-      </FormControl>
-      <FormControl fullWidth>
-        <InputLabel id="message">Message</InputLabel>
-        <Input
-          id="message"
-          name="message"
-          type="text"
-          value={formValues.message}
-          onChange={handleChange}
-        />
-      </FormControl>
-      <Button
-        label="Submit"
-        type="button"
-        variant="contained"
-        color="success"
-      />
-      {sentStatus && (
-        <div className={`form-message status-${sentStatus}`}>
-          <Typography variant="b2" color="light">
-            {statusMessage}
-          </Typography>
-        </div>
-      )}
+        {sentStatus && (
+          <div className={`form-message status-${sentStatus}`}>
+            <Typography variant="b2" color="light">
+              {statusMessage}
+            </Typography>
+          </div>
+        )}
+      </motion.div>
     </NetlifyForm>
   );
 };

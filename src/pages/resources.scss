@@ -3,8 +3,27 @@
   width: 100%;
   height: 900px;
 }
+.publications {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px;
+
+  .pub-title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px 0px;
+  }
+  .pub-wrapper {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 @media only screen and (max-width: 880px) {
-    .mlab-report {
-        height: 600px;
-    }
+  .mlab-report {
+    height: 600px;
+  }
 }
