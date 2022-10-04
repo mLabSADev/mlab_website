@@ -1,7 +1,7 @@
 ---
-path: "/Palesa"
-name: "PALESA ANTONY"
-position: "Provincial Coordinator – Polokwane"
+path: /Palesa
+name: Palesa Antony
+position: Provincial Coordinator – Polokwane
 profilePicture: ../../images/theTeam/Palesa.png
 thumb: ../../images/theTeam/Palesa.png
 ---
