@@ -1,7 +1,7 @@
 ---
-path: "/Tendai"
-name: "TENDAI MAZHUDE"
-position: "Chief Business Development Officer"
+path: /Tendai
+name: Tendai Mazhude
+position: Chief Business Development Officer
 profilePicture: ../../images/theTeam/Tendai.png
 thumb: ../../images/theTeam/Tendai.png
 ---
