@@ -1,6 +1,6 @@
 ---
 path: /Melvin
-name: MELVIN MUSEHANI
+name: Melvin Musehani
 position: Innovation Lab Technical Lead
 profilePicture: ../../images/theTeam/Melvin.png
 thumb: ../../images/theTeam/Melvin.png
