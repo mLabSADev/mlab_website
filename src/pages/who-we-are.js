@@ -34,20 +34,24 @@ export const WhatWeDoCard = ({ image, title, description, excerpt }) => {
   );
 };
 const TeamCard = ({ fullName, position, image }) => {
+  const capitalizeFirstLetter = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
   return (
     <div className="card-tc">
-      <Typography variant="h5" center>
-        {fullName}
-      </Typography>
-      <Typography variant="s2" center color="gray">
-        {position}
-      </Typography>
+      {" "}
       <GatsbyImage
         image={image}
         alt={fullName}
         objectFit="contain"
         className="image-tc"
       />
+      <Typography capitalise={true} variant="h5" center>
+        {capitalizeFirstLetter(fullName)}
+      </Typography>
+      <Typography variant="s2" center color="gray">
+        {position}
+      </Typography>
     </div>
   );
 };

@@ -10,4 +10,4 @@ order: 2
 email: "limpopo@gmail.com"
 ---
 
-mLab Limpopo is a proud partnership between mLab, Limpopo Connexion and The Department of Science and Technology.
+mLab Limpopo is a proud partnership between mLab, Limpopo Connexion and The Department of Science and Innovation.

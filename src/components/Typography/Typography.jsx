@@ -7,13 +7,14 @@ import "./style.scss";
  * @returns
  */
 const Typography = (props) => {
+  console.log(props.capitalise);
   return (
     <p
       {...props}
       className={[
         `main-t ${props.variant} ${props.color} ${
           props.center == true ? "center" : null
-        }`,
+        } ${props.capitalise ? "sentance-case" : null}`,
       ]}
     >
       {props.children}

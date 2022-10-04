@@ -8,10 +8,6 @@ import Typography from "../components/Typography/Typography";
 const Resources = () => {
   const pubs = [
     {
-      title: "mPact Report 2020",
-      link: "https://drive.google.com/file/d/18mpxYRHAA_c-kf-Ge3eH7JGMmAMqnP94/view?usp=sharing",
-    },
-    {
       title: "Summary Economic Impact Assessment (TBC)",
       link: "",
     },

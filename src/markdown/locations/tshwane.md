@@ -11,4 +11,4 @@ order: 1
 email: "tshwane@gmail.com"
 ---
 
-mLab Tshwane is a proud partnership between mLab, The Innovation Hub and The Department of Science and Technology and represents the first mLab launched in South Africa in 2012 through the support of the current partners and the CSIR, the World Bank and the Finnish Ministry of Foreign Affairs.
+mLab Tshwane is a proud partnership between mLab, The Innovation Hub and The Department of Science and Innovation and represents the first mLab launched in South Africa in 2012 through the support of the current partners and the CSIR, the World Bank and the Finnish Ministry of Foreign Affairs.
