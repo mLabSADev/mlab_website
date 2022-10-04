@@ -1,7 +1,7 @@
 ---
-path: "/Mesuli"
-name: "MESULI CELE"
-position: "Operations Coordinator"
+path: /Mesuli
+name: Mesuli Cele
+position: Operations Coordinator
 profilePicture: ../../images/theTeam/Mesuli.png
 thumb: ../../images/theTeam/Mesuli.png
 ---
