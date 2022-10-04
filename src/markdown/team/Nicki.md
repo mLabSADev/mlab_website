@@ -1,7 +1,7 @@
 ---
-path: "/Nicki"
-name: "NICKI KOORBANALLY"
-position: "CEO"
+path: /Nicki
+name: Nicki Koorbanally
+position: CEO
 profilePicture: ../../images/theTeam/Nicki.jpg
 thumb: ../../images/theTeam/Nicki.jpg
 ---
