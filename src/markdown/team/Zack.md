@@ -1,6 +1,6 @@
 ---
 path: /Zack
-name: ZACK TINGA
+name: Zack Tinga
 position: Skills Accelerator / Quality Facilitator
 profilePicture: ../../images/theTeam/Zack.png
 thumb: ../../images/theTeam/Zack.png
