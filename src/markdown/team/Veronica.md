@@ -1,7 +1,7 @@
 ---
-path: "/Veronica"
-name: "VERONICA MAHLANGU"
-position: "Skills Accelerator Coordinator"
+path: /Veronica
+name: Veronica Mahlangu
+position: Skills Accelerator Coordinator
 profilePicture: ../../images/theTeam/Veronica.jpg
 thumb: ../../images/theTeam/Veronica.jpg
 ---
