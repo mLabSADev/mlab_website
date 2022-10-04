@@ -1,7 +1,7 @@
 ---
-path: "/Hanleo"
-name: "HENLEO LOUW"
-position: "Provincial Coordinator - Northern Cape"
+path: /Hanleo
+name: Henleo Louw
+position: Provincial Coordinator - Northern Cape
 profilePicture: ../../images/theTeam/Hanleo.png
 thumb: ../../images/theTeam/Hanleo.png
 ---
