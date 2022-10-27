@@ -1,7 +1,7 @@
 ---
-path: "/Nokwanda"
-name: "Nokwanda Maranjane"
-position: "Skills Accelerator Facilitator – Tembisa"
+path: /Nokwanda
+name: Nokwanda Maranjane
+position: Skills Facilitator – Tembisa
 profilePicture: ../../images/theTeam/Nokwanda.jpg
 thumb: ../../images/theTeam/Nokwanda.jpg
 ---
