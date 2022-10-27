@@ -1,7 +1,7 @@
 ---
 path: /Kabelo
 name: Kabelo Gaotlhaelwe
-position: Skills Accelerator Facilitator –  Northern Cape
+position: Skills Facilitator –  Northern Cape
 profilePicture: ../../images/theTeam/Kabelo.png
 thumb: ../../images/theTeam/Kabelo.png
 ---
