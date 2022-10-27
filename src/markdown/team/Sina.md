@@ -1,7 +1,7 @@
 ---
 path: /Sina
 name: Sina Legong
-position: Corporate Programmes Lead
+position: Partner Programme Lead
 profilePicture: ../../images/theTeam/Sina.png
 thumb: ../../images/theTeam/Sina.png
 ---
