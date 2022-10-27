@@ -1,7 +1,7 @@
 ---
 path: /Tendai
 name: Tendai Mazhude
-position: Chief Business Development Officer
+position: Chief Operations Officer or COO
 profilePicture: ../../images/theTeam/Tendai.png
 thumb: ../../images/theTeam/Tendai.png
 ---
