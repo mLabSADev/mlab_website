@@ -9,14 +9,14 @@ programmes:
   - CodeTribe Academy
   - Accelerator
   - App Fund
-tel: N/A
-physicalAddress: U8, Enterprise Building, The Innovation Hub, Mark Shuttleworth
-  Street, Tshwane Pretoria, South Africa, 0087
+tel: +27 012 844 0240
+physicalAddress: 13 CNR TYALA &, Hulana, Galeshewe, Kimberley, 8345
 email: leo@mlab.co.za
 description: mLab Northern Cape is a proud partnership between mLab, the
   Northern Cape Department of Economic Development and Tourism, Sol Plaatje
   Municipality, Northern Cape Community Education College, and The Department of
-  Science and Innovation.
+  Science and Innovation. We run Tech Ecosystem, Tech Skills and Tech Startups
+  from this facility.
 ---
 
 mLab Northern Cape is a proud partnership between mLab, the Northern Cape Department of Economic Development and Tourism, Sol Plaatje Municipality, Northern Cape Community Education College, and The Department of Science and Innovation.
