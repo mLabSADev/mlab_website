@@ -1,7 +1,7 @@
 ---
 path: /Zack
 name: Zack Tinga
-position: Skills Accelerator / Quality Facilitator
+position: Skills Facilitator Soweto / Quality Assurance
 profilePicture: ../../images/theTeam/Zack.png
 thumb: ../../images/theTeam/Zack.png
 ---
