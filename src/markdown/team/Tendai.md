@@ -1,7 +1,7 @@
 ---
 path: /Tendai
 name: Tendai Mazhude
-position: Chief Operations Officer or COO
+position: "Chief Operations Officer "
 profilePicture: ../../images/theTeam/Tendai.png
 thumb: ../../images/theTeam/Tendai.png
 ---
