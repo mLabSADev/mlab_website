@@ -12,7 +12,7 @@ programmes:
 tel: N/A
 physicalAddress: U8, Enterprise Building, The Innovation Hub, Mark Shuttleworth
   Street, Tshwane Pretoria, South Africa, 0087
-email: notherncape@gmail.com
+email: leo@mlab.co.za
 description: mLab Northern Cape is a proud partnership between mLab, the
   Northern Cape Department of Economic Development and Tourism, Sol Plaatje
   Municipality, Northern Cape Community Education College, and The Department of
