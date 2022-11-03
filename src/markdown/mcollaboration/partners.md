@@ -3,7 +3,7 @@ title: Partnership
 ---
 ### Work with Us
 
-![We want to impact 1 Million Young People in ICT - 1 job and 1 rand at a time, would you like to join us in this journey? ](../../images/unnamed-1-.png "partner with us to address youth unemployment")
+![We want to impact 1 Million Young People in ICT - 1 job and 1 rand at a time, would you like to join us in this journey? ](../../images/screenshot-2022-11-03-192425.png "partner with us to address youth unemployment")
 
 **We want to impact 1 Million Young People in ICT - 1 job and 1 rand at a time, would you like to join us in this journey?**
 
