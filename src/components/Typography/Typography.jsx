@@ -7,7 +7,6 @@ import "./style.scss";
  * @returns
  */
 const Typography = (props) => {
-  console.log(props.capitalise);
   return (
     <p
       {...props}

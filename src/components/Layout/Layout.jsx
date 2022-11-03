@@ -101,8 +101,7 @@ export const ChatForm = ({ formState }) => {
             name="enquiry"
             id="enquiry"
             value={formValues.enquiry}
-            onChange={handleChange}
-          >
+            onChange={handleChange}>
             <StaticQuery
               query={graphql`
                 query Enquiry {

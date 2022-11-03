@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./what-we-do.scss";
 import Layout from "../components/Layout/Layout";
 import { graphql } from "gatsby";
@@ -13,6 +13,7 @@ import ProgressStatistic from "../components/ProgressStatistic/ProgressStatistic
 import Modal from "../components/Modal/Modal";
 import { AnimatePresence } from "framer-motion";
 import TechCard from "../components/TextCard/TechCard";
+import { WhatWeDoCard } from "./who-we-are";
 
 const CodeTribe = ({ state = true }) => {
   return (
@@ -132,11 +133,38 @@ const SubPage = ({ title, data, theTech = [] }) => {
 const WhatWeDo = ({ data }) => {
   const [modalOpen, setModalOpen] = useState({ title: "", state: false });
   const [activeSection, setActiveSection] = useState({});
+  const [isMouseOver, setMouseOver] = useState(false);
   const sectionData = data.wwdSections.edges;
   const close = () => setModalOpen({ state: false, title: "" });
   const open = (section) => setModalOpen({ state: true, title: section });
   const impactBarStats = data.impactBarStats.edges;
   const stats = data.stats.edges;
+
+  useEffect(() => {
+    setTimeout(() => {
+      const scrollElement = document.getElementsByClassName(
+        "progress-stat-wrappr"
+      )[0];
+      scrollElement.addEventListener(
+        "mouseleave",
+        (event) => {
+          setMouseOver(false);
+        },
+        false
+      );
+      scrollElement.addEventListener(
+        "mouseover",
+        (event) => {
+          setMouseOver(true);
+          scrollElement.addEventListener("wheel", (evt) => {
+            // The magic happens here.
+            scrollElement.scrollLeft += evt.deltaY;
+          });
+        },
+        false
+      );
+    }, 1000);
+  }, []);
   return (
     <Layout>
       <AnimatePresence initial={false} exitBeforeEnter={true}>
@@ -155,8 +183,10 @@ const WhatWeDo = ({ data }) => {
       <br />
       <br />
       <br />
+
       <Section>
-        <Typography variant="s1">
+        <SectionTitle>we believe in an empowered youth</SectionTitle>
+        <Typography center variant="b1">
           At the heart of mLab’s work is the belief that when our youth are
           empowered with the right skills to innovate and create solutions, they
           unlock opportunities for optimising existing, or establishing new
@@ -164,55 +194,38 @@ const WhatWeDo = ({ data }) => {
         </Typography>
         <br />
 
-        <Typography variant="b2">
+        <Typography center variant="b2">
           We do this by offering programmes, projects and services under the
-          following pillars;{" "}
+          following pillars
         </Typography>
+        <br />
+        <br />
+        <div className="main-wwd-c">
+          {data.whatWeDo.edges.map((card, i) => {
+            const img = getImage(card.node.frontmatter.featureImage);
+            return (
+              <WhatWeDoCard
+                title={card.node.frontmatter.title}
+                excerpt={card.node.frontmatter.excerpt}
+                description={card.node.rawMarkdownBody}
+                image={img}
+              />
+            );
+          })}
+        </div>
       </Section>
-      <div className="wwd-secton-wrapper">
-        {sectionData.map((item, i) => {
-          const title = item.node.frontmatter.title;
-          const excerpt = item.node.excerpt;
-          const body = item.node.rawMarkdownBody;
-          const image = getImage(item.node.frontmatter.featureImage);
-          return (
-            <div className="wwd-section">
-              <div className="wwd-details">
-                <Typography color="light" variant="h4">
-                  {title.toUpperCase()}
-                </Typography>
-                <Typography color="light" variant="b1">
-                  {excerpt}
-                </Typography>
-                <Button
-                  color="light"
-                  type="button"
-                  onClick={async () => {
-                    setActiveSection(item);
-                    open(title);
-                  }}
-                  label="MORE INFO / APPLY"
-                ></Button>
-              </div>
-              <GatsbyImage
-                image={image}
-                alt="title"
-                className="wwd-image"
-              ></GatsbyImage>
-            </div>
-          );
-        })}
-      </div>
       <Section>
         <SectionTitle>Our Impact</SectionTitle>
         <div className="responsive-column">
           <div className="progress-stat-wrappr">
             {impactBarStats.map((item, i) => {
+              const image = getImage(item.node.frontmatter.icon);
               return (
                 <ProgressStatistic
                   key={i}
-                  percentage={item.node.frontmatter.percentage}
                   label={item.node.frontmatter.label}
+                  description={item.node.frontmatter.description}
+                  icon={image}
                 />
               );
             })}
@@ -286,6 +299,30 @@ export const query = graphql`
         }
       }
     }
+
+    whatWeDo: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/(whatWeDo)/" } }
+    ) {
+      edges {
+        node {
+          id
+          rawMarkdownBody
+          frontmatter {
+            title
+            path
+            excerpt
+
+            featureImage {
+              name
+              childImageSharp {
+                gatsbyImageData(formats: [AUTO, WEBP], width: 350)
+              }
+            }
+          }
+        }
+      }
+    }
+
     theTech: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/(theTech)/" } }
     ) {
@@ -316,15 +353,20 @@ export const query = graphql`
     ) {
       edges {
         node {
-          id
           frontmatter {
-            title
             label
             percentage
+            description
+            icon {
+              childImageSharp {
+                gatsbyImageData(
+                  quality: 10
+                  placeholder: BLURRED
+                  layout: FULL_WIDTH
+                )
+              }
+            }
           }
-          excerpt
-          rawMarkdownBody
-          html
         }
       }
     }

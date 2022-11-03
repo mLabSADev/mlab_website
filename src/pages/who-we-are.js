@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./who-we-are.scss";
 import Layout from "../components/Layout/Layout";
 import { graphql } from "gatsby";
@@ -10,6 +10,11 @@ import PageHeader from "../components/PageHeader/PageHeader";
 import Button from "../components/Button/Button";
 
 export const WhatWeDoCard = ({ image, title, description, excerpt }) => {
+  const url = typeof window !== "undefined" ? window.location.href : "";
+
+  useEffect(() => {
+    console.log(url);
+  }, []);
   return (
     <div className="wwd-c">
       <GatsbyImage

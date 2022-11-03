@@ -1,6 +1,10 @@
 .wwd-secton-wrapper {
+  box-sizing: border-box;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 30px 100px 90px 100px;
+  gap: 50px;
 }
 .wwd-section {
   box-sizing: border-box;
@@ -43,8 +47,10 @@
   column-gap: 30px;
   row-gap: 30px;
   .progress-stat-wrappr {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    overflow: auto;
+    // grid-template-columns: 1fr 1fr;
+    
   }
 }
 .subPage {
@@ -141,6 +147,8 @@
     color: white !important;
   }
 }
+
+
 @media only screen and (max-width: 1200px) {
   .subPage {
     .subPage-header {

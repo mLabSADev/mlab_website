@@ -17,7 +17,6 @@ import Modal from "../components/Modal/Modal";
 import { AnimatePresence } from "framer-motion";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 
-
 export const SignupForm = ({ main, interests = [] }) => {
   const [sentStatus, setSentStatus] = useState("");
   const [statusMessage, setStatusMessage] = useState("");
@@ -120,6 +119,7 @@ export const SignupForm = ({ main, interests = [] }) => {
             const title = node.node.frontmatter.title;
             return <MenuItem value={title}>{title}</MenuItem>;
           })}
+          <MenuItem value="Other">Other</MenuItem>
         </Select>
       </FormControl>
       <FormControl fullWidth>

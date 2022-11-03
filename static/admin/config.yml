@@ -83,6 +83,7 @@ collections:
     fields:
       - { label: "Icon", name: "icon", widget: "image" }
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Contact Emain", name: "email", widget: "string" }
       - { label: "Summary", name: "summary", widget: "string" }
       - { label: "Short Text", name: "shortText", widget: "string" }
       - { label: "Background", name: "featureImage", widget: "image" }
@@ -120,6 +121,8 @@ collections:
     create: true
     fields:
       - { label: "Label", name: "label", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Icon", name: "image", widget: "image" }
       - {
           label: "Percentage",
           name: "percentage",

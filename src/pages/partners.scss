@@ -1,9 +1,3 @@
-.partner-p {
-  box-sizing: border-box;
-  height: 200px;
-  margin: 10px;
-}
-
 .partners-main {
   padding: 20px 20% 20px 20%;
   span {
@@ -22,9 +16,16 @@
 .list-partners {
   box-sizing: border-box;
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  justify-content: space-evenly;
+  // grid-template-columns: 1fr;
   gap: 40px;
+  .partner-p {
+    box-sizing: border-box;
+    width: 100%;
+    height: 200px;
+    margin: 10px;
+  }
 }
 
 @media only screen and (max-width: 1600px) {
@@ -32,6 +33,7 @@
     padding: 20px 10% 20px 10%;
   }
   .list-partners {
+    display: grid;
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -45,6 +47,7 @@
     }
   }
   .list-partners {
+    display: grid;
     grid-template-columns: 1fr;
   }
 }
