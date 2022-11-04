@@ -1,7 +1,7 @@
 ---
 featureImage: ../../images/junior-developers-collaborating-on-group-project-c-2022-04-11-18-09-08-utc.jpg
 path: /impact-through-technology
-icon: ../../images/ecosystem.png
+icon: ../../images/ecosystem-green-icon.png
 summary: Events, Training, Workshops and Bootcamps
 shortText: Short ICT-led interventions to stimulate vibrant ecosystems in which
   youth innovators can thrive
