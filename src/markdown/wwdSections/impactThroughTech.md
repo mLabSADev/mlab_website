@@ -1,7 +1,7 @@
 ---
 featureImage: ../../images/african-american-coder-employee-programming-busine-2021-12-09-02-41-56-utc.jpg.jpg
 path: /impact-through-technology
-icon: ../../images/skills.png
+icon: ../../images/skills-green-icon.png
 summary: Unleashing Tech Talent
 shortText: Supports aspiring coders to develop Android, iOS and Web solutions
 thumb: ../../images/whatWeDo/creating.png
