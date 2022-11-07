@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./style.scss";
 import { Link } from "gatsby";
 import Typography from "../Typography/Typography";
+import { graphql, StaticQuery } from "gatsby";
 
 export const Item = ({ label, url }) => {
   return (
@@ -41,7 +42,10 @@ const MenuToggle = (props) => {
 const Dropdown = ({ label, items, url }) => {
   return (
     <div className="dropdown">
-      <Typography variant="overline">{label}</Typography>
+      <Link className="dropdown--label" activeClassName="active" to={url}>
+        <Typography variant="overline">{label}</Typography>
+      </Link>
+
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="dropdown-icon"
@@ -90,9 +94,7 @@ export const links = [
   {
     label: "Home",
     url: "/",
-    items: [
-      
-    ],
+    items: [],
   },
   {
     label: "Who we are",
@@ -102,7 +104,12 @@ export const links = [
   {
     label: "What we do",
     url: "/what-we-do",
-    items: [],
+    items: [
+      { label: "Tech Skills", url: "/what-we-do/Tech-Skills" },
+      { label: "Tech Solutions", url: "/what-we-do/Tech-Solutions" },
+      { label: "Tech Ecosystems", url: "/what-we-do/Tech-Ecosystems" },
+      { label: "Tech Start-ups", url: "/what-we-do/Tech-Start-Ups" },
+    ],
   },
   {
     label: "Partners",
@@ -128,6 +135,7 @@ export const links = [
 const Navigation = ({ title, route }) => {
   const [menu, setMenu] = useState(false);
   const [openDropdown, setDropdown] = useState("");
+  const [pillers, setPillers] = useState([]);
   const logoColors = {
     m: "#8cc051",
     lab: "#fefefe",
@@ -140,7 +148,8 @@ const Navigation = ({ title, route }) => {
         <svg
           className="logo"
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 4291.96 1503.06">
+          viewBox="0 0 4291.96 1503.06"
+        >
           <g id="Layer_2" data-name="Layer 2">
             <g id="Layer_1-2" data-name="Layer 1">
               <path
@@ -167,6 +176,7 @@ const Navigation = ({ title, route }) => {
           </g>
         </svg>
         {/* web links */}
+
         <div className="links---">
           {links.map((item, i) => {
             if (item.items.length === 0) {

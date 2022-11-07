@@ -88,15 +88,16 @@ const WhatWeDo = ({ data, location }) => {
         <br />
         <div className="main-wwd-c">
           {data.whatWeDo.edges.map((card, i) => {
-            const title = card.node.frontmatter.title;
             const img = getImage(card.node.frontmatter.featureImage);
+            const title = card.node.frontmatter.title;
+            const noSpaces = title.replaceAll(" ", "-")
             return (
               <WhatWeDoCard
                 title={title}
                 excerpt={card.node.frontmatter.excerpt}
                 description={card.node.rawMarkdownBody}
                 image={img}
-                url="/what-we-do"
+                url={`/what-we-do/${noSpaces}`}
               />
             );
           })}

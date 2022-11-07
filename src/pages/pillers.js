@@ -98,7 +98,7 @@ const Pillers = ({ title, data, location }) => {
                       {data.frontmatter.title.toUpperCase()}
                     </Typography>
                     <Typography
-                      variant={width < resposiveWidth ? "h4" : "h3"}
+                      variant={width < resposiveWidth ? "h4" : "h2"}
                       color="light"
                       center={width < resposiveWidth ? true : false}
                     >
@@ -183,18 +183,18 @@ export const query = graphql`
             featureImage {
               childImageSharp {
                 gatsbyImageData(
-                  formats: AUTO
+                  formats: WEBP
                   layout: FULL_WIDTH
                   placeholder: BLURRED
                   quality: 100
-                  width: 1080
+                  width: 720
                 )
               }
             }
             icon {
               childImageSharp {
                 gatsbyImageData(
-                  formats: AUTO
+                  formats: WEBP
                   layout: FULL_WIDTH
                   placeholder: BLURRED
                   quality: 100

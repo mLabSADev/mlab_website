@@ -29,11 +29,13 @@
       }
       .sp-c-icon {
         width: 100%;
-        display: grid;
-        justify-content: center;
-        align-items: center;
+        height: 100%;
+        padding: 50px;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
         img {
-          height: 300px;
+          // height: 300px;
         }
       }
     }
@@ -79,7 +81,7 @@
         justify-items: center;
         .sp-c-icon {
           width: 100px;
-          height: 100px;
+          height: auto;
         }
       }
     }
