@@ -19,7 +19,7 @@ const IndexPage = ({ data }) => {
   const close = () => setModalOpen(false);
   const open = () => setModalOpen(true);
   const news = data.news.edges;
-  
+
   const banners = data.banners.edges;
   // const impactBarStats = data.impactBarStats.edges;
   // const stats = data.stats.edges;
@@ -43,13 +43,16 @@ const IndexPage = ({ data }) => {
         <SectionTitle>what we do</SectionTitle>
         <div className="main-wwd-c">
           {data.whatWeDo.edges.map((card, i) => {
-            const img = getImage(card.node.frontmatter.featureImage);
+            const img = getImage(card.node.frontmatter.icon);
+            const title = card.node.frontmatter.title;
+            const noSpaces = title.replaceAll(" ", "-")
             return (
               <WhatWeDoCard
                 title={card.node.frontmatter.title}
                 excerpt={card.node.frontmatter.excerpt}
-                description={card.node.rawMarkdownBody}
+                description={card.node.excerpt}
                 image={img}
+                url={`/what-we-do/${noSpaces}`}
               />
             );
           })}
@@ -76,7 +79,7 @@ const IndexPage = ({ data }) => {
           {news.map((item, i) => {
             const image = getImage(item.node.frontmatter.featureImage);
             const title = item.node.frontmatter.title;
-            const lowerCase = title ;
+            const lowerCase = title;
             const remove_invalid_1 = lowerCase.replaceAll(":", "");
             const remove_invalid_2 = remove_invalid_1.replaceAll("|", "");
             const remove_invalid_3 = remove_invalid_2.replaceAll("#", "");
@@ -100,7 +103,7 @@ const IndexPage = ({ data }) => {
         </div>
         <div className=""></div>
       </Section>
-      
+
       <div className="index-form">
         <SignupForm main={false}></SignupForm>
         <ChatForm />
@@ -185,28 +188,40 @@ export const query = graphql`
       }
     }
     whatWeDo: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/(whatWeDo)/" } }
+      filter: { fileAbsolutePath: { regex: "/(wwdSections)/" } }
     ) {
       edges {
         node {
-          id
+          html
           rawMarkdownBody
+          excerpt
+          id
           frontmatter {
             title
-            path
-            excerpt
-
+            summary
+            shortText
             featureImage {
-              name
               childImageSharp {
-                gatsbyImageData(formats: [AUTO, WEBP], width: 350)
+                gatsbyImageData(
+                  formats: AUTO
+                  placeholder: BLURRED
+                  quality: 100
+                )
+              }
+            }
+            icon {
+              childImageSharp {
+                gatsbyImageData(
+                  formats: AUTO
+                  placeholder: BLURRED
+                  quality: 100
+                )
               }
             }
           }
         }
       }
     }
-
     newsHeader: markdownRemark(
       fileAbsolutePath: { regex: "/(seo-headers/news)/" }
     ) {

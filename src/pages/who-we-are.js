@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./who-we-are.scss";
 import Layout from "../components/Layout/Layout";
 import { graphql } from "gatsby";
@@ -9,12 +9,16 @@ import Typography from "../components/Typography/Typography";
 import PageHeader from "../components/PageHeader/PageHeader";
 import Button from "../components/Button/Button";
 
-export const WhatWeDoCard = ({ image, title, description, excerpt }) => {
-  const url = typeof window !== "undefined" ? window.location.href : "";
-
-  useEffect(() => {
-    console.log(url);
-  }, []);
+export const WhatWeDoCard = ({
+  image,
+  title,
+  description,
+  excerpt,
+  url,
+  location,
+  onClick,
+}) => {
+  // const page = location.pathname;
   return (
     <div className="wwd-c">
       <GatsbyImage
@@ -33,7 +37,7 @@ export const WhatWeDoCard = ({ image, title, description, excerpt }) => {
         <Typography center color="gray" variant="b2">
           {description}
         </Typography>
-        <Button label="read more" type="link" url="/what-we-do" />
+        <Button label="read more" type={"link"} url={url} onClick={onClick} />
       </div>
     </div>
   );

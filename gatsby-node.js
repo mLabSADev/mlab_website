@@ -5,6 +5,7 @@ exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions;
   const PostTemplate = path.resolve("src/templates/blog-post.js");
   const TagsTemplate = path.resolve("src/templates/tags.js");
+  const PillerTemplate = path.resolve("src/pages/pillers.js");
   const news = await graphql(`
     {
       allMarkdownRemark(
@@ -49,30 +50,21 @@ exports.createPages = async ({ actions, graphql }) => {
       }
     }
   `);
-  const whatWeDo = await graphql(`
+  const pillers = await graphql(`
     {
       allMarkdownRemark(
         filter: { fileAbsolutePath: { regex: "/(wwdSections)/" } }
       ) {
         edges {
           node {
-            rawMarkdownBody
             frontmatter {
-              path
               title
-              link
-              thumb {
-                childImageSharp {
-                  gatsbyImageData(placeholder: DOMINANT_COLOR, width: 700)
-                }
-              }
             }
           }
         }
       }
     }
   `);
-
   news.data.allMarkdownRemark.edges.forEach(({ node }) => {
     const title = node.frontmatter.title;
     const lowerCase = title;
@@ -99,6 +91,13 @@ exports.createPages = async ({ actions, graphql }) => {
         });
       });
     }
+  });
+  pillers.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPage({
+      path: `/what-we-do/${node.frontmatter.title.replaceAll(" ", "-")}`,
+      component: PillerTemplate,
+      context: { title: node.frontmatter.title },
+    });
   });
   paginate({
     createPage, // The Gatsby `createPage` function
