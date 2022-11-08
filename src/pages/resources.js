@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./resources.scss";
 import Layout from "../components/Layout/Layout";
 import PageHeader from "../components/PageHeader/PageHeader";
@@ -20,6 +20,21 @@ const Resources = () => {
       link: "https://drive.google.com/file/d/1ytVoAwtKUJem3EoJXmlDWj_w3zYEnRdL/view?usp=sharing",
     },
   ];
+  useEffect(() => {
+    (function (h, o, t, j, a, r) {
+      h.hj =
+        h.hj ||
+        function () {
+          (h.hj.q = h.hj.q || []).push(arguments);
+        };
+      h._hjSettings = { hjid: 3238112, hjsv: 6 };
+      a = o.getElementsByTagName("head")[0];
+      r = o.createElement("script");
+      r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+  }, []);
   return (
     <Layout>
       <PageHeader index={5} title="resources" />
