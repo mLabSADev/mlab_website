@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./main.scss";
 import Layout, { ChatForm } from "../components/Layout/Layout";
 import { graphql } from "gatsby";
@@ -25,6 +25,21 @@ const IndexPage = ({ data }) => {
   // const stats = data.stats.edges;
   const newsHeader = data.newsHeader.frontmatter.position;
   const newsAbstr = data.newsHeader.frontmatter.abstract;
+  useEffect(() => {
+    (function (h, o, t, j, a, r) {
+      h.hj =
+        h.hj ||
+        function () {
+          (h.hj.q = h.hj.q || []).push(arguments);
+        };
+      h._hjSettings = { hjid: 3238112, hjsv: 6 };
+      a = o.getElementsByTagName("head")[0];
+      r = o.createElement("script");
+      r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+  }, []);
   return (
     <Layout>
       <AnimatePresence

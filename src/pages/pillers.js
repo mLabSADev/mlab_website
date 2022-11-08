@@ -14,7 +14,7 @@ import Modal from "../components/Modal/Modal";
 import { AnimatePresence } from "framer-motion";
 import TechCard from "../components/TextCard/TechCard";
 import { WhatWeDoCard } from "./who-we-are";
-const CodeTribe = ({ state = false }) => {
+const CodeTribe = ({ state = false, link }) => {
   return (
     <div className="codeTribe">
       <div className="codeTribe-bg">
@@ -45,30 +45,38 @@ const CodeTribe = ({ state = false }) => {
           to be kept informed of other exciting opportunities:
         </Typography>
         {state ? (
-          <Button
-            color="light"
-            label="Apply Now"
-            type="link"
-            url="http://codetribe.co.za/"
-          />
+          <Button color="light" label="Apply Now" type="link" url={link} />
         ) : null}
       </div>
     </div>
   );
 };
 
-const Pillers = ({ title, data, location }) => {
-  console.log(data);
+const Pillers = ({ data, location }) => {
+  const [applicationState, setApplicationState] = useState({
+    state: false,
+    link: "",
+  });
   // const icon = getImage(data.frontmatter.icon);
   // const background = getImage(data.frontmatter.featureImage);
-  console.log(data);
   const sectionData = data.allMarkdownRemark.edges;
   const theTech = data.theTech.edges;
+  const application = data.applications.edges;
   let width = typeof window !== "undefined" ? window.screen.width : 800;
   const resposiveWidth = 980;
   const url = location.pathname;
   const splitUrl = url.split("/");
   const cleanSplit = splitUrl[2].replace("-", " ");
+
+  useEffect(() => {
+    application.forEach((element) => {
+      const open = element.node.frontmatter.open;
+      const link = element.node.frontmatter.link;
+      if (open != null) {
+        setApplicationState({ state: open, link: link });
+      }
+    });
+  }, []);
   return (
     <Layout>
       {sectionData.map((node) => {
@@ -136,7 +144,10 @@ const Pillers = ({ title, data, location }) => {
                   <div></div>
                 </div>
               </Section>
-              <CodeTribe />
+              <CodeTribe
+                state={applicationState.state}
+                link={applicationState.link}
+              />
               {cleanSplit == "Tech Solutions" && (
                 <Section>
                   <SectionTitle>our tech</SectionTitle>
@@ -238,6 +249,19 @@ export const query = graphql`
             }
           }
           excerpt
+        }
+      }
+    }
+
+    applications: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/(tech-solutions)/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            open
+            link
+          }
         }
       }
     }
