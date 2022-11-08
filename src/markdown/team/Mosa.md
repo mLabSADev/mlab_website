@@ -3,7 +3,6 @@ path: /Mosa
 name: Mosa Makhongoana
 position: "Project Coordinator: Scrum Master"
 profilePicture: ../../images/theTeam/Mosa.png
-thumb: ../../images/theTeam/Mosa.png
 location: Pretoria
 ---
 

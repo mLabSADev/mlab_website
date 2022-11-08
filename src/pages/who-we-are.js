@@ -119,7 +119,7 @@ const WhoWeAre = ({ data }) => {
         </Typography>
         <div className="our-team-wrapper">
           {team.map((t, i) => {
-            const img = getImage(t.node.frontmatter.thumb);
+            const img = getImage(t.node.frontmatter.profilePicture);
             return (
               <TeamCard
                 image={img}
@@ -159,10 +159,14 @@ export const query = graphql`
             location
             tags
             path
-            thumb {
+            profilePicture {
               childImageSharp {
-                id
-                gatsbyImageData(quality: 100, width: 1920)
+                gatsbyImageData(
+                  layout: FULL_WIDTH
+                  placeholder: BLURRED
+                  quality: 100
+                  width: 720
+                )
               }
             }
           }
