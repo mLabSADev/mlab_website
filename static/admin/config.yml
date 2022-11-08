@@ -152,3 +152,10 @@ collections:
       - { label: "Thumb", name: "featureImage", widget: "image" }
       - { label: "Video Link", name: "video", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "codetribe"
+    label: "Tech Solutions"
+    folder: "src/markdown/tech-solutions"
+    create: false
+    fields:
+      - { label: "Open", name: "open", widget: "boolean" }
+      - { label: "Application Url", name: "link", widget: "string" }

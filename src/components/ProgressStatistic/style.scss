@@ -3,7 +3,12 @@
   min-width: 490px;
   max-width: 490px;
   padding: 40px;
-  background-color: #d2ffe4;
+  background-image: linear-gradient(
+      109.6deg,
+      rgb(238, 243, 245) 11.2%,
+      rgba(88, 134, 80, 0.068) 91.1%
+    ),
+    url(https://grainy-gradients.vercel.app/noise.svg);
   display: flex;
   align-items: center;
   gap: 20px;

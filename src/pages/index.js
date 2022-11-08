@@ -24,6 +24,7 @@ const IndexPage = ({ data }) => {
   // const impactBarStats = data.impactBarStats.edges;
   // const stats = data.stats.edges;
   const newsHeader = data.newsHeader.frontmatter.position;
+  const newsAbstr = data.newsHeader.frontmatter.abstract;
   return (
     <Layout>
       <AnimatePresence
@@ -45,7 +46,7 @@ const IndexPage = ({ data }) => {
           {data.whatWeDo.edges.map((card, i) => {
             const img = getImage(card.node.frontmatter.icon);
             const title = card.node.frontmatter.title;
-            const noSpaces = title.replaceAll(" ", "-")
+            const noSpaces = title.replaceAll(" ", "-");
             return (
               <WhatWeDoCard
                 title={card.node.frontmatter.title}
@@ -72,6 +73,7 @@ const IndexPage = ({ data }) => {
       {/* ... */}
       <Section>
         <SectionTitle>latest news</SectionTitle>
+
         <Typography center variant="b1">
           {newsHeader}
         </Typography>
@@ -227,6 +229,7 @@ export const query = graphql`
     ) {
       frontmatter {
         position
+        abstract
       }
     }
   }

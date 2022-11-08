@@ -104,6 +104,12 @@ const Pillers = ({ title, data, location }) => {
                     >
                       {data.frontmatter.shortText}
                     </Typography>
+                    <Button
+                      color="light"
+                      label="Contact Us for more info"
+                      type="link"
+                      url="/contact"
+                    />
                   </div>
                 </div>
               </div>
@@ -187,7 +193,7 @@ export const query = graphql`
                   layout: FULL_WIDTH
                   placeholder: BLURRED
                   quality: 100
-                  width: 720
+                  width: 1080
                 )
               }
             }
