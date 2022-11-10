@@ -109,6 +109,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Link", name: "link", widget: "link" }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
       - {
           label: "Can embed?",
           name: "embed",

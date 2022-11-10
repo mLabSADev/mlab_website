@@ -76,7 +76,8 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #073f4e67;
+    background: linear-gradient(rgba(7, 63, 78, 0.404), rgba(7, 63, 78, 0.404)),
+      url(https://grainy-gradients.vercel.app/noise.svg);
     backdrop-filter: blur(30px);
     position: absolute;
     z-index: 20;

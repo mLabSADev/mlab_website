@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./style.scss";
 import Typography from "../Typography/Typography";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import Button from "../Button/Button";
+import { squareVariants } from "../Typography/Typography";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 /**
  *
  * @param {obj} image result from getImage
@@ -22,9 +25,21 @@ const NewsCard = ({ image, title, excerpt, url, date }) => {
       titleFix = title;
     }
   }
-
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
   return (
-    <div className="main-nc">
+    <motion.div
+      ref={ref}
+      animate={controls}
+      initial="hidden"
+      variants={squareVariants}
+      className="main-nc"
+    >
       {image ? (
         <GatsbyImage
           objectFit="cover"
@@ -48,7 +63,7 @@ const NewsCard = ({ image, title, excerpt, url, date }) => {
         </Typography>
       </div>
       <Button label="read more" type="link" url={`${url}`} />
-    </div>
+    </motion.div>
   );
 };
 
