@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./main.scss";
-import Layout, { ChatForm } from "../components/Layout/Layout";
+import { ChatBot } from "../components/ChatBot/ChatBot";
 import { graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 import CarouselSlider from "../components/Carousel/Carousel";
@@ -14,6 +14,7 @@ import { SignupForm } from "./contact";
 import { AnimatePresence } from "framer-motion";
 import moment from "moment";
 import { WhatWeDoCard } from "./who-we-are";
+import Layout from "../components/ChatBot/ChatBot";
 const IndexPage = ({ data }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const close = () => setModalOpen(false);
@@ -123,7 +124,7 @@ const IndexPage = ({ data }) => {
 
       <div className="index-form">
         <SignupForm main={false}></SignupForm>
-        <ChatForm />
+        <ChatBot />
       </div>
     </Layout>
   );
