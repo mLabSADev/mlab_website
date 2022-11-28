@@ -71,7 +71,7 @@ const Partners = ({ data }) => {
           let image = getImage(item.node.frontmatter.thumb);
           return (
             <GatsbyImage
-              style={{ width: "500px" }}
+              // style={{ width: "500px" }}
               className="partner-p"
               image={image}
               alt={name}
@@ -103,7 +103,7 @@ export const query = graphql`
       edges {
         node {
           frontmatter {
-            name
+            title
             thumb {
               childImageSharp {
                 gatsbyImageData(

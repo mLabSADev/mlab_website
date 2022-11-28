@@ -94,7 +94,13 @@ collections:
     create: false
     fields:
       - { label: "Body", name: "body", widget: "markdown" }
-
+  - name: "provincialPartners"
+    label: "Provincial Partners"
+    folder: "src/markdown/provincial-partners"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Thumb", name: "thumb", widget: "image" }
   - name: "partnershipContacts"
     label: "Partnership Contacts"
     folder: "src/markdown/partnershipContacts"
