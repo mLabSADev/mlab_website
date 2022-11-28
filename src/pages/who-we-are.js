@@ -122,6 +122,7 @@ const WhoWeAre = ({ data }) => {
             const img = getImage(t.node.frontmatter.profilePicture);
             return (
               <TeamCard
+                key={i}
                 image={img}
                 fullName={t.node.frontmatter.name}
                 position={t.node.frontmatter.position}
@@ -149,6 +150,7 @@ export const query = graphql`
     }
     team: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/(team)/" } }
+      sort: { fields: frontmatter___name, order: ASC }
     ) {
       edges {
         node {

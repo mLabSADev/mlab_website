@@ -21,8 +21,6 @@ const IndexPage = ({ data }) => {
   const news = data.news.edges;
 
   const banners = data.banners.edges;
-  // const impactBarStats = data.impactBarStats.edges;
-  // const stats = data.stats.edges;
   const newsHeader = data.newsHeader.frontmatter.position;
   const newsAbstr = data.newsHeader.frontmatter.abstract;
   useEffect(() => {
@@ -64,6 +62,7 @@ const IndexPage = ({ data }) => {
             const noSpaces = title.replaceAll(" ", "-");
             return (
               <WhatWeDoCard
+                key={i}
                 title={card.node.frontmatter.title}
                 excerpt={card.node.frontmatter.excerpt}
                 description={card.node.excerpt}
@@ -104,9 +103,10 @@ const IndexPage = ({ data }) => {
             const remove_invalid_5 = remove_invalid_4.replaceAll('"', "");
             const remove_invalid_6 = remove_invalid_5.replaceAll('"', "");
             const _path = remove_invalid_6.replaceAll(" ", "-");
+            console.log(item);
             return (
               <NewsCard
-                date={moment(item.node.frontmatter.timeStamp).format(
+                date={moment(item.node.frontmatter.date).format(
                   "DD MMMM, YYYY"
                 )}
                 key={i}
