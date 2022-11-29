@@ -3527,7 +3527,7 @@
     redux-thunk "^2.4.1"
     reselect "^4.1.5"
 
-"@sendgrid/client@^6.0.0":
+"@sendgrid/client@^6.5.5":
   version "6.5.5"
   resolved "https://registry.yarnpkg.com/@sendgrid/client/-/client-6.5.5.tgz#66cf569445d98a795998a894bb432a9939ead7c3"
   integrity sha512-Nbfgo94gbWSL8PIgJfuHoifyOJJepvV8NQkkglctAEfb1hyozKhrzE6v1kPG/z4j0RodaTtXD5LJj/t0q/VhLA==
@@ -3536,7 +3536,7 @@
     "@types/request" "^2.48.4"
     request "^2.88.0"
 
-"@sendgrid/helpers@^6.0.0", "@sendgrid/helpers@^6.5.5":
+"@sendgrid/helpers@^6.5.5":
   version "6.5.5"
   resolved "https://registry.yarnpkg.com/@sendgrid/helpers/-/helpers-6.5.5.tgz#de6de9b94794fbf834b4f66a7d44af84bf736459"
   integrity sha512-uRFEanalfss5hDsuzVXZ1wm7i7eEXHh1py80piOXjobiQ+MxmtR19EU+gDSXZ+uMcEehBGhxnb7QDNN0q65qig==
@@ -3544,13 +3544,13 @@
     chalk "^2.0.1"
     deepmerge "^4.2.2"
 
-"@sendgrid/mail@^6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@sendgrid/mail/-/mail-6.0.0.tgz#290f2ae3b3005cd0fdd1f99f3de2e8ea732ac0b9"
-  integrity sha512-UVzF+kWxNq9XUyDYl+iP3HHyXlmybQVK9PK9+1AS7cNpZzhJUeaqUiEkqjYhlbYjIIfGC8yIwX/9pMBnf2unBg==
+"@sendgrid/mail@6.5.5":
+  version "6.5.5"
+  resolved "https://registry.yarnpkg.com/@sendgrid/mail/-/mail-6.5.5.tgz#45bef4e4878144304b6688867baa13179deecc4b"
+  integrity sha512-DSu8oTPI0BJFH60jMOG9gM+oeNMoRALFmdAYg2PIXpL+Zbxd7L2GzQZtmf1jLy/8UBImkbB3D74TjiOBiLRK1w==
   dependencies:
-    "@sendgrid/client" "^6.0.0"
-    "@sendgrid/helpers" "^6.0.0"
+    "@sendgrid/client" "^6.5.5"
+    "@sendgrid/helpers" "^6.5.5"
 
 "@sideway/address@^4.1.3":
   version "4.1.4"

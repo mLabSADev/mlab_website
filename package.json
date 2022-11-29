@@ -27,7 +27,7 @@
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "@reduxjs/toolkit": "^1.8.3",
-    "@sendgrid/mail": "^6.0.0",
+    "@sendgrid/mail": "6.5.5",
     "antd": "^5.0.2",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
