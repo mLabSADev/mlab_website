@@ -173,11 +173,16 @@ a {
   .linksWrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     box-sizing: border-box;
     width: 100%;
-    .logo {
-      width: 70px;
+    .logo-n-w {
+      height: 30px;
+      .logo {
+        width: 70px;
+      }
     }
+
     .links--- {
       display: flex;
       align-items: center;
