@@ -7,8 +7,6 @@ import SectionTitle from "../components/SectionTitle/SectionTitle";
 import PageHeader from "../components/PageHeader/PageHeader";
 import { graphql } from "gatsby";
 
-
-
 const Partners = ({ data }) => {
   const partners = data.partners;
   const provincialPartners = data.provincialPartners.edges;
@@ -71,18 +69,21 @@ const Partners = ({ data }) => {
       </Section>
       <SectionTitle>Provincial Partners</SectionTitle>
       <Section>
-        {provincialPartners.map((item, i) => {
-          let name = item.node.frontmatter.name;
-          let image = getImage(item.node.frontmatter.thumb);
-          return (
-            <GatsbyImage
-              // style={{ width: "500px" }}
-              className="partner-p"
-              image={image}
-              alt={name}
-            />
-          );
-        })}
+        <div className="list-partners">
+          {provincialPartners.map((item, i) => {
+            let name = item.node.frontmatter.name;
+            let image = getImage(item.node.frontmatter.thumb);
+            return (
+              <GatsbyImage
+                // style={{ width: "500px" }}
+                objectFit="contain"
+                className="partner-p"
+                image={image}
+                alt={name}
+              />
+            );
+          })}
+        </div>
       </Section>
       <Section>
         <div
