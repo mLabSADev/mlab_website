@@ -1,6 +1,6 @@
 ---
 name: Zukanye Madakana
 position: Marketing and Communications Admin
-profilePicture: ../../images/to-team-picture.png
+profilePicture: ../../images/1634379451049.jpg
 ---
 N﻿/A
