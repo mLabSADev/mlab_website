@@ -1,6 +1,6 @@
 ---
 name: Kenneth Chuenyana
-position: Skills Accelerator Facilitator
+position: SKILLS FACILITATOR – LIMPOPO
 profilePicture: ../../images/img_3349.jpg
 ---
 N﻿/A
