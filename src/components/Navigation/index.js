@@ -105,10 +105,10 @@ export const links = [
     label: "What we do",
     url: "/what-we-do",
     items: [
-      { label: "Tech Skills", url: "/what-we-do/Tech-Skills" },
-      { label: "Tech Solutions", url: "/what-we-do/Tech-Solutions" },
       { label: "Tech Ecosystems", url: "/what-we-do/Tech-Ecosystems" },
+      { label: "Tech Skills", url: "/what-we-do/Tech-Skills" },
       { label: "Tech Start-ups", url: "/what-we-do/Tech-Start-Ups" },
+      { label: "Tech Solutions", url: "/what-we-do/Tech-Solutions" },
     ],
   },
   {
@@ -133,6 +133,7 @@ export const links = [
   },
 ];
 const Navigation = ({ title, route }) => {
+  const [dropdownItems, setDropdownItems] = useState([]);
   const [menu, setMenu] = useState(false);
   const [openDropdown, setDropdown] = useState("");
   const [pillers, setPillers] = useState([]);
@@ -145,7 +146,7 @@ const Navigation = ({ title, route }) => {
     <div className="navigation---">
       <div className="linksWrapper">
         {/* Logo */}
-        <Link className='logo-n-w' to="/">
+        <Link className="logo-n-w" to="/">
           <svg
             className="logo"
             xmlns="http://www.w3.org/2000/svg"

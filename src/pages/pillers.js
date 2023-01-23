@@ -204,6 +204,7 @@ export const query = graphql`
   query WhatWeDo {
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/(wwdSections)/" } }
+      sort: {fields: frontmatter___priority, order: ASC}
     ) {
       edges {
         node {
