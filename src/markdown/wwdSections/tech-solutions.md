@@ -1,4 +1,5 @@
 ---
+priority: 4
 icon: ../../images/solutions-green-icon.png
 title: Tech Solutions
 email: melvin@mlab.co.za
