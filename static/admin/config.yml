@@ -81,6 +81,7 @@ collections:
     folder: "src/markdown/wwdSections"
     create: true
     fields:
+      - { label: "Priority", name: "priority", widget: "number" }
       - { label: "Icon", name: "icon", widget: "image" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Contact Emain", name: "email", widget: "string" }
