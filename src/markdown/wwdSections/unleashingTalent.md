@@ -9,7 +9,7 @@ shortText: Assisting early-stage start-ups to pursue their next growth opportuni
 thumb: ../../images/whatWeDo/nurturingtalent.png
 title: Tech Start-Ups
 link: impact-through-technology
-video: https://www.youtube.com/embed/50UGhZ5O7j8
+video: https://www.youtube.com/embed/kQpp-3lD-Dc
 ---
 ![startup accelerator](../../images/screenshot-2022-11-04-075218.png)
 
