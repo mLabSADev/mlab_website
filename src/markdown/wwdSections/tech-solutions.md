@@ -5,6 +5,7 @@ title: Tech Solutions
 email: melvin@mlab.co.za
 summary: Impact through Technology
 shortText: We help co-create digital solutions that address social and economic challenges
+video: https://www.youtube.com/watch?v=50UGhZ5O7j8
 featureImage: ../../images/smart-speaker-close-up-2022-03-09-03-01-44-utc.jpg
 ---
 ![technology accelerator](../../images/1.jpg)
