@@ -19,7 +19,7 @@ This Enterprise Development programme supports early-stage founders of tech-enab
 
 ![venture builder](../../images/3.png)
 
-### SELECTION CRITERIA
+# SELECTION CRITERIA
 
 We are looking for passionate and committed young innovators, founders, next generation coders and digital creatives. If you believe you or somebody you know meet the below criteria, we encourage you to apply if calls are open, otherwise register onto our database to be notified when calls open. 
 
