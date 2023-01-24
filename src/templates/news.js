@@ -6,6 +6,7 @@ import Typography from "../components/Typography/Typography";
 import PageHeader from "../components/PageHeader/PageHeader";
 import NewsCard from "../components/NewsCard/NewsCard";
 import Pagination from "@mui/material/Pagination";
+
 import { graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
