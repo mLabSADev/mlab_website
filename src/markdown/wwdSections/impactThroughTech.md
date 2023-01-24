@@ -9,7 +9,7 @@ shortText: Supports aspiring coders to develop Android, iOS and Web solutions
 thumb: ../../images/whatWeDo/creating.png
 title: Tech Skills
 link: impact-through-technology
-video: https://www.youtube.com/embed/50UGhZ5O7j8
+video: https://www.youtube.com/watch?v=50UGhZ5O7j8
 ---
 ![skills accelerator process](../../images/screenshot-2022-11-04-075322.png)
 
