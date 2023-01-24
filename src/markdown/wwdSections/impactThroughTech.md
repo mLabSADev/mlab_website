@@ -17,9 +17,7 @@ According to the World Bank, more than 230 million jobs will require digital ski
 
 mLab currently runs the CodeTribe Academy in Polokwane, Kimberly, Soweto, Tembisa and Tshwane and aims to drive inclusive digital innovation in South Africa. The programme is accredited by the Institute of Information Technology Professionals South Africa (IITPSA). The coding programme provides training and work experience to talented youth in ICT to develop a portfolio of Android, iOS and Web solutions. Participants are also up-skilled in cloud technologies, scrum agile project management and introduced to 4IR technologies in order to drive their employment and self-employment prospects.
 
-![tech stack](../../images/techstack-temp.png)
-
-# **SELECTION CRITERIA**
+### **SELECTION CRITERIA**
 
 We are looking for passionate and committed young innovators, founders, next generation coders and digital creatives. If you believe you or somebody you know meet the below criteria, we encourage you to apply if calls are open, otherwise register onto our database to be notified when calls open.
 
@@ -30,8 +28,6 @@ We are looking for passionate and committed young innovators, founders, next gen
 * Degree/B Tech/Honours in IT (with programming background)
 * Qualification in Mathematics/Statistics/Applied Mathematics or IT related field
 * Bcom Informatics(Information Systems)
-
-
 
 It is specifically noted that candidates with any of the above qualifications will have also completed Matric/Grade 12/ NQF level 4. Candidates with only this level of qualification will only be considered under special circumstances where they can produce sufficient evidence of software development experience in the form of portfolios or qualified references. The mLab believes in encouraging those without this level of qualification to first complete their Matric/Grade 12/NQF Level 4.
 
