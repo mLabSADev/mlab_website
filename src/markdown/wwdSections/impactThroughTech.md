@@ -19,7 +19,7 @@ mLab currently runs the CodeTribe Academy in Polokwane, Kimberly, Soweto, Tembis
 
 ![tech stack](../../images/techstack-temp.png)
 
-##### **SELECTION CRITERIA**
+# **SELECTION CRITERIA**
 
 We are looking for passionate and committed young innovators, founders, next generation coders and digital creatives. If you believe you or somebody you know meet the below criteria, we encourage you to apply if calls are open, otherwise register onto our database to be notified when calls open.
 
@@ -31,6 +31,8 @@ We are looking for passionate and committed young innovators, founders, next gen
 * Qualification in Mathematics/Statistics/Applied Mathematics or IT related field
 * Bcom Informatics(Information Systems)
 
+
+
 It is specifically noted that candidates with any of the above qualifications will have also completed Matric/Grade 12/ NQF level 4. Candidates with only this level of qualification will only be considered under special circumstances where they can produce sufficient evidence of software development experience in the form of portfolios or qualified references. The mLab believes in encouraging those without this level of qualification to first complete their Matric/Grade 12/NQF Level 4.
 
 **In addition to the above listed requirements, the applicant must:**
@@ -40,9 +42,9 @@ It is specifically noted that candidates with any of the above qualifications wi
 * Reside within proximity of a CodeTribe Academy facility
 * Not have a criminal record.
 
-\*\** Young South African females are encouraged to apply.
+**Young South African females are encouraged to apply.**
 
-\*\** Students in their final year doing their work Integrated learning are also encouraged to apply.
+Students in their final year doing their work Integrated learning are also encouraged to apply.
 
 Please note:
 
