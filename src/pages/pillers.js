@@ -14,16 +14,30 @@ import Modal from "../components/Modal/Modal";
 import { AnimatePresence } from "framer-motion";
 import TechCard from "../components/TextCard/TechCard";
 import { WhatWeDoCard } from "./who-we-are";
-const CodeTribe = ({ state = false, link }) => {
+const CodeTribe = ({ state = false, link, title }) => {
   return (
     <div className="codeTribe">
       <div className="codeTribe-bg">
-        <iframe
+        {state ? (
+          <StaticImage
+            className="ct-bg"
+            src={"../images/backgrounds/codetribe.png"}
+            alt="bg"
+          />
+        ) : (
+          <StaticImage
+            className="ct-bg"
+            src={"../images/backgrounds/appsclosed.png"}
+            alt="bg"
+          />
+        )}
+
+        {/* <iframe
           title="bg"
           className="ct-bg"
           src="https://my.spline.design/interactivespherescopy-9c716a85bc147c41a41c8e55bf0dfd1e/"
           frameBorder="0"
-        ></iframe>
+        ></iframe> */}
       </div>
       <div className="codeTribe-details">
         {state ? (
@@ -36,7 +50,7 @@ const CodeTribe = ({ state = false, link }) => {
           </Typography>
         )}
         <Typography variant="h6" color="light">
-          Tech StartUp
+          {title}
         </Typography>
         <Typography variant="b2" color="light">
           Calls for applications are as below. If currently closed, please
@@ -134,7 +148,17 @@ const Pillers = ({ data, location }) => {
                   </div>
                 </div>
               </div>
-              {data.frontmatter.video && (
+
+              {cleanSplit === "Tech Ecosystems" && (
+                <Section>
+                  <StaticImage
+                    className="subPage-video"
+                    src="../images/resources/ecosystem.jpg"
+                    alt={"Ecosystem"}
+                  />
+                </Section>
+              )}
+              {data.frontmatter.video && cleanSplit !== "Tech Ecosystems" && (
                 <Section>
                   <iframe
                     title={title}
@@ -145,6 +169,13 @@ const Pillers = ({ data, location }) => {
                     referrerPolicy="no-referrer-when-downgrade"
                   ></iframe>
                 </Section>
+              )}
+              {cleanSplit !== "Tech Ecosystems" && (
+                <CodeTribe
+                  title={cleanSplit}
+                  state={applicationState.state}
+                  link={applicationState.link}
+                />
               )}
 
               <Section>
@@ -157,12 +188,6 @@ const Pillers = ({ data, location }) => {
                   <div></div>
                 </div>
               </Section>
-              {cleanSplit == "Tech Solutions" && (
-                <CodeTribe
-                  state={applicationState.state}
-                  link={applicationState.link}
-                />
-              )}
 
               {cleanSplit == "Tech Solutions" && (
                 <Section>
@@ -204,7 +229,7 @@ export const query = graphql`
   query WhatWeDo {
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/(wwdSections)/" } }
-      sort: {fields: frontmatter___priority, order: ASC}
+      sort: { fields: frontmatter___priority, order: ASC }
     ) {
       edges {
         node {

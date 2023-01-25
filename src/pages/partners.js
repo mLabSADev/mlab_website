@@ -67,8 +67,8 @@ const Partners = ({ data }) => {
           ></StaticImage>
         </div>
       </Section>
-      <SectionTitle>Provincial Partners</SectionTitle>
-      <Section>
+      {/* <SectionTitle>Provincial Partners</SectionTitle> */}
+      {/* <Section>
         <div className="list-partners">
           {provincialPartners.map((item, i) => {
             let name = item.node.frontmatter.name;
@@ -84,7 +84,7 @@ const Partners = ({ data }) => {
             );
           })}
         </div>
-      </Section>
+      </Section> */}
       <Section>
         <div
           className="partners-main"

@@ -11,6 +11,7 @@ collections:
   - name: "news"
     label: "News"
     folder: "src/markdown/news"
+    filter: { field: "timeStamp" }
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
@@ -174,10 +175,11 @@ collections:
       - { label: "Thumb", name: "featureImage", widget: "image" }
       - { label: "Video Link", name: "video", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
-  - name: "codetribe"
-    label: "Applications"
-    folder: "src/markdown/tech-solutions"
+  - name: "techSolutionsApplication"
+    label: "Tech Solutions Applications"
+    file: "src/markdown/tech-solutions/tech-solutions.md"
     create: false
     fields:
       - { label: "Open", name: "open", widget: "boolean" }
+      - { label: "Description", name: "description", widget: "string" }
       - { label: "Application Url", name: "link", widget: "string" }
