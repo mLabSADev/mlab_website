@@ -11,7 +11,6 @@ collections:
   - name: "news"
     label: "News"
     folder: "src/markdown/news"
-    filter: { field: "timeStamp" }
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }

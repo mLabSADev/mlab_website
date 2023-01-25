@@ -107,7 +107,7 @@ const IndexPage = ({ data }) => {
             console.log(item);
             return (
               <NewsCard
-                date={moment(item.node.frontmatter.date).format(
+                date={moment(item.node.frontmatter.timeStamp).format(
                   "DD MMMM, YYYY"
                 )}
                 key={i}
