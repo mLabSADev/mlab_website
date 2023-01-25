@@ -109,6 +109,13 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Thumb", name: "thumb", widget: "image" }
+  - name: "foundingPartners"
+    label: "Founding Partners"
+    folder: "src/markdown/founding-partners"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Thumb", name: "thumb", widget: "image" }
   - name: "partnershipContacts"
     label: "Partnership Contacts"
     folder: "src/markdown/partnershipContacts"
