@@ -27,7 +27,7 @@ The partnership will primarily benefit mLab’s Ecosystem Acceleration offering 
 
 With over a decade of experience in delivering impact, mLab is known for having a strong focus on empowering youth, women and previously disadvantaged communities. This partnership supports this endeavour by fostering a conducive learning and development environment for South Africa’s youth.
 
-#### The statement is also published by the following publications:
+##### The statement is also published by the following publications:
 
 * S﻿outh Africa Newswire: <https://world.einnews.com/pr_news/southafrica/591849823/expanding-the-arm-e3-ngage-partnership-networks-in-africa>
 * E﻿ducation News Today: <https://education.einnews.com/pr_news/591849823/expanding-the-arm-e3-ngage-partnership-networks-in-africa>
