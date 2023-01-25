@@ -14,7 +14,7 @@ import Modal from "../components/Modal/Modal";
 import { AnimatePresence } from "framer-motion";
 import TechCard from "../components/TextCard/TechCard";
 import { WhatWeDoCard } from "./who-we-are";
-const CodeTribe = ({ state = false, link, title }) => {
+const CodeTribe = ({ state = false, link, title, description }) => {
   return (
     <div className="codeTribe">
       <div className="codeTribe-bg">
@@ -53,10 +53,7 @@ const CodeTribe = ({ state = false, link, title }) => {
           {title}
         </Typography>
         <Typography variant="b2" color="light">
-          Calls for applications are as below. If currently closed, please
-          follow us on social media to find out when calls are open. You can
-          also register onto our database to be notified when calls are open and
-          to be kept informed of other exciting opportunities:
+          {description}
         </Typography>
         {state ? (
           <Button color="light" label="Apply Now" type="link" url={link} />
@@ -75,7 +72,10 @@ const Pillers = ({ data, location }) => {
   // const background = getImage(data.frontmatter.featureImage);
   const sectionData = data.allMarkdownRemark.edges;
   const theTech = data.theTech.edges;
-  const application = data.applications.edges;
+  const techStartupApplication = data.techStartupApplication.edges;
+  const techSkillsApplication = data.techSkillsApplication.edges;
+  const techSolutionsApplication = data.techSolutionsApplication.edges;
+
   let width = typeof window !== "undefined" ? window.screen.width : 800;
   const resposiveWidth = 980;
   const url = location.pathname;
@@ -83,13 +83,6 @@ const Pillers = ({ data, location }) => {
   const cleanSplit = splitUrl[2].replace("-", " ");
 
   useEffect(() => {
-    application.forEach((element) => {
-      const open = element.node.frontmatter.open;
-      const link = element.node.frontmatter.link;
-      if (open != null) {
-        setApplicationState({ state: open, link: link });
-      }
-    });
     (function (h, o, t, j, a, r) {
       h.hj =
         h.hj ||
@@ -170,13 +163,41 @@ const Pillers = ({ data, location }) => {
                   ></iframe>
                 </Section>
               )}
-              {cleanSplit !== "Tech Ecosystems" && (
+
+              {/* techStartupApplication */}
+              {cleanSplit === "Tech Start-Up" &&
+                techStartupApplication.map((item) => {
+                  const description = item.node.frontmatter.description;
+                  const link = item.node.frontmatter.description;
+                  const open = item.node.frontmatter.description;
+                  return (
+                    <CodeTribe
+                      title={cleanSplit}
+                      state={open}
+                      description={description}
+                      link={link}
+                    />
+                  );
+                })}
+
+              {/* techSkillsApplication */}
+              {/* {cleanSplit === "Tech Skills" && (
                 <CodeTribe
                   title={cleanSplit}
-                  state={applicationState.state}
-                  link={applicationState.link}
+                  state={techSkillsApplication.open}
+                  description={techSkillsApplication.description}
+                  link={techSkillsApplication.link}
                 />
-              )}
+              )} */}
+              {/* techSolutionsApplication */}
+              {/* {cleanSplit === "Tech Solutions" && (
+                <CodeTribe
+                  title={cleanSplit}
+                  state={techSolutionsApplication.open}
+                  description={techSolutionsApplication.description}
+                  link={techSolutionsApplication.link}
+                />
+              )} */}
 
               <Section>
                 <div className="reading">
@@ -295,13 +316,41 @@ export const query = graphql`
       }
     }
 
-    applications: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/(tech-solutions)/" } }
+    techStartupApplication: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/(tech-skills)/" } }
     ) {
       edges {
         node {
           frontmatter {
             open
+            description
+            link
+          }
+        }
+      }
+    }
+    techSkillsApplication: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/(tech-skills)/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            open
+            description
+            link
+          }
+        }
+      }
+    }
+    techSolutionsApplication: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/(tech-solution)/" } }
+      skip: 2
+    ) {
+      edges {
+        node {
+          frontmatter {
+            open
+            description
             link
           }
         }
