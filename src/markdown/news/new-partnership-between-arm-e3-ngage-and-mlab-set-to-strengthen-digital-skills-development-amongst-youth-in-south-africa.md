@@ -4,7 +4,7 @@ title: New partnership between Arm(E3)NGAGE and mLab set to strengthen digital
 author: Zukanye Madakana
 timeStamp: 2022-09-23T09:03:33.661Z
 featureImage: ../../images/nicki-and-arm-1.jpg
-category: Entrepreneurship
+category: Tech Ecosystems
 tags:
   - Partnership
   - ARM
