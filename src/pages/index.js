@@ -148,7 +148,7 @@ export const query = graphql`
             tags
             path
             title
-            date
+            timeStamp
             author
             featureImage {
               childImageSharp {
