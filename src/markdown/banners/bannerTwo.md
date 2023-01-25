@@ -1,5 +1,5 @@
 ---
-title: UPSKILLING THE NEXT GENERATION OF CODERS.
+title: UPSKILLING THE NEXT GENERATION OF CODERS
 featureImage: ../../images/carousel/2.png
 image: ../../images/carousel/2.png
 registration: Registered Non-Profit (Mobile Applications Laboratory NPC) & Level

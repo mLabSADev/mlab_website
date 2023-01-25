@@ -108,6 +108,7 @@ const WhatWeDo = ({ data, location }) => {
             const noSpaces = title.replaceAll(" ", "-");
             return (
               <WhatWeDoCard
+                key={i}
                 title={title}
                 excerpt={card.node.frontmatter.excerpt}
                 description={card.node.rawMarkdownBody}

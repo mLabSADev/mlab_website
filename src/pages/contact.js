@@ -115,9 +115,13 @@ export const SignupForm = ({ main, interests = [] }) => {
           value={formValues.interest}
           onChange={handleChange}
         >
-          {interests.map((node) => {
+          {interests.map((node, i) => {
             const title = node.node.frontmatter.title;
-            return <MenuItem value={title}>{title}</MenuItem>;
+            return (
+              <MenuItem key={i} value={title}>
+                {title}
+              </MenuItem>
+            );
           })}
           <MenuItem value="Other">Other</MenuItem>
         </Select>
@@ -225,7 +229,7 @@ const Contact = ({ data }) => {
       {locations.map((l, i) => {
         const image = getImage(l.node.frontmatter.featureImage);
         return (
-          <Section>
+          <Section key={i}>
             <div className="locaton-wrapper">
               <GatsbyImage
                 alt={l.node.frontmatter.city}
