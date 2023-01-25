@@ -12,7 +12,7 @@ tags:
   - Business
   - StartUp
 ---
-### Introduction
+##### Introduction
 
 Developing digital talent, innovative technology and successful entrepreneurs are the pillars on which Africa will build a prosperous and sustainable future.
 
@@ -22,9 +22,7 @@ The CodeUp Programme aims to support recently graduated coders with additional c
 
 ![CodeUp](../../images/codeup-call-socials-2-min.png)
 
-
-
-### Programme Outline
+##### Programme Outline
 
 In order to qualify for the programme, applicants must meet the following criteria: 
 
@@ -34,9 +32,7 @@ In order to qualify for the programme, applicants must meet the following criter
 * Preference will be given to mLab graduates/alumni and applicants from previously disadvantaged groups
 * Have access to a device and data in order to work remotely
 
-
-
-### How to apply
+##### How to apply
 
 Applications must be submitted before 15 December 2022, 4pm.
 
