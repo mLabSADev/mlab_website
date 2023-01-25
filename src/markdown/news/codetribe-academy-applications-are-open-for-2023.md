@@ -1,9 +1,9 @@
 ---
 title: CodeTribe Academy Applications Are Open for 2023
 author: "Zukanye Madakana "
-timeStamp: 2023-01-15T08:49:55.464Z
+timeStamp: 2022-12-15T08:49:55.464Z
 featureImage: ../../images/codetribe-call-2023.png
-category: Talent
+category: Tech Skills
 tags:
   - CodeTribe
   - Opportunity
