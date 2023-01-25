@@ -176,7 +176,7 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "techSolutionsApplication"
     label: "Tech Solutions Applications"
-    folder: "src/markdown/tech-solutions"
+    folder: "src/markdown/tech-solution"
     create: false
     fields:
       - { label: "Open", name: "open", widget: "boolean" }
