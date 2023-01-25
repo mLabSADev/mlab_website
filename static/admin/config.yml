@@ -177,7 +177,23 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "techSolutionsApplication"
     label: "Tech Solutions Applications"
-    file: "src/markdown/tech-solutions/tech-solutions.md"
+    folder: "src/markdown/tech-solutions"
+    create: false
+    fields:
+      - { label: "Open", name: "open", widget: "boolean" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Application Url", name: "link", widget: "string" }
+  - name: "techStartupApplication"
+    label: "Tech Start-Ups Applications"
+    folder: "src/markdown/tech-startups"
+    create: false
+    fields:
+      - { label: "Open", name: "open", widget: "boolean" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Application Url", name: "link", widget: "string" }
+  - name: "techSkillsApplication"
+    label: "Tech Skills Applications"
+    folder: "src/markdown/tech-skills"
     create: false
     fields:
       - { label: "Open", name: "open", widget: "boolean" }
