@@ -3,7 +3,7 @@ title: CodeUp Programme Applications Are Open for 2023
 author: Zukanye Madakana
 timeStamp: 2022-12-06T09:00:23.487Z
 featureImage: ../../images/codeup-linkedin-banner.png
-category: Talent
+category: Tech Start-Ups
 tags:
   - AWS
   - CodeUp
