@@ -20,7 +20,7 @@ Ratlabala’s idea was to develop a technology that would be able to take electr
 
 Then, Learn Base pty (LTD) was born. 
 
-### A mark of honour: Ratlabala wins an Allan Gray Makers Award
+#### A mark of honour: Ratlabala wins an Allan Gray Makers Award
 
 ![Allan-Gray Makers winners. Mokete Ratlabala, 2nd from Right.](../../images/allan-gray-makers-winners.jpg "Allan-Gray Makers winners. Mokete Ratlabala, 2nd from Right.")
 
@@ -30,7 +30,7 @@ These awards shine a spotlight on African Artisan Makers to encourage more young
 
 Ratlabala won R100 000 for his business, under the Innovation Phase category.
 
-### Effort on his part, going for it and finding the opportunity.
+#### Effort on his part, going for it and finding the opportunity.
 
 ![Founder of Learn Base pty (LTD), Mokete Ratlabala.](../../images/mokete-image-2.jpg "Founder of Learn Base pty (LTD), Mokete Ratlabala.")
 
@@ -42,7 +42,7 @@ As a result of all the effort he put in, he secured some funding to develop his 
 
 Five years later, Ratlabala will be pilot testing his product, beginning this year up until the end of 2024. He will be working with a couple of institutions amid this time, including Polokwane Municipality, France Mohlala Secondary School, Kuschke Agricultural Secondary School, and Moshakga Primary School. 
 
-### ‘If it does not work out, no big deal, try again.’
+#### ‘If it does not work out, no big deal, try again.’
 
 Advising aspiring and budding entrepreneurs, Ratlabala said, “if you are going to start a business, do not think it’s going to take-off quickly”. 
 
