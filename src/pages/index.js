@@ -104,7 +104,6 @@ const IndexPage = ({ data }) => {
             const remove_invalid_5 = remove_invalid_4.replaceAll('"', "");
             const remove_invalid_6 = remove_invalid_5.replaceAll('"', "");
             const _path = remove_invalid_6.replaceAll(" ", "-");
-            console.log(item);
             return (
               <NewsCard
                 date={moment(item.node.frontmatter.timeStamp).format(
@@ -207,7 +206,7 @@ export const query = graphql`
     }
     whatWeDo: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/(wwdSections)/" } }
-      sort: {fields: frontmatter___priority, order: ASC}
+      sort: { fields: frontmatter___priority, order: ASC }
     ) {
       edges {
         node {

@@ -165,11 +165,11 @@ const Pillers = ({ data, location }) => {
               )}
 
               {/* techStartupApplication */}
-              {cleanSplit === "Tech Start-Up" &&
+              {cleanSplit === "Tech Start-Ups" &&
                 techStartupApplication.map((item) => {
                   const description = item.node.frontmatter.description;
                   const link = item.node.frontmatter.description;
-                  const open = item.node.frontmatter.description;
+                  const open = item.node.frontmatter.open;
                   return (
                     <CodeTribe
                       title={cleanSplit}
@@ -181,23 +181,35 @@ const Pillers = ({ data, location }) => {
                 })}
 
               {/* techSkillsApplication */}
-              {/* {cleanSplit === "Tech Skills" && (
-                <CodeTribe
-                  title={cleanSplit}
-                  state={techSkillsApplication.open}
-                  description={techSkillsApplication.description}
-                  link={techSkillsApplication.link}
-                />
-              )} */}
+              {cleanSplit === "Tech Skills" &&
+                techSkillsApplication.map((item) => {
+                  const description = item.node.frontmatter.description;
+                  const link = item.node.frontmatter.description;
+                  const open = item.node.frontmatter.open;
+                  return (
+                    <CodeTribe
+                      title={cleanSplit}
+                      state={open}
+                      description={description}
+                      link={link}
+                    />
+                  );
+                })}
               {/* techSolutionsApplication */}
-              {/* {cleanSplit === "Tech Solutions" && (
-                <CodeTribe
-                  title={cleanSplit}
-                  state={techSolutionsApplication.open}
-                  description={techSolutionsApplication.description}
-                  link={techSolutionsApplication.link}
-                />
-              )} */}
+              {cleanSplit === "Tech Solutions" &&
+                techSolutionsApplication.map((item) => {
+                  const description = item.node.frontmatter.description;
+                  const link = item.node.frontmatter.description;
+                  const open = item.node.frontmatter.open;
+                  return (
+                    <CodeTribe
+                      title={cleanSplit}
+                      state={open}
+                      description={description}
+                      link={link}
+                    />
+                  );
+                })}
 
               <Section>
                 <div className="reading">
