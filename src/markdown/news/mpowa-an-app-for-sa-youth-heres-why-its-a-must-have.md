@@ -1,14 +1,17 @@
 ---
-path: "/mpowa-an-app-for-sa-youth-heres-why-its-a-must-have" 
-date: 2022-05-20T11:49:16 
-title: "mPowa, an app for SA youth: here’s why it&#8217;s a must have" 
-featureImage: "../../images/Male-hand-mPowa-removebg-preview.jpg" 
-thumb: "../../images/Male-hand-mPowa-removebg-preview.jpg" 
-abstract:  
+abstract: null
+featureImage: ../../images/Male-hand-mPowa-removebg-preview.jpg
+path: /mpowa-an-app-for-sa-youth-heres-why-its-a-must-have
 author: Zukanye Madakana
-tags: [] 
-timeStamp: 2022-05-20T11:49:16 
-categories: ['News'] 
+date: 2022-05-20T11:49:16
+timeStamp: 2022-05-20T11:49:16
+thumb: ../../images/Male-hand-mPowa-removebg-preview.jpg
+title: "mPowa, an app for SA youth: here’s why it's a must have."
+tags:
+  - youth empowerment
+categories:
+  - News
+category: Tech Solutions
 ---
 
 <p><span style="font-weight: 400;">mPowa is a mobile application created for South African youth, its purpose is to empower young people to improve their employment readiness and direct them to life-changing opportunities. It is a member of the SA Youth Network and aims to fulfil its purpose by creating awareness and granting access to a wide range of support services that surround young people. </span></p>
