@@ -66,7 +66,7 @@ export const ChatBot = ({ formState }) => {
       width: '100%',
       height: 500,
       border: 'none'
-    }} src="https://mlab-ai.web.app"></iframe>
+    }} src="https://mlab-chatbot.web.app"></iframe>
   );
 };
 const Layout = (props) => {
