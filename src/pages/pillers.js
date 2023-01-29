@@ -92,14 +92,14 @@ const Pillers = ({ data, location }) => {
   }, []);
   return (
     <Layout>
-      {sectionData.map((node) => {
+      {sectionData.map((node, i) => {
         const title = cleanSplit;
         const background = getImage(node.node.frontmatter.featureImage);
         const icon = getImage(node.node.frontmatter.icon);
         if (node.node.frontmatter.title == title) {
           const data = node.node;
           return (
-            <div className="subPage">
+            <div className="subPage" key={i}>
               <div className="subPage-header">
                 <GatsbyImage
                   className="image-sp"
@@ -157,10 +157,13 @@ const Pillers = ({ data, location }) => {
                   <div></div>
                 </div>
               </Section>
-              <CodeTribe
-                state={applicationState.state}
-                link={applicationState.link}
-              />
+              {cleanSplit == "Tech Solutions" && (
+                <CodeTribe
+                  state={applicationState.state}
+                  link={applicationState.link}
+                />
+              )}
+
               {cleanSplit == "Tech Solutions" && (
                 <Section>
                   <SectionTitle>our tech</SectionTitle>
