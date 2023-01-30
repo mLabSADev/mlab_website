@@ -1,14 +1,20 @@
 import React, { useEffect } from "react";
 import "./partners.scss";
 import Layout from "../components/Layout/Layout";
-import { StaticImage } from "gatsby-plugin-image";
+import { StaticImage, getImage, GatsbyImage } from "gatsby-plugin-image";
 import Section from "../components/Section/Section";
 import SectionTitle from "../components/SectionTitle/SectionTitle";
 import PageHeader from "../components/PageHeader/PageHeader";
 import { graphql } from "gatsby";
+
+
+
 const Partners = ({ data }) => {
   const partners = data.partners;
+  const provincialPartners = data.provincialPartners.edges;
+  const foundingPartners = data.provincialPartners.edges;
   useEffect(() => {
+    console.log(foundingPartners);
     (function (h, o, t, j, a, r) {
       h.hj =
         h.hj ||
@@ -63,6 +69,21 @@ const Partners = ({ data }) => {
           ></StaticImage>
         </div>
       </Section>
+      <SectionTitle>Provincial Partners</SectionTitle>
+      <Section>
+        {provincialPartners.map((item, i) => {
+          let name = item.node.frontmatter.name;
+          let image = getImage(item.node.frontmatter.thumb);
+          return (
+            <GatsbyImage
+              // style={{ width: "500px" }}
+              className="partner-p"
+              image={image}
+              alt={name}
+            />
+          );
+        })}
+      </Section>
       <Section>
         <div
           className="partners-main"
@@ -80,6 +101,48 @@ export const query = graphql`
       fileAbsolutePath: { regex: "/(mcollaboration)/" }
     ) {
       html
+    }
+    provincialPartners: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/(provincial-partners)/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            thumb {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: FULL_WIDTH
+                  placeholder: BLURRED
+                  quality: 100
+                  width: 720
+                )
+              }
+            }
+          }
+        }
+      }
+    }
+    foundingPartners: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/(founding-partners)/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            thumb {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: FULL_WIDTH
+                  placeholder: BLURRED
+                  quality: 100
+                  width: 720
+                )
+              }
+            }
+          }
+        }
+      }
     }
   }
 `;

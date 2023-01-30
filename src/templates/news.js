@@ -37,7 +37,7 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
       r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
       a.appendChild(r);
     })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
-  }, [])
+  }, []);
   return (
     <Layout>
       <PageHeader
@@ -112,6 +112,7 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
             if (url === current) {
               return (
                 <Pagination
+                  key={i}
                   page={number === "" ? 1 : number}
                   showFirstButton
                   showLastButton

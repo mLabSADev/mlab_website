@@ -130,7 +130,7 @@ const Layout = (props) => {
         >
           {" "}
           <Typography color="light" variant="b2">
-            {openForm ? "close" : "Chat to us"}{" "}
+            {openForm ? "close" : "Chat to us"}
           </Typography>
         </div>
       </div>

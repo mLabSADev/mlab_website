@@ -90,7 +90,7 @@ const CarouselSlider = ({ data = [] }) => {
         const reg = banner.node.frontmatter.registration;
         const image = banner.node.frontmatter.image;
         return (
-          <SwiperSlide className="item-c">
+          <SwiperSlide key={i} className="item-c">
             <CarouselItem title={title} image={getImage(image)} text={reg} />
           </SwiperSlide>
         );
