@@ -1,14 +1,15 @@
 ---
-featureImage: ../../images/african-american-coder-employee-programming-busine-2021-12-09-02-41-56-utc.jpg.jpg
-path: /impact-through-technology
+priority: 2
 icon: ../../images/skills-green-icon.png
 email: mesuli@mlab.co.za
+featureImage: ../../images/african-american-coder-employee-programming-busine-2021-12-09-02-41-56-utc.jpg.jpg
+path: /impact-through-technology
 summary: Unleashing Tech Talent
 shortText: Supports aspiring coders to develop Android, iOS and Web solutions
 thumb: ../../images/whatWeDo/creating.png
 title: Tech Skills
 link: impact-through-technology
-video: https://www.youtube.com/embed/50UGhZ5O7j8
+video: https://www.youtube.com/embed/c0EUf5wWqnE
 ---
 ![skills accelerator process](../../images/screenshot-2022-11-04-075322.png)
 
@@ -16,9 +17,7 @@ According to the World Bank, more than 230 million jobs will require digital ski
 
 mLab currently runs the CodeTribe Academy in Polokwane, Kimberly, Soweto, Tembisa and Tshwane and aims to drive inclusive digital innovation in South Africa. The programme is accredited by the Institute of Information Technology Professionals South Africa (IITPSA). The coding programme provides training and work experience to talented youth in ICT to develop a portfolio of Android, iOS and Web solutions. Participants are also up-skilled in cloud technologies, scrum agile project management and introduced to 4IR technologies in order to drive their employment and self-employment prospects.
 
-![tech stack](../../images/techstack-temp.png)
-
-##### **SELECTION CRITERIA**
+### **SELECTION CRITERIA**
 
 We are looking for passionate and committed young innovators, founders, next generation coders and digital creatives. If you believe you or somebody you know meet the below criteria, we encourage you to apply if calls are open, otherwise register onto our database to be notified when calls open.
 
@@ -39,9 +38,9 @@ It is specifically noted that candidates with any of the above qualifications wi
 * Reside within proximity of a CodeTribe Academy facility
 * Not have a criminal record.
 
-\*\** Young South African females are encouraged to apply.
+**Young South African females are encouraged to apply.**
 
-\*\** Students in their final year doing their work Integrated learning are also encouraged to apply.
+Students in their final year doing their work Integrated learning are also encouraged to apply.
 
 Please note:
 

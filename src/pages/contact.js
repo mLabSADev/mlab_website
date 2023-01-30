@@ -276,6 +276,7 @@ export const query = graphql`
     }
     wwdSections: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/(wwdSections)/" } }
+      sort: {fields: frontmatter___priority, order: ASC}
     ) {
       edges {
         node {

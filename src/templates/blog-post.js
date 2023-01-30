@@ -10,6 +10,7 @@ import "./blog-post.scss";
 import Typography from "../components/Typography/Typography";
 import { AnimatePresence } from "framer-motion";
 import ImageModal from "../components/ImageModal/ImageModal";
+
 import moment from "moment";
 export default function BlogPost({ data }) {
   const [modalOpen, setModalOpen] = useState(false);
