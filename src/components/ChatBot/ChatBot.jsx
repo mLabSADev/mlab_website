@@ -1,63 +1,63 @@
-import { StaticImage } from "gatsby-plugin-image";
-import React, { useState } from "react";
-import Footer from "../Footer/Footer";
-import Navigation from "../Navigation/index";
-import Typography from "../Typography/Typography";
-import NetlifyForm from "react-ssg-netlify-forms";
-import FormControl from "@mui/material/FormControl";
-import Input from "@mui/material/Input";
-import Box from "@mui/material/Box";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import { motion, AnimatePresence } from "framer-motion";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
-import { StaticQuery, graphql } from "gatsby";
-import "./style.scss";
-import Button from "../Button/Button";
+import {StaticImage} from 'gatsby-plugin-image';
+import React, {useState} from 'react';
+import Footer from '../Footer/Footer';
+import Navigation from '../Navigation/index';
+import Typography from '../Typography/Typography';
+import NetlifyForm from 'react-ssg-netlify-forms';
+import FormControl from '@mui/material/FormControl';
+import Input from '@mui/material/Input';
+import Box from '@mui/material/Box';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import {motion, AnimatePresence} from 'framer-motion';
+import Select, {SelectChangeEvent} from '@mui/material/Select';
+import {StaticQuery, graphql} from 'gatsby';
+import './style.scss';
+import Button from '../Button/Button';
 
-export const ChatBot = ({ formState }) => {
-  const [sentStatus, setSentStatus] = useState("");
-  const [statusMessage, setStatusMessage] = useState("");
+export const ChatBot = ({formState}) => {
+  const [sentStatus, setSentStatus] = useState('');
+  const [statusMessage, setStatusMessage] = useState('');
   const [enquiry, setInquiry] = useState([]);
   const [enlarge, setEnlarge] = useState(false);
   const maximize = () => setEnlarge(true);
   const minimize = () => setEnlarge(false);
   const [formValues, setFormValues] = useState({
-    company: "",
-    fullName: "",
-    email: "",
-    phoneNumber: "",
-    message: "",
+    company: '',
+    fullName: '',
+    email: '',
+    phoneNumber: '',
+    message: '',
   });
   const postSubmit = () => {
-    setStatusMessage("Thank you for your submission.");
-    setSentStatus("success");
+    setStatusMessage('Thank you for your submission.');
+    setSentStatus('success');
     setTimeout(() => {
-      setSentStatus("");
+      setSentStatus('');
       formState();
     }, 2000);
 
     setFormValues({
-      company: "",
-      fullName: "",
-      email: "",
-      phoneNumber: "",
-      message: "",
+      company: '',
+      fullName: '',
+      email: '',
+      phoneNumber: '',
+      message: '',
     });
   };
-  const handleChange = (e) => {
-    setFormValues({ ...formValues, [e.target.name]: e.target.value });
+  const handleChange = e => {
+    setFormValues({...formValues, [e.target.name]: e.target.value});
 
-    if (e.target.name === "email") {
+    if (e.target.name === 'email') {
       if (
         /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(formValues.email)
       ) {
-        setStatusMessage("");
-        setSentStatus("");
+        setStatusMessage('');
+        setSentStatus('');
       } else {
-        setStatusMessage("Email is invalid");
+        setStatusMessage('Email is invalid');
 
-        setSentStatus("error");
+        setSentStatus('error');
       }
     }
   };
@@ -69,7 +69,7 @@ export const ChatBot = ({ formState }) => {
     }} src="https://mlab-chatbot.web.app"></iframe>
   );
 };
-const Layout = (props) => {
+const Layout = props => {
   const [openForm, setOpenForm] = useState(false);
 
   const open = () => setOpenForm(true);
@@ -99,8 +99,7 @@ const Layout = (props) => {
                 x: 900,
                 opacity: 0,
               }}
-              className="feedback-ui"
-            >
+              className="feedback-ui">
               <ChatBot formState={() => close()} />
             </motion.div>
           )}
@@ -126,9 +125,7 @@ const Layout = (props) => {
               open();
             }
           }}
-          className={openForm ? "chat-label-show" : "chat-label-show"}
-        >
-          {" "}
+          className={openForm ? 'chat-label-show' : 'chat-label-show'}>
           <Typography color="light" variant="b2">
             {openForm ? "close" : "Chat to us"}
           </Typography>

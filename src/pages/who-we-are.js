@@ -63,7 +63,6 @@ const TeamCard = ({ fullName, position, image }) => {
   };
   return (
     <div className="card-tc">
-      {" "}
       <GatsbyImage
         image={image}
         alt={fullName}
@@ -81,7 +80,7 @@ const TeamCard = ({ fullName, position, image }) => {
 };
 const WhoWeAre = ({ data }) => {
   const team = data.team.edges;
-  const about = data.aboutMlab.rawMarkdownBody;
+  const about = data.aboutMlab.html;
   return (
     <Layout>
       <PageHeader title="WHO WE ARE" index={1} />
@@ -91,7 +90,8 @@ const WhoWeAre = ({ data }) => {
             <Typography variant="h4">About Us</Typography>
             <br></br>
             <br></br>
-            <Typography variant="b1">{about}</Typography>
+            <p dangerouslySetInnerHTML={{ __html: about }}></p>
+            {/* <Typography variant="b1">{about}</Typography> */}
           </div>
           <div>
             <StaticImage
@@ -196,7 +196,7 @@ export const query = graphql`
         path
         title
       }
-      rawMarkdownBody
+      html
     }
   }
 `;

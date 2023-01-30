@@ -14,16 +14,30 @@ import Modal from "../components/Modal/Modal";
 import { AnimatePresence } from "framer-motion";
 import TechCard from "../components/TextCard/TechCard";
 import { WhatWeDoCard } from "./who-we-are";
-const CodeTribe = ({ state = false, link }) => {
+const CodeTribe = ({ state = false, link, title, description }) => {
   return (
     <div className="codeTribe">
       <div className="codeTribe-bg">
-        <iframe
+        {state ? (
+          <StaticImage
+            className="ct-bg"
+            src={"../images/backgrounds/codetribe.png"}
+            alt="bg"
+          />
+        ) : (
+          <StaticImage
+            className="ct-bg"
+            src={"../images/backgrounds/appsclosed.png"}
+            alt="bg"
+          />
+        )}
+
+        {/* <iframe
           title="bg"
           className="ct-bg"
           src="https://my.spline.design/interactivespherescopy-9c716a85bc147c41a41c8e55bf0dfd1e/"
           frameBorder="0"
-        ></iframe>
+        ></iframe> */}
       </div>
       <div className="codeTribe-details">
         {state ? (
@@ -36,13 +50,10 @@ const CodeTribe = ({ state = false, link }) => {
           </Typography>
         )}
         <Typography variant="h6" color="light">
-          Tech StartUp
+          {title}
         </Typography>
         <Typography variant="b2" color="light">
-          Calls for applications are as below. If currently closed, please
-          follow us on social media to find out when calls are open. You can
-          also register onto our database to be notified when calls are open and
-          to be kept informed of other exciting opportunities:
+          {description}
         </Typography>
         {state ? (
           <Button color="light" label="Apply Now" type="link" url={link} />
@@ -61,7 +72,10 @@ const Pillers = ({ data, location }) => {
   // const background = getImage(data.frontmatter.featureImage);
   const sectionData = data.allMarkdownRemark.edges;
   const theTech = data.theTech.edges;
-  const application = data.applications.edges;
+  const techStartupApplication = data.techStartupApplication.edges;
+  const techSkillsApplication = data.techSkillsApplication.edges;
+  const techSolutionsApplication = data.techSolutionsApplication.edges;
+
   let width = typeof window !== "undefined" ? window.screen.width : 800;
   const resposiveWidth = 980;
   const url = location.pathname;
@@ -69,13 +83,6 @@ const Pillers = ({ data, location }) => {
   const cleanSplit = splitUrl[2].replace("-", " ");
 
   useEffect(() => {
-    application.forEach((element) => {
-      const open = element.node.frontmatter.open;
-      const link = element.node.frontmatter.link;
-      if (open != null) {
-        setApplicationState({ state: open, link: link });
-      }
-    });
     (function (h, o, t, j, a, r) {
       h.hj =
         h.hj ||
@@ -134,7 +141,17 @@ const Pillers = ({ data, location }) => {
                   </div>
                 </div>
               </div>
-              {data.frontmatter.video && (
+
+              {cleanSplit === "Tech Ecosystems" && (
+                <Section>
+                  <StaticImage
+                    className="subPage-video"
+                    src="../images/resources/ecosystem.jpg"
+                    alt={"Ecosystem"}
+                  />
+                </Section>
+              )}
+              {data.frontmatter.video && cleanSplit !== "Tech Ecosystems" && (
                 <Section>
                   <iframe
                     title={title}
@@ -147,6 +164,53 @@ const Pillers = ({ data, location }) => {
                 </Section>
               )}
 
+              {/* techStartupApplication */}
+              {cleanSplit === "Tech Start-Ups" &&
+                techStartupApplication.map((item) => {
+                  const description = item.node.frontmatter.description;
+                  const link = item.node.frontmatter.description;
+                  const open = item.node.frontmatter.open;
+                  return (
+                    <CodeTribe
+                      title={cleanSplit}
+                      state={open}
+                      description={description}
+                      link={link}
+                    />
+                  );
+                })}
+
+              {/* techSkillsApplication */}
+              {cleanSplit === "Tech Skills" &&
+                techSkillsApplication.map((item) => {
+                  const description = item.node.frontmatter.description;
+                  const link = item.node.frontmatter.description;
+                  const open = item.node.frontmatter.open;
+                  return (
+                    <CodeTribe
+                      title={cleanSplit}
+                      state={open}
+                      description={description}
+                      link={link}
+                    />
+                  );
+                })}
+              {/* techSolutionsApplication */}
+              {cleanSplit === "Tech Solutions" &&
+                techSolutionsApplication.map((item) => {
+                  const description = item.node.frontmatter.description;
+                  const link = item.node.frontmatter.description;
+                  const open = item.node.frontmatter.open;
+                  return (
+                    <CodeTribe
+                      title={cleanSplit}
+                      state={open}
+                      description={description}
+                      link={link}
+                    />
+                  );
+                })}
+
               <Section>
                 <div className="reading">
                   <div></div>
@@ -157,12 +221,6 @@ const Pillers = ({ data, location }) => {
                   <div></div>
                 </div>
               </Section>
-              {cleanSplit == "Tech Solutions" && (
-                <CodeTribe
-                  state={applicationState.state}
-                  link={applicationState.link}
-                />
-              )}
 
               {cleanSplit == "Tech Solutions" && (
                 <Section>
@@ -204,6 +262,7 @@ export const query = graphql`
   query WhatWeDo {
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/(wwdSections)/" } }
+      sort: { fields: frontmatter___priority, order: ASC }
     ) {
       edges {
         node {
@@ -269,13 +328,41 @@ export const query = graphql`
       }
     }
 
-    applications: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/(tech-solutions)/" } }
+    techStartupApplication: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/(tech-skills)/" } }
     ) {
       edges {
         node {
           frontmatter {
             open
+            description
+            link
+          }
+        }
+      }
+    }
+    techSkillsApplication: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/(tech-skills)/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            open
+            description
+            link
+          }
+        }
+      }
+    }
+    techSolutionsApplication: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/(tech-solution)/" } }
+      skip: 2
+    ) {
+      edges {
+        node {
+          frontmatter {
+            open
+            description
             link
           }
         }

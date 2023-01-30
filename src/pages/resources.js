@@ -8,10 +8,6 @@ import Typography from "../components/Typography/Typography";
 const Resources = () => {
   const pubs = [
     {
-      title: "Summary Economic Impact Assessment (TBC)",
-      link: "",
-    },
-    {
       title: "do mLabs make a difference (World Bank Report)",
       link: "https://drive.google.com/file/d/1IdNp195GKrTRIFfNeBitmIxqDfD8MZHS/view?usp=sharing",
     },
