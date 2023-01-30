@@ -62,13 +62,11 @@ export const ChatBot = ({formState}) => {
     }
   };
   return (
-    <iframe
-      style={{
-        width: '100%',
-        height: 500,
-        border: 'none',
-      }}
-      src="https://mlab-ai.web.app"></iframe>
+    <iframe style={{
+      width: '100%',
+      height: 500,
+      border: 'none'
+    }} src="https://mlab-chatbot.web.app"></iframe>
   );
 };
 const Layout = props => {
@@ -129,7 +127,7 @@ const Layout = props => {
           }}
           className={openForm ? 'chat-label-show' : 'chat-label-show'}>
           <Typography color="light" variant="b2">
-            {openForm ? 'close' : 'Chat to us'}
+            {openForm ? "close" : "Chat to us"}
           </Typography>
         </div>
       </div>
