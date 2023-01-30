@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: master
 
-site_url: https://mobilelab.netlify.app/
+site_url: https://mobilelab.netlify.app
 
 media_folder: src/images
 public_folder: ../../images
@@ -21,12 +21,18 @@ collections:
           label: "Category",
           name: "category",
           widget: "select",
-          options: ["Talent", "Startup", "Entrepreneurship"],
+          options:
+            [
+              "Tech Ecosystems",
+              "Tech Skills",
+              "Tech Start-Ups",
+              "Tech Solutions",
+            ],
         }
       - { label: "Tag(s)", name: "tags", widget: "list" }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "theTech"
-    label: "Tech"
+    label: "App Projects"
     folder: "src/markdown/theTech"
     create: true
     fields:
@@ -41,7 +47,7 @@ collections:
           choose_url: true,
         }
   - name: "team"
-    label: "Team"
+    label: "mLab Team"
     folder: "src/markdown/team"
     create: true
     fields:
@@ -77,15 +83,17 @@ collections:
       - { label: "Image", name: "thumb", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "wwdSections"
-    label: What We Do Sections
+    label: "Pillers"
     folder: "src/markdown/wwdSections"
     create: true
     fields:
+      - { label: "Priority", name: "priority", widget: "number" }
       - { label: "Icon", name: "icon", widget: "image" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Contact Emain", name: "email", widget: "string" }
       - { label: "Summary", name: "summary", widget: "string" }
       - { label: "Short Text", name: "shortText", widget: "string" }
+      - { label: "Video", name: "video", widget: "string", required: false }
       - { label: "Background", name: "featureImage", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "mcollaboration"
@@ -97,6 +105,13 @@ collections:
   - name: "provincialPartners"
     label: "Provincial Partners"
     folder: "src/markdown/provincial-partners"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Thumb", name: "thumb", widget: "image" }
+  - name: "foundingPartners"
+    label: "Founding Partners"
+    folder: "src/markdown/founding-partners"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
@@ -150,7 +165,7 @@ collections:
       - { label: "Registration", name: "registration", widget: "string" }
       - { label: "Body", name: "body", widget: "string" }
   - name: "whatWeDo"
-    label: "whatWeDo"
+    label: "WWD Sections(Old)"
     folder: "src/markdown/whatWeDo"
     create: true
     fields:
@@ -159,10 +174,27 @@ collections:
       - { label: "Thumb", name: "featureImage", widget: "image" }
       - { label: "Video Link", name: "video", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
-  - name: "codetribe"
-    label: "Tech Solutions"
-    folder: "src/markdown/tech-solutions"
+  - name: "techSolutionsApplication"
+    label: "Tech Solutions Applications"
+    folder: "src/markdown/tech-solution"
     create: false
     fields:
       - { label: "Open", name: "open", widget: "boolean" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Application Url", name: "link", widget: "string" }
+  - name: "techStartupApplication"
+    label: "Tech Start-Ups Applications"
+    folder: "src/markdown/tech-startups"
+    create: false
+    fields:
+      - { label: "Open", name: "open", widget: "boolean" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Application Url", name: "link", widget: "string" }
+  - name: "techSkillsApplication"
+    label: "Tech Skills Applications"
+    folder: "src/markdown/tech-skills"
+    create: false
+    fields:
+      - { label: "Open", name: "open", widget: "boolean" }
+      - { label: "Description", name: "description", widget: "string" }
       - { label: "Application Url", name: "link", widget: "string" }

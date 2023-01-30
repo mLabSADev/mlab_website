@@ -11,20 +11,20 @@ module.exports = {
     address:
       "U8, Enterprise Building, The Innovation Hub, Mark Shuttleworth Street, Tshwane Pretoria, South Africa, 0087",
     telephone: "+27 012 844 0240",
-    description: `mLab South Africa is a registered Non-profit Organisation with Public Benefit Organisation status. We are a Level 1 B-BBEE service provider focusing on Ecosystem, Skills, Enterprise and Technology acceleration. We believe that when our youth are empowered with the right skills, resources and support, they can drive our economy forward. Our founding partners include the World Bank, the Ministry of Foreign Affairs of Finland, the Department of Science and Innovation, The Innovation Hub, and the CSIR.`,
+    description: `mLab is a tech-centred business that prepares innovators and entrepreneurs for opportunities within the digital economy. mLab is registered as a Not-for-Profit Company (NPC) with public benefit organisation (PBO) status and is a Level 1 B-BBEE service provider.`,
   },
   plugins: [
-    "gatsby-plugin-netlify-cms", //
-    "gatsby-plugin-sass", //
-    "gatsby-plugin-image", //
-    "gatsby-plugin-react-helmet", //
-    "gatsby-plugin-mdx", //
-    "gatsby-plugin-sharp", //
-    "gatsby-transformer-sharp", //
+    "gatsby-plugin-netlify-cms",
+    "gatsby-plugin-sass",
+    "gatsby-plugin-image",
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-mdx",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
     "gatsby-plugin-sitemap",
     `gatsby-plugin-offline`,
     {
-      resolve: "gatsby-plugin-manifest", //
+      resolve: "gatsby-plugin-manifest",
       options: {
         name: `mLab Southern Africa`,
         short_name: `mLab`,

@@ -1,5 +1,5 @@
 ---
-featureImage: ../../images/locations/limpopo-mlab.jpeg
+featureImage: ../../images/whatsapp-image-2023-01-23-at-13.49.21.jpeg
 path: /polokwane
 city: Polokwane
 order: 2

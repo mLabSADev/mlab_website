@@ -104,10 +104,9 @@ const IndexPage = ({ data }) => {
             const remove_invalid_5 = remove_invalid_4.replaceAll('"', "");
             const remove_invalid_6 = remove_invalid_5.replaceAll('"', "");
             const _path = remove_invalid_6.replaceAll(" ", "-");
-            console.log(item);
             return (
               <NewsCard
-                date={moment(item.node.frontmatter.date).format(
+                date={moment(item.node.frontmatter.timeStamp).format(
                   "DD MMMM, YYYY"
                 )}
                 key={i}
@@ -148,7 +147,7 @@ export const query = graphql`
             tags
             path
             title
-            date
+            timeStamp
             author
             featureImage {
               childImageSharp {
@@ -207,6 +206,7 @@ export const query = graphql`
     }
     whatWeDo: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/(wwdSections)/" } }
+      sort: { fields: frontmatter___priority, order: ASC }
     ) {
       edges {
         node {

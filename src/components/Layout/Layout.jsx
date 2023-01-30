@@ -14,6 +14,7 @@ import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { StaticQuery, graphql } from "gatsby";
 import "./style.scss";
 import Button from "../Button/Button";
+import { ChatBot } from "../ChatBot/ChatBot";
 
 export const ChatForm = ({ formState }) => {
   const [sentStatus, setSentStatus] = useState("");
@@ -72,36 +73,20 @@ export const ChatForm = ({ formState }) => {
         style={{ width: enlarge ? "500%" : "auto" }}
         className="motion-class"
       >
-        <div className="main-form-header">
+        <ChatBot />
+        {/* <div className="main-form-header">
           <Typography variant="h4">Chat to us</Typography>
-          {/* <div className="main-form-icons">
-            <div onClick={() => minimize()}>
-              <StaticImage
-                className="minimize"
-                objectFit="contain"
-                src="../../images/icons/minimize.png"
-                alt="minimize"
-              />
-            </div>
-            <div onClick={() => maximize()}>
-              <StaticImage
-                className="maximize"
-                objectFit="contain"
-                src="../../images/icons/maximize.png"
-                alt="maximize"
-              />
-            </div>
-          </div> */}
-        </div>
+        </div> */}
 
-        <Typography variant="b2">We'd love to hear from you.</Typography>
+        {/* <Typography variant="b2">We'd love to hear from you.</Typography>
         <FormControl variant="standard" fullWidth>
           <InputLabel id="enquiry">How can we help you?</InputLabel>
           <Select
             name="enquiry"
             id="enquiry"
             value={formValues.enquiry}
-            onChange={handleChange}>
+            onChange={handleChange}
+          >
             <StaticQuery
               query={graphql`
                 query Enquiry {
@@ -177,7 +162,7 @@ export const ChatForm = ({ formState }) => {
           type="button"
           variant="contained"
           color="success"
-        />
+        /> */}
         {sentStatus && (
           <div className={`form-message status-${sentStatus}`}>
             <Typography variant="b2" color="light">

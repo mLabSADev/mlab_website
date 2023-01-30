@@ -1,14 +1,15 @@
 ---
-featureImage: ../../images/start-your-day-with-a-posistive-mindset-shot-of-a-2022-09-27-02-29-52-utc.jpg
-path: /impact-through-technology
+priority: 3
 icon: ../../images/startups-green-icon.png
 email: sina@mlab.co.za
+featureImage: ../../images/start-your-day-with-a-posistive-mindset-shot-of-a-2022-09-27-02-29-52-utc.jpg
+path: /impact-through-technology
 summary: Launching Great Businesses
 shortText: Assisting early-stage start-ups to pursue their next growth opportunity
 thumb: ../../images/whatWeDo/nurturingtalent.png
 title: Tech Start-Ups
 link: impact-through-technology
-video: https://www.youtube.com/embed/e2mEltIWcAg
+video: https://www.youtube.com/embed/kQpp-3lD-Dc
 ---
 ![startup accelerator](../../images/screenshot-2022-11-04-075218.png)
 

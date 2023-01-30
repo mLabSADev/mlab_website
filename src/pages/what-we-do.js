@@ -106,6 +106,7 @@ const WhatWeDo = ({ data, location }) => {
             const img = getImage(card.node.frontmatter.featureImage);
             const title = card.node.frontmatter.title;
             const noSpaces = title.replaceAll(" ", "-");
+            console.log(title);
             return (
               <WhatWeDoCard
                 key={i}
@@ -155,6 +156,7 @@ export const query = graphql`
     }
     wwdSections: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/(wwdSections)/" } }
+      sort: {fields: frontmatter___priority, order: ASC}
     ) {
       edges {
         node {

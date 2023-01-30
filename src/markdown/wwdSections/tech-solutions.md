@@ -1,12 +1,14 @@
 ---
+priority: 4
 icon: ../../images/solutions-green-icon.png
 title: Tech Solutions
 email: melvin@mlab.co.za
 summary: Impact through Technology
 shortText: We help co-create digital solutions that address social and economic challenges
+video: https://www.youtube.com/embed/50UGhZ5O7j8
 featureImage: ../../images/smart-speaker-close-up-2022-03-09-03-01-44-utc.jpg
 ---
-![technology accelerator](../../images/1.png)
+![technology accelerator](../../images/1.jpg)
 
 mLab’s Innovation Lab is a creative space where our team supports digital solution development, especially those with a social impact focus.
 
