@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import "./news.scss";
-import Layout from "../components/Layout/Layout";
+import Layout from "../components/ChatBot/ChatBot";
 import Typography from "../components/Typography/Typography";
 import Section from "../components/Section/Section";
 import PageHeader from "../components/PageHeader/PageHeader";

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./main.scss";
-import { ChatBot } from "../components/ChatBot/ChatBot";
 import { graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 import CarouselSlider from "../components/Carousel/Carousel";
@@ -121,10 +120,10 @@ const IndexPage = ({ data }) => {
         <div className=""></div>
       </Section>
 
-      <div className="index-form">
+      {/* <div className="index-form">
         <SignupForm main={false}></SignupForm>
         <ChatBot />
-      </div>
+      </div> */}
     </Layout>
   );
 };

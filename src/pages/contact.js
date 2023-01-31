@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./contact.scss";
-import Layout from "../components/Layout/Layout";
+import Layout from "../components/ChatBot/ChatBot";
 import { graphql, StaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import PageHeader from "../components/PageHeader/PageHeader";
@@ -260,6 +260,10 @@ const Contact = ({ data }) => {
           </Section>
         );
       })}
+      <div className="index-form">
+        {/* <SignupForm main={false}></SignupForm> */}
+        {/* <ChatBot /> */}
+      </div>
     </Layout>
   );
 };

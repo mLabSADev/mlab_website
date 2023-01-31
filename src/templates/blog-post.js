@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import "./style.scss";
 import DisqusTemplate from "../components/disqus/index";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import Layout from "../components/Layout/Layout";
+import Layout from "../components/ChatBot/ChatBot";
 import Section from "../components/Section/Section";
 import Tag from "../components/Tag/Tag";
 import "./blog-post.scss";
@@ -113,6 +113,10 @@ export default function BlogPost({ data }) {
           <div></div>
         </div>
       </Section>
+      <div className="index-form">
+        {/* <SignupForm main={false}></SignupForm> */}
+        {/* <ChatBot /> */}
+      </div>
     </Layout>
   );
 }

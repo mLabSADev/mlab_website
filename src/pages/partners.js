@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./partners.scss";
-import Layout from "../components/Layout/Layout";
+import Layout from "../components/ChatBot/ChatBot";
 import { StaticImage, getImage, GatsbyImage } from "gatsby-plugin-image";
 import Section from "../components/Section/Section";
 import SectionTitle from "../components/SectionTitle/SectionTitle";

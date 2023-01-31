@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./resources.scss";
-import Layout from "../components/Layout/Layout";
+import Layout from "../components/ChatBot/ChatBot";
 import PageHeader from "../components/PageHeader/PageHeader";
 import Section from "../components/Section/Section";
 import Publication from "../components/Publication/Publication";
