@@ -83,7 +83,13 @@ const Layout = props => {
         <Footer />
       </div>
 
-      <div className="feedback-ui-button">
+      <div className="feedback-ui-button" onClick={() => {
+            if (openForm) {
+              close();
+            } else {
+              open();
+            }
+          }}>
         <AnimatePresence>
           {openForm && (
             <motion.div
@@ -118,13 +124,7 @@ const Layout = props => {
           />
         )}
         <div
-          onClick={() => {
-            if (openForm) {
-              close();
-            } else {
-              open();
-            }
-          }}
+          
           className={openForm ? 'chat-label-show' : 'chat-label-show'}>
           <Typography color="light" variant="b2">
             {openForm ? "close" : "Chat to us"}
