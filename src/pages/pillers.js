@@ -72,10 +72,10 @@ const Pillers = ({ data, location }) => {
   // const background = getImage(data.frontmatter.featureImage);
   const sectionData = data.allMarkdownRemark.edges;
   const theTech = data.theTech.edges;
-  const techStartupApplication = data.techStartupApplication.edges;
-  const techSkillsApplication = data.techSkillsApplication.edges;
-  const techSolutionsApplication = data.techSolutionsApplication.edges;
-
+  const techStartupApplication = data.techStartupApplication.frontmatter;
+  const techSkillsApplication = data.techSkillsApplication.frontmatter;
+  const techSolutionsApplication = data.techSolutionsApplication.frontmatter;
+  console.log(techStartupApplication);
   let width = typeof window !== "undefined" ? window.screen.width : 800;
   const resposiveWidth = 980;
   const url = location.pathname;
@@ -165,51 +165,34 @@ const Pillers = ({ data, location }) => {
               )}
 
               {/* techStartupApplication */}
-              {cleanSplit === "Tech Start-Ups" &&
-                techStartupApplication.map((item) => {
-                  const description = item.node.frontmatter.description;
-                  const link = item.node.frontmatter.description;
-                  const open = item.node.frontmatter.open;
-                  return (
-                    <CodeTribe
-                      title={cleanSplit}
-                      state={open}
-                      description={description}
-                      link={link}
-                    />
-                  );
-                })}
+              {cleanSplit === "Tech Start-Ups" && (
+                <CodeTribe
+                  title={cleanSplit}
+                  state={techStartupApplication.open}
+                  description={techStartupApplication.description}
+                  link={techStartupApplication.link}
+                />
+              )}
 
               {/* techSkillsApplication */}
-              {cleanSplit === "Tech Skills" &&
-                techSkillsApplication.map((item) => {
-                  const description = item.node.frontmatter.description;
-                  const link = item.node.frontmatter.description;
-                  const open = item.node.frontmatter.open;
-                  return (
-                    <CodeTribe
-                      title={cleanSplit}
-                      state={open}
-                      description={description}
-                      link={link}
-                    />
-                  );
-                })}
+              {cleanSplit === "Tech Skills" && (
+                <CodeTribe
+                  title={cleanSplit}
+                  state={techSkillsApplication.open}
+                  description={techSkillsApplication.description}
+                  link={techSkillsApplication.link}
+                />
+              )}
+
               {/* techSolutionsApplication */}
-              {cleanSplit === "Tech Solutions" &&
-                techSolutionsApplication.map((item) => {
-                  const description = item.node.frontmatter.description;
-                  const link = item.node.frontmatter.description;
-                  const open = item.node.frontmatter.open;
-                  return (
-                    <CodeTribe
-                      title={cleanSplit}
-                      state={open}
-                      description={description}
-                      link={link}
-                    />
-                  );
-                })}
+              {cleanSplit === "Tech Solutions" && (
+                <CodeTribe
+                  title={cleanSplit}
+                  state={techSolutionsApplication.open}
+                  description={techSolutionsApplication.description}
+                  link={techSolutionsApplication.link}
+                />
+              )}
 
               <Section>
                 <div className="reading">
@@ -328,44 +311,31 @@ export const query = graphql`
       }
     }
 
-    techStartupApplication: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/(tech-skills)/" } }
+    techStartupApplication: markdownRemark(
+      fileAbsolutePath: { regex: "/(tech-skills/index.md)/" }
     ) {
-      edges {
-        node {
-          frontmatter {
-            open
-            description
-            link
-          }
-        }
+      frontmatter {
+        description
+        link
+        open
       }
     }
-    techSkillsApplication: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/(tech-skills)/" } }
+    techSkillsApplication: markdownRemark(
+      fileAbsolutePath: { regex: "/(tech-skills/index.md)/" }
     ) {
-      edges {
-        node {
-          frontmatter {
-            open
-            description
-            link
-          }
-        }
+      frontmatter {
+        description
+        link
+        open
       }
     }
-    techSolutionsApplication: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/(tech-solution)/" } }
-      skip: 2
+    techSolutionsApplication: markdownRemark(
+      fileAbsolutePath: { regex: "/(tech-solution/index.md)/" }
     ) {
-      edges {
-        node {
-          frontmatter {
-            open
-            description
-            link
-          }
-        }
+      frontmatter {
+        description
+        link
+        open
       }
     }
   }
