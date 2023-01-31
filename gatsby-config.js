@@ -11,7 +11,7 @@ module.exports = {
     address:
       "U8, Enterprise Building, The Innovation Hub, Mark Shuttleworth Street, Tshwane Pretoria, South Africa, 0087",
     telephone: "+27 012 844 0240",
-    description: `mLab South Africa is a registered Non-profit Organisation with Public Benefit Organisation status. We are a Level 1 B-BBEE service provider focusing on Ecosystem, Skills, Enterprise and Technology acceleration. We believe that when our youth are empowered with the right skills, resources and support, they can drive our economy forward. Our founding partners include the World Bank, the Ministry of Foreign Affairs of Finland, the Department of Science and Innovation, The Innovation Hub, and the CSIR.`,
+    description: `mLab is a tech-centred business that prepares innovators and entrepreneurs for opportunities within the digital economy. mLab is registered as a Not-for-Profit Company (NPC) with public benefit organisation (PBO) status and is a Level 1 B-BBEE service provider.`,
   },
   plugins: [
     "gatsby-plugin-netlify-cms", //
@@ -28,7 +28,7 @@ module.exports = {
       options: {
         name: `mLab Southern Africa`,
         short_name: `mLab`,
-        description: `mLab Southern Africa is a registered Nonprofit organisation and Level 1 B-BBEE service provider focusing on Skills and Enterprise Development as well as Lean Innovation Facilitation and Supplier Development Support. We have proudly partnered with  founding partners The Ministry of Foreign Affairs of Finland, The Department of Science & Technology, The Innovation Hub, The CSIR, The V&A Waterfront and the World Bank`,
+        description: `mLab is a tech-centred business that prepares innovators and entrepreneurs for opportunities within the digital economy. mLab is registered as a Not-for-Profit Company (NPC) with public benefit organisation (PBO) status and is a Level 1 B-BBEE service provider.`,
         lang: `en`,
         display: `standalone`,
         icon: `src/images/icon.png`,
