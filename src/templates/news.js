@@ -23,7 +23,13 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
   let tags = [];
   news.forEach((element) => {
     let tag = element.node.frontmatter.tags;
-    tags = tags.concat(tag);
+    let cleanTags = [];
+    tag.map((item) => {
+      const remove_invalid_1 = item.replaceAll("_", " ");
+      const remove_invalid_2 = remove_invalid_1.replaceAll("-", " ");
+      cleanTags.push(remove_invalid_2);
+    });
+    tags = tags.concat(cleanTags);
   });
   useEffect(() => {
     (function (h, o, t, j, a, r) {
