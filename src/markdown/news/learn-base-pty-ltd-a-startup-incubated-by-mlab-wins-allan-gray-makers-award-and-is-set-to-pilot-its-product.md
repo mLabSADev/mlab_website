@@ -32,7 +32,11 @@ Ratlabala won R100 000 for his business, under the Innovation Phase category.
 
 ##### Effort on his part, going for it and finding the opportunity.
 
+
+
 ![Founder of Learn Base pty (LTD), Mokete Ratlabala.](../../images/mokete-image-2.jpg "Founder of Learn Base pty (LTD), Mokete Ratlabala.")
+
+
 
 Ratlabala was determined to get his business started, and he knocked on many doors to do so. “I was looking for resources to develop this product, so I approached a couple of organisations including mLab and TIA”, he said. TIA is the Technology Innovation Agency. 
 
