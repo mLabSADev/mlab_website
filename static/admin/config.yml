@@ -159,10 +159,30 @@ collections:
       - { label: "Thumb", name: "featureImage", widget: "image" }
       - { label: "Video Link", name: "video", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
-  - name: "codetribe"
-    label: "Tech Solutions"
-    folder: "src/markdown/tech-solutions"
+  - name: "tech-solution"
+    label: "Tech Solutions Application"
+    folder: "src/markdown/tech-solution"
     create: false
     fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
       - { label: "Open", name: "open", widget: "boolean" }
-      - { label: "Application Url", name: "link", widget: "string" }
+      - { label: "Link", name: "link", widget: "string" }
+  - name: "tech-skills"
+    label: "Tech Skills Application"
+    folder: "src/markdown/tech-skills"
+    create: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Open", name: "open", widget: "boolean" }
+      - { label: "Link", name: "link", widget: "string" }
+  - name: "tech-startups"
+    label: "Tech Startups Application"
+    folder: "src/markdown/tech-startups"
+    create: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Open", name: "open", widget: "boolean" }
+      - { label: "Link", name: "link", widget: "string" }
