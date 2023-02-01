@@ -16,6 +16,7 @@ import { navigate } from "gatsby";
 import Modal from "../components/Modal/Modal";
 import { AnimatePresence } from "framer-motion";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
+import { Helmet } from "react-helmet";
 
 export const SignupForm = ({ main, interests = [] }) => {
   const [sentStatus, setSentStatus] = useState("");
@@ -193,6 +194,7 @@ const Contact = ({ data }) => {
   const interest = data.wwdSections.edges;
   return (
     <Layout>
+      <Helmet title={'mLab | Contact Us'} />
       <PageHeader index={6} title="Contact Us" />
       <Section>
         <div className="form-wraper">

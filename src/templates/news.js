@@ -12,6 +12,7 @@ import { getImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 import Tag from "../components/Tag/Tag";
 import moment from "moment";
+import { Helmet } from "react-helmet";
 const News = ({ data, pageContext, numberOfAllPages = [] }) => {
   const { numberOfPages } = pageContext;
   for (let i = 0; i < numberOfPages; i++) {
@@ -41,6 +42,7 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
   }, []);
   return (
     <Layout>
+      <Helmet title={"mLab | News"} />
       <PageHeader
         title="news"
         text="Keep up to date with our latest calls for applications, opportunities, projects and success stories"
@@ -162,14 +164,14 @@ export const query = graphql`
               name
               childImageSharp {
                 id
-                gatsbyImageData(formats: [AUTO, WEBP], width: 1024)
+                gatsbyImageData(formats: [AUTO, WEBP], width: 1920)
               }
             }
             attachments {
               name
               childImageSharp {
                 id
-                gatsbyImageData(formats: [AUTO, WEBP], width: 350)
+                gatsbyImageData(formats: [AUTO, WEBP], width: 1920)
               }
             }
           }

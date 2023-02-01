@@ -6,6 +6,7 @@ import Section from "../components/Section/Section";
 import SectionTitle from "../components/SectionTitle/SectionTitle";
 import PageHeader from "../components/PageHeader/PageHeader";
 import { graphql } from "gatsby";
+import { Helmet } from "react-helmet";
 
 const Partners = ({ data }) => {
   const partners = data.partners;
@@ -29,6 +30,7 @@ const Partners = ({ data }) => {
   }, []);
   return (
     <Layout>
+      <Helmet title={"mLab | Partners"} />
       <PageHeader title="Partners" index={3} />
       <Section>
         <SectionTitle>Founding Partners</SectionTitle>

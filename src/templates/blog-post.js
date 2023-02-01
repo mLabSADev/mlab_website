@@ -59,12 +59,14 @@ export default function BlogPost({ data }) {
         )}
       </AnimatePresence>
       <div onClick={() => open()} class="image-b">
+        <div />
         <GatsbyImage
           class="image-bog"
           image={image}
           alt={title}
           objectFit="cover"
         />
+        <div />
       </div>
 
       <Section>

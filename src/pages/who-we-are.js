@@ -8,6 +8,7 @@ import SectionTitle from "../components/SectionTitle/SectionTitle";
 import Typography from "../components/Typography/Typography";
 import PageHeader from "../components/PageHeader/PageHeader";
 import Button from "../components/Button/Button";
+import { Helmet } from "react-helmet";
 
 export const WhatWeDoCard = ({
   image,
@@ -83,6 +84,7 @@ const WhoWeAre = ({ data }) => {
   const about = data.aboutMlab.html;
   return (
     <Layout>
+      <Helmet title="mLab | Who We Are" />
       <PageHeader title="WHO WE ARE" index={1} />
       <Section>
         <div className="about-page">
