@@ -27,7 +27,11 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
     tag.map((item) => {
       const remove_invalid_1 = item.replaceAll("_", " ");
       const remove_invalid_2 = remove_invalid_1.replaceAll("-", " ");
-      cleanTags.push(remove_invalid_2);
+      const tag = {
+        label: remove_invalid_2,
+        link: item,
+      };
+      cleanTags.push(tag);
     });
     tags = tags.concat(cleanTags);
   });
@@ -105,7 +109,9 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
               )}
               <div className="tag-list">
                 {tags.map((item, i) => {
-                  return item ? <Tag key={i} label={item} url={item} /> : null;
+                  return item.label ? (
+                    <Tag key={i} label={item.label} url={item.link} />
+                  ) : null;
                 })}
               </div>
             </div>

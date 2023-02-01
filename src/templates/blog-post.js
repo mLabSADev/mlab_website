@@ -95,9 +95,15 @@ export default function BlogPost({ data }) {
             <div className="tag-w">
               {tags &&
                 tags.map((t, i) => {
-                  const removeUnderscore = t.replaceAll('_', " ")
-                  const removeDash = removeUnderscore.replaceAll('-', " ")
-                  return t ? <Tag key={i} label={removeDash} url={t} /> : null;
+                  const removeUnderscore = t.replaceAll("_", " ");
+                  const removeDash = removeUnderscore.replaceAll("-", " ");
+                  const tag = {
+                    label: removeDash,
+                    link: t,
+                  };
+                  return tag.label ? (
+                    <Tag key={i} label={tag.label} url={tag.link} />
+                  ) : null;
                 })}
             </div>
           </div>
