@@ -22,12 +22,14 @@ The programme is accredited by the Institute of Information Technology Professio
 
 We are looking for passionate and committed young innovators, founders, next generation coders and digital creatives. If you believe you or somebody you know meet the below criteria, we encourage you to apply if calls are open, otherwise register on our database through Palesa the chatbot to be notified when calls open.
 
-The ideal candidates for this 6 - 12 month programme must have either:
+**The ideal candidates for this 6 - 12 month programme must have either:**
+
 - Be a South African citizen with a valid ID.
 - Be an unemployed youth/graduate between 18 to 35 years of age.
 - Reside within proximity of a CodeTribe Academy facility
 - Not have a criminal record.
 - Minimum 12 months IT qualification/ NQF level 5 (with programming background) e.g. Diploma in IT, Degree/B Tech/Honours in IT, Bcom Informatics (Information Systems) and/or Qualification in Mathematics/Statistics/Applied Mathematics or IT related field.
+
 Young South African females are encouraged to apply. Young people with disabilities are also encouraged to apply. Finally, students in their final year doing their work Integrated learning are also encouraged to apply.It is specifically noted that candidates with any of the above qualifications will have also completed Matric/Grade 12/ NQF level 4. Candidates with only this level of qualification will only be considered under special circumstances where they can produce sufficient evidence of software development experience in the form of portfolios or qualified references. The mLab believes in encouraging those without this level of qualification to first complete their Matric/Grade 12/NQF Level 4.
 
 Please note: Our Skills programme receives a large amount of applications when open. Hence, should you not hear back from us within a month of applying, please assume that your application was unsuccessful.
