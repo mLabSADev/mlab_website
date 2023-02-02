@@ -22,6 +22,7 @@ export default function BlogPost({ data }) {
     data.markdownRemark.frontmatter.featureImage &&
       data.markdownRemark.frontmatter.featureImage
   );
+  const banner = getImage(data.markdownRemark.frontmatter?.banner);
   const tags = data.markdownRemark.frontmatter.tags;
   const title = data.markdownRemark.frontmatter.title.replaceAll("-", " ");
   const html = data.markdownRemark.html;
@@ -62,7 +63,7 @@ export default function BlogPost({ data }) {
         <div />
         <GatsbyImage
           class="image-bog"
-          image={image}
+          image={banner ? image : banner}
           alt={title}
           objectFit="cover"
         />

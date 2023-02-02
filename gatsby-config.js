@@ -129,20 +129,7 @@ module.exports = {
         head: true,
       },
     },
-    {
-      resolve: "gatsby-plugin-firebase",
-      options: {
-        credentials: {
-          apiKey: "AIzaSyD115GptMK3aCUu3pu0hFqNJuStQ_ctRKI",
-          authDomain: "mlabwebsite.firebaseapp.com",
-          projectId: "mlabwebsite",
-          storageBucket: "mlabwebsite.appspot.com",
-          messagingSenderId: "870711052956",
-          appId: "1:870711052956:web:6dde9253bc6a5129cafb59",
-          measurementId: "G-VEM9BZWE33",
-        },
-      },
-    },
+
     {
       resolve: `gatsby-plugin-disqus`,
       options: {

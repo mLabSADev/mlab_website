@@ -70,6 +70,7 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
               {data.allMarkdownRemark.edges.map((entry, i) => {
                 // clean later
                 const img = getImage(entry.node.frontmatter.featureImage);
+                
                 const title = entry.node.frontmatter.title;
 
                 const excerpt = entry.node.excerpt;

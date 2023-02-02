@@ -16,7 +16,8 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Author", name: "author", widget: "string" }
       - { label: "Date", name: "timeStamp", widget: "date" }
-      - { label: "Image", name: "featureImage", widget: "image" }
+      - { label: "Thumbnail", name: "featureImage", widget: "image" }
+      - { label: "Banner", name: "banner", widget: "image" }
       - {
           label: "Category",
           name: "category",
