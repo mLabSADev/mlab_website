@@ -1,8 +1,8 @@
 backend:
   name: git-gateway
   branch: master
-
-site_url: https://mobilelab.netlify.app/
+# https://mobilelab.netlify.app/
+site_url: https://mlab.co.za/
 
 media_folder: src/images
 public_folder: ../../images
