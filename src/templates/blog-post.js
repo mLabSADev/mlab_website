@@ -63,7 +63,7 @@ export default function BlogPost({ data }) {
         <div />
         <GatsbyImage
           class="image-bog"
-          image={banner ? image : banner}
+          image={banner ? banner : image}
           alt={title}
           objectFit="cover"
         />

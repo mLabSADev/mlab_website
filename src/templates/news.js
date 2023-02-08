@@ -12,7 +12,7 @@ import { getImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 import Tag from "../components/Tag/Tag";
 import moment from "moment";
-import { Helmet } from "react-helmet";
+// import { Helmet } from "react-helmet";
 const News = ({ data, pageContext, numberOfAllPages = [] }) => {
   const { numberOfPages } = pageContext;
   for (let i = 0; i < numberOfPages; i++) {
@@ -52,7 +52,7 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
   }, []);
   return (
     <Layout>
-      <Helmet title={"mLab | News"} />
+      {/* <Helmet title={"mLab | News"} /> */}
       <PageHeader
         title="news"
         text="Keep up to date with our latest calls for applications, opportunities, projects and success stories"

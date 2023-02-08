@@ -15,7 +15,7 @@ import { AnimatePresence } from "framer-motion";
 import TechCard from "../components/TextCard/TechCard";
 import Pillers from "./pillers";
 import { WhatWeDoCard } from "./who-we-are";
-import { Helmet } from "react-helmet";
+// import { Helmet } from "react-helmet";
 
 const WhatWeDo = ({ data, location }) => {
   const [modalOpen, setModalOpen] = useState({ title: "", state: false });
@@ -69,7 +69,7 @@ const WhatWeDo = ({ data, location }) => {
   }, []);
   return (
     <Layout>
-      <Helmet title={'mLab | What we do'} />
+      {/* <Helmet title={'mLab | What we do'} /> */}
       <AnimatePresence initial={false} exitBeforeEnter={true}>
         {/* {modalOpen.state && (
           <Modal modalOpen={modalOpen.state} handleClose={close}>

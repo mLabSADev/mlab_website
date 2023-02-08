@@ -14,7 +14,7 @@ import { AnimatePresence } from "framer-motion";
 import moment from "moment";
 import { WhatWeDoCard } from "./who-we-are";
 import Layout from "../components/ChatBot/ChatBot";
-import { Helmet } from "react-helmet";
+// import { Helmet } from "react-helmet";
 const IndexPage = ({ data }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const close = () => setModalOpen(false);
@@ -41,7 +41,7 @@ const IndexPage = ({ data }) => {
   }, []);
   return (
     <Layout>
-      <Helmet title={'mLab | Home'} />
+      {/* <Helmet title={'mLab | Home'} /> */}
       <AnimatePresence
         initial={false}
         exitBeforeEnter={true}
