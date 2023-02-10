@@ -22,7 +22,7 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
   const news = data.allMarkdownRemark.edges;
   let tags = [];
   news.forEach((element) => {
-    let tag = element.node.frontmatter.tags;
+    let tag = element.node.frontmatter.tags || [];
     let cleanTags = [];
     tag.map((item) => {
       const remove_invalid_1 = item.replaceAll("_", " ");
@@ -48,7 +48,7 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
       r.async = 1;
       r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
       a.appendChild(r);
-    })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    })(window, document, "https:static.hotjar.com/c/hotjar-", ".js?sv=");
   }, []);
   return (
     <Layout>
@@ -102,20 +102,20 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
               <Typography variant="h5">Tags</Typography>
             </div>
 
-            <div className="tags">
-              {tags.length == 0 && (
-                <div className="empty-tags">
-                  <Typography variant="b1">No tags for this page.</Typography>
-                </div>
-              )}
-              <div className="tag-list">
-                {tags.map((item, i) => {
-                  return item.label ? (
-                    <Tag key={i} label={item.label} url={item.link} />
-                  ) : null;
-                })}
-              </div>
-            </div>
+            {/* <div className="tags"> */}
+            {/*   {tags.length == 0 && ( */}
+            {/*     <div className="empty-tags"> */}
+            {/*       <Typography variant="b1">No tags for this page.</Typography> */}
+            {/*     </div> */}
+            {/*   )} */}
+            {/*   <div className="tag-list"> */}
+            {/*     {tags.map((item, i) => { */}
+            {/*       return item.label ? ( */}
+            {/*         <Tag key={i} label={item.label} url={item.link} /> */}
+            {/*       ) : null; */}
+            {/*     })} */}
+            {/*   </div> */}
+            {/* </div> */}
           </div>
         </div>
 
