@@ -44,7 +44,7 @@ const NewsCard = ({ image, title, excerpt, url, date }) => {
         style={{
           padding: "1px",
           background:
-            "radial-gradient(circle, rgba(93,145,0,1) 0%, rgba(54,80,0,1) 41%, rgba(107,159,0,1) 47%, rgba(110,164,0,1) 47%, rgba(60,89,0,1) 49%, rgba(85,121,9,1) 51%, rgba(108,255,0,1) 100%)",
+            "radial-gradient(circle, rgba(219,255,154,1) 0%, rgba(203,255,95,1) 41%, rgba(141,198,25,1) 47%, rgba(110,164,0,1) 47%, rgba(172,255,0,1) 49%, rgba(213,255,124,1) 51%, rgba(245,255,238,1) 100%)",
         }}
       >
         {image ? (

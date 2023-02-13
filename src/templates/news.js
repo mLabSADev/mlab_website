@@ -70,7 +70,7 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
               {data.allMarkdownRemark.edges.map((entry, i) => {
                 // clean later
                 const img = getImage(entry.node.frontmatter.featureImage);
-                
+
                 const title = entry.node.frontmatter.title;
 
                 const excerpt = entry.node.excerpt;
@@ -102,20 +102,20 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
               <Typography variant="h5">Tags</Typography>
             </div>
 
-            {/* <div className="tags"> */}
-            {/*   {tags.length == 0 && ( */}
-            {/*     <div className="empty-tags"> */}
-            {/*       <Typography variant="b1">No tags for this page.</Typography> */}
-            {/*     </div> */}
-            {/*   )} */}
-            {/*   <div className="tag-list"> */}
-            {/*     {tags.map((item, i) => { */}
-            {/*       return item.label ? ( */}
-            {/*         <Tag key={i} label={item.label} url={item.link} /> */}
-            {/*       ) : null; */}
-            {/*     })} */}
-            {/*   </div> */}
-            {/* </div> */}
+            <div className="tags">
+              {tags.length == 0 && (
+                <div className="empty-tags">
+                  <Typography variant="b1">No tags for this page.</Typography>
+                </div>
+              )}
+              <div className="tag-list">
+                {tags.map((item, i) => {
+                  return item.label ? (
+                    <Tag key={i} label={item.label} url={item.link} />
+                  ) : null;
+                })}
+              </div>
+            </div>
           </div>
         </div>
 
