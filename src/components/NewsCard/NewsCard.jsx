@@ -49,7 +49,7 @@ const NewsCard = ({ image, title, excerpt, url, date }) => {
       >
         {image ? (
           <GatsbyImage
-            objectFit="contain"
+            objectFit="cover"
             image={image}
             backgroundColor={"rgba(93,145,0,0)"}
             alt={title}

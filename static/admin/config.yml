@@ -14,7 +14,12 @@ collections:
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Author", name: "author", widget: "string" }
+      - name: author
+        label: Author
+        widget: relation
+        collection: team
+        searchFields: [name]
+        valueField: name
       - { label: "Date", name: "timeStamp", widget: "date" }
       - { label: "Thumbnail", name: "featureImage", widget: "image" }
       - { label: "Banner", name: "banner", widget: "image" }
