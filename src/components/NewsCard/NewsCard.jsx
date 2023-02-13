@@ -40,20 +40,29 @@ const NewsCard = ({ image, title, excerpt, url, date }) => {
       variants={squareVariants}
       className="main-nc"
     >
-      {image ? (
-        <GatsbyImage
-          objectFit="cover"
-          image={image}
-          alt={title}
-          className="image-nc"
-        ></GatsbyImage>
-      ) : (
-        <StaticImage
-          src="../../assets/placeholder.jpg"
-          className="image-nc"
-          alt="no image"
-        />
-      )}
+      <div
+        style={{
+          padding: "1px",
+          background:
+            "radial-gradient(circle, rgba(93,145,0,1) 0%, rgba(54,80,0,1) 41%, rgba(107,159,0,1) 47%, rgba(110,164,0,1) 47%, rgba(60,89,0,1) 49%, rgba(85,121,9,1) 51%, rgba(108,255,0,1) 100%)",
+        }}
+      >
+        {image ? (
+          <GatsbyImage
+            objectFit="contain"
+            image={image}
+            backgroundColor={"rgba(93,145,0,0)"}
+            alt={title}
+            className="image-nc"
+          ></GatsbyImage>
+        ) : (
+          <StaticImage
+            src="../../assets/placeholder.jpg"
+            className="image-nc"
+            alt="no image"
+          />
+        )}
+      </div>
 
       <div className="details-nc">
         <Typography variant="h6">{date}</Typography>
