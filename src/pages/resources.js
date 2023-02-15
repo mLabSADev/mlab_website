@@ -5,7 +5,7 @@ import PageHeader from "../components/PageHeader/PageHeader";
 import Section from "../components/Section/Section";
 import Publication from "../components/Publication/Publication";
 import Typography from "../components/Typography/Typography";
-// import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet";
 const Resources = () => {
   const pubs = [
     {
@@ -34,7 +34,7 @@ const Resources = () => {
   }, []);
   return (
     <Layout>
-      {/* <Helmet title={'mLab | Resources'} /> */}
+      <Helmet title={'mLab | Resources'} />
       <PageHeader index={5} title="resources" />
       <Section>
         <iframe

@@ -8,44 +8,23 @@ media_folder: src/images
 public_folder: ../../images
 
 collections:
-  - name: "news"
-    label: "News"
-    folder: "src/markdown/news"
+  - name: "banners"
+    label: "Banners"
+    folder: "src/markdown/banners"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - name: author
-        label: Author
-        widget: relation
-        collection: team
-        searchFields: [name]
-        valueField: name
-      - { label: "Date", name: "timeStamp", widget: "date" }
-      - { label: "Thumbnail", name: "featureImage", widget: "image" }
-      - { label: "Banner", name: "banner", widget: "image" }
-      - {
-          label: "Category",
-          name: "category",
-          widget: "select",
-          options: ["Talent", "Startup", "Entrepreneurship"],
-        }
-      - { label: "Tag(s)", name: "tags", widget: "list" }
-      - { label: "Body", name: "body", widget: "markdown" }
-  - name: "theTech"
-    label: "Tech"
-    folder: "src/markdown/theTech"
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Registration", name: "registration", widget: "string" }
+      - { label: "Body", name: "body", widget: "string" }
+  - name: "aboutUs"
+    label: "About Us"
+    folder: "src/markdown/about-mlab"
     create: true
     fields:
-      - { label: "App Name", name: "appName", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "App Icon", name: "icon", widget: "image", choose_url: true }
-      - {
-          label: "Screenshot",
-          name: "screenshot",
-          widget: "image",
-          allow_multiple: false,
-          choose_url: true,
-        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image", name: "thumb", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
   - name: "team"
     label: "Team"
     folder: "src/markdown/team"
@@ -59,111 +38,6 @@ collections:
           widget: "image",
           choose_url: true,
         }
-      - { label: "Body", name: "body", widget: "markdown" }
-  - name: "locations"
-    label: "Locations"
-    folder: "src/markdown/locations"
-    create: true
-    fields:
-      - { label: "City", name: "city", widget: "string" }
-      - { label: "Province", name: "province", widget: "string" }
-      - { label: "Image", name: "featureImage", widget: "image" }
-      - { label: "Location", name: "location", widget: "string" }
-      - { label: "Programmes", name: "programmes", widget: "list" }
-      - { label: "Telephone", name: "tel", widget: "string" }
-      - { label: "Physical Address", name: "physicalAddress", widget: "string" }
-      - { label: "Email", name: "email", widget: "string" }
-      - { label: "Description", name: "description", widget: "markdown" }
-  - name: "aboutUs"
-    label: "About Us"
-    folder: "src/markdown/about-mlab"
-    create: true
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "thumb", widget: "image" }
-      - { label: "Body", name: "body", widget: "markdown" }
-  - name: "wwdSections"
-    label: What We Do Sections
-    folder: "src/markdown/wwdSections"
-    create: true
-    fields:
-      - { label: "Icon", name: "icon", widget: "image" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Contact Emain", name: "email", widget: "string" }
-      - { label: "Summary", name: "summary", widget: "string" }
-      - { label: "Short Text", name: "shortText", widget: "string" }
-      - { label: "Background", name: "featureImage", widget: "image" }
-      - { label: "Body", name: "body", widget: "markdown" }
-  - name: "mcollaboration"
-    label: Partners
-    folder: "src/markdown/mcollaboration"
-    create: false
-    fields:
-      - { label: "Body", name: "body", widget: "markdown" }
-  - name: "provincialPartners"
-    label: "Provincial Partners"
-    folder: "src/markdown/provincial-partners"
-    create: true
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Thumb", name: "thumb", widget: "image" }
-  - name: "partnershipContacts"
-    label: "Partnership Contacts"
-    folder: "src/markdown/partnershipContacts"
-    create: true
-    fields:
-      - { label: "Enquiry", name: "enquiry", widget: "string" }
-      - { label: "Employee Contact", name: "contact", widget: "string" }
-  - name: "publications"
-    label: "Publications"
-    folder: "src/markdown/publications"
-    create: true
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Link", name: "link", widget: "link" }
-      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
-      - {
-          label: "Can embed?",
-          name: "embed",
-          widget: "boolean",
-          default: false,
-        }
-  - name: "barStats"
-    label: "Impact Bar Stats"
-    folder: "src/markdown/impactBarStats"
-    create: true
-    fields:
-      - { label: "Label", name: "label", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Icon", name: "image", widget: "image" }
-      - {
-          label: "Percentage",
-          name: "percentage",
-          widget: "number",
-          value_type: "int",
-          default: 1,
-          min: 1,
-          max: 100,
-          step: 1,
-        }
-  - name: "banners"
-    label: "Banners"
-    folder: "src/markdown/banners"
-    create: true
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "image" }
-      - { label: "Registration", name: "registration", widget: "string" }
-      - { label: "Body", name: "body", widget: "string" }
-  - name: "whatWeDo"
-    label: "whatWeDo"
-    folder: "src/markdown/whatWeDo"
-    create: true
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Excerpt", name: "excerpt", widget: "string" }
-      - { label: "Thumb", name: "featureImage", widget: "image" }
-      - { label: "Video Link", name: "video", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "tech-solution"
     label: "Tech Solutions Application"
@@ -192,3 +66,79 @@ collections:
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Open", name: "open", widget: "boolean" }
       - { label: "Link", name: "link", widget: "string" }
+  - name: "wwdSections"
+    label: What We Do Sections
+    folder: "src/markdown/wwdSections"
+    create: true
+    fields:
+      - { label: "Icon", name: "icon", widget: "image" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Contact Emain", name: "email", widget: "string" }
+      - { label: "Summary", name: "summary", widget: "string" }
+      - { label: "Short Text", name: "shortText", widget: "string" }
+      - { label: "Background", name: "featureImage", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "theTech"
+    label: "Tech"
+    folder: "src/markdown/theTech"
+    create: true
+    fields:
+      - { label: "App Name", name: "appName", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "App Icon", name: "icon", widget: "image", choose_url: true }
+      - {
+          label: "Screenshot",
+          name: "screenshot",
+          widget: "image",
+          allow_multiple: false,
+          choose_url: true,
+        }
+  - name: "foundingPartners"
+    label: "Founding Partners"
+    folder: "src/markdown/founding-partners"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Thumb", name: "thumb", widget: "image" }
+  - name: "partners"
+    label: "Partners Content"
+    folder: "src/markdown/mcollaboration"
+    create: false
+    fields:
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "partnershipContacts"
+    label: "Partnership Contacts"
+    folder: "src/markdown/partnershipContacts"
+    create: true
+    fields:
+      - { label: "Priority", name: "priprity", widget: "number" }
+      - { label: "Enquiry", name: "enquiry", widget: "string" }
+      - { label: "Employee Contact", name: "contact", widget: "string" }
+  - name: "publications"
+    label: "Publications"
+    folder: "src/markdown/publications"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Link", name: "link", widget: "link" }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
+      - {
+          label: "Can embed?",
+          name: "embed",
+          widget: "boolean",
+          default: false,
+        }
+  - name: "locations"
+    label: "Locations"
+    folder: "src/markdown/locations"
+    create: true
+    fields:
+      - { label: "City", name: "city", widget: "string" }
+      - { label: "Province", name: "province", widget: "string" }
+      - { label: "Image", name: "featureImage", widget: "image" }
+      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Programmes", name: "programmes", widget: "list" }
+      - { label: "Telephone", name: "tel", widget: "string" }
+      - { label: "Physical Address", name: "physicalAddress", widget: "string" }
+      - { label: "Email", name: "email", widget: "string" }
+      - { label: "Description", name: "description", widget: "markdown" }

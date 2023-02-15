@@ -14,7 +14,7 @@ import Modal from "../components/Modal/Modal";
 import { AnimatePresence } from "framer-motion";
 import TechCard from "../components/TextCard/TechCard";
 import { WhatWeDoCard } from "./who-we-are";
-// import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet";
 const CodeTribe = ({ state = false, link, title, description }) => {
   return (
     <div className="codeTribe">
@@ -100,7 +100,7 @@ const Pillers = ({ data, location }) => {
   }, []);
   return (
     <Layout>
-      {/* <Helmet title={`mLab | ${cleanSplit}`} /> */}
+      <Helmet title={`mLab | ${cleanSplit}`} />
       {sectionData.map((node, i) => {
         const title = cleanSplit;
         const background = getImage(node.node.frontmatter.featureImage);
