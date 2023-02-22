@@ -2,7 +2,7 @@
 title: "MEDIA STATEMENT: mLab delivers a short Internet of Things training
   programme to develop work-ready youth for the digital economy"
 author: Zukanye Madakana
-timeStamp: 2023-02-23T20:45:52.355Z
+timeStamp: 2023-02-22T20:55:39.658Z
 featureImage: ../../images/pr-statement-thumbnail-2.png
 category: Tech Skills
 tags:
