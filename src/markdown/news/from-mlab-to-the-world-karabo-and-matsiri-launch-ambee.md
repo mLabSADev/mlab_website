@@ -1,13 +1,23 @@
 ---
-path: "/from-mlab-to-the-world-karabo-and-matsiri-launch-ambee" 
-date: 2022-04-06T16:25:47 
-title: "From mLab to the world: Meet the youngest CEO and COO" 
-featureImage: "../../images/Karabo-Matsiri.jpeg"
-thumb: "../../images/placeholder.png" 
-abstract:  
-tags: [] 
-timeStamp: 2022-04-06T16:25:47 
-categories: ['News'] 
+abstract: null
+featureImage: ../../images/Karabo-Matsiri.jpeg
+path: /from-mlab-to-the-world-karabo-and-matsiri-launch-ambee
+author: Zukanye Madakana
+date: 2022-04-06T16:25:47
+timeStamp: 2022-04-06T16:25:47
+thumb: ../../images/placeholder.png
+title: "From mLab to the world: Karabo and Matsiri are pushing for
+  entrepreneurial success"
+category: Tech Start-ups
+tags:
+  - StartUps
+  - Entrepreneurship
+  - YouthEmpowerment
+  - BusinessDevelopment
+  - YouthEntrepreneurs
+  - StartUpAccelerator
+categories:
+  - News
 ---
 
 <p>&nbsp;</p>
