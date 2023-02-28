@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./partners.scss";
 import Layout from "../components/ChatBot/ChatBot";
-import { StaticImage, getImage, GatsbyImage } from "gatsby-plugin-image";
+import { StaticImage } from "gatsby-plugin-image";
 import Section from "../components/Section/Section";
 import SectionTitle from "../components/SectionTitle/SectionTitle";
 import PageHeader from "../components/PageHeader/PageHeader";
@@ -10,7 +10,7 @@ import { graphql } from "gatsby";
 
 const Partners = ({ data }) => {
   const partners = data.partners;
-  const provincialPartners = data.provincialPartners.edges;
+  // const provincialPartners = data.provincialPartners.edges;
   const foundingPartners = data.provincialPartners.edges;
   useEffect(() => {
     console.log(foundingPartners);

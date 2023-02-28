@@ -1,19 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./pillers.scss";
 import Layout from "../components/ChatBot/ChatBot";
-import { StaticQuery, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import Button from "../components/Button/Button";
 import Typography from "../components/Typography/Typography";
-import PageHeader from "../components/PageHeader/PageHeader";
 import SectionTitle from "../components/SectionTitle/SectionTitle";
 import Section from "../components/Section/Section";
-import CategoryStats from "../components/CategoryStats/CategoryStats";
-import ProgressStatistic from "../components/ProgressStatistic/ProgressStatistic";
-import Modal from "../components/Modal/Modal";
-import { AnimatePresence } from "framer-motion";
 import TechCard from "../components/TextCard/TechCard";
-import { WhatWeDoCard } from "./who-we-are";
 // import { Helmet } from "react-helmet";
 const CodeTribe = ({ state = false, link, title, description }) => {
   return (
@@ -41,7 +35,7 @@ const CodeTribe = ({ state = false, link, title, description }) => {
         ></iframe> */}
       </div>
       <div className="codeTribe-details">
-        {state ? (
+        {/* {state ? (
           <Typography variant="h3" color="light">
             Applications Open
           </Typography>
@@ -49,8 +43,8 @@ const CodeTribe = ({ state = false, link, title, description }) => {
           <Typography variant="h3" color="light">
             Applications Closed
           </Typography>
-        )}
-        <Typography variant="h6" color="light">
+        )} */}
+        <Typography variant="h3" color="light">
           {title}
         </Typography>
         <Typography variant="b2" color="light">

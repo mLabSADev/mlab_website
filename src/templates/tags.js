@@ -10,7 +10,6 @@ import { getImage } from "gatsby-plugin-image";
 import Tag from "../components/Tag/Tag";
 
 export default function TaggedPosts({ data, pageContext }) {
-
   // detect change
   const { tag } = pageContext;
   const news = data.allMarkdownRemark.nodes;

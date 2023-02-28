@@ -19,7 +19,12 @@ module.exports = {
     "gatsby-plugin-image", //
     // "gatsby-plugin-react-helmet", //
     "gatsby-plugin-mdx", //
-    "gatsby-plugin-sharp", //
+    {
+      resolve: "gatsby-plugin-sharp",
+      options: {
+        breakpoints: [750, 1080, 1366, 1920],
+      },
+    },
     "gatsby-transformer-sharp", //
     "gatsby-plugin-sitemap",
     `gatsby-plugin-offline`,

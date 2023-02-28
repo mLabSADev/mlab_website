@@ -52,7 +52,11 @@ const PageHeader = ({ image, title, page, index = 0, text }) => {
         <Typography variant="h3" color="light">
           {title.toUpperCase()}
         </Typography>
-        <Typography variant="b2" color="light">{text}</Typography>
+        <div className="sectionTitleDescription">
+          <Typography variant="b2" color="light">
+            {text}
+          </Typography>
+        </div>
       </div>
     </div>
   );

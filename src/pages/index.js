@@ -7,10 +7,6 @@ import Section from "../components/Section/Section";
 import NewsCard from "../components/NewsCard/NewsCard";
 import SectionTitle from "../components/SectionTitle/SectionTitle";
 import Typography from "../components/Typography/Typography";
-import TechCard from "../components/TextCard/TechCard";
-import Modal from "../components/Modal/Modal";
-import { SignupForm } from "./contact";
-import { AnimatePresence } from "framer-motion";
 import moment from "moment";
 import { WhatWeDoCard } from "./who-we-are";
 import Layout from "../components/ChatBot/ChatBot";
@@ -18,12 +14,10 @@ import Layout from "../components/ChatBot/ChatBot";
 const IndexPage = ({ data }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const close = () => setModalOpen(false);
-  const open = () => setModalOpen(true);
   const news = data.news.edges;
 
   const banners = data.banners.edges;
   const newsHeader = data.newsHeader.frontmatter.position;
-  const newsAbstr = data.newsHeader.frontmatter.abstract;
   useEffect(() => {
     (function (h, o, t, j, a, r) {
       h.hj =
@@ -41,18 +35,6 @@ const IndexPage = ({ data }) => {
   }, []);
   return (
     <Layout>
-      {/* <Helmet title={'mLab | Home'} /> */}
-      <AnimatePresence
-        initial={false}
-        exitBeforeEnter={true}
-        onExitComplete={() => null}
-      >
-        {modalOpen && (
-          <Modal modalOpen={modalOpen} handleClose={close}>
-            <Typography variant="h2">Hello World</Typography>
-          </Modal>
-        )}
-      </AnimatePresence>
       <CarouselSlider data={banners} />
 
       <Section>

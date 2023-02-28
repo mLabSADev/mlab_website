@@ -2,30 +2,18 @@ import React, { useState, useEffect } from "react";
 import "./what-we-do.scss";
 import Layout from "../components/ChatBot/ChatBot";
 import { graphql } from "gatsby";
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
-import Button from "../components/Button/Button";
+import { getImage } from "gatsby-plugin-image";
 import Typography from "../components/Typography/Typography";
 import PageHeader from "../components/PageHeader/PageHeader";
 import SectionTitle from "../components/SectionTitle/SectionTitle";
 import Section from "../components/Section/Section";
-import CategoryStats from "../components/CategoryStats/CategoryStats";
 import ProgressStatistic from "../components/ProgressStatistic/ProgressStatistic";
-import Modal from "../components/Modal/Modal";
 import { AnimatePresence } from "framer-motion";
-import TechCard from "../components/TextCard/TechCard";
-import Pillers from "./pillers";
 import { WhatWeDoCard } from "./who-we-are";
 // import { Helmet } from "react-helmet";
 
 const WhatWeDo = ({ data, location }) => {
-  const [modalOpen, setModalOpen] = useState({ title: "", state: false });
-  const [activeSection, setActiveSection] = useState({});
-  const [isMouseOver, setMouseOver] = useState(false);
-  const sectionData = data.wwdSections.edges;
-  const close = () => setModalOpen({ state: false, title: "" });
-  const open = (section) => setModalOpen({ state: true, title: section });
   const impactBarStats = data.impactBarStats.edges;
-  const stats = data.stats.edges;
 
   // useEffect(() => {
   //   setTimeout(() => {
@@ -158,7 +146,7 @@ export const query = graphql`
     }
     wwdSections: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/(wwdSections)/" } }
-      sort: {fields: frontmatter___priority, order: ASC}
+      sort: { fields: frontmatter___priority, order: ASC }
     ) {
       edges {
         node {
