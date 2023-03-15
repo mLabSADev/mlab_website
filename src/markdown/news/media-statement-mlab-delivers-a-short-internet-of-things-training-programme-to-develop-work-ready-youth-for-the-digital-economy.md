@@ -6,13 +6,13 @@ timeStamp: 2023-02-24T10:56:36.876Z
 featureImage: ../../images/thumbanail-girls-.png
 category: Tech Skills
 tags:
-  - YouthDevelpment
+  - Youth Development
   - IoT
-  - InternetofThings
-  - YouthEmpowerment
+  - Internet of Things
+  - Youth Empowerment
   - 4IR
-  - FourthIndustrialRevolution
-  - SkillsDevelopment
+  - Fourth Industrial Revolution
+  - Skills Development
   - TechSkills
 ---
 A partnership between mLab and the Media, Information and Communication Technologies Sector Education and Training Authority (MICT SETA) was established through the signing of a Memorandum of Agreement in 2022, to empower South African youth with skills that are necessary in the Fourth Industrial Revolution (4IR)  and beyond.
