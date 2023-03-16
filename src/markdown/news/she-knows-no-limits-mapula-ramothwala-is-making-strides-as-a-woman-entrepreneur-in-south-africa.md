@@ -18,6 +18,8 @@ She has a passion for working with young children which she says drives her to c
 
 Unfortunately, she could not get this business idea off the ground, she then identified a different issue to solve. She mothers a young boy who plays soccer whom she says had body odour issues and she could not find products that were suitable for his age group. From conducting research it turned out that most kids were facing the same issue and parents did not know what to do, and from there, her company Kiddo Cool was born. Kiddo Cool is a children's cosmetic brand that sells antiperspirant products; foot powder, antiperspirant spray, and roll-on.   
 
+![CEO of Kiddo Cool showcasing the products. ](../../images/71eefbe4ddec49c29ef76ccfa9af039f.jpg "CEO of Kiddo Cool showcasing the products. ")
+
 ### **"So many people did not believe in me"**
 
 ![Kiddo Cool CEO, Mapula Ramothwala presenting her business at mLab’s 2022 Skills and StartUp graduation ceremony. ](../../images/mapula-3.jpg "Kiddo Cool CEO, Mapula Ramothwala presenting her business at mLab’s 2022 Skills and StartUp graduation ceremony. ")
