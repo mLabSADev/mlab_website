@@ -22,11 +22,11 @@ Unfortunately, she could not get this business idea off the ground, she then ide
 
 ### **"So many people did not believe in me"**
 
-![Kiddo Cool CEO, Mapula Ramothwala presenting her business at mLab’s 2022 Skills and StartUp graduation ceremony. ](../../images/mapula-3.jpg "Kiddo Cool CEO, Mapula Ramothwala presenting her business at mLab’s 2022 Skills and StartUp graduation ceremony. ")
-
 The number of women business owners in South Africa is growing, according to the  Mastercard Index of Women Entrepreneurs (MIWE) about 19.4% of SA businesses are owned by women. This is a slight 0.2% increase since 2019. 
 
 Just like Ramothwala, while women entrepreneurs are making the progress they still continue to face gender-related challenges. "Sometimes we are not taken seriously, some people did not trust my products because I'm a black woman", said Ramothwala. Other people used to tell Ramothwala to find a job and stop dreaming. 
+
+![Kiddo Cool CEO, Mapula Ramothwala presenting her business at mLab’s 2022 Skills and StartUp graduation ceremony. ](../../images/mapula-3.jpg "Kiddo Cool CEO, Mapula Ramothwala presenting her business at mLab’s 2022 Skills and StartUp graduation ceremony. ")
 
 However, she chose to not listen to such noise but to focus on building her business. That came with more challenges such as access to funding to commercialise, networking opportunities, etc. Luckily, mLab assisted Ramothwala with seed funding which she used to market her business. mLab also helped her conceptualise a mobile application for her business, she now has a prototype that is yet to be developed. 
 
