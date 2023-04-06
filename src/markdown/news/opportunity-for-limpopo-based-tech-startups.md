@@ -2,7 +2,7 @@
 title: "Opportunity for Limpopo-based tech startups "
 author: Zukanye Madakana
 timeStamp: 2023-04-06T14:51:03.035Z
-featureImage: ../../images/agritourza-2023-applications-thumbnail-.png
+featureImage: ../../images/agritourza-bootcamp-thumbnail-.png
 category: Tech Start-ups
 tags:
   - StartUpAccelerator
