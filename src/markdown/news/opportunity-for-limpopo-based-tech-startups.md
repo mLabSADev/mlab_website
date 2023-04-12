@@ -48,7 +48,7 @@ The bootcamp will be conducted virtually and will commence on 2 May 2023 at 10h0
 * Access to Co-Working Spaces
 * Access to Mentors
 
-**4 Star-Ups will be selected for the final round to receive support which includes:**
+**4 Start-Ups will be selected for the final round to receive support which includes:**
 
 * Mentorship and Validation
 * Digital MVP development    
