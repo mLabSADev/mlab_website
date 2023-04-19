@@ -17,9 +17,7 @@ The United Nations declared 2023 the International Year of Millets to raise awar
 
 Good self care and resilience are essential for our team to function productively, and so the theme for 2023 is quite relevant in our environment. Our well-earned holiday helped us return to work feeling rejuvenated and ready to do great things in 2023.
 
-![Our staff on  the first day of work in 2023. ](../../images/back-to-work.png)
-
-
+![Our staff on  the first day of work in 2023. ](../../images/news-edit4.png)
 
 ## **SA’s youth are at the top of our agenda. We opened calls for applications to attend our CodeTribe Bootcamp.** 
 
@@ -29,7 +27,7 @@ The bootcamp runs annually in February, over 4 weeks, during which participants 
 
 Our bootcamp runs virtually with physical meetups hosted at our regional offices in Limpopo, Gauteng, and in the Northern Cape. Over 600 applications were received for the entrance into our coding academy for 2023.
 
-![Youth at our 2023 Coding BootCamp hosted in Tshwane, Soweto, Polokwane and Kimberley. ](../../images/codetribe-bootcamp23.png)
+![Youth at our 2023 Coding BootCamp hosted in Tshwane, Soweto, Polokwane and Kimberley. ](../../images/news-edit3.png)
 
 ## **A success story to warm the heart: mLab start-up wins an Allan Gray Makers Award**
 
@@ -37,7 +35,7 @@ It is always heart-warming to watch mLab start-ups progress to their next growth
 
 The Allan Gray Makers Awards encourage young people to join the technical and vocational trades to create meaningful employment opportunities in their communities.
 
-Ratlabala won R100 000 for his business, under the Innovation Phase category. [[Read More]](https://mlab.co.za/news/Learn-Base-pty-(LTD),-a-startup-incubated-by-mLab-wins-Allan-Gray-Makers-Award-and-is-set-to-pilot-its-product.)
+Ratlabala won R100 000 for his business, under the Innovation Phase category. [\[Read More]](https://mlab.co.za/news/Learn-Base-pty-(LTD),-a-startup-incubated-by-mLab-wins-Allan-Gray-Makers-Award-and-is-set-to-pilot-its-product.)
 
 ![Mokete Ratlabala, the CEO and Founder of LearnBase. ](../../images/mokete-1.jpg)
 
@@ -57,7 +55,7 @@ We hope that you will also enjoy the new look and feel of the website, as well a
 
 ## **A February filled with training sessions to empower entrepreneurs**
 
-![Digital Entrepreneurship training in a village in Limpopo ](../../images/february-trainings-.png)
+![Digital Entrepreneurship training in a village in Limpopo ](../../images/news-edit2-.png)
 
 Digital technology and media have disrupted the business industry, moreso after the Covid-19 pandemic. This era of digitisation has propelled businesses to find innovative and creative ways of engaging with their customers.
 
@@ -67,7 +65,7 @@ These training sessions were both online and physical, and we touched down in Ga
 
 ## **More Than A Woman**
 
-![We attended the More Than A Woman showcase on International Women's Day ](../../images/more-than-a-woman.png)
+![We attended the More Than A Woman showcase on International Women's Day ](../../images/news-edit1.png)
 
 \
 On International Women’s Day we celebrated female innovators at the ‘More Than A Woman’ showcase, hosted by [Global Alliance Africa](https://iuk.ktn-uk.org/programme/africa/). 
