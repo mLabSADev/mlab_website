@@ -34,7 +34,7 @@ He said Farmru strives to help farmers to move from subsistence farming to comme
 
 #### **Winning the RISP Innovation Challenge**
 
-Pitching a business with limited time in front of judges can be extremely daunting but Netshumbupfe did it, out of more than eight competitors, he won second place in the prizes.
+Pitching a business with limited time in front of judges can be extremely daunting but Netshimbupfe did it, out of more than eight competitors, he won second place in the prizes.
 
 He walked away with R100 000 which comes in the form of market access,  technology development, patenting, and IP support. 
 
