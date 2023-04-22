@@ -25,7 +25,7 @@ Three of our AgriTourZA Start-Up programme beneficiaries participated in the Inn
 
 Tsedzuluso Netshimbupfe the CEO and Founder of a startup company Farmru is one of our AgriTourZA alumni who competed in the Innovation Challenge. Netshumbupfe's Farmru was incubated by mLab in 2021 and ever since he has been making strides.
 
-He hails from the village of Tshimbupfe in Thohoyandou in Limpopo,  a dry area where food security is a major concern for villagers. Netshumbupfe's company Farmru developed a technology device that assists farmers by saving water and maintaining optimal soil quality for the production of healthy crops. It monitors the environment and executes tasks using a low-cost microcontroller device.
+He hails from the village of Tshimbupfe in Thohoyandou in Limpopo,  a dry area where food security is a major concern for villagers. Netshimbupfe's company Farmru developed a technology device that assists farmers by saving water and maintaining optimal soil quality for the production of healthy crops. It monitors the environment and executes tasks using a low-cost microcontroller device.
 
 ![](../../images/farmru-profile-.jpg)
 
