@@ -10,7 +10,7 @@ On 18 -19 April 2023, the Regional Innovation Support Programme (RISP) with supp
 
 Three of our AgriTourZA Start-Up programme beneficiaries participated in the Innovation Challenge by RISP, they competed against other RISP beneficiaries. Competitors pitched in front of a panel of judges and only three finalists were selected to walk away with R150 000, R100 000, and R25 000.
 
-**Motivated by the village he comes from, he decides to start an empire**
+#### **Motivated by the village he comes from, he decides to start an empire**
 
 ![](../../images/tsedzu-n4.jpg "Image: Branson Centre of Entrepreneurship")
 
