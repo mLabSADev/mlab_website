@@ -48,7 +48,7 @@ const IndexPage = ({ data }) => {
               <WhatWeDoCard
                 key={i}
                 title={card.node.frontmatter.title}
-                excerpt={card.node.frontmatter.excerpt}
+                excerpt={card.node.frontmatter.summary}
                 description={card.node.excerpt}
                 image={img}
                 url={`/what-we-do/${noSpaces}`}

@@ -1,6 +1,6 @@
 ---
 label: 200 Start-ups Supported
-description: R23m+ Funds Raised & 300+ Jobs
+description: 500+ jobs & R150m+ funds raised
 icon: ../../images/stats-icons/start-up.png
 percentage: 10
 ---

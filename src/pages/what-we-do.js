@@ -92,8 +92,8 @@ const WhatWeDo = ({ data, location }) => {
         <br />
         <br />
         <div className="main-wwd-c">
-          {data.whatWeDo.edges.map((card, i) => {
-            const img = getImage(card.node.frontmatter.featureImage);
+          {data.wwdSections.edges.map((card, i) => {
+            const img = getImage(card.node.frontmatter.icon);
             const title = card.node.frontmatter.title;
             const noSpaces = title.replaceAll(" ", "-");
             console.log(title);
@@ -101,8 +101,8 @@ const WhatWeDo = ({ data, location }) => {
               <WhatWeDoCard
                 key={i}
                 title={title}
-                excerpt={card.node.frontmatter.excerpt}
-                description={card.node.rawMarkdownBody}
+                excerpt={card.node.frontmatter.summary}
+                description={card.node.excerpt}
                 image={img}
                 url={`/what-we-do/${noSpaces}`}
               />
@@ -191,29 +191,6 @@ export const query = graphql`
             icon {
               childImageSharp {
                 gatsbyImageData(width: 1920, quality: 100)
-              }
-            }
-          }
-        }
-      }
-    }
-
-    whatWeDo: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/(whatWeDo)/" } }
-    ) {
-      edges {
-        node {
-          id
-          rawMarkdownBody
-          frontmatter {
-            title
-            path
-            excerpt
-
-            featureImage {
-              name
-              childImageSharp {
-                gatsbyImageData(formats: [AUTO, WEBP], width: 350)
               }
             }
           }

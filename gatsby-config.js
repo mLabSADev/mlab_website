@@ -22,7 +22,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-sharp",
       options: {
-        breakpoints: [750, 1080, 1366, 1920],
+        // breakpoints: [750, 1080, 1366, 1920],
       },
     },
     "gatsby-transformer-sharp", //

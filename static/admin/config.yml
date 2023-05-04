@@ -78,6 +78,14 @@ collections:
       - { label: "Short Text", name: "shortText", widget: "string" }
       - { label: "Background", name: "featureImage", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "impact"
+    label: "Our Impact"
+    folder: "src/markdown/impactBarStats"
+    create: true
+    fields:
+      - { label: "Label", name: "label", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "icon", name: "Icon", widget: "image" }
   - name: "theTech"
     label: "Tech"
     folder: "src/markdown/theTech"
@@ -106,7 +114,6 @@ collections:
     create: false
     fields:
       - { label: "Body", name: "body", widget: "markdown" }
-
   - name: "news"
     label: "News"
     folder: "src/markdown/news"
@@ -122,10 +129,14 @@ collections:
           widget: "select",
           options:
             [
+              "General",
+              "Events",
               "Tech Ecosystems",
               "Tech Skills",
               "Tech Solutions",
               "Tech Start-ups",
+              "Newsletter",
+              "Media Statement",
             ],
         }
       - { label: "Tags", name: "tags", widget: "list" }

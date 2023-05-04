@@ -16,13 +16,13 @@ const CodeTribe = ({ state = false, link, title, description }) => {
         {state ? (
           <StaticImage
             className="ct-bg"
-            src={"../images/backgrounds/codetribe.png"}
+            src={"../images/backgrounds/codetribe.jpg"}
             alt="bg"
           />
         ) : (
           <StaticImage
             className="ct-bg"
-            src={"../images/backgrounds/appsclosed.png"}
+            src={"../images/backgrounds/appsclosed.jpg"}
             alt="bg"
           />
         )}
@@ -35,21 +35,26 @@ const CodeTribe = ({ state = false, link, title, description }) => {
         ></iframe> */}
       </div>
       <div className="codeTribe-details">
-        {/* {state ? (
-          <Typography variant="h3" color="light">
+        {state ? (
+          <Typography variant="s2" color="light">
             Applications Open
           </Typography>
         ) : (
-          <Typography variant="h3" color="light">
+          <Typography variant="s2" color="light">
             Applications Closed
           </Typography>
-        )} */}
+        )}
         <Typography variant="h3" color="light">
           {title}
         </Typography>
-        <Typography variant="b2" color="light">
+        <Typography variant="b1" color="light">
           {description}
         </Typography>
+        {state ? null : (
+          <Typography variant="b2">
+            Please register with the chatbot to be notified when calls open.
+          </Typography>
+        )}
         {state ? (
           <Button color="light" label="Apply Now" type="link" url={link} />
         ) : null}

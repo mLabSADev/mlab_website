@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./contact.scss";
 import Layout from "../components/ChatBot/ChatBot";
 import { graphql, StaticQuery } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image";
 import PageHeader from "../components/PageHeader/PageHeader";
 import Section from "../components/Section/Section";
 import Typography from "../components/Typography/Typography";
@@ -226,6 +226,25 @@ const Contact = ({ data }) => {
             <Typography variant="b1">We'd love to hear from you</Typography>
             <SignupForm main={true} interests={interest} />
           </div>
+        </div>
+      </Section>
+      <Section>
+        <div
+          style={{
+            justifyItems: "center",
+            alignItems: "center",
+            // width: "70%",
+            margin: "auto",
+            padding: 90,
+          }}
+        >
+          <StaticImage
+            style={{
+              width: "100%",
+            }}
+            src="../images/backgrounds/Bridging the Digital Divide.png"
+            alt="Bridging the Digital Divide"
+          />
         </div>
       </Section>
       {locations.map((l, i) => {
