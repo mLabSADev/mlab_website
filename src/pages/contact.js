@@ -235,7 +235,7 @@ const Contact = ({ data }) => {
             alignItems: "center",
             // width: "70%",
             margin: "auto",
-            padding: 90,
+            // padding: 90,
           }}
         >
           <StaticImage
