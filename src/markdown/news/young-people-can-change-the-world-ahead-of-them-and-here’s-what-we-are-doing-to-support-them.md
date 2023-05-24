@@ -12,10 +12,6 @@ tags:
   - YouthSkillsDevelopment
   - FutureSkills
 ---
-
-
-
-
 Promoting positive youth development and creating excitement about technology and innovation remains one of the biggest priorities at mLab. With an understanding of the high need for programmes that engage young people in intentional, productive, and helpful ways to help them realise their potential or strengths, we make positive youth development efforts. 
 
 Our efforts for positive youth development include hosting hackathons, virtual and physical workshops to stimulate entrepreneurial and innovative thinking.  
@@ -46,4 +42,4 @@ To name a few highlights from our youth skills development interventions, on 25 
 
 ![](../../images/nc4.jpg)
 
-Where gratitude is due, we would like to especially thank the Media, Information and Communication Technologies Sector Education and Training Authority (MICT SETA), for partnering with us to make this prestigious programme a success**.**
+Where gratitude is due, we would like to especially thank the Media, Information and Communication Technologies Sector Education and Training Authority (MICT SETA), for partnering with us to make this prestigious programme a success.
