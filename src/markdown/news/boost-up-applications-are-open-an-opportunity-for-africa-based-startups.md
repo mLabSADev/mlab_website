@@ -36,7 +36,6 @@ Boost Up Scale Up is an incubation programme for impact-driven startups eager to
 * Technology and innovation play a key role in your business model to address a societal challenge in Southern Africa.
 * You have a scalable business model.
 * You are developing or finalising a prototype, or have a prototype ready.
-* You are developing or finalising a prototype, or have a prototype ready. 
 * You or your startup have not won a SAIS 2-associated national pitch competition and participated in the Boost Up Bootcamp in 2022 or 2019, Slush Global Impact Accelerator 2018, or been sponsored by SAIS 2 to participate in Slush 2017.
 
 Applications for 2023 are currently, to apply click on the ‘application form’ below. Application deadline is 30 June 2023.
