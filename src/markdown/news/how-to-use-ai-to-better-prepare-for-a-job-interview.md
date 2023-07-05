@@ -35,4 +35,4 @@ Get feedback on your interview skills: AI-powered video analysis tools, such as 
 
 ![](../../images/ai-article-body-image-1.png)
 
-As you make use of technology to make your life easier, we encourage you to still continue practising your skills and not fully depend on AI. We cannot deny how simpler things have been made by AI, however, we do not encourage you to throw all your work on AI, but rather utilise it when necessary.
+As you make use of AI to make your life easier, we encourage you to still continue practising your skills and not fully depend on AI. We cannot deny how simpler things have been made by AI, however, we do not encourage you to throw all your work on AI, but rather utilise it when necessary.
