@@ -31,7 +31,7 @@ You can use AI to analyse your resume. There are AI-powered resume analysis tool
 
 Get feedback on your interview skills: AI-powered video analysis tools, such as HireVue and Pymetrics, can analyse your nonverbal communication during a mock interview. These tools use computer vision and machine learning algorithms to analyse your facial expressions, tone of voice, and body language, and provide feedback on areas where you can improve.
 
-#### **Use AI but avoid being extremely dependent on it**
+#### **Use AI but avoid being extremely dependent**
 
 ![](../../images/ai-article-body-image-1.png)
 
