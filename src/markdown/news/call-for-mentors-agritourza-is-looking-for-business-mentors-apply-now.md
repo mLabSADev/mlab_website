@@ -61,6 +61,4 @@ We are looking for mentors from the agricultural, business, tourism, and tech se
 4. Successful candidates will be notified of their acceptance into the Mentorship Programme and will be matched with suitable startups.
 5. We encourage individuals from diverse backgrounds and experiences to apply, as we believe in the power of diverse perspectives and knowledge to drive innovation and growth.
 
-Join us in shaping the future of the Agri-Tech and Travel-Tech sectors in Limpopo by becoming a mentor in the AgriTourZA Limpopo Innovation Programme.
-
 [APPLICATION FORM ](https://docs.google.com/forms/d/e/1FAIpQLSfU4bjGlqyfQ3hLVp0n5DprK4x-nHWUxU5lkQwZjCu2jtrUIA/viewform)
