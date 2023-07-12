@@ -13,7 +13,7 @@ tags:
   - Mentorship
   - StartupAccelerator
 ---
-###### About AgriTourZA
+##### About AgriTourZA
 
 The Department of Science and Innovation’s (DSI) Regional Innovation Support Programme (RISP) aims to strengthen innovation ecosystems at sub-national levels through innovation challenges in partnership with regional partners. In 2021, mLab received RISP funding from the Department of Science and Innovation, through the Council for Scientific and Industrial Research (CSIR), to establish the first Agri-Tech and Travel-Tech innovation platform in Limpopo, also known as AgriTourZA.
 
@@ -21,7 +21,7 @@ The first and second phases of the AgritourZA Limpopo Innovation Platform have s
 
 The next phase (Phase 3), on which this proposal is based, is to continue with the momentum created in phases 1 and 2, that is to expand the reach of AgriTourZA.
 
-##### **The mentorship call for applications**
+**The mentorship call for applications**
 
 We are looking for mentors from the agricultural, business, tourism, and tech sectors to provide guidance, knowledge, expertise, and networking opportunities to startups.
 
