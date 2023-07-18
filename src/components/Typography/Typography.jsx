@@ -17,7 +17,7 @@ const Typography = (props) => {
   const [ref, inView] = useInView();
   const textVariants = {
     visible: { opacity: 1, transition: { duration: 0.5 } },
-    hidden: { opacity: 0.3, },
+    hidden: { opacity: 0.3 },
   };
   useEffect(() => {
     if (inView) {
@@ -34,7 +34,11 @@ const Typography = (props) => {
       className={[
         `main-t ${props.variant} ${props.color} ${
           props.center == true ? "center" : null
-        } ${props.capitalise ? "sentance-case" : null}`,
+        } ${
+          (props.capitalise ? "sentance-case" : null,
+          props.ai ? "ai-font" : null,
+          props.boldAi ? "ai-font-bold" : null)
+        }`,
       ]}
     >
       {props.children}

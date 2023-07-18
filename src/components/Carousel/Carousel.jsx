@@ -7,7 +7,13 @@ import React from "react";
 import Typography from "../Typography/Typography";
 import "./style.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay } from "swiper";
+import {
+  Navigation,
+  Pagination,
+  Mousewheel,
+  Keyboard,
+  Autoplay,
+} from "swiper/modules";
 // import "./styles.css";
 import { Carousel } from "react-carousel-minimal";
 

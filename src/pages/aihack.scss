@@ -1,0 +1,441 @@
+:root {
+  --logo-scale: 2px;
+}
+.main {
+  width: 100%;
+  box-sizing: border-box;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 90px 200px;
+  background-size: 100% 100%;
+  background-position:
+    0px 0px,
+    0px 0px,
+    0px 0px,
+    0px 0px,
+    0px 0px,
+    0px 0px,
+    0px 0px,
+    0px 0px,
+    0px 0px,
+    0px 0px,
+    0px 0px;
+  background-image: radial-gradient(18% 28% at 24% 50%, #cefaffff 7%, #073aff00 100%),
+    radial-gradient(18% 28% at 18% 71%, #ffffff59 6%, #073aff00 100%),
+    radial-gradient(70% 53% at 36% 76%, #73f2ff0a 0%, #073aff00 100%),
+    radial-gradient(42% 53% at 15% 94%, #ffffffff 7%, #073aff00 100%),
+    radial-gradient(42% 53% at 34% 72%, #ffffffff 7%, #073aff00 100%),
+    radial-gradient(18% 28% at 35% 87%, #ffffffff 7%, #073aff00 100%),
+    radial-gradient(31% 43% at 7% 98%, #ffffffff 24%, #073aff00 100%),
+    radial-gradient(21% 37% at 72% 23%, #d3ff6d21 24%, #073aff00 100%),
+    radial-gradient(35% 56% at 91% 74%, #8a4fff12 9%, #073aff00 100%),
+    radial-gradient(74% 86% at 67% 38%, #6dffae0f 24%, #073aff00 100%),
+    linear-gradient(125deg, #4eb5ff08 1%, #4c00fc0a 100%);
+  .deco1 {
+    pointer-events: none;
+    position: fixed;
+    bottom: -10px;
+    left: -10px;
+    width: 491px;
+    height: 440px;
+    z-index: -1;
+    .img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .sliderContainer {
+    width: 100%;
+    position: relative;
+    display: grid;
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    background-color: #ffffff;
+    border-radius: 10px;
+    .slideContent {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      padding: 80px 90px;
+      gap: 90px;
+      border-radius: 30px;
+      .logos {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        gap: 15px;
+        .mlab {
+          width: 72px;
+          height: 25px;
+        }
+        .mic {
+          width: 115px;
+          height: 25px;
+        }
+      }
+      .text {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-bottom: 40px;
+      }
+      .navContainer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 10px 20px;
+        display: flex;
+        gap: 10px;
+        .navButton {
+          cursor: pointer;
+          display: flex;
+          padding: 8px;
+          justify-content: center;
+          align-items: center;
+          border-radius: 4px;
+        }
+        .navButton:hover {
+          background-color: white;
+        }
+      }
+      .rectangle {
+        width: 307px;
+        height: 665px;
+        position: absolute;
+        left: 42px;
+        bottom: -196px;
+        border-radius: 153.5px;
+        opacity: 0.2;
+        background: linear-gradient(#c239b3, #c239b3);
+        filter: blur(95px);
+      }
+    }
+    .slideImage {
+      display: flex;
+      flex: 1;
+      background-color: red;
+      .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .aiAbout {
+    box-sizing: border-box;
+    width: 100%;
+    .headerText {
+      box-sizing: border-box;
+      padding: 50px 0px;
+      text-align: center;
+    }
+    .cardsContainer {
+      width: 100%;
+      box-sizing: border-box;
+      display: flex;
+
+      flex-direction: row;
+      gap: 10px;
+      .partnercard {
+        display: flex;
+        gap: 30px;
+        flex: 1;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        background: var(#ffffff, #fafafa);
+        padding: 30px;
+        border-radius: 10px;
+        p {
+          width: 100%;
+        }
+      }
+      .card {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        gap: 30px;
+        border-radius: 10px;
+        border: 1px solid linear-gradient(#ffffff, #fff);
+        background: linear-gradient(131deg, #fafafa80 0%, #eeeeee48 100%);
+        backdrop-filter: blur(35px);
+        /* Card */
+        box-shadow: 0px 44px 61px -70px rgb(0 0 0);
+      }
+    }
+  }
+  .partners_participate {
+    display: flex;
+    flex: 1;
+    padding: 90px 0px;
+    gap: 10px;
+
+    border-radius: 10px;
+    overflow: hidden;
+    .partnerheader {
+      width: 100%;
+      text-align: center;
+      padding: 30px 0px;
+    }
+    .card {
+      flex: 1;
+      display: flex;
+      padding: 20px 10px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 30px;
+      flex: 1;
+      border-radius: 10px;
+      // background: linear-gradient(#fafafa, #fafafa);
+      overflow: hidden;
+    }
+    .partner {
+      width: 100%;
+      flex: 1;
+      padding: 20px 10px;
+      border-radius: 10px;
+      border: 1px solid linear-gradient(#ffffff, #fff);
+      background: linear-gradient(131deg, #fafafa80 0%, #eeeeee48 100%);
+      backdrop-filter: blur(35px);
+      /* Card */
+      box-shadow: 0px 14px 21px 0px rgba(0, 0, 0, 0.09);
+      .c {
+        flex: 1;
+        width: 100%;
+        text-align: center;
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        .memberButton {
+          flex: 1;
+          padding: 30px;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          button {
+            display: block;
+            cursor: pointer;
+            color: white;
+            border: 0px;
+            z-index: 5;
+            margin: auto;
+            border-radius: 10px;
+            background: linear-gradient(169deg, #8cc051 0%, #78b236 100%);
+
+            /* Card */
+            box-shadow: 0px 14px 21px 0px rgba(0, 0, 0, 0.09);
+            display: flex;
+            padding: 20px 30px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+          }
+          button:hover {
+            background: linear-gradient(169deg, #74a041 0%, #5c8b26 100%);
+          }
+          .hands {
+            width: 237px;
+            height: 143px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -70px;
+            z-index: -1;
+            .img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+            }
+          }
+        }
+      }
+      .exhisting-partners {
+        flex: 1;
+        display: flex;
+        padding: 10px 10px;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+        align-items: flex-start;
+        gap: 10px;
+        .line {
+          // opacity: 0.9;
+        }
+        .partnerList {
+          display: flex;
+          box-sizing: border-box;
+          width: 100%;
+          align-items: flex-start;
+          overflow-x: auto;
+          gap: 10px;
+          .partner-logo-cont {
+            min-width: 117px;
+            max-width: 117px;
+            height: 70px;
+            .logo {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+            }
+          }
+        }
+      }
+    }
+    .participate {
+      // width: 100%;
+      flex: 1;
+      padding: 10px 10px;
+      text-align: center;
+      border-radius: 10px;
+      border: 1px solid linear-gradient(#ffffff, #fff);
+      background: linear-gradient(131deg, #fafafa80 0%, #eeeeee48 100%);
+      backdrop-filter: blur(35px);
+
+      /* Card */
+      box-shadow: 0px 14px 21px 0px rgba(0, 0, 0, 0.09);
+      .partnerheader {
+        flex: 1;
+      }
+      .cardsContainer {
+        flex: 1;
+        width: 100%;
+        gap: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        .partnercard {
+          align-items: center;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          padding: 50px 0px;
+          border-radius: 10px;
+          justify-content: center;
+          text-align: center;
+          background-color: white;
+          button:hover {
+            background: #8cc051;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  .brought {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    text-align: center;
+    .logos {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      .mlab {
+        width: 131px;
+        height: 46.001px;
+      }
+      .mic {
+        width: 216px;
+        height: 46px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1600px) {
+  .main {
+    padding: 30px 90px;
+    .deco1 {
+      opacity: 0.1;
+    }
+    .sliderContainer {
+      grid-template-columns: 1fr 1fr;
+      .slideContent {
+        padding: 30px;
+        gap: 30px;
+      }
+    }
+    .aiAbout {
+      .cardsContainer {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+      }
+    }
+    .partners_participate {
+      flex-direction: column-reverse;
+      gap: 30px;
+      box-sizing: border-box;
+      width: 100%;
+      .participate {
+        .cardsContainer {
+          .partnercard {
+            padding: 30px 0px;
+          }
+        }
+      }
+      .partner {
+        .exhisting-partners {
+          .partnerList {
+            justify-content: space-evenly;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 880px) {
+  .main {
+    padding: 50px 10px;
+    .deco1 {
+      opacity: 0.1;
+    }
+    .sliderContainer {
+      grid-template-columns: 1fr;
+      .slideContent {
+        padding: 30px;
+        gap: 30px;
+      }
+    }
+    .aiAbout {
+      .cardsContainer {
+        flex-direction: column;
+        gap: 30px;
+      }
+    }
+    .partners_participate {
+      flex-direction: column-reverse;
+      gap: 30px;
+      box-sizing: border-box;
+      width: 100%;
+      .participate {
+        .cardsContainer {
+          .partnercard {
+            padding: 30px 0px;
+          }
+        }
+      }
+      .partner {
+        .exhisting-partners {
+          .partnerList {
+            justify-content: space-evenly;
+          }
+        }
+      }
+    }
+    .brought {
+      .logo {
+        transform: scale(0.7);
+      }
+    }
+  }
+}

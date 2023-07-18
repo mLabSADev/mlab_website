@@ -1,6 +1,8 @@
 @import url("../../assets/Fonts/fonts.scss");
 :root {
   --primary-font: "Trebuchet";
+  --ai-regular: "Segoe";
+  --ai-bold: "Segoe_Bold";
   --header-font: "Oswald";
   --secondary-font-regular: "Source_Regular";
   --secondary-font-light: "Source_Light";
@@ -26,6 +28,12 @@
 }
 p {
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.089);
+}
+.ai-font {
+  font-family: var(--ai-regular) !important;
+}
+.ai-font-bold {
+  font-family: var(--ai-bold) !important;
 }
 .h1 {
   font-family: var(--header-font);
