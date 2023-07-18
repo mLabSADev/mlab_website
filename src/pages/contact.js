@@ -242,7 +242,7 @@ const Contact = ({ data }) => {
             style={{
               width: "100%",
             }}
-            src="../images/backgrounds/Bridging the Digital Divide.png"
+            src="../images/backgrounds/BDD.png"
             alt="Bridging the Digital Divide"
           />
         </div>

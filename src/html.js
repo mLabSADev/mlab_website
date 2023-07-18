@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+import 'swiper/scss';
+import 'swiper/scss/navigation';
+import 'swiper/scss/pagination';
 export default function HTML(props) {
   return (
     <html {...props.htmlAttributes}>
