@@ -3,7 +3,70 @@ import "./style.scss";
 import { Link } from "gatsby";
 import Typography from "../Typography/Typography";
 import { graphql, StaticQuery } from "gatsby";
+const AIHack = () => {
+  return (<Link
+    href="https://codetribe.mlab.co.za/"
+    target="_blank"
+    rel="noreferrer"
+    to="/aihack"
+    className="aihack"
+  >
+    <Typography style={{ fontFamily: 'Segoe_Bold' }} variant="s2" color="black">
+      AI Hackathon
+    </Typography>
+    <div class="system">
+      <div class="system__orbit system__orbit--sun">
+        <img src="https://www.dropbox.com/s/g02pto204mz1ywi/sun.png?raw=1" alt="Sun" class="system__icon system__icon--sun" />
+      </div>
 
+      <div class="system__orbit system__orbit--mercury">
+        <div class="system__planet system__planet--mercury">
+          <img src="https://www.dropbox.com/s/2o38602cmwhhdi1/mercury.png?raw=1" alt="Mercury" />
+        </div>
+      </div>
+      <div class="system__orbit system__orbit--venus">
+        <div class="system__planet system__planet--venus">
+          <img src="https://www.dropbox.com/s/wvictuysutiirho/venus.png?raw=1" alt="Venus" />
+        </div>
+      </div>
+      <div class="system__orbit system__orbit--earth">
+        <div class="system__planet system__planet--earth">
+          <img src="https://www.dropbox.com/s/ropzlyhb1v19l5t/earth.png?raw=1" alt="Earth" />
+        </div>
+      </div>
+      <div class="system__orbit system__orbit--mars">
+        <div class="system__planet system__planet--mars">
+          <img src="https://www.dropbox.com/s/fa9biyj617n1q30/mars.png?raw=1" alt="Mars" />
+        </div>
+      </div>
+      <div class="system__orbit system__orbit--jupiter">
+        <div class="system__planet system__planet--jupiter">
+          <img src="https://www.dropbox.com/s/d28oxi2c74zcoqk/jupiter.png?raw=1" alt="Jupiter" />
+        </div>
+      </div>
+      <div class="system__orbit system__orbit--saturn">
+        <div class="system__planet system__planet--saturn">
+          <img src="https://www.dropbox.com/s/h8pj72v6mmaa0yq/saturn.png?raw=1" alt="Saturn" />
+        </div>
+      </div>
+      <div class="system__orbit system__orbit--uranus">
+        <div class="system__planet system__planet--uranus">
+          <img src="https://www.dropbox.com/s/du6znsmfos2r4ry/uranus.png?raw=1" alt="Uranus" />
+        </div>
+      </div>
+      <div class="system__orbit system__orbit--neptune">
+        <div class="system__planet system__planet--neptune">
+          <img src="https://www.dropbox.com/s/170sr7xl6gxpona/neptune.png?raw=1" alt="Neptune" />
+        </div>
+      </div>
+      <div class="system__orbit system__orbit--pluto">
+        <div class="system__planet system__planet--pluto">
+          <img src="https://www.dropbox.com/s/z7axkafhs887t9b/pluto.png?raw=1" alt="Pluto" />
+        </div>
+      </div>
+    </div>
+  </Link>)
+}
 export const Item = ({ label, url }) => {
   return (
     <Link
@@ -196,68 +259,7 @@ const Navigation = ({ title, route }) => {
               );
             }
           })}
-          <Link
-            href="https://codetribe.mlab.co.za/"
-            target="_blank"
-            rel="noreferrer"
-            to="/aihack"
-            className="aihack"
-          >
-            <Typography variant="s2" color="light">
-              AI Hackathon
-            </Typography>
-            <div class="system">
-              <div class="system__orbit system__orbit--sun">
-                <img src="https://www.dropbox.com/s/g02pto204mz1ywi/sun.png?raw=1" alt="Sun" class="system__icon system__icon--sun" />
-              </div>
-
-              <div class="system__orbit system__orbit--mercury">
-                <div class="system__planet system__planet--mercury">
-                  <img src="https://www.dropbox.com/s/2o38602cmwhhdi1/mercury.png?raw=1" alt="Mercury" />
-                </div>
-              </div>
-              <div class="system__orbit system__orbit--venus">
-                <div class="system__planet system__planet--venus">
-                  <img src="https://www.dropbox.com/s/wvictuysutiirho/venus.png?raw=1" alt="Venus" />
-                </div>
-              </div>
-              <div class="system__orbit system__orbit--earth">
-                <div class="system__planet system__planet--earth">
-                  <img src="https://www.dropbox.com/s/ropzlyhb1v19l5t/earth.png?raw=1" alt="Earth" />
-                </div>
-              </div>
-              <div class="system__orbit system__orbit--mars">
-                <div class="system__planet system__planet--mars">
-                  <img src="https://www.dropbox.com/s/fa9biyj617n1q30/mars.png?raw=1" alt="Mars" />
-                </div>
-              </div>
-              <div class="system__orbit system__orbit--jupiter">
-                <div class="system__planet system__planet--jupiter">
-                  <img src="https://www.dropbox.com/s/d28oxi2c74zcoqk/jupiter.png?raw=1" alt="Jupiter" />
-                </div>
-              </div>
-              <div class="system__orbit system__orbit--saturn">
-                <div class="system__planet system__planet--saturn">
-                  <img src="https://www.dropbox.com/s/h8pj72v6mmaa0yq/saturn.png?raw=1" alt="Saturn" />
-                </div>
-              </div>
-              <div class="system__orbit system__orbit--uranus">
-                <div class="system__planet system__planet--uranus">
-                  <img src="https://www.dropbox.com/s/du6znsmfos2r4ry/uranus.png?raw=1" alt="Uranus" />
-                </div>
-              </div>
-              <div class="system__orbit system__orbit--neptune">
-                <div class="system__planet system__planet--neptune">
-                  <img src="https://www.dropbox.com/s/170sr7xl6gxpona/neptune.png?raw=1" alt="Neptune" />
-                </div>
-              </div>
-              <div class="system__orbit system__orbit--pluto">
-                <div class="system__planet system__planet--pluto">
-                  <img src="https://www.dropbox.com/s/z7axkafhs887t9b/pluto.png?raw=1" alt="Pluto" />
-                </div>
-              </div>
-            </div>
-          </Link>
+          {/* <AIHack /> */}
           <a
             href="https://codetribe.mlab.co.za/"
             target="_blank"
@@ -299,68 +301,7 @@ const Navigation = ({ title, route }) => {
             );
           }
         })}
-        <Link
-          href="https://codetribe.mlab.co.za/"
-          target="_blank"
-          rel="noreferrer"
-          to="/aihack"
-          className="aihack"
-        >
-          <Typography style={{ fontFamily: 'Segoe_Bold' }} variant="s2" color="black">
-            AI Hackathon
-          </Typography>
-          <div class="system">
-            <div class="system__orbit system__orbit--sun">
-              <img src="https://www.dropbox.com/s/g02pto204mz1ywi/sun.png?raw=1" alt="Sun" class="system__icon system__icon--sun" />
-            </div>
-
-            <div class="system__orbit system__orbit--mercury">
-              <div class="system__planet system__planet--mercury">
-                <img src="https://www.dropbox.com/s/2o38602cmwhhdi1/mercury.png?raw=1" alt="Mercury" />
-              </div>
-            </div>
-            <div class="system__orbit system__orbit--venus">
-              <div class="system__planet system__planet--venus">
-                <img src="https://www.dropbox.com/s/wvictuysutiirho/venus.png?raw=1" alt="Venus" />
-              </div>
-            </div>
-            <div class="system__orbit system__orbit--earth">
-              <div class="system__planet system__planet--earth">
-                <img src="https://www.dropbox.com/s/ropzlyhb1v19l5t/earth.png?raw=1" alt="Earth" />
-              </div>
-            </div>
-            <div class="system__orbit system__orbit--mars">
-              <div class="system__planet system__planet--mars">
-                <img src="https://www.dropbox.com/s/fa9biyj617n1q30/mars.png?raw=1" alt="Mars" />
-              </div>
-            </div>
-            <div class="system__orbit system__orbit--jupiter">
-              <div class="system__planet system__planet--jupiter">
-                <img src="https://www.dropbox.com/s/d28oxi2c74zcoqk/jupiter.png?raw=1" alt="Jupiter" />
-              </div>
-            </div>
-            <div class="system__orbit system__orbit--saturn">
-              <div class="system__planet system__planet--saturn">
-                <img src="https://www.dropbox.com/s/h8pj72v6mmaa0yq/saturn.png?raw=1" alt="Saturn" />
-              </div>
-            </div>
-            <div class="system__orbit system__orbit--uranus">
-              <div class="system__planet system__planet--uranus">
-                <img src="https://www.dropbox.com/s/du6znsmfos2r4ry/uranus.png?raw=1" alt="Uranus" />
-              </div>
-            </div>
-            <div class="system__orbit system__orbit--neptune">
-              <div class="system__planet system__planet--neptune">
-                <img src="https://www.dropbox.com/s/170sr7xl6gxpona/neptune.png?raw=1" alt="Neptune" />
-              </div>
-            </div>
-            <div class="system__orbit system__orbit--pluto">
-              <div class="system__planet system__planet--pluto">
-                <img src="https://www.dropbox.com/s/z7axkafhs887t9b/pluto.png?raw=1" alt="Pluto" />
-              </div>
-            </div>
-          </div>
-        </Link>
+        {/* <AIHack /> */}
         <a
           href="https://codetribe.mlab.co.za/"
           target="_blank"
