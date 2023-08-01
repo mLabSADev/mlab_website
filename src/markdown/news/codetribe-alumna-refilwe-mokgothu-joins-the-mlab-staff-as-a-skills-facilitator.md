@@ -12,6 +12,7 @@ tags:
   - CodeTribeAcademy
   - CodeTribe
   - Alumni
+  - WomensMonth
 ---
 It is the eagerness to succeed, fresh ideas, and enthusiasm that mLab loves about hiring young people. We saw great potential in Refilwe and most importantly her capability to impart tech skills to others. Just a year after graduating from our coding academy, she took part in our short Internet of Things (IoT) training this year, and now she joins our staff. 
 
@@ -19,7 +20,7 @@ She has worked for the Department of Transport, Safety and Liaison as a Technici
 
 ![Refilwe graduates from mLab's IoT training programme ](../../images/refilwe-x-mlab-2.jpg)
 
-#### \    Joining the mLab team
+#### Joining the mLab team
 
 “I'm extremely excited for the chance to work with talented and motivated people to add to the organisation's central goal, which is to empower South African youth with digital technology skills and entrepreneurial expertise”, she said. 
 
