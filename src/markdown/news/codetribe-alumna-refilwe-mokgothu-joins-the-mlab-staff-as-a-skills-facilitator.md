@@ -19,7 +19,7 @@ She has worked for the Department of Transport, Safety and Liaison as a Technici
 
 ![Refilwe graduates from mLab's IoT training programme ](../../images/refilwe-x-mlab-2.jpg)
 
-#### Joining the mLab team
+#### \    Joining the mLab team
 
 “I'm extremely excited for the chance to work with talented and motivated people to add to the organisation's central goal, which is to empower South African youth with digital technology skills and entrepreneurial expertise”, she said. 
 
