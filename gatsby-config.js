@@ -126,11 +126,10 @@ module.exports = {
       },
       __key: "pages",
     },
-
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "G-3KLGEL4MZG",
+        trackingId: "G-8HGPG96E9D",
         head: true,
       },
     },
