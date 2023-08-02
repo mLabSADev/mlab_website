@@ -126,6 +126,7 @@ module.exports = {
       },
       __key: "pages",
     },
+
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
