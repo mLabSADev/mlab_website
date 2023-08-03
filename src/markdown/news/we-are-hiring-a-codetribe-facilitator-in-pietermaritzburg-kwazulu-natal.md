@@ -2,7 +2,7 @@
 title: "We are hiring a CodeTribe Facilitator in Pietermaritzburg, KwaZulu-Natal. "
 author: "Zukanye Madakana "
 timeStamp: 2023-08-03T09:21:31.070Z
-featureImage: ../../images/codetribe-advert-thumbnail-.png
+featureImage: ../../images/hiring-thumbnail-.png
 category: Tech Skills
 tags:
   - JobAlert
