@@ -38,7 +38,7 @@ const Typography = (props) => {
           (props.capitalise ? "sentance-case" : null,
           props.ai ? "ai-font" : null,
           props.boldAi ? "ai-font-bold" : null)
-        }`,
+        } ${props.gradient ? "gradientText" : null}`,
       ]}
     >
       {props.children}
