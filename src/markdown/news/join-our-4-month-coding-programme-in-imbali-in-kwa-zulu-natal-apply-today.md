@@ -43,6 +43,6 @@ Ultimately, the programme seeks to empower unemployed youth within Imbali, KZN, 
 
 Shortlisted candidates will be invited for a 2-week bootcamp to assess their passion for web development, willingness to collaborate in teams, and ability to dedicate time to the programme. The programme will officially begin with an introductory session, where participants will get to know each other, the instructors, and the programme structure.
 
-The closing date is 25 August 2023.
+The CLOSING DATE is 25 August 2023.
 
 APPLY NOW: [Application form](https://docs.google.com/forms/d/1Vt2vMyyC8mAh71Crd7Guhgj7yUL5oJBB3hUDugsLDV0/edit?ts=64d0d420)
