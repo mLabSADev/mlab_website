@@ -17,13 +17,13 @@ The programme aims to increase awareness and interest in coding, inspiring parti
 
 Moreover, participants will engage in collaborative projects, where they will design and develop prototype solutions addressing real-world challenges relevant to Imbali, KZN.
 
-##### Here's why we are bringing this programme to Imbali 
+##### Here's why we are bringing this programme to Imbali
 
 Throughout the programme, participants will receive mentorship and support to refine their coding proficiency and develop impressive portfolios and resumes, enhancing their employability in the tech job market. Additionally, the programme will foster an entrepreneurial mindset, encouraging participants to explore tech-focused entrepreneurship opportunities and innovative solutions.
 
 Ultimately, the programme seeks to empower unemployed youth within Imbali, KZN, with the necessary coding skills and knowledge to thrive in the ever-evolving digital landscape, bridging the gap between unemployment and tech-enabled opportunities in the local community and the world.
 
-##### Recruitment process 
+##### Recruitment process
 
 ###### Criteria
 
@@ -41,7 +41,7 @@ Ultimately, the programme seeks to empower unemployed youth within Imbali, KZN, 
 * **Location:**
 * * Participants should ideally reside in Imbali, KZN, or nearby areas. Priority may be given to applicants from specific wards or areas to promote community engagement and support local talent.
 
-Shortlisted candidates will be invited for a 2 weeks bootcamp to assess their passion for web development, willingness to collaborate in teams, and ability to dedicate time to the program. The program will officially begin with an introductory session, where participants will get to know each other, the instructors, and the programme structure.
+Shortlisted candidates will be invited for a 2-week bootcamp to assess their passion for web development, willingness to collaborate in teams, and ability to dedicate time to the programme. The programme will officially begin with an introductory session, where participants will get to know each other, the instructors, and the programme structure.
 
 The closing date is 25 August 2023.
 
