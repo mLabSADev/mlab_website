@@ -9,6 +9,12 @@ html,
 body {
   margin: 0px;
 }
+
+.ant-statistic-content-value {
+  font-size: 3rem;
+  color: white !important;
+  font-weight: bold;
+}
 .index-form {
   box-sizing: border-box;
   width: 100%;
@@ -91,4 +97,3 @@ body {
     grid-template-columns: 1fr;
   }
 }
- 
