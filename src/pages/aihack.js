@@ -325,30 +325,45 @@ const Slides = () => {
     <SwiperSlide>
       <div className='slideImageCont'>
         <div className='slideImageText'>
-          <Typography variant="h5">Unleash Innovation, Transform Tomorrow</Typography>
+          <Typography variant="h4">Unleash Innovation, Transform Tomorrow</Typography>
         </div>
-        <img className='slideImage' alt='' src="https://res.cloudinary.com/devex/image/fetch/c_scale,f_auto,q_auto,w_720/https://lh4.googleusercontent.com/VQyrPPyh-FGdV2BJtlcwDphesnxERD6SLWvGtARygLDVNSsXhFF0kzG_yXvLyiARZbKIG3VYF_CIbF4_B-Wy3Eu7kKhHKKR3pq_2ob2pdZgxt_Wz_uqXjRMrhIBKREQnJo--Ui9b" />
+        <StaticImage className='slideImage' alt='' src="https://res.cloudinary.com/devex/image/fetch/c_scale,f_auto,q_auto,w_720/https://lh4.googleusercontent.com/VQyrPPyh-FGdV2BJtlcwDphesnxERD6SLWvGtARygLDVNSsXhFF0kzG_yXvLyiARZbKIG3VYF_CIbF4_B-Wy3Eu7kKhHKKR3pq_2ob2pdZgxt_Wz_uqXjRMrhIBKREQnJo--Ui9b" />
       </div>
 
     </SwiperSlide>
     <SwiperSlide>
       <div className='slideImageCont'>
         <div className='slideImageText'>
-          <Typography variant="h5">Breaking Boundaries &amp; Redefining Possibilities</Typography>
+          <Typography variant="h4">Breaking Boundaries &amp; Redefining Possibilities</Typography>
         </div>
-        <img className='slideImage' alt='' src="https://www.afro.who.int/sites/default/files/2020-04/online%2520training.jpg" />
+        <StaticImage className='slideImage' alt='' src="../images/aihack/images/1.jpg" />
       </div>
 
     </SwiperSlide>
     <SwiperSlide>
       <div className='slideImageCont'>
         <div className='slideImageText'>
-          <Typography variant="h5">Connect, Create &amp; Corroborate</Typography>
+          <Typography variant="h4">Connect, Create &amp; Corroborate</Typography>
         </div>
-        <img className='slideImage' alt='' src="https://media.istockphoto.com/id/1452604857/photo/businessman-touching-the-brain-working-of-artificial-intelligence-automation-predictive.webp?b=1&s=170667a&w=0&k=20&c=iJp6e2C-l2lRmyG3ColHMpXe0QYrPnrfQQc2O6PsYC4=" />
+        <StaticImage className='slideImage' alt='' src="../images/aihack/images/2.jpg" />
       </div>
     </SwiperSlide>
-
+    <SwiperSlide>
+      <div className='slideImageCont'>
+        <div className='slideImageText'>
+          <Typography variant="h4">Embrace the AI revolution and be at the forefront of innovation.</Typography>
+        </div>
+        <StaticImage className='slideImage' alt='' src="../images/aihack/images/3.jpg" />
+      </div>
+    </SwiperSlide>
+    <SwiperSlide>
+      <div className='slideImageCont'>
+        <div className='slideImageText'>
+          <Typography variant="h4"> Hone your presentation skills and craft a compelling pitch for your AI solution. </Typography>
+        </div>
+        <StaticImage className='slideImage' alt='' src="../images/aihack/images/4.jpg" />
+      </div>
+    </SwiperSlide>
   </Swiper>)
 }
 const webinars = [{
