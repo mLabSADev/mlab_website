@@ -531,7 +531,8 @@ const AiHack = () => {
           <div className='details-content'>
             <AiCard>
               <div className='centerContent'>
-                <Countdown style={{ color: 'white' }} title="Countdown to closing" value={deadline} format=" 📆D ⏳H : m : s" />
+                <Typography variant="s2">Countdown to closing</Typography>
+                <Countdown style={{ color: 'white' }} value={deadline} format=" 📆D ⏳H : m : s" />
                 <Typography variant="s2">Closes 01 Nov</Typography>
                 <StaticImage className='coutdownGraphic' src='../images/aihack/coutdowngraphic.png' alt='' />
               </div>
