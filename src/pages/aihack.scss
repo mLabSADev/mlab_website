@@ -68,6 +68,7 @@
 .exhisting-partners {
   display: flex;
   padding: 10px 10px;
+  margin: 30px 0px;
   flex-direction: column;
   width: 100%;
   box-sizing: border-box;
@@ -87,7 +88,7 @@
     width: 100%;
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 30px;
     .partner-logo-cont {
       min-width: 117px;
       max-width: 117px;
@@ -405,6 +406,10 @@
     box-sizing: border-box;
     width: 100%;
     z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 30px 0px;
     .headerText {
       box-sizing: border-box;
       padding: 50px 0px;
@@ -416,7 +421,7 @@
       display: flex;
       flex-direction: row;
       gap: 10px;
-      align-items: center;
+      // align-items: center;
       justify-content: center;
       .partnercard {
         display: flex;
@@ -425,7 +430,7 @@
         justify-content: center;
         text-align: center;
         flex-direction: column;
-        align-items: center;
+        // align-items: center;
         background: var(#ffffff, #fafafa);
         padding: 30px;
         border-radius: 10px;

@@ -358,16 +358,12 @@ const webinars = [{
 }]
 const AiHack = () => {
   const [showPackage, setShowPackage] = useState(false)
+  const [scaleStep, setScaleStep] = useState(0.5);
   const swiper = useSwiper();
 
   return (
     <Layout>
-      <Modal bodyStyle={{
-        width: '90%',
-        height: '90%',
-      }} onOk={() => setShowPackage(false)} onCancel={() => setShowPackage(false)} open={showPackage} footer={false}>
-        <StaticImage src='../images/aihack/PARTNERSHIP_PACKAGE/PARTNERSHIP_PACKAGE.jpg' alt='' />
-      </Modal>
+
       <video className='bgVideo' muted autoPlay loop style={{ width: `100%` }}>
         <source src={AIVideo} type="video/mp4" />
       </video>
@@ -448,11 +444,33 @@ const AiHack = () => {
           </div>
         </div>
         {/* About */}
+        <Image
+          width={200}
+          style={{ display: 'none' }}
+          src="https://firebasestorage.googleapis.com/v0/b/mlab-22bb9.appspot.com/o/aihack%2FAIpackage.png?alt=media&token=e4975705-8fcf-4bed-b893-f97e19dacbeb"
+          preview={{
+            visible: showPackage,
+            scaleStep,
+            src: 'https://firebasestorage.googleapis.com/v0/b/mlab-22bb9.appspot.com/o/aihack%2FAIpackage.png?alt=media&token=e4975705-8fcf-4bed-b893-f97e19dacbeb',
+            onVisibleChange: (value) => {
+              setShowPackage(false);
+            },
+          }}
+        />
         <div className='aiAbout'>
           <div className='headerText'>
-            <Typography style={{ fontFamily: 'Segoe' }} variant="h3">About</Typography>
+            <Typography style={{ fontFamily: 'Segoe' }} variant="h3">About AI MashUp</Typography>
           </div>
-
+          <AiCard>
+            <Typography style={{ fontFamily: 'Segoe' }} variant="h6">AI Mashup is a creative approach in AI, where developers and innovators combine different AI technologies, algorithms, and models to create
+              comprehensive solutions. This process involves integrating AI APIs, libraries, or frameworks from different providers into a single application,
+              enabling the fusion of distinct AI capabilities to address complex problems or enhance functionality.</Typography>
+            <Typography style={{ fontFamily: 'Segoe' }} variant="h6">The AI Mashup is an AI-themed Hackathon, hosted in four provincial locations in South Africa, offering virtual and in-person events, skills training,
+              and post-Hackathon support. Participants leverage AI capabilities to create unique solutions for complex problems or enhanced functionality, such
+              as combining natural language processing and image recognition for a chatbot. AI Mashups can lead to innovative and powerful applications,
+              utilizing the strengths of different AI systems.</Typography>
+            <Typography style={{ fontFamily: 'Segoe' }} variant="h6">Partners and participants who dare to approach challenges differently and seek innovative solutions are encouraged to apply.</Typography>
+          </AiCard>
           <div className='cardsContainer'>
             {/* Cards */}
             <AiCard>
@@ -488,22 +506,20 @@ const AiHack = () => {
             </AiCard>
           </div>
         </div>
+        <StaticImage objectFit='contain' src='../images/aihack/timeline.png' alt='' />
+        {/* Exhisting Partners */}
         <div className='exhisting-partners'>
           <Typography style={{ fontFamily: 'Segoe_Bold', textAlign: 'center' }}>Existing Partners</Typography>
-          <hr className='line' />
+
           <div className='partnerList'>
             <div className='partner-logo-cont'>
-              <StaticImage objectFit='contain' className='logo' src='../images/aihack/partners/aiexpo.png' alt='partnerLogo' />
+              <StaticImage objectFit='contain' className='logo' src='../images/logo/logo.png' alt='partnerLogo' />
             </div>
-            <div className='partner-logo-cont'>
-              <StaticImage objectFit='contain' className='logo' src='../images/aihack/partners/dsi.png' alt='partnerLogo' />
-            </div>
+
             <div className='partner-logo-cont'>
               <StaticImage objectFit='contain' className='logo' src='../images/aihack/partners/microsoft.png' alt='partnerLogo' />
             </div>
-            <div className='partner-logo-cont'>
-              <StaticImage objectFit='contain' className='logo' src='../images/aihack/partners/MICTSETA-LOGO-FORMATS-21 1.png' alt='partnerLogo' />
-            </div>
+
 
           </div>
         </div>
@@ -627,16 +643,16 @@ const AiHack = () => {
           </div>
           <div className='thumbnails'>
             <AiCard>
-              <StaticImage src='../images/aihack/webinars/AI_in_South_Africa.png' alt='' />
+              <StaticImage src='../images/aihack/webinars/AI in South Africa.png' alt='' />
             </AiCard>
             <AiCard>
-              <StaticImage src='../images/aihack/webinars/Building_an_MVP with_AI.png' alt='' />
+              <StaticImage src='../images/aihack/webinars/Building an MVP with AI .png' alt='' />
             </AiCard>
             <AiCard>
-              <StaticImage src='../images/aihack/webinars/Microsoft_Azure_Cognitive.png' alt='' />
+              <StaticImage src='../images/aihack/webinars/Microsoft Azure Cognitive.png' alt='' />
             </AiCard>
             <AiCard>
-              <StaticImage src='../images/aihack/webinars/Microsoft_Azure_OpenAI.png' alt='' />
+              <StaticImage src='../images/aihack/webinars/Microsoft Azure OpenAI.png' alt='' />
             </AiCard>
           </div>
         </div>
