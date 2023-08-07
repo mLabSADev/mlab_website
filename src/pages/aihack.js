@@ -322,30 +322,30 @@ const Slides = () => {
   // onSwiper={(swiper) => console.log(swiper)}
   // onSlideChange={() => console.log('slide change')}
   >
-    <SwiperSlide>
+    <SwiperSlide style={{ height: '100%' }}>
       <div className='slideImageCont'>
         <div className='slideImageText'>
           <Typography variant="h4">Unleash Innovation, Transform Tomorrow</Typography>
         </div>
-        <StaticImage className='slideImage' alt='' src="https://res.cloudinary.com/devex/image/fetch/c_scale,f_auto,q_auto,w_720/https://lh4.googleusercontent.com/VQyrPPyh-FGdV2BJtlcwDphesnxERD6SLWvGtARygLDVNSsXhFF0kzG_yXvLyiARZbKIG3VYF_CIbF4_B-Wy3Eu7kKhHKKR3pq_2ob2pdZgxt_Wz_uqXjRMrhIBKREQnJo--Ui9b" />
+        <StaticImage style={{ height: '100%' }} className='slideImage' alt='' src="https://res.cloudinary.com/devex/image/fetch/c_scale,f_auto,q_auto,w_720/https://lh4.googleusercontent.com/VQyrPPyh-FGdV2BJtlcwDphesnxERD6SLWvGtARygLDVNSsXhFF0kzG_yXvLyiARZbKIG3VYF_CIbF4_B-Wy3Eu7kKhHKKR3pq_2ob2pdZgxt_Wz_uqXjRMrhIBKREQnJo--Ui9b" />
       </div>
 
     </SwiperSlide>
-    <SwiperSlide>
+    <SwiperSlide style={{ height: '100%' }}>
       <div className='slideImageCont'>
         <div className='slideImageText'>
           <Typography variant="h4">Breaking Boundaries &amp; Redefining Possibilities</Typography>
         </div>
-        <StaticImage className='slideImage' alt='' src="../images/aihack/images/1.jpg" />
+        <StaticImage style={{ height: '100%' }} className='slideImage' alt='' src="../images/aihack/images/1.jpg" />
       </div>
 
     </SwiperSlide>
-    <SwiperSlide>
+    <SwiperSlide style={{ height: '100%' }}>
       <div className='slideImageCont'>
         <div className='slideImageText'>
           <Typography variant="h4">Connect, Create &amp; Corroborate</Typography>
         </div>
-        <StaticImage className='slideImage' alt='' src="../images/aihack/images/2.jpg" />
+        <StaticImage style={{ height: '100%' }} className='slideImage' alt='' src="../images/aihack/images/2.jpg" />
       </div>
     </SwiperSlide>
     <SwiperSlide>
@@ -353,15 +353,15 @@ const Slides = () => {
         <div className='slideImageText'>
           <Typography variant="h4">Embrace the AI revolution and be at the forefront of innovation.</Typography>
         </div>
-        <StaticImage className='slideImage' alt='' src="../images/aihack/images/3.jpg" />
+        <StaticImage style={{ height: '100%' }} className='slideImage' alt='' src="../images/aihack/images/3.jpg" />
       </div>
     </SwiperSlide>
-    <SwiperSlide>
+    <SwiperSlide style={{ height: '100%' }}>
       <div className='slideImageCont'>
         <div className='slideImageText'>
           <Typography variant="h4"> Hone your presentation skills and craft a compelling pitch for your AI solution. </Typography>
         </div>
-        <StaticImage className='slideImage' alt='' src="../images/aihack/images/4.jpg" />
+        <StaticImage style={{ height: '100%' }} className='slideImage' alt='' src="../images/aihack/images/4.jpg" />
       </div>
     </SwiperSlide>
   </Swiper>)
@@ -522,22 +522,7 @@ const AiHack = () => {
           </div>
         </div>
         <StaticImage objectFit='contain' src='../images/aihack/timeline.png' alt='' />
-        {/* Exhisting Partners */}
-        <div className='exhisting-partners'>
-          <Typography style={{ fontFamily: 'Segoe_Bold', textAlign: 'center' }}>Existing Partners</Typography>
 
-          <div className='partnerList'>
-            <div className='partner-logo-cont'>
-              <StaticImage objectFit='contain' className='logo' src='../images/logo/logo.png' alt='partnerLogo' />
-            </div>
-
-            <div className='partner-logo-cont'>
-              <StaticImage objectFit='contain' className='logo' src='../images/aihack/partners/microsoft.png' alt='partnerLogo' />
-            </div>
-
-
-          </div>
-        </div>
         {/* details */}
         <div className='details'>
           <div className='details-slides'>
@@ -553,14 +538,40 @@ const AiHack = () => {
             </AiCard>
             <AiCard>
               <div className='centerContent'>
-                <Typography variant="s2">2023 Hackathon</Typography>
-                <Typography>👩‍💻Theme: Sustainable AI</Typography>
-                <Typography>📅 Date: 03 - 05 Nov</Typography>
-                <Typography>⏰ Time: 08: 00 am - 15:00 pm next day</Typography>
-                <Typography>📍 Locations: Johannesburg
-                  , Kimberly
-                  , Polokwane, Imbali</Typography>
-              </div></AiCard>
+                <div>
+                  <Typography variant="s1">2023 Hackathon</Typography>
+                  <br />
+                  <Typography variant="s2">👩‍💻Theme</Typography>
+                  <Typography variant="h5">Sustainable AI</Typography>
+                  <hr />
+                  <Typography variant="s2">📅Date</Typography>
+                  <Typography variant="h5">03 - 05 Nov</Typography>
+                  <hr />
+                  <Typography variant="s2">⏰Time</Typography>
+                  <Typography variant="h6">08: 00 am - 15:00 pm next day</Typography>
+                  <hr /><Typography variant="s2">📍Locations</Typography>
+                  <Typography variant="h6">Johannesburg
+                    , Kimberly
+                    , Polokwane, Imbali</Typography>
+                </div>
+              </div>
+            </AiCard>
+          </div>
+        </div>
+        {/* Exhisting Partners */}
+        <div className='exhisting-partners'>
+          <Typography style={{ fontFamily: 'Segoe_Bold', textAlign: 'center' }}>Existing Partners</Typography>
+
+          <div className='partnerList'>
+            <div className='partner-logo-cont'>
+              <StaticImage objectFit='contain' className='logo' src='../images/logo/logo.png' alt='partnerLogo' />
+            </div>
+
+            <div className='partner-logo-cont'>
+              <StaticImage objectFit='contain' className='logo' src='../images/aihack/partners/microsoft.png' alt='partnerLogo' />
+            </div>
+
+
           </div>
         </div>
         {/* Partner & Participate */}
