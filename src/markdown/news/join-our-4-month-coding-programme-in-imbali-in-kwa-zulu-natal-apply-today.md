@@ -1,5 +1,5 @@
 ---
-title: Join our 4-month coding programme in Imbali in Kwa-Zulu Natal, APPLY Today .
+title: Join our 4-month coding programme in Imbali in Kwa-Zulu Natal, APPLY Today.
 author: Zukanye Madakana
 timeStamp: 2023-08-07T11:55:29.031Z
 featureImage: ../../images/imbali-coding-programme-thumbnail-.png
