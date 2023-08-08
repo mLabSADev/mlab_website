@@ -327,9 +327,8 @@ const Slides = () => {
         <div className='slideImageText'>
           <Typography variant="h4">Unleash Innovation, Transform Tomorrow</Typography>
         </div>
-        <StaticImage style={{ height: '100%' }} className='slideImage' alt='' src="https://res.cloudinary.com/devex/image/fetch/c_scale,f_auto,q_auto,w_720/https://lh4.googleusercontent.com/VQyrPPyh-FGdV2BJtlcwDphesnxERD6SLWvGtARygLDVNSsXhFF0kzG_yXvLyiARZbKIG3VYF_CIbF4_B-Wy3Eu7kKhHKKR3pq_2ob2pdZgxt_Wz_uqXjRMrhIBKREQnJo--Ui9b" />
+        <StaticImage style={{ height: '100%' }} className='slideImage' alt='' src="../images/aihack/images/4.jpg" />
       </div>
-
     </SwiperSlide>
     <SwiperSlide style={{ height: '100%' }}>
       <div className='slideImageCont'>
@@ -356,14 +355,7 @@ const Slides = () => {
         <StaticImage style={{ height: '100%' }} className='slideImage' alt='' src="../images/aihack/images/3.jpg" />
       </div>
     </SwiperSlide>
-    <SwiperSlide style={{ height: '100%' }}>
-      <div className='slideImageCont'>
-        <div className='slideImageText'>
-          <Typography variant="h4"> Hone your presentation skills and craft a compelling pitch for your AI solution. </Typography>
-        </div>
-        <StaticImage style={{ height: '100%' }} className='slideImage' alt='' src="../images/aihack/images/4.jpg" />
-      </div>
-    </SwiperSlide>
+
   </Swiper>)
 }
 const webinars = [{
@@ -371,7 +363,7 @@ const webinars = [{
   link: '',
   graphic: <StaticImage src='../images/aihack/webinars/AI_in_South_Africa .png' alt='' />
 }]
-const AiHack = () => {
+const AiMashup = () => {
   const [showPackage, setShowPackage] = useState(false)
   const [scaleStep, setScaleStep] = useState(0.5);
   const swiper = useSwiper();
@@ -559,7 +551,7 @@ const AiHack = () => {
             </AiCard>
           </div>
         </div>
-        {/* Exhisting Partners */}
+        {/* Existing Partners */}
         <div className='exhisting-partners'>
           <Typography style={{ fontFamily: 'Segoe_Bold', textAlign: 'center' }}>Existing Partners</Typography>
 
@@ -572,7 +564,9 @@ const AiHack = () => {
               <StaticImage objectFit='contain' className='logo' src='../images/aihack/partners/microsoft.png' alt='partnerLogo' />
             </div>
 
-
+            <div className='partner-logo-cont'>
+              <StaticImage objectFit='contain' className='logo' src='../images/aihack/partners/aiexpo.png' alt='partnerLogo' />
+            </div>
           </div>
         </div>
         {/* Partner & Participate */}
@@ -702,4 +696,4 @@ const AiHack = () => {
   )
 }
 
-export default AiHack
+export default AiMashup

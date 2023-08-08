@@ -8,11 +8,11 @@ const AIHack = () => {
     href="https://codetribe.mlab.co.za/"
     target="_blank"
     rel="noreferrer"
-    to="/aihack"
+    to="/aimashup"
     className="aihack"
   >
     <Typography style={{ fontFamily: 'Segoe_Bold' }} variant="s2" color="white">
-      AI Hackathon
+      AIMashup
     </Typography>
     <div class="system">
       <div class="system__orbit system__orbit--sun">
