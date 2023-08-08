@@ -6,6 +6,16 @@ exports.createPages = async ({ actions, graphql }) => {
   const PostTemplate = path.resolve("src/templates/blog-post.js");
   const TagsTemplate = path.resolve("src/templates/tags.js");
   const PillerTemplate = path.resolve("src/pages/pillers.js");
+  const GeneratePath = (path) => {
+    const link = slugify(path, {
+      replacement: '-',  // replace spaces with replacement character, defaults to `-`
+      remove: /[*+~.()'"!:@]/g, // remove characters that match regex, defaults to `undefined`
+      lower: true,      // convert to lower case, defaults to `false`
+      strict: true,     // strip special characters except replacement, defaults to `false`
+      trim: true         // trim leading and trailing replacement chars, defaults to `true`
+    })
+    return link
+  }
   const news = await graphql(`
     {
       allMarkdownRemark(
@@ -67,14 +77,7 @@ exports.createPages = async ({ actions, graphql }) => {
   `);
   news.data.allMarkdownRemark.edges.forEach(({ node }) => {
     const title = node.frontmatter.title;
-    const lowerCase = title;
-    const remove_invalid_1 = lowerCase.replaceAll(":", "");
-    const remove_invalid_2 = remove_invalid_1.replaceAll("|", "");
-    const remove_invalid_3 = remove_invalid_2.replaceAll("#", "");
-    const remove_invalid_4 = remove_invalid_3.replaceAll("&", "");
-    const remove_invalid_5 = remove_invalid_4.replaceAll('"', "");
-    const remove_invalid_6 = remove_invalid_5.replaceAll('"', "");
-    const _path = remove_invalid_6.replaceAll(" ", "-");
+    const _path = GeneratePath(title);
     createPage({
       path: `/news/${_path}`,
       component: PostTemplate,
@@ -84,8 +87,21 @@ exports.createPages = async ({ actions, graphql }) => {
   tags.data.allMarkdownRemark.edges.forEach(({ node }) => {
     if (node.frontmatter.tags.length) {
       node.frontmatter.tags.forEach((tag) => {
+        const _path = GeneratePath(tag);
         createPage({
-          path: `/news/tag/${tag.replaceAll(" ", "-")}`,
+          path: `/news/tag/${_path}`,
+          component: TagsTemplate,
+          context: { tag: tag },
+        });
+      });
+    }
+  });
+  categories.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    if (node.frontmatter.tags.length) {
+      node.frontmatter.name.forEach((tag) => {
+        const _path = GeneratePath(tag);
+        createPage({
+          path: `/news/category/${_path}`,
           component: TagsTemplate,
           context: { tag: tag },
         });
@@ -93,8 +109,9 @@ exports.createPages = async ({ actions, graphql }) => {
     }
   });
   pillers.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    const _path = GeneratePath(node.frontmatter.title);
     createPage({
-      path: `/what-we-do/${node.frontmatter.title.replaceAll(" ", "-")}`,
+      path: `/what-we-do/${_path}`,
       component: PillerTemplate,
       context: { title: node.frontmatter.title },
     });

@@ -8,7 +8,18 @@ import Typography from "../components/Typography/Typography";
 import SectionTitle from "../components/SectionTitle/SectionTitle";
 import Section from "../components/Section/Section";
 import TechCard from "../components/TextCard/TechCard";
+const slugify = require('slugify');
 // import { Helmet } from "react-helmet";
+const GeneratePath = (path) => {
+  const link = slugify(path, {
+    replacement: '-',  // replace spaces with replacement character, defaults to `-`
+    remove: /[*+~.()'"!:@]/g, // remove characters that match regex, defaults to `undefined`
+    lower: true,      // convert to lower case, defaults to `false`
+    strict: true,     // strip special characters except replacement, defaults to `false`
+    trim: true         // trim leading and trailing replacement chars, defaults to `true`
+  })
+  return link
+}
 const CodeTribe = ({ state = false, link, title, description }) => {
   return (
     <div className="codeTribe">
@@ -80,8 +91,8 @@ const Pillers = ({ data, location }) => {
   const resposiveWidth = 980;
   const url = location.pathname;
   const splitUrl = url.split("/");
-  const cleanSplit = splitUrl[2].replace("-", " ");
-
+  // const cleanSplit = splitUrl[2].replace("-", " ");
+  const cleanSplit = GeneratePath(splitUrl[2]);
   useEffect(() => {
     (function (h, o, t, j, a, r) {
       h.hj =
@@ -104,7 +115,7 @@ const Pillers = ({ data, location }) => {
         const title = cleanSplit;
         const background = getImage(node.node.frontmatter.featureImage);
         const icon = getImage(node.node.frontmatter.icon);
-        if (node.node.frontmatter.title == title) {
+        if (GeneratePath(node.node.frontmatter.title) == title) {
           const data = node.node;
           return (
             <div className="subPage" key={i}>
@@ -225,7 +236,7 @@ const Pillers = ({ data, location }) => {
                           image={img}
                           icon={icon}
                           description={description}
-                          // handleClick={open}
+                        // handleClick={open}
                         />
                       );
                     })}

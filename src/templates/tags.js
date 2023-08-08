@@ -18,6 +18,16 @@ export default function TaggedPosts({ data, pageContext }) {
     let tag = element.frontmatter.tags;
     tags = tags.concat(tag);
   });
+  const GeneratePath = (path) => {
+    const link = slugify(path, {
+      replacement: '-',  // replace spaces with replacement character, defaults to `-`
+      remove: /[*+~.()'"!:@]/g, // remove characters that match regex, defaults to `undefined`
+      lower: true,      // convert to lower case, defaults to `false`
+      strict: true,       // strip special characters except replacement, defaults to `false`
+      trim: true         // trim leading and trailing replacement chars, defaults to `true`
+    })
+    return link
+  }
   return (
     <Layout>
       <PageHeader title={tag.toUpperCase()} />

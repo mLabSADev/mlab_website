@@ -3,6 +3,18 @@ import "./style.scss";
 import { Link } from "gatsby";
 import Typography from "../Typography/Typography";
 import { graphql, StaticQuery } from "gatsby";
+const slugify = require('slugify');
+//  - { label: "Author", name: "author", widget: "string" }
+const GeneratePath = (path) => {
+  const link = slugify(path, {
+    replacement: '-',  // replace spaces with replacement character, defaults to `-`
+    remove: /[*+~.()'"!:@]/g, // remove characters that match regex, defaults to `undefined`
+    lower: true,      // convert to lower case, defaults to `false`
+    strict: true,     // strip special characters except replacement, defaults to `false`
+    trim: true         // trim leading and trailing replacement chars, defaults to `true`
+  })
+  return link
+}
 const AIHack = () => {
   return (<Link
     href="https://codetribe.mlab.co.za/"
@@ -168,10 +180,10 @@ export const links = [
     label: "What we do",
     url: "/what-we-do",
     items: [
-      { label: "Tech Ecosystems", url: "/what-we-do/Tech-Ecosystems" },
-      { label: "Tech Skills", url: "/what-we-do/Tech-Skills" },
-      { label: "Tech Start-ups", url: "/what-we-do/Tech-Start-Ups" },
-      { label: "Tech Solutions", url: "/what-we-do/Tech-Solutions" },
+      { label: "Tech Ecosystems", url: "/what-we-do/tech-ecosystems" },
+      { label: "Tech Skills", url: "/what-we-do/tech-skills" },
+      { label: "Tech Start-ups", url: "/what-we-do/tech-start-ups" },
+      { label: "Tech Solutions", url: "/what-we-do/tech-solutions" },
     ],
   },
   {
