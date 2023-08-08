@@ -11,8 +11,8 @@ const AIHack = () => {
     to="/aimashup"
     className="aihack"
   >
-    <Typography style={{ fontFamily: 'Segoe_Bold' }} variant="s2" color="white">
-      AIMashup
+    <Typography style={{ fontFamily: 'Segoe_Bold', textTransform: 'capitalize', color: 'white' }} variant="s2" color="white">
+      AI Mashup
     </Typography>
     <div class="system">
       <div class="system__orbit system__orbit--sun">
