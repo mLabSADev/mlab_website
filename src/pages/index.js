@@ -11,6 +11,7 @@ import moment from "moment";
 import { WhatWeDoCard } from "./who-we-are";
 import Layout from "../components/ChatBot/ChatBot";
 // import { Helmet } from "react-helmet";
+const slugify = require('slugify')
 const IndexPage = ({ data }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const close = () => setModalOpen(false);
@@ -18,6 +19,16 @@ const IndexPage = ({ data }) => {
 
   const banners = data.banners.edges;
   const newsHeader = data.newsHeader.frontmatter.position;
+  const GeneratePath = (path) => {
+    const link = slugify(path, {
+      replacement: '-',  // replace spaces with replacement character, defaults to `-`
+      remove: /[*+~.()'"!:@]/g, // remove characters that match regex, defaults to `undefined`
+      lower: true,      // convert to lower case, defaults to `false`
+      strict: false,     // strip special characters except replacement, defaults to `false`
+      trim: true         // trim leading and trailing replacement chars, defaults to `true`
+    })
+    return link
+  }
   useEffect(() => {
     (function (h, o, t, j, a, r) {
       h.hj =
@@ -87,19 +98,23 @@ const IndexPage = ({ data }) => {
             const remove_invalid_5 = remove_invalid_4.replaceAll('"', "");
             const remove_invalid_6 = remove_invalid_5.replaceAll('"', "");
             const remove_invalid_7 = remove_invalid_6.replaceAll('.', "");
-            const _path = remove_invalid_7.replaceAll(" ", "-");
-            return (
-              <NewsCard
-                date={moment(item.node.frontmatter.timeStamp).format(
-                  "DD MMMM, YYYY"
-                )}
-                key={i}
-                image={image}
-                excerpt={item.node.excerpt}
-                title={item.node.frontmatter.title.replace("-", " ")}
-                url={`/news/${_path}`}
-              />
-            );
+            // const _path = remove_invalid_7.replaceAll(" ", "-");
+            const _path = GeneratePath(`/news/${title}`);
+            if (title) {
+              return (
+                <NewsCard
+                  date={moment(item.node.frontmatter.timeStamp).format(
+                    "DD MMMM, YYYY"
+                  )}
+                  key={i}
+                  image={image}
+                  excerpt={item.node.excerpt}
+                  title={item.node.frontmatter.title.replace("-", " ")}
+                  url={_path}
+                />
+              );
+            }
+
           })}
         </div>
         <div className=""></div>

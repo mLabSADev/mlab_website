@@ -1,4 +1,5 @@
 const path = require("path");
+const slugify = require('slugify');
 const { paginate } = require("gatsby-awesome-pagination");
 const { createFilePath } = require(`gatsby-source-filesystem`);
 exports.createPages = async ({ actions, graphql }) => {
@@ -6,6 +7,16 @@ exports.createPages = async ({ actions, graphql }) => {
   const PostTemplate = path.resolve("src/templates/blog-post.js");
   const TagsTemplate = path.resolve("src/templates/tags.js");
   const PillerTemplate = path.resolve("src/pages/pillers.js");
+  const GeneratePath = (path) => {
+    const link = slugify(path, {
+      replacement: '-',  // replace spaces with replacement character, defaults to `-`
+      remove: /[*+~.()'"!:@]/g, // remove characters that match regex, defaults to `undefined`
+      lower: true,      // convert to lower case, defaults to `false`
+      strict: false,     // strip special characters except replacement, defaults to `false`
+      trim: true         // trim leading and trailing replacement chars, defaults to `true`
+    })
+    return link
+  }
   const news = await graphql(`
     {
       allMarkdownRemark(
@@ -50,6 +61,25 @@ exports.createPages = async ({ actions, graphql }) => {
       }
     }
   `);
+  const categories = await graphql(`
+    {
+      allMarkdownRemark(
+        filter: {
+          fileAbsolutePath: { regex: "/(categories)/" }
+          frontmatter: { tags: { ne: null } }
+        }
+      ) {
+        edges {
+          node {
+            id
+            frontmatter {
+              tags
+            }
+          }
+        }
+      }
+    }
+  `);
   const pillers = await graphql(`
     {
       allMarkdownRemark(
@@ -67,17 +97,9 @@ exports.createPages = async ({ actions, graphql }) => {
   `);
   news.data.allMarkdownRemark.edges.forEach(({ node }) => {
     const title = node.frontmatter.title;
-    const lowerCase = title;
-    const remove_invalid_1 = lowerCase.replaceAll(":", "");
-    const remove_invalid_2 = remove_invalid_1.replaceAll("|", "");
-    const remove_invalid_3 = remove_invalid_2.replaceAll("#", "");
-    const remove_invalid_4 = remove_invalid_3.replaceAll("&", "");
-    const remove_invalid_5 = remove_invalid_4.replaceAll('"', "");
-    const remove_invalid_6 = remove_invalid_5.replaceAll('"', "");
-    const remove_invalid_7 = remove_invalid_6.replaceAll('.', "");
-    const _path = remove_invalid_7.replaceAll(" ", "-");
+    const _path = GeneratePath(`/news/${title}`);
     createPage({
-      path: `/news/${_path}`,
+      path: _path,
       component: PostTemplate,
       context: { article: title },
     });
@@ -85,8 +107,21 @@ exports.createPages = async ({ actions, graphql }) => {
   tags.data.allMarkdownRemark.edges.forEach(({ node }) => {
     if (node.frontmatter.tags.length) {
       node.frontmatter.tags.forEach((tag) => {
+        const _path = GeneratePath(`/news/tag/${tag}`);
         createPage({
-          path: `/news/tag/${tag.replaceAll(" ", "-")}`,
+          path: _path,
+          component: TagsTemplate,
+          context: { tag: tag },
+        });
+      });
+    }
+  });
+  categories.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    if (node.frontmatter.tags.length) {
+      node.frontmatter.name.forEach((tag) => {
+        const _path = GeneratePath(`/news/category/${tag}`);
+        createPage({
+          path: _path,
           component: TagsTemplate,
           context: { tag: tag },
         });
@@ -94,8 +129,9 @@ exports.createPages = async ({ actions, graphql }) => {
     }
   });
   pillers.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    const _path = GeneratePath(`/what-we-do//${node.frontmatter.title}`);
     createPage({
-      path: `/what-we-do/${node.frontmatter.title.replaceAll(" ", "-")}`,
+      path: _path,
       component: PillerTemplate,
       context: { title: node.frontmatter.title },
     });

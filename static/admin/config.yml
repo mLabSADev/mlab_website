@@ -120,7 +120,6 @@ collections:
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
-
       - {
           label: "Author",
           name: "author",
@@ -134,21 +133,20 @@ collections:
       - {
           label: "Category",
           name: "category",
-          widget: "select",
-          options:
-            [
-              "General",
-              "Events",
-              "Tech Ecosystems",
-              "Tech Skills",
-              "Tech Solutions",
-              "Tech Start-ups",
-              "Newsletter",
-              "Media Statement",
-            ],
+          widget: "relation",
+          collection: "categories",
+          searchFields: ["name"],
+          valueField: "name",
         }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Content", name: "body", widget: "markdown" }
+
+  - name: "categories"
+    label: "Categories"
+    folder: "src/markdown/categories"
+    create: true
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
   - name: "partnershipContacts"
     label: "Partnership Contacts"
     folder: "src/markdown/partnershipContacts"
