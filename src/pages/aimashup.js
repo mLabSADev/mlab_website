@@ -322,7 +322,6 @@ const Slides = () => {
   // onSwiper={(swiper) => console.log(swiper)}
   // onSlideChange={() => console.log('slide change')}
   >
-
     <SwiperSlide style={{ height: '100%' }}>
       <div className='slideImageCont'>
         <div className='slideImageText'>
@@ -348,6 +347,7 @@ const Slides = () => {
         <StaticImage style={{ height: '100%' }} className='slideImage' alt='' src="../images/aihack/images/3.jpg" />
       </div>
     </SwiperSlide>
+
     <SwiperSlide style={{ height: '100%' }}>
       <div className='slideImageCont'>
         <div className='slideImageText'>
@@ -356,6 +356,7 @@ const Slides = () => {
         <StaticImage style={{ height: '100%' }} className='slideImage' alt='' src="../images/aihack/images/4.jpg" />
       </div>
     </SwiperSlide>
+
   </Swiper>)
 }
 const webinars = [{
@@ -363,7 +364,9 @@ const webinars = [{
   link: '',
   graphic: <StaticImage src='../images/aihack/webinars/AI_in_South_Africa .png' alt='' />
 }]
-const AiHack = () => {
+
+const AiMashup = () => {
+
   const [showPackage, setShowPackage] = useState(false)
   const [scaleStep, setScaleStep] = useState(0.5);
   const swiper = useSwiper();
@@ -381,7 +384,7 @@ const AiHack = () => {
             <div className='cont-wel'>
               <div className='text-wel'>
                 <Typography style={{ fontFamily: 'Segoe_Bold' }} variant="h2">Sustainable</Typography>
-                <Typography gradient={true} style={{ fontFamily: 'Segoe_Bold', }} variant="h2">AI Theme Hackathon</Typography>
+                <Typography gradient={true} style={{ fontFamily: 'Segoe_Bold', }} variant="h2">AI Themed Hackathon</Typography>
                 <Typography style={{ fontFamily: 'Segoe_Bold' }} variant="h6">Gain Recognition and Network with Industry Leaders</Typography>
                 <div className='buttons'>
                   <a href='https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&FormId=t-gnePdSFkGYhuZR7_hNSFJAzbdI5nxLruEDle0dirBUNUgzUDQzOTVZUktSSTc3QU5WOFNWWVNQNS4u&Token=09b15ffa58ab424e9b764b549f31c06d' target='_blank' className='registerbtn'>
@@ -469,6 +472,7 @@ const AiHack = () => {
             <Typography style={{ fontFamily: 'Segoe' }} variant="h3">About AI MashUp</Typography>
           </div>
           <AiCard>
+
             <Typography style={{ fontFamily: 'Segoe' }} variant="h6">
               The AI Mashup is more than just an artificial intelligence-themed Hackathon. It is a
               combination of virtual and in person events, hosted simultaneously in multiple locations. This
@@ -481,10 +485,12 @@ const AiHack = () => {
             <Typography style={{ fontFamily: 'Segoe' }} variant="h6">
               Partners and participants who dare to approach challenges differently are encouraged to register.
             </Typography>
+
           </AiCard>
           <div className='cardsContainer'>
             {/* Cards */}
             <AiCard>
+
               <Typography variant="h5" style={{ fontFamily: 'Segoe_Bold' }}>The Mashup</Typography>
               <Typography style={{ fontFamily: 'Segoe' }} variant="b2">The AI Mashup will be hosted under the theme of Sustainable Artificial Intelligence.
               </Typography>
@@ -493,6 +499,7 @@ const AiHack = () => {
                   which have been identified as having a significant impact on the social and economic
                   landscape of Africa:
                 </Typography>
+
                 <ul>
                   <li><Typography style={{ fontFamily: 'Segoe' }}>Fintech</Typography></li>
                   <li><Typography style={{ fontFamily: 'Segoe' }}>Healthtech</Typography></li>
@@ -569,7 +576,9 @@ const AiHack = () => {
             </AiCard>
           </div>
         </div>
+
         {/* Exhisting Partners */}
+
         <div className='exhisting-partners'>
           <Typography style={{ fontFamily: 'Segoe_Bold', textAlign: 'center' }}>Existing Partners</Typography>
 
@@ -581,6 +590,7 @@ const AiHack = () => {
             <div className='partner-logo-cont'>
               <StaticImage objectFit='contain' className='logo' src='../images/aihack/partners/microsoft.png' alt='partnerLogo' />
             </div>
+
             <div className='partner-logo-cont'>
               <StaticImage objectFit='contain' className='logo' src='../images/aihack/partners/aiexpo.png' alt='partnerLogo' />
             </div>
@@ -592,6 +602,7 @@ const AiHack = () => {
           {/* Partner */}
           <AiCard>
             <div className='centerContent fillContent'>
+
               <Typography variant="h4" style={{ fontFamily: 'Segoe_Bold' }}>Register for Partnership Briefing Session</Typography>
               <a className='partnerbtn' href='https://forms.office.com/r/C7ZN7Zpjqx' target='_blank' >
                 <Typography variant="button" style={{ fontFamily: 'Segoe' }}>Partner with us</Typography>
@@ -601,6 +612,7 @@ const AiHack = () => {
               <Typography variant="h6" style={{ fontFamily: 'Segoe_Bold' }}>View Partnership Packages</Typography>
             </a>
 
+
           </AiCard>
           <AiCard>
             <div className='partnerheader'>
@@ -609,6 +621,7 @@ const AiHack = () => {
             <div className='centerContent'>
 
               <StaticImage objectFit='contain' className='locationsmap' src='../images/aihack/locationsMap.png' alt='' />
+
               <a href='https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&FormId=t-gnePdSFkGYhuZR7_hNSFJAzbdI5nxLruEDle0dirBUNUgzUDQzOTVZUktSSTc3QU5WOFNWWVNQNS4u&Token=09b15ffa58ab424e9b764b549f31c06d' target='_blank' className='registerbtn'>
                 <svg className='star1' xmlns="http://www.w3.org/2000/svg" width="54" height="53" viewBox="0 0 54 53" fill="none">
                   <g filter="url(#filter0_f_198_2813)">
@@ -678,11 +691,13 @@ const AiHack = () => {
         {/* webinars */}
         <div className='webinars'>
           <div className='web-header'>
+
             <Typography variant="h3" style={{ fontFamily: 'Segoe_bold' }}>Webinars</Typography>
             <Typography variant="b2" style={{ fontFamily: 'Segoe' }}>By registering to participate in the AI Mashup you will be advised on Webinar dates and
               times. Below is a sample of some of the sessions that will be held in October 2023. If you
               are not a participant and would like to participate in the webinar series, please contact us for
               assistance.</Typography>
+
           </div>
           <div className='thumbnails'>
             <AiCard>
@@ -718,4 +733,6 @@ const AiHack = () => {
   )
 }
 
-export default AiHack
+
+export default AiMashup
+
