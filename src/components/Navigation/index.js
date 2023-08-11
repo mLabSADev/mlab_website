@@ -23,8 +23,8 @@ const AIHack = () => {
     to="/aihack"
     className="aihack"
   >
-    <Typography style={{ fontFamily: 'Segoe_Bold' }} variant="s2" color="white">
-      AI Hackathon
+    <Typography style={{ fontFamily: 'Segoe_Bold', textTransform: 'capitalize', color: 'white' }} variant="s2" color="white">
+      AIMashup
     </Typography>
     <div class="system">
       <div class="system__orbit system__orbit--sun">
@@ -273,7 +273,8 @@ const Navigation = ({ title, route }) => {
           })}
           <AIHack />
           <a
-            href="https://codetribe.mlab.co.za/"
+            // href="https://codetribe.mlab.co.za/"
+            href="https://codetribe-platform.web.app/"
             target="_blank"
             rel="noreferrer"
             className="codetribe-link"
@@ -315,7 +316,7 @@ const Navigation = ({ title, route }) => {
         })}
         <AIHack />
         <a
-          href="https://codetribe.mlab.co.za/"
+          href="https://codetribe-platform.web.app/"
           target="_blank"
           rel="noreferrer"
           className="codetribe-link"
