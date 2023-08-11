@@ -1,4 +1,5 @@
 const path = require("path");
+const slugify = require('slugify')
 const { paginate } = require("gatsby-awesome-pagination");
 const { createFilePath } = require(`gatsby-source-filesystem`);
 exports.createPages = async ({ actions, graphql }) => {
@@ -96,18 +97,18 @@ exports.createPages = async ({ actions, graphql }) => {
       });
     }
   });
-  categories.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    if (node.frontmatter.tags.length) {
-      node.frontmatter.name.forEach((tag) => {
-        const _path = GeneratePath(tag);
-        createPage({
-          path: `/news/category/${_path}`,
-          component: TagsTemplate,
-          context: { tag: tag },
-        });
-      });
-    }
-  });
+  // categories.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  //   if (node.frontmatter.tags.length) {
+  //     node.frontmatter.name.forEach((tag) => {
+  //       const _path = GeneratePath(tag);
+  //       createPage({
+  //         path: `/news/category/${_path}`,
+  //         component: TagsTemplate,
+  //         context: { tag: tag },
+  //       });
+  //     });
+  //   }
+  // });
   pillers.data.allMarkdownRemark.edges.forEach(({ node }) => {
     const _path = GeneratePath(node.frontmatter.title);
     createPage({

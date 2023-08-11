@@ -11,6 +11,7 @@ import moment from "moment";
 import { WhatWeDoCard } from "./who-we-are";
 import Layout from "../components/ChatBot/ChatBot";
 // import { Helmet } from "react-helmet";
+const slugify = require('slugify')
 const IndexPage = ({ data }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const close = () => setModalOpen(false);

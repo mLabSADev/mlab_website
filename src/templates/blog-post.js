@@ -10,8 +10,8 @@ import "./blog-post.scss";
 import Typography from "../components/Typography/Typography";
 import { AnimatePresence } from "framer-motion";
 import ImageModal from "../components/ImageModal/ImageModal";
-
 import moment from "moment";
+const slugify = require('slugify')
 export default function BlogPost({ data }) {
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -20,10 +20,11 @@ export default function BlogPost({ data }) {
 
   const image = getImage(
     data.markdownRemark.frontmatter.featureImage &&
-      data.markdownRemark.frontmatter.featureImage
+    data.markdownRemark.frontmatter.featureImage
   );
   const banner = getImage(data.markdownRemark.frontmatter?.banner);
   const tags = data.markdownRemark.frontmatter.tags;
+
   const title = data.markdownRemark.frontmatter.title.replaceAll("-", " ");
   const html = data.markdownRemark.html;
   const date = data.markdownRemark.frontmatter.timeStamp;

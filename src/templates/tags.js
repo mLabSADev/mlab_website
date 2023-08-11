@@ -8,7 +8,7 @@ import PageHeader from "../components/PageHeader/PageHeader";
 import NewsCard from "../components/NewsCard/NewsCard";
 import { getImage } from "gatsby-plugin-image";
 import Tag from "../components/Tag/Tag";
-
+const slugify = require('slugify')
 export default function TaggedPosts({ data, pageContext }) {
   // detect change
   const { tag } = pageContext;

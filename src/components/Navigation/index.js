@@ -20,7 +20,7 @@ const AIHack = () => {
     href="https://codetribe.mlab.co.za/"
     target="_blank"
     rel="noreferrer"
-    to="/aihack"
+    to="/aimashup"
     className="aihack"
   >
     <Typography style={{ fontFamily: 'Segoe_Bold', textTransform: 'capitalize', color: 'white' }} variant="s2" color="white">
