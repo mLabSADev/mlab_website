@@ -381,7 +381,7 @@ const AiHack = () => {
             <div className='cont-wel'>
               <div className='text-wel'>
                 <Typography style={{ fontFamily: 'Segoe_Bold' }} variant="h2">Sustainable</Typography>
-                <Typography gradient={true} style={{ fontFamily: 'Segoe_Bold', }} variant="h2">AI Theme Hackathon</Typography>
+                <Typography gradient={true} style={{ fontFamily: 'Segoe_Bold', }} variant="h2">AI Themed Hackathon</Typography>
                 <Typography style={{ fontFamily: 'Segoe_Bold' }} variant="h6">Gain Recognition and Network with Industry Leaders</Typography>
                 <div className='buttons'>
                   <a href='https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&FormId=t-gnePdSFkGYhuZR7_hNSFJAzbdI5nxLruEDle0dirBUNUgzUDQzOTVZUktSSTc3QU5WOFNWWVNQNS4u&Token=09b15ffa58ab424e9b764b549f31c06d' target='_blank' className='registerbtn'>
@@ -607,7 +607,6 @@ const AiHack = () => {
               <Typography variant="h6" style={{ fontFamily: 'Segoe_bold' }}>Participate</Typography>
             </div>
             <div className='centerContent'>
-
               <StaticImage objectFit='contain' className='locationsmap' src='../images/aihack/locationsMap.png' alt='' />
               <a href='https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&FormId=t-gnePdSFkGYhuZR7_hNSFJAzbdI5nxLruEDle0dirBUNUgzUDQzOTVZUktSSTc3QU5WOFNWWVNQNS4u&Token=09b15ffa58ab424e9b764b549f31c06d' target='_blank' className='registerbtn'>
                 <svg className='star1' xmlns="http://www.w3.org/2000/svg" width="54" height="53" viewBox="0 0 54 53" fill="none">
