@@ -705,7 +705,11 @@
     }
   }
 }
+
 @media only screen and (max-width: 880px) {
+  .locationsmap {
+    width: 100%;
+  }
   .welcome {
     .main-wel {
       .cont-wel {
