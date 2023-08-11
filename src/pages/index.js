@@ -99,6 +99,7 @@ const IndexPage = ({ data }) => {
             const remove_invalid_5 = remove_invalid_4.replaceAll('"', "");
             const remove_invalid_6 = remove_invalid_5.replaceAll('"', "");
             const remove_invalid_7 = remove_invalid_6.replaceAll('.', "");
+
             // const _path = remove_invalid_7.replaceAll(" ", "-");
             const _path = GeneratePath(title);
             if (title) {
@@ -115,6 +116,7 @@ const IndexPage = ({ data }) => {
                 />
               );
             }
+
 
           })}
         </div>
