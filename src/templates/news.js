@@ -12,7 +12,6 @@ import { getImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 import Tag from "../components/Tag/Tag";
 import moment from "moment";
-const slugify = require('slugify')
 // import { Helmet } from "react-helmet";
 const slugify = require('slugify');
 const News = ({ data, pageContext, numberOfAllPages = [] }) => {
