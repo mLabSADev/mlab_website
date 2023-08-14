@@ -610,6 +610,9 @@
 }
 
 @media only screen and (max-width: 1600px) {
+  .locationsmap {
+    width: 100%;
+  }
   .coutdownGraphic {
     right: -129px;
     transform: scale(1);

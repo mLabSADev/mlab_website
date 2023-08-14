@@ -469,14 +469,17 @@ const AiMashup = () => {
             <Typography style={{ fontFamily: 'Segoe' }} variant="h3">About AI MashUp</Typography>
           </div>
           <AiCard>
-            <Typography style={{ fontFamily: 'Segoe' }} variant="h6">AI Mashup is a creative approach in AI, where developers and innovators combine different AI technologies, algorithms, and models to create
-              comprehensive solutions. This process involves integrating AI APIs, libraries, or frameworks from different providers into a single application,
-              enabling the fusion of distinct AI capabilities to address complex problems or enhance functionality.</Typography>
-            <Typography style={{ fontFamily: 'Segoe' }} variant="h6">The AI Mashup is an AI-themed Hackathon, hosted in four provincial locations in South Africa, offering virtual and in-person events, skills training,
-              and post-Hackathon support. Participants leverage AI capabilities to create unique solutions for complex problems or enhanced functionality, such
-              as combining natural language processing and image recognition for a chatbot. AI Mashups can lead to innovative and powerful applications,
-              utilizing the strengths of different AI systems.</Typography>
-            <Typography style={{ fontFamily: 'Segoe' }} variant="h6">Partners and participants who dare to approach challenges differently and seek innovative solutions are encouraged to apply.</Typography>
+
+            <Typography style={{ fontFamily: 'Segoe' }} variant="h6">
+              The AI Mashup is more than just an artificial intelligence-themed hackathon. It is a combination of virtual and in-person events, hosted simultaneously in multiple locations. This year we are starting with four provincial locations across South Africa and have plans to expand into other Sub Saharan African countries next year.
+            </Typography>
+            <Typography style={{ fontFamily: 'Segoe' }} variant="h6">
+              The AI Mashup offers a series of events from skills development webinars leading up to the Sustainable AI Hackathon, followed by post-hack incubation for the winning solutions. At the hackathon, participants will leverage AI capabilities to create unique solutions for provided challenge statements, or demonstrate enhanced functionality to existing solutions through the use of AI.
+            </Typography>
+            <Typography style={{ fontFamily: 'Segoe' }} variant="h6">
+              Partners and participants who dare to approach challenges differently are encouraged to register.
+            </Typography>
+
           </AiCard>
           <div className='cardsContainer'>
             {/* Cards */}
@@ -499,7 +502,12 @@ const AiMashup = () => {
               <Typography variant="h5" style={{ fontFamily: 'Segoe_Bold' }}>Why AI for Sustainability</Typography>
               <Typography style={{ fontFamily: 'Segoe' }}>Given that AI has the potential to address many of the social and economic challenges faced by South Africa, such as finance, healthcare, education, and food security.
               </Typography>
-              <Typography >By hosting a Sustainable AI hackathon, Microsoft and its partners seek to encourage developers to build AI solutions that have a positive impact on these issues.</Typography>
+              <ul>
+                <li><Typography style={{ fontFamily: 'Segoe' }}>Mentors</Typography></li>
+                <li><Typography style={{ fontFamily: 'Segoe' }}>Meals &amp; drinks</Typography></li>
+                <li><Typography style={{ fontFamily: 'Segoe' }}>Toiletry bags</Typography></li>
+                <li><Typography style={{ fontFamily: 'Segoe' }}>Corporate gifts</Typography></li>
+              </ul>
             </AiCard>
             <AiCard>
               <Typography variant="h5" style={{ fontFamily: 'Segoe_Bold' }}>Benefits of Joining</Typography>
