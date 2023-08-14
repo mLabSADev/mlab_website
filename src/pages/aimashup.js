@@ -386,7 +386,7 @@ const AiMashup = () => {
                 <div>
                   <Typography style={{ fontFamily: 'Segoe_Bold' }} variant="h3">Sustainable  </Typography>
                   <Typography style={{ fontFamily: 'Segoe_Bold', }} variant="h3 " gradient={true}>Artificial Intelligence</Typography>
-                  <Typography style={{ fontFamily: 'Segoe_Bold' }} variant="h4">themed webinars, hackathon and post-hack incubation</Typography>
+                  <Typography style={{ fontFamily: 'Segoe_Bold' }} variant="h4">themed webinars, hackathon and <br/>post-hack incubation</Typography>
                 </div>
 
                 <Typography style={{ fontFamily: 'Segoe_Bold' }} variant="h6">Unleash Innovation, Transform Tomorrow</Typography>
