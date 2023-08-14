@@ -52,14 +52,14 @@ export default function TaggedPosts({ data, pageContext }) {
                 const remove_invalid_5 = remove_invalid_4.replaceAll('"', "");
                 const remove_invalid_6 = remove_invalid_5.replaceAll('"', "");
                 // const _path = remove_invalid_6.replaceAll(" ", "-");
-                const _path = GeneratePath(`/news/${title}`);
+                const _path = GeneratePath(title);
                 return (
                   <NewsCard
                     key={i}
                     image={img}
                     title={title}
                     excerpt={excerpt}
-                    url={_path}
+                    url={`/news/${_path}`}
                   />
                 );
               })}
@@ -74,8 +74,8 @@ export default function TaggedPosts({ data, pageContext }) {
             <div className="tags">
               <div className="tag-list">
                 {tags.map((item, i) => {
-                  const _path = GeneratePath(`/news/tag/${item}`);
-                  return <Tag key={i} label={item} url={_path} />;
+                  const _path = GeneratePath(item);
+                  return <Tag key={i} label={item} url={`/news/tag/${_path}`} />;
                 })}
               </div>
             </div>

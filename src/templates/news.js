@@ -125,9 +125,9 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
               )}
               <div className="tag-list">
                 {tags.map((item, i) => {
-                  const _path = GeneratePath(`/news/tag/${item.link}`);
+                  const _path = GeneratePath(item.link);
                   return item.label ? (
-                    <Tag key={i} label={item.label} url={_path} />
+                    <Tag key={i} label={item.label} url={`/news/tag/${_path}`} />
                   ) : null;
                 })}
               </div>
