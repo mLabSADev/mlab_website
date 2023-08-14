@@ -95,7 +95,7 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
                 const remove_invalid_6 = remove_invalid_5.replaceAll('"', "");
                 const remove_invalid_7 = remove_invalid_6.replaceAll('.', "");
                 // const _path = remove_invalid_7.replaceAll(" ", "-");
-                const _path = GeneratePath(`/${title}`);
+                const _path = GeneratePath(title);
                 if (title) {
                   return (
                     <NewsCard
@@ -104,7 +104,7 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
                       image={img}
                       title={title}
                       excerpt={excerpt}
-                      url={_path}
+                      url={`/news/${_path}`}
                     />
                   );
                 }
