@@ -12,7 +12,8 @@ exports.createPages = async ({ actions, graphql }) => {
       replacement: '-',  // replace spaces with replacement character, defaults to `-`
       remove: /[*+~.()'"!:@]/g, // remove characters that match regex, defaults to `undefined`
       lower: true,      // convert to lower case, defaults to `false`
-      strict: false,     // strip special characters except replacement, defaults to `false`
+      strict: true,     // strip special characters except replacement, defaults to `false`
+
       trim: true         // trim leading and trailing replacement chars, defaults to `true`
     })
     return link
@@ -97,7 +98,9 @@ exports.createPages = async ({ actions, graphql }) => {
   `);
   news.data.allMarkdownRemark.edges.forEach(({ node }) => {
     const title = node.frontmatter.title;
-    const _path = GeneratePath(`/news/${title}`);
+
+    const _path = GeneratePath(title);
+
     createPage({
       path: _path,
       component: PostTemplate,
@@ -107,31 +110,31 @@ exports.createPages = async ({ actions, graphql }) => {
   tags.data.allMarkdownRemark.edges.forEach(({ node }) => {
     if (node.frontmatter.tags.length) {
       node.frontmatter.tags.forEach((tag) => {
-        const _path = GeneratePath(`/news/tag/${tag}`);
+        const _path = GeneratePath(tag);
         createPage({
-          path: _path,
+          path: `/news/tag/${_path}`,
           component: TagsTemplate,
           context: { tag: tag },
         });
       });
     }
   });
-  categories.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    if (node.frontmatter.tags.length) {
-      node.frontmatter.name.forEach((tag) => {
-        const _path = GeneratePath(`/news/category/${tag}`);
-        createPage({
-          path: _path,
-          component: TagsTemplate,
-          context: { tag: tag },
-        });
-      });
-    }
-  });
+  // categories.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  //   if (node.frontmatter.tags.length) {
+  //     node.frontmatter.name.forEach((tag) => {
+  //       const _path = GeneratePath(tag);
+  //       createPage({
+  //         path: `/news/category/${_path}`,
+  //         component: TagsTemplate,
+  //         context: { tag: tag },
+  //       });
+  //     });
+  //   }
+  // });
   pillers.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    const _path = GeneratePath(`/what-we-do//${node.frontmatter.title}`);
+    const _path = GeneratePath(node.frontmatter.title);
     createPage({
-      path: _path,
+      path: `/what-we-do/${_path}`,
       component: PillerTemplate,
       context: { title: node.frontmatter.title },
     });

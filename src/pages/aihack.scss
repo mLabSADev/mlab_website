@@ -44,8 +44,15 @@
     // z-index: -1;
   }
 }
+.locationsmap {
+  width: 700px;
+  margin: auto;
+}
 .slideImageCont {
   position: relative;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
   .slideImageText {
     position: absolute;
     bottom: 0;
@@ -315,6 +322,8 @@
   justify-content: center;
   background: linear-gradient(#1de2bf, #0a9eff);
   cursor: pointer;
+  text-decoration: none;
+  color: white;
 }
 .main {
   color: white;
@@ -356,6 +365,7 @@
       width: 100%;
       height: 100%;
       object-fit: contain;
+      margin-bottom: 30px;
     }
   }
   .welcome {
@@ -611,6 +621,7 @@
 
 @media only screen and (max-width: 1600px) {
   .coutdownGraphic {
+    top: 120px;
     right: -129px;
     transform: scale(1);
   }
@@ -679,9 +690,10 @@
   }
   .details {
     grid-template-columns: 1fr;
+    margin: 100px 0px;
     .details-slides {
       max-width: 100%;
-      height: 200px;
+      height: 500px;
     }
     .details-content {
       flex-direction: row-reverse;
@@ -693,7 +705,11 @@
     }
   }
 }
+
 @media only screen and (max-width: 880px) {
+  .locationsmap {
+    width: 100%;
+  }
   .welcome {
     .main-wel {
       .cont-wel {
@@ -718,6 +734,7 @@
     }
   }
   .coutdownGraphic {
+    top: 120px;
     right: -109px;
     transform: scale(0.5);
   }

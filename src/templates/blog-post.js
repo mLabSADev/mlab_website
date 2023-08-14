@@ -11,7 +11,7 @@ import Typography from "../components/Typography/Typography";
 import { AnimatePresence } from "framer-motion";
 import ImageModal from "../components/ImageModal/ImageModal";
 import moment from "moment";
-const slugify = require('slugify');
+const slugify = require('slugify')
 export default function BlogPost({ data }) {
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -24,6 +24,7 @@ export default function BlogPost({ data }) {
   );
   const banner = getImage(data.markdownRemark.frontmatter?.banner);
   const tags = data.markdownRemark.frontmatter.tags;
+
   const title = data.markdownRemark.frontmatter.title.replaceAll("-", " ");
   const html = data.markdownRemark.html;
   const date = data.markdownRemark.frontmatter.timeStamp;
@@ -33,7 +34,7 @@ export default function BlogPost({ data }) {
       replacement: '-',  // replace spaces with replacement character, defaults to `-`
       remove: /[*+~.()'"!:@]/g, // remove characters that match regex, defaults to `undefined`
       lower: true,      // convert to lower case, defaults to `false`
-      strict: false,     // strip special characters except replacement, defaults to `false`
+      strict: true,       // strip special characters except replacement, defaults to `false`
       trim: true         // trim leading and trailing replacement chars, defaults to `true`
     })
     return link

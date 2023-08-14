@@ -12,6 +12,7 @@ import { getImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 import Tag from "../components/Tag/Tag";
 import moment from "moment";
+const slugify = require('slugify')
 // import { Helmet } from "react-helmet";
 const slugify = require('slugify');
 const News = ({ data, pageContext, numberOfAllPages = [] }) => {
@@ -41,7 +42,7 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
       replacement: '-',  // replace spaces with replacement character, defaults to `-`
       remove: /[*+~.()'"!:@]/g, // remove characters that match regex, defaults to `undefined`
       lower: true,      // convert to lower case, defaults to `false`
-      strict: false,     // strip special characters except replacement, defaults to `false`
+      strict: true,     // strip special characters except replacement, defaults to `false`
       trim: true         // trim leading and trailing replacement chars, defaults to `true`
     })
     return link
@@ -95,7 +96,7 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
                 const remove_invalid_6 = remove_invalid_5.replaceAll('"', "");
                 const remove_invalid_7 = remove_invalid_6.replaceAll('.', "");
                 // const _path = remove_invalid_7.replaceAll(" ", "-");
-                const _path = GeneratePath(`/news/${title}`);
+                const _path = GeneratePath(`/${title}`);
                 if (title) {
                   return (
                     <NewsCard

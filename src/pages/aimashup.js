@@ -325,14 +325,6 @@ const Slides = () => {
     <SwiperSlide style={{ height: '100%' }}>
       <div className='slideImageCont'>
         <div className='slideImageText'>
-          <Typography variant="h4">Unleash Innovation, Transform Tomorrow</Typography>
-        </div>
-        <StaticImage style={{ height: '100%' }} className='slideImage' alt='' src="../images/aihack/images/4.jpg" />
-      </div>
-    </SwiperSlide>
-    <SwiperSlide style={{ height: '100%' }}>
-      <div className='slideImageCont'>
-        <div className='slideImageText'>
           <Typography variant="h4">Breaking Boundaries &amp; Redefining Possibilities</Typography>
         </div>
         <StaticImage style={{ height: '100%' }} className='slideImage' alt='' src="../images/aihack/images/1.jpg" />
@@ -356,6 +348,15 @@ const Slides = () => {
       </div>
     </SwiperSlide>
 
+    <SwiperSlide style={{ height: '100%' }}>
+      <div className='slideImageCont'>
+        <div className='slideImageText'>
+          <Typography variant="h4">Unleash Innovation, Transform Tomorrow</Typography>
+        </div>
+        <StaticImage style={{ height: '100%' }} className='slideImage' alt='' src="../images/aihack/images/4.jpg" />
+      </div>
+    </SwiperSlide>
+
   </Swiper>)
 }
 const webinars = [{
@@ -363,7 +364,9 @@ const webinars = [{
   link: '',
   graphic: <StaticImage src='../images/aihack/webinars/AI_in_South_Africa .png' alt='' />
 }]
+
 const AiMashup = () => {
+
   const [showPackage, setShowPackage] = useState(false)
   const [scaleStep, setScaleStep] = useState(0.5);
   const swiper = useSwiper();
@@ -381,7 +384,7 @@ const AiMashup = () => {
             <div className='cont-wel'>
               <div className='text-wel'>
                 <Typography style={{ fontFamily: 'Segoe_Bold' }} variant="h2">Sustainable</Typography>
-                <Typography gradient={true} style={{ fontFamily: 'Segoe_Bold', }} variant="h2">AI Hackathon</Typography>
+                <Typography gradient={true} style={{ fontFamily: 'Segoe_Bold', }} variant="h2">AI Themed Hackathon</Typography>
                 <Typography style={{ fontFamily: 'Segoe_Bold' }} variant="h6">Gain Recognition and Network with Industry Leaders</Typography>
                 <div className='buttons'>
                   <a href='https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&FormId=t-gnePdSFkGYhuZR7_hNSFJAzbdI5nxLruEDle0dirBUNUgzUDQzOTVZUktSSTc3QU5WOFNWWVNQNS4u&Token=09b15ffa58ab424e9b764b549f31c06d' target='_blank' className='registerbtn'>
@@ -444,8 +447,8 @@ const AiMashup = () => {
                 </div>
               </div>
               <div className='images-wel'>
-                {/* <StaticImage src='../images/aihack/logo.svg' alt='' /> */}
-                <Logo />
+                <StaticImage src='../images/aihack/newlogo.png' alt='' />
+                {/* <Logo /> */}
               </div>
             </div>
           </div>
@@ -469,23 +472,34 @@ const AiMashup = () => {
             <Typography style={{ fontFamily: 'Segoe' }} variant="h3">About AI MashUp</Typography>
           </div>
           <AiCard>
-            <Typography style={{ fontFamily: 'Segoe' }} variant="h6">AI Mashup is a creative approach in AI, where developers and innovators combine different AI technologies, algorithms, and models to create
-              comprehensive solutions. This process involves integrating AI APIs, libraries, or frameworks from different providers into a single application,
-              enabling the fusion of distinct AI capabilities to address complex problems or enhance functionality.</Typography>
-            <Typography style={{ fontFamily: 'Segoe' }} variant="h6">The AI Mashup is an AI-themed Hackathon, hosted in four provincial locations in South Africa, offering virtual and in-person events, skills training,
-              and post-Hackathon support. Participants leverage AI capabilities to create unique solutions for complex problems or enhanced functionality, such
-              as combining natural language processing and image recognition for a chatbot. AI Mashups can lead to innovative and powerful applications,
-              utilizing the strengths of different AI systems.</Typography>
-            <Typography style={{ fontFamily: 'Segoe' }} variant="h6">Partners and participants who dare to approach challenges differently and seek innovative solutions are encouraged to apply.</Typography>
+
+            <Typography style={{ fontFamily: 'Segoe' }} variant="h6">
+              The AI Mashup is more than just an artificial intelligence-themed Hackathon. It is a
+              combination of virtual and in person events, hosted simultaneously in multiple locations. This
+              year we are starting with multiple provincial locations across South Africa and have plans to
+              expand into other Sub Saharan African countries next year.
+            </Typography>
+            <Typography style={{ fontFamily: 'Segoe' }} variant="h6">
+              The AI Mashup offers virtual and in-person activities, skills training, and post-event support. Participants are encouraged to leverage AI capabilities to create unique solutions for provided challenge statements or demonstrate enhanced functionality to existing solutions through the use of AI.
+            </Typography>
+            <Typography style={{ fontFamily: 'Segoe' }} variant="h6">
+              Partners and participants who dare to approach challenges differently are encouraged to register.
+            </Typography>
+
           </AiCard>
           <div className='cardsContainer'>
             {/* Cards */}
             <AiCard>
-              <Typography variant="h5" style={{ fontFamily: 'Segoe_Bold' }}>The Hackathon</Typography>
-              <Typography style={{ fontFamily: 'Segoe' }} variant="b2">The hackathon will be hosted under the theme of Sustainable Artificial Intelligence.
+
+              <Typography variant="h5" style={{ fontFamily: 'Segoe_Bold' }}>The Mashup</Typography>
+              <Typography style={{ fontFamily: 'Segoe' }} variant="b2">The AI Mashup will be hosted under the theme of Sustainable Artificial Intelligence.
               </Typography>
               <div>
-                <Typography >It will focus on teams that can develop solutions under the following themes which have been identified as having a significant impact on the socio economic landscape of South Africa:</Typography>
+                <Typography >It will focus on teams that can develop solutions under the following themes,
+                  which have been identified as having a significant impact on the social and economic
+                  landscape of Africa:
+                </Typography>
+
                 <ul>
                   <li><Typography style={{ fontFamily: 'Segoe' }}>Fintech</Typography></li>
                   <li><Typography style={{ fontFamily: 'Segoe' }}>Healthtech</Typography></li>
@@ -496,19 +510,30 @@ const AiMashup = () => {
               </div>
             </AiCard>
             <AiCard>
-              <Typography variant="h5" style={{ fontFamily: 'Segoe_Bold' }}>Why AI for Sustainability</Typography>
-              <Typography style={{ fontFamily: 'Segoe' }}>Given that AI has the potential to address many of the social and economic challenges faced by South Africa, such as finance, healthcare, education, and food security.
-              </Typography>
-              <Typography >By hosting a Sustainable AI hackathon, Microsoft and its partners seek to encourage developers to build AI solutions that have a positive impact on these issues.</Typography>
-            </AiCard>
-            <AiCard>
-              <Typography variant="h5" style={{ fontFamily: 'Segoe_Bold' }}>Benefits of Joining</Typography>
-              <Typography style={{ fontFamily: 'Segoe' }}>Participants would receive overnight toiletry bags containing sanitary pads, wipes and any corporate gifts from sponsors.
+              <Typography variant="h5" style={{ fontFamily: 'Segoe_Bold' }}>Apply to participate</Typography>
+              <Typography style={{ fontFamily: 'Segoe' }}>Participants get to increase their AI knowledge as well as build and showcase an AI solution to industry leaders. In addition, winning teams will receive cash prizes as well as post-event
+                support opportunities. Participants will also receive:
               </Typography>
               <ul>
-                <li><Typography style={{ fontFamily: 'Segoe' }}>Internship Opportunities</Typography></li>
-                <li><Typography style={{ fontFamily: 'Segoe' }}>Microsoft Azure Hosting Credits</Typography></li>
-                <li><Typography style={{ fontFamily: 'Segoe' }}>Support Packages and more</Typography></li>
+                <li><Typography style={{ fontFamily: 'Segoe' }}>Mentors</Typography></li>
+                <li><Typography style={{ fontFamily: 'Segoe' }}>Meals &amp; drinks</Typography></li>
+                <li><Typography style={{ fontFamily: 'Segoe' }}>Toiletry bags</Typography></li>
+                <li><Typography style={{ fontFamily: 'Segoe' }}>Corporate gifts</Typography></li>
+                <li><Typography style={{ fontFamily: 'Segoe' }}>Servicetech</Typography></li>
+              </ul>
+            </AiCard>
+            <AiCard>
+              <Typography variant="h5" style={{ fontFamily: 'Segoe_Bold' }}>Become a Partner</Typography>
+              <Typography style={{ fontFamily: 'Segoe' }}>
+                Register to be part of our partner briefing session - where you will find out more about the Partnership Packages and available benefits for your organisation. The AI Mashup is a
+                combination of specific ecosystem building activities that are designed to address local
+                challenges, foster innovation, and nurture local talent. Partner with us to:
+              </Typography>
+              <ul>
+                <li><Typography style={{ fontFamily: 'Segoe' }}>Share thought leadership</Typography></li>
+                <li><Typography style={{ fontFamily: 'Segoe' }}>Crowdsource solutions &amp; data insights</Typography></li>
+                <li><Typography style={{ fontFamily: 'Segoe' }}>Identify tech talent</Typography></li>
+                <li><Typography style={{ fontFamily: 'Segoe' }}>Make an impact</Typography></li>
               </ul>
             </AiCard>
           </div>
@@ -551,7 +576,9 @@ const AiMashup = () => {
             </AiCard>
           </div>
         </div>
-        {/* Existing Partners */}
+
+        {/* Exhisting Partners */}
+
         <div className='exhisting-partners'>
           <Typography style={{ fontFamily: 'Segoe_Bold', textAlign: 'center' }}>Existing Partners</Typography>
 
@@ -567,6 +594,7 @@ const AiMashup = () => {
             <div className='partner-logo-cont'>
               <StaticImage objectFit='contain' className='logo' src='../images/aihack/partners/aiexpo.png' alt='partnerLogo' />
             </div>
+
           </div>
         </div>
         {/* Partner & Participate */}
@@ -574,14 +602,16 @@ const AiMashup = () => {
           {/* Partner */}
           <AiCard>
             <div className='centerContent fillContent'>
-              <Typography variant="h4" style={{ fontFamily: 'Segoe_Bold' }}>Partner with us</Typography>
+
+              <Typography variant="h4" style={{ fontFamily: 'Segoe_Bold' }}>Register for Partnership Briefing Session</Typography>
               <a className='partnerbtn' href='https://forms.office.com/r/C7ZN7Zpjqx' target='_blank' >
-                <Typography variant="button" style={{ fontFamily: 'Segoe' }}>Become a Member</Typography>
+                <Typography variant="button" style={{ fontFamily: 'Segoe' }}>Partner with us</Typography>
               </a>
             </div>
-            <div className='partnershipPackages centerContent' onClick={() => { setShowPackage(true) }}>
+            <a className='partnershipPackages centerContent' href='https://firebasestorage.googleapis.com/v0/b/mlab-22bb9.appspot.com/o/aihack%2FAI%20Mashup%20-%20Partnership%20Packages%20823.pdf?alt=media&token=e0e8f6bb-444d-4947-828e-2a7d2bd1120f' target='_blank'>
               <Typography variant="h6" style={{ fontFamily: 'Segoe_Bold' }}>View Partnership Packages</Typography>
-            </div>
+            </a>
+
 
           </AiCard>
           <AiCard>
@@ -589,8 +619,8 @@ const AiMashup = () => {
               <Typography variant="h6" style={{ fontFamily: 'Segoe_bold' }}>Participate</Typography>
             </div>
             <div className='centerContent'>
+              <StaticImage objectFit='contain' className='locationsmap' src='../images/aihack/locationsMap.png' alt='' />
 
-              <StaticImage objectFit='contain' src='../images/aihack/locationsMap.png' alt='' />
               <a href='https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&FormId=t-gnePdSFkGYhuZR7_hNSFJAzbdI5nxLruEDle0dirBUNUgzUDQzOTVZUktSSTc3QU5WOFNWWVNQNS4u&Token=09b15ffa58ab424e9b764b549f31c06d' target='_blank' className='registerbtn'>
                 <svg className='star1' xmlns="http://www.w3.org/2000/svg" width="54" height="53" viewBox="0 0 54 53" fill="none">
                   <g filter="url(#filter0_f_198_2813)">
@@ -660,7 +690,13 @@ const AiMashup = () => {
         {/* webinars */}
         <div className='webinars'>
           <div className='web-header'>
-            <Typography variant="h3">Webinars</Typography>
+
+            <Typography variant="h3" style={{ fontFamily: 'Segoe_bold' }}>Webinars</Typography>
+            <Typography variant="b2" style={{ fontFamily: 'Segoe' }}>By registering to participate in the AI Mashup you will be advised on Webinar dates and
+              times. Below is a sample of some of the sessions that will be held in October 2023. If you
+              are not a participant and would like to participate in the webinar series, please contact us for
+              assistance.</Typography>
+
           </div>
           <div className='thumbnails'>
             <AiCard>
@@ -696,4 +732,6 @@ const AiMashup = () => {
   )
 }
 
+
 export default AiMashup
+

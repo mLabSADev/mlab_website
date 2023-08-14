@@ -24,7 +24,9 @@ const IndexPage = ({ data }) => {
       replacement: '-',  // replace spaces with replacement character, defaults to `-`
       remove: /[*+~.()'"!:@]/g, // remove characters that match regex, defaults to `undefined`
       lower: true,      // convert to lower case, defaults to `false`
-      strict: false,     // strip special characters except replacement, defaults to `false`
+
+      strict: true,       // strip special characters except replacement, defaults to `false`
+
       trim: true         // trim leading and trailing replacement chars, defaults to `true`
     })
     return link
@@ -55,6 +57,7 @@ const IndexPage = ({ data }) => {
             const img = getImage(card.node.frontmatter.icon);
             const title = card.node.frontmatter.title;
             const noSpaces = title.replaceAll(" ", "-");
+            const _path = GeneratePath(title);
             return (
               <WhatWeDoCard
                 key={i}
@@ -62,7 +65,7 @@ const IndexPage = ({ data }) => {
                 excerpt={card.node.frontmatter.summary}
                 description={card.node.excerpt}
                 image={img}
-                url={`/what-we-do/${noSpaces}`}
+                url={`/what-we-do/${_path}`}
               />
             );
           })}
@@ -99,7 +102,7 @@ const IndexPage = ({ data }) => {
             const remove_invalid_6 = remove_invalid_5.replaceAll('"', "");
             const remove_invalid_7 = remove_invalid_6.replaceAll('.', "");
             // const _path = remove_invalid_7.replaceAll(" ", "-");
-            const _path = GeneratePath(`/news/${title}`);
+            const _path = GeneratePath(title);
             if (title) {
               return (
                 <NewsCard
@@ -110,11 +113,10 @@ const IndexPage = ({ data }) => {
                   image={image}
                   excerpt={item.node.excerpt}
                   title={item.node.frontmatter.title.replace("-", " ")}
-                  url={_path}
+                  url={`/news/${_path}`}
                 />
               );
             }
-
           })}
         </div>
         <div className=""></div>
