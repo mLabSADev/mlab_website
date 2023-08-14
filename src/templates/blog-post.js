@@ -113,8 +113,9 @@ export default function BlogPost({ data }) {
                     label: removeDash,
                     link: t,
                   };
+                  const _path = GeneratePath(`/news/tag/${tag.link}`);
                   return tag.label ? (
-                    <Tag key={i} label={tag.label} url={tag.link} />
+                    <Tag key={i} label={tag.label} url={_path} />
                   ) : null;
                 })}
             </div>

@@ -24,7 +24,9 @@ const IndexPage = ({ data }) => {
       replacement: '-',  // replace spaces with replacement character, defaults to `-`
       remove: /[*+~.()'"!:@]/g, // remove characters that match regex, defaults to `undefined`
       lower: true,      // convert to lower case, defaults to `false`
+
       strict: true,       // strip special characters except replacement, defaults to `false`
+
       trim: true         // trim leading and trailing replacement chars, defaults to `true`
     })
     return link
@@ -99,7 +101,6 @@ const IndexPage = ({ data }) => {
             const remove_invalid_5 = remove_invalid_4.replaceAll('"', "");
             const remove_invalid_6 = remove_invalid_5.replaceAll('"', "");
             const remove_invalid_7 = remove_invalid_6.replaceAll('.', "");
-
             // const _path = remove_invalid_7.replaceAll(" ", "-");
             const _path = GeneratePath(title);
             if (title) {
@@ -116,8 +117,6 @@ const IndexPage = ({ data }) => {
                 />
               );
             }
-
-
           })}
         </div>
         <div className=""></div>

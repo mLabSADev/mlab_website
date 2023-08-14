@@ -14,6 +14,7 @@ import Tag from "../components/Tag/Tag";
 import moment from "moment";
 const slugify = require('slugify')
 // import { Helmet } from "react-helmet";
+const slugify = require('slugify');
 const News = ({ data, pageContext, numberOfAllPages = [] }) => {
   const { numberOfPages } = pageContext;
   for (let i = 0; i < numberOfPages; i++) {
@@ -94,7 +95,6 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
                 const remove_invalid_5 = remove_invalid_4.replaceAll('"', "");
                 const remove_invalid_6 = remove_invalid_5.replaceAll('"', "");
                 const remove_invalid_7 = remove_invalid_6.replaceAll('.', "");
-
                 // const _path = remove_invalid_7.replaceAll(" ", "-");
                 const _path = GeneratePath(`/${title}`);
                 if (title) {
@@ -109,7 +109,6 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
                     />
                   );
                 }
-
               })}
             </div>
           </div>
@@ -127,8 +126,9 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
               )}
               <div className="tag-list">
                 {tags.map((item, i) => {
+                  const _path = GeneratePath(`/news/tag/${item.link}`);
                   return item.label ? (
-                    <Tag key={i} label={item.label} url={item.link} />
+                    <Tag key={i} label={item.label} url={_path} />
                   ) : null;
                 })}
               </div>

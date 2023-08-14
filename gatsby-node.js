@@ -1,5 +1,5 @@
 const path = require("path");
-const slugify = require('slugify')
+const slugify = require('slugify');
 const { paginate } = require("gatsby-awesome-pagination");
 const { createFilePath } = require(`gatsby-source-filesystem`);
 exports.createPages = async ({ actions, graphql }) => {
@@ -13,6 +13,7 @@ exports.createPages = async ({ actions, graphql }) => {
       remove: /[*+~.()'"!:@]/g, // remove characters that match regex, defaults to `undefined`
       lower: true,      // convert to lower case, defaults to `false`
       strict: true,     // strip special characters except replacement, defaults to `false`
+
       trim: true         // trim leading and trailing replacement chars, defaults to `true`
     })
     return link
@@ -61,6 +62,25 @@ exports.createPages = async ({ actions, graphql }) => {
       }
     }
   `);
+  const categories = await graphql(`
+    {
+      allMarkdownRemark(
+        filter: {
+          fileAbsolutePath: { regex: "/(categories)/" }
+          frontmatter: { tags: { ne: null } }
+        }
+      ) {
+        edges {
+          node {
+            id
+            frontmatter {
+              tags
+            }
+          }
+        }
+      }
+    }
+  `);
   const pillers = await graphql(`
     {
       allMarkdownRemark(
@@ -82,7 +102,7 @@ exports.createPages = async ({ actions, graphql }) => {
     const _path = GeneratePath(title);
 
     createPage({
-      path: `/news/${_path}`,
+      path: _path,
       component: PostTemplate,
       context: { article: title },
     });

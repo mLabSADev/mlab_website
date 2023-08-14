@@ -15,6 +15,7 @@ const GeneratePath = (path) => {
   })
   return link
 }
+
 const AIHack = () => {
   return (<Link
     href="https://codetribe.mlab.co.za/"
