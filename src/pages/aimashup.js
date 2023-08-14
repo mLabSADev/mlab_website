@@ -15,7 +15,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 const { Countdown } = Statistic;
 
-const deadline = new Date('01 November 2023'); // Dayjs is also OK
+const deadline = new Date('03 November 2023'); // Dayjs is also OK
 const SLIDERS = [{
 
 }]
@@ -380,9 +380,11 @@ const AiMashup = () => {
           <div className='main-wel'>
             <div className='cont-wel'>
               <div className='text-wel'>
-                <Typography style={{ fontFamily: 'Segoe_Bold' }} variant="h2">Sustainable</Typography>
-                <Typography gradient={true} style={{ fontFamily: 'Segoe_Bold', }} variant="h2">AI Hackathon</Typography>
-                <Typography style={{ fontFamily: 'Segoe_Bold' }} variant="h6">Gain Recognition and Network with Industry Leaders</Typography>
+                <Typography gradient={true} style={{ fontFamily: 'Segoe_Bold' }} variant="h2">Unleash Innovation, Transform Tomorrow</Typography>
+                {/* Sustainable Artificial Intelligence themed webinars, hackathon and post-hack incubation */}
+                <Typography style={{ fontFamily: 'Segoe_Bold' }} variant="h5">Sustainable <Typography variant="h5" style={{ fontFamily: 'Segoe_Bold', marginBottom: 5 }} gradient={true}>Artificial Intelligence Hackathon</Typography>plus Webinars, and Post-hack Incubation</Typography>
+
+
                 <div className='buttons'>
                   <a href='https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&FormId=t-gnePdSFkGYhuZR7_hNSFJAzbdI5nxLruEDle0dirBUNUgzUDQzOTVZUktSSTc3QU5WOFNWWVNQNS4u&Token=09b15ffa58ab424e9b764b549f31c06d' target='_blank' className='registerbtn'>
                     <svg className='star1' xmlns="http://www.w3.org/2000/svg" width="54" height="53" viewBox="0 0 54 53" fill="none">
@@ -444,8 +446,8 @@ const AiMashup = () => {
                 </div>
               </div>
               <div className='images-wel'>
-                {/* <StaticImage src='../images/aihack/logo.svg' alt='' /> */}
-                <Logo />
+                <StaticImage width={900} objectFit='contain' src='../images/aihack/logo.png' alt='' />
+                {/* <Logo /> */}
               </div>
             </div>
           </div>
@@ -494,7 +496,7 @@ const AiMashup = () => {
                   <li><Typography style={{ fontFamily: 'Segoe' }}>Healthtech</Typography></li>
                   <li><Typography style={{ fontFamily: 'Segoe' }}>Edutech</Typography></li>
                   <li><Typography style={{ fontFamily: 'Segoe' }}>Agritech</Typography></li>
-                  <li><Typography style={{ fontFamily: 'Segoe' }}>Servicetech</Typography></li>
+
                 </ul>
               </div>
             </AiCard>
@@ -533,7 +535,7 @@ const AiMashup = () => {
               <div className='centerContent'>
                 <Typography variant="s2">Countdown to closing</Typography>
                 <Countdown style={{ color: 'white' }} value={deadline} format=" 📆D ⏳H : m : s" />
-                <Typography variant="s2">Closes 01 Nov</Typography>
+                <Typography variant="s2">Closes {deadline.toDateString()}</Typography>
                 <StaticImage className='coutdownGraphic' src='../images/aihack/coutdowngraphic.png' alt='' />
               </div>
             </AiCard>
