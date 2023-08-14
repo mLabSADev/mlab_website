@@ -15,7 +15,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 const { Countdown } = Statistic;
 
-const deadline = new Date('01 November 2023'); // Dayjs is also OK
+const deadline = new Date('03 November 2023'); // Dayjs is also OK
 const SLIDERS = [{
 
 }]
@@ -383,9 +383,13 @@ const AiMashup = () => {
           <div className='main-wel'>
             <div className='cont-wel'>
               <div className='text-wel'>
-                <Typography style={{ fontFamily: 'Segoe_Bold' }} variant="h2">Sustainable</Typography>
-                <Typography gradient={true} style={{ fontFamily: 'Segoe_Bold', }} variant="h2">AI Themed Hackathon</Typography>
-                <Typography style={{ fontFamily: 'Segoe_Bold' }} variant="h6">Gain Recognition and Network with Industry Leaders</Typography>
+                <div>
+                  <Typography style={{ fontFamily: 'Segoe_Bold' }} variant="h3">Sustainable  </Typography>
+                  <Typography style={{ fontFamily: 'Segoe_Bold', }} variant="h3 " gradient={true}>Artificial Intelligence</Typography>
+                  <Typography style={{ fontFamily: 'Segoe_Bold' }} variant="h4">themed webinars, hackathon and post-hack incubation</Typography>
+                </div>
+
+                <Typography style={{ fontFamily: 'Segoe_Bold' }} variant="h6">Unleash Innovation, Transform Tomorrow</Typography>
                 <div className='buttons'>
                   <a href='https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&FormId=t-gnePdSFkGYhuZR7_hNSFJAzbdI5nxLruEDle0dirBUNUgzUDQzOTVZUktSSTc3QU5WOFNWWVNQNS4u&Token=09b15ffa58ab424e9b764b549f31c06d' target='_blank' className='registerbtn'>
                     <svg className='star1' xmlns="http://www.w3.org/2000/svg" width="54" height="53" viewBox="0 0 54 53" fill="none">
@@ -505,7 +509,7 @@ const AiMashup = () => {
                   <li><Typography style={{ fontFamily: 'Segoe' }}>Healthtech</Typography></li>
                   <li><Typography style={{ fontFamily: 'Segoe' }}>Edutech</Typography></li>
                   <li><Typography style={{ fontFamily: 'Segoe' }}>Agritech</Typography></li>
-                  <li><Typography style={{ fontFamily: 'Segoe' }}>Servicetech</Typography></li>
+
                 </ul>
               </div>
             </AiCard>
@@ -519,7 +523,7 @@ const AiMashup = () => {
                 <li><Typography style={{ fontFamily: 'Segoe' }}>Meals &amp; drinks</Typography></li>
                 <li><Typography style={{ fontFamily: 'Segoe' }}>Toiletry bags</Typography></li>
                 <li><Typography style={{ fontFamily: 'Segoe' }}>Corporate gifts</Typography></li>
-                <li><Typography style={{ fontFamily: 'Segoe' }}>Servicetech</Typography></li>
+
               </ul>
             </AiCard>
             <AiCard>
@@ -550,7 +554,7 @@ const AiMashup = () => {
               <div className='centerContent'>
                 <Typography variant="s2">Countdown to closing</Typography>
                 <Countdown style={{ color: 'white' }} value={deadline} format=" 📆D ⏳H : m : s" />
-                <Typography variant="s2">Closes 01 Nov</Typography>
+                <Typography variant="s2">Closes {deadline.toDateString()}</Typography>
                 <StaticImage className='coutdownGraphic' src='../images/aihack/coutdowngraphic.png' alt='' />
               </div>
             </AiCard>
@@ -616,11 +620,10 @@ const AiMashup = () => {
           </AiCard>
           <AiCard>
             <div className='partnerheader'>
-              <Typography variant="h6" style={{ fontFamily: 'Segoe_bold' }}>Participate</Typography>
+              <Typography variant="h4" style={{ fontFamily: 'Segoe_bold' }}>Participate</Typography>
             </div>
             <div className='centerContent'>
-              <StaticImage objectFit='contain' className='locationsmap' src='../images/aihack/locationsMap.png' alt='' />
-
+              <StaticImage width={500} objectFit='contain' src='../images/aihack/locationsMap.png' alt='' />
               <a href='https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&FormId=t-gnePdSFkGYhuZR7_hNSFJAzbdI5nxLruEDle0dirBUNUgzUDQzOTVZUktSSTc3QU5WOFNWWVNQNS4u&Token=09b15ffa58ab424e9b764b549f31c06d' target='_blank' className='registerbtn'>
                 <svg className='star1' xmlns="http://www.w3.org/2000/svg" width="54" height="53" viewBox="0 0 54 53" fill="none">
                   <g filter="url(#filter0_f_198_2813)">
@@ -690,13 +693,11 @@ const AiMashup = () => {
         {/* webinars */}
         <div className='webinars'>
           <div className='web-header'>
-
-            <Typography variant="h3" style={{ fontFamily: 'Segoe_bold' }}>Webinars</Typography>
-            <Typography variant="b2" style={{ fontFamily: 'Segoe' }}>By registering to participate in the AI Mashup you will be advised on Webinar dates and
+            <Typography variant="h3">Webinars</Typography>
+            <Typography variant="b1">By registering to participate in the AI Mashup you will be advised on Webinar dates and
               times. Below is a sample of some of the sessions that will be held in October 2023. If you
               are not a participant and would like to participate in the webinar series, please contact us for
               assistance.</Typography>
-
           </div>
           <div className='thumbnails'>
             <AiCard>

@@ -98,11 +98,9 @@ exports.createPages = async ({ actions, graphql }) => {
   `);
   news.data.allMarkdownRemark.edges.forEach(({ node }) => {
     const title = node.frontmatter.title;
-
     const _path = GeneratePath(title);
-
     createPage({
-      path: _path,
+      path: `/news/${_path}`,
       component: PostTemplate,
       context: { article: title },
     });

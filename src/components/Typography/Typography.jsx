@@ -35,7 +35,7 @@ const Typography = (props) => {
         `main-t ${props.variant} ${props.color} ${
           props.center == true ? "center" : null
         } ${
-          (props.capitalise ? "sentance-case" : null,
+          (props.capitalise ? "sentence-case" : null,
           props.ai ? "ai-font" : null,
           props.boldAi ? "ai-font-bold" : null)
         } ${props.gradient ? "gradientText" : null}`,
