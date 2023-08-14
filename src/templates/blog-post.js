@@ -10,8 +10,8 @@ import "./blog-post.scss";
 import Typography from "../components/Typography/Typography";
 import { AnimatePresence } from "framer-motion";
 import ImageModal from "../components/ImageModal/ImageModal";
-
 import moment from "moment";
+const slugify = require('slugify');
 export default function BlogPost({ data }) {
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -20,7 +20,7 @@ export default function BlogPost({ data }) {
 
   const image = getImage(
     data.markdownRemark.frontmatter.featureImage &&
-      data.markdownRemark.frontmatter.featureImage
+    data.markdownRemark.frontmatter.featureImage
   );
   const banner = getImage(data.markdownRemark.frontmatter?.banner);
   const tags = data.markdownRemark.frontmatter.tags;
@@ -28,6 +28,16 @@ export default function BlogPost({ data }) {
   const html = data.markdownRemark.html;
   const date = data.markdownRemark.frontmatter.timeStamp;
   const author = data.markdownRemark.frontmatter.author;
+  const GeneratePath = (path) => {
+    const link = slugify(path, {
+      replacement: '-',  // replace spaces with replacement character, defaults to `-`
+      remove: /[*+~.()'"!:@]/g, // remove characters that match regex, defaults to `undefined`
+      lower: true,      // convert to lower case, defaults to `false`
+      strict: false,     // strip special characters except replacement, defaults to `false`
+      trim: true         // trim leading and trailing replacement chars, defaults to `true`
+    })
+    return link
+  }
   useEffect(() => {
     (function (h, o, t, j, a, r) {
       h.hj =
@@ -102,8 +112,9 @@ export default function BlogPost({ data }) {
                     label: removeDash,
                     link: t,
                   };
+                  const _path = GeneratePath(`/news/tag/${tag.link}`);
                   return tag.label ? (
-                    <Tag key={i} label={tag.label} url={tag.link} />
+                    <Tag key={i} label={tag.label} url={_path} />
                   ) : null;
                 })}
             </div>

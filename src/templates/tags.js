@@ -8,7 +8,7 @@ import PageHeader from "../components/PageHeader/PageHeader";
 import NewsCard from "../components/NewsCard/NewsCard";
 import { getImage } from "gatsby-plugin-image";
 import Tag from "../components/Tag/Tag";
-
+const slugify = require('slugify');
 export default function TaggedPosts({ data, pageContext }) {
   // detect change
   const { tag } = pageContext;
@@ -18,6 +18,16 @@ export default function TaggedPosts({ data, pageContext }) {
     let tag = element.frontmatter.tags;
     tags = tags.concat(tag);
   });
+  const GeneratePath = (path) => {
+    const link = slugify(path, {
+      replacement: '-',  // replace spaces with replacement character, defaults to `-`
+      remove: /[*+~.()'"!:@]/g, // remove characters that match regex, defaults to `undefined`
+      lower: true,      // convert to lower case, defaults to `false`
+      strict: false,     // strip special characters except replacement, defaults to `false`
+      trim: true         // trim leading and trailing replacement chars, defaults to `true`
+    })
+    return link
+  }
   return (
     <Layout>
       <PageHeader title={tag.toUpperCase()} />
@@ -41,14 +51,15 @@ export default function TaggedPosts({ data, pageContext }) {
                 const remove_invalid_4 = remove_invalid_3.replaceAll("&", "");
                 const remove_invalid_5 = remove_invalid_4.replaceAll('"', "");
                 const remove_invalid_6 = remove_invalid_5.replaceAll('"', "");
-                const _path = remove_invalid_6.replaceAll(" ", "-");
+                // const _path = remove_invalid_6.replaceAll(" ", "-");
+                const _path = GeneratePath(`/news/${title}`);
                 return (
                   <NewsCard
                     key={i}
                     image={img}
                     title={title}
                     excerpt={excerpt}
-                    url={`/news/${_path}`}
+                    url={_path}
                   />
                 );
               })}
@@ -63,7 +74,8 @@ export default function TaggedPosts({ data, pageContext }) {
             <div className="tags">
               <div className="tag-list">
                 {tags.map((item, i) => {
-                  return <Tag key={i} label={item} url={item} />;
+                  const _path = GeneratePath(`/news/tag/${item}`);
+                  return <Tag key={i} label={item} url={_path} />;
                 })}
               </div>
             </div>

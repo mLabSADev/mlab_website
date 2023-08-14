@@ -3,6 +3,9 @@ import "./style.scss";
 import { Link } from "gatsby";
 import Typography from "../Typography/Typography";
 import { graphql, StaticQuery } from "gatsby";
+
+//  - { label: "Author", name: "author", widget: "string" }
+
 const AIHack = () => {
   return (<Link
     href="https://codetribe.mlab.co.za/"
