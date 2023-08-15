@@ -325,7 +325,7 @@ const Slides = () => {
     <SwiperSlide style={{ height: '100%' }}>
       <div className='slideImageCont'>
         <div className='slideImageText'>
-          <Typography variant="h4">Breaking Boundaries &amp; Redefining Possibilities</Typography>
+          <Typography style={{ fontFamily: 'Segoe' }} variant="h4">Breaking Boundaries &amp; Redefining Possibilities</Typography>
         </div>
         <StaticImage style={{ height: '100%' }} className='slideImage' alt='' src="../images/aihack/images/1.jpg" />
       </div>
@@ -334,7 +334,7 @@ const Slides = () => {
     <SwiperSlide style={{ height: '100%' }}>
       <div className='slideImageCont'>
         <div className='slideImageText'>
-          <Typography variant="h4">Connect, Create &amp; Corroborate</Typography>
+          <Typography style={{ fontFamily: 'Segoe' }} variant="h4">Connect, Create &amp; Corroborate</Typography>
         </div>
         <StaticImage style={{ height: '100%' }} className='slideImage' alt='' src="../images/aihack/images/2.jpg" />
       </div>
@@ -342,7 +342,7 @@ const Slides = () => {
     <SwiperSlide>
       <div className='slideImageCont'>
         <div className='slideImageText'>
-          <Typography variant="h4">Embrace the AI revolution and be at the forefront of innovation.</Typography>
+          <Typography style={{ fontFamily: 'Segoe' }} variant="h4">Embrace the AI revolution and be at the forefront of innovation.</Typography>
         </div>
         <StaticImage style={{ height: '100%' }} className='slideImage' alt='' src="../images/aihack/images/3.jpg" />
       </div>
@@ -351,12 +351,11 @@ const Slides = () => {
     <SwiperSlide style={{ height: '100%' }}>
       <div className='slideImageCont'>
         <div className='slideImageText'>
-          <Typography variant="h4">Unleash Innovation, Transform Tomorrow</Typography>
+          <Typography style={{ fontFamily: 'Segoe' }} variant="h4">Unleash Innovation, Transform Tomorrow</Typography>
         </div>
         <StaticImage style={{ height: '100%' }} className='slideImage' alt='' src="../images/aihack/images/4.jpg" />
       </div>
     </SwiperSlide>
-
   </Swiper>)
 }
 const webinars = [{
@@ -552,27 +551,27 @@ const AiMashup = () => {
           <div className='details-content'>
             <AiCard>
               <div className='centerContent'>
-                <Typography variant="s2">Countdown to the Event</Typography>
+                <Typography variant="s2" style={{ fontFamily: 'Segoe' }}>Countdown to the Event</Typography>
                 <Countdown style={{ color: 'white' }} value={deadline} format=" 📆D ⏳H : m : s" />
-                <Typography variant="s2">Starting {deadline.toDateString()}</Typography>
+                <Typography variant="s2" style={{ fontFamily: 'Segoe' }}>Starting {deadline.toDateString()}</Typography>
                 <StaticImage className='coutdownGraphic' src='../images/aihack/coutdowngraphic.png' alt='' />
               </div>
             </AiCard>
             <AiCard>
               <div className='centerContent'>
                 <div>
-                  <Typography variant="s1">2023 Hackathon</Typography>
+                  <Typography variant="s1" style={{ fontFamily: 'Segoe' }}>2023 Hackathon</Typography>
                   <br />
-                  <Typography variant="s2">👩‍💻Theme</Typography>
-                  <Typography variant="h5">Sustainable AI</Typography>
+                  <Typography variant="s2" style={{ fontFamily: 'Segoe' }}>👩‍💻Theme</Typography>
+                  <Typography variant="h5" style={{ fontFamily: 'Segoe' }}>Sustainable AI</Typography>
                   <hr />
-                  <Typography variant="s2">📅Date</Typography>
-                  <Typography variant="h5">03 - 05 Nov</Typography>
+                  <Typography variant="s2" style={{ fontFamily: 'Segoe' }}>📅Date</Typography>
+                  <Typography variant="h5" style={{ fontFamily: 'Segoe' }}>03 - 05 Nov</Typography>
                   <hr />
-                  <Typography variant="s2">⏰Time</Typography>
-                  <Typography variant="h6"> 3pm Fri - 3pm Sun </Typography>
-                  <hr /><Typography variant="s2">📍Locations</Typography>
-                  <Typography variant="h6">Johannesburg, Kimberly, Polokwane, Imbali</Typography>
+                  <Typography variant="s2" style={{ fontFamily: 'Segoe' }}>⏰Time</Typography>
+                  <Typography variant="h6" style={{ fontFamily: 'Segoe' }}> 3pm Fri - 3pm Sun </Typography>
+                  <hr /><Typography variant="s2" style={{ fontFamily: 'Segoe' }}>📍Locations</Typography>
+                  <Typography variant="h6" style={{ fontFamily: 'Segoe' }}>Johannesburg, Kimberly, Polokwane, Imbali</Typography>
                 </div>
               </div>
             </AiCard>
