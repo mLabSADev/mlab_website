@@ -390,7 +390,7 @@ const AiMashup = () => {
 
                 <Typography style={{ fontFamily: 'Segoe_Bold' }} variant="h6">Unleash Innovation, Transform Tomorrow</Typography>
                 <div className='buttons'>
-                  <a href='https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&FormId=t-gnePdSFkGYhuZR7_hNSFJAzbdI5nxLruEDle0dirBUNUgzUDQzOTVZUktSSTc3QU5WOFNWWVNQNS4u&Token=09b15ffa58ab424e9b764b549f31c06d' target='_blank' className='registerbtn'>
+                  <a href='https://forms.office.com/r/EQ2urXxqfQ' target='_blank' className='registerbtn'>
                     <svg className='star1' xmlns="http://www.w3.org/2000/svg" width="54" height="53" viewBox="0 0 54 53" fill="none">
                       <g filter="url(#filter0_f_198_2813)">
                         <path d="M17.0311 37.234L20.6212 35.1178C22.6794 33.9036 25.1309 33.3355 27.7136 33.4743C30.2963 33.6131 32.9131 34.4535 35.2841 35.9057L39.4194 38.4371L36.6484 34.4376C35.0587 32.1446 34.0585 29.5647 33.7546 26.9738C33.4506 24.3828 33.8544 21.8784 34.9228 19.7282L36.7846 15.9777L33.1945 18.0939C31.1369 19.308 28.6861 19.8763 26.1041 19.7381C23.522 19.5999 20.9058 18.7603 18.535 17.3092L14.3964 14.7747L17.1707 18.7773C18.7593 21.0701 19.7586 23.6496 20.062 26.2399C20.3653 28.8302 19.9613 31.3339 18.893 33.4835L17.0311 37.234Z" fill="url(#paint0_linear_198_2813)" />
@@ -619,7 +619,7 @@ const AiMashup = () => {
             </div>
             <div className='centerContent'>
               <StaticImage width={500} objectFit='contain' src='../images/aihack/locationsMap.png' alt='' />
-              <a href='https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&FormId=t-gnePdSFkGYhuZR7_hNSFJAzbdI5nxLruEDle0dirBUNUgzUDQzOTVZUktSSTc3QU5WOFNWWVNQNS4u&Token=09b15ffa58ab424e9b764b549f31c06d' target='_blank' className='registerbtn'>
+              <a href='https://forms.office.com/r/EQ2urXxqfQ' target='_blank' className='registerbtn'>
                 <svg className='star1' xmlns="http://www.w3.org/2000/svg" width="54" height="53" viewBox="0 0 54 53" fill="none">
                   <g filter="url(#filter0_f_198_2813)">
                     <path d="M17.0311 37.234L20.6212 35.1178C22.6794 33.9036 25.1309 33.3355 27.7136 33.4743C30.2963 33.6131 32.9131 34.4535 35.2841 35.9057L39.4194 38.4371L36.6484 34.4376C35.0587 32.1446 34.0585 29.5647 33.7546 26.9738C33.4506 24.3828 33.8544 21.8784 34.9228 19.7282L36.7846 15.9777L33.1945 18.0939C31.1369 19.308 28.6861 19.8763 26.1041 19.7381C23.522 19.5999 20.9058 18.7603 18.535 17.3092L14.3964 14.7747L17.1707 18.7773C18.7593 21.0701 19.7586 23.6496 20.062 26.2399C20.3653 28.8302 19.9613 31.3339 18.893 33.4835L17.0311 37.234Z" fill="url(#paint0_linear_198_2813)" />
