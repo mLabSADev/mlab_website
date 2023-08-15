@@ -386,7 +386,7 @@ const AiMashup = () => {
                 <div>
                   <Typography style={{ fontFamily: 'Segoe_Bold' }} variant="h3">Sustainable  </Typography>
                   <Typography style={{ fontFamily: 'Segoe_Bold', }} variant="h3 " gradient={true}>Artificial Intelligence</Typography>
-                  <Typography style={{ fontFamily: 'Segoe_Bold' }} variant="h4">themed webinars, hackathon and <br/>post-hack incubation</Typography>
+                  <Typography style={{ fontFamily: 'Segoe_Bold' }} variant="h4">themed webinars, hackathon and <br />post-hack incubation</Typography>
                 </div>
 
                 <Typography style={{ fontFamily: 'Segoe_Bold' }} variant="h6">Unleash Innovation, Transform Tomorrow</Typography>
@@ -552,9 +552,9 @@ const AiMashup = () => {
           <div className='details-content'>
             <AiCard>
               <div className='centerContent'>
-                <Typography variant="s2">Countdown to closing</Typography>
+                <Typography variant="s2">Countdown to the Event</Typography>
                 <Countdown style={{ color: 'white' }} value={deadline} format=" 📆D ⏳H : m : s" />
-                <Typography variant="s2">Closes {deadline.toDateString()}</Typography>
+                <Typography variant="s2">Starting {deadline.toDateString()}</Typography>
                 <StaticImage className='coutdownGraphic' src='../images/aihack/coutdowngraphic.png' alt='' />
               </div>
             </AiCard>
@@ -570,19 +570,15 @@ const AiMashup = () => {
                   <Typography variant="h5">03 - 05 Nov</Typography>
                   <hr />
                   <Typography variant="s2">⏰Time</Typography>
-                  <Typography variant="h6">08: 00 am - 15:00 pm next day</Typography>
+                  <Typography variant="h6"> 3pm Fri - 3pm Sun </Typography>
                   <hr /><Typography variant="s2">📍Locations</Typography>
-                  <Typography variant="h6">Johannesburg
-                    , Kimberly
-                    , Polokwane, Imbali</Typography>
+                  <Typography variant="h6">Johannesburg, Kimberly, Polokwane, Imbali</Typography>
                 </div>
               </div>
             </AiCard>
           </div>
         </div>
-
         {/* Exhisting Partners */}
-
         <div className='exhisting-partners'>
           <Typography style={{ fontFamily: 'Segoe_Bold', textAlign: 'center' }}>Existing Partners</Typography>
 
