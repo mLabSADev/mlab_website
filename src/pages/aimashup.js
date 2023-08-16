@@ -571,7 +571,7 @@ const AiMashup = () => {
                   <Typography variant="s2" style={{ fontFamily: 'Segoe' }}>⏰Time</Typography>
                   <Typography variant="h6" style={{ fontFamily: 'Segoe' }}> 3pm Fri - 3pm Sun </Typography>
                   <hr /><Typography variant="s2" style={{ fontFamily: 'Segoe' }}>📍Locations</Typography>
-                  <Typography variant="h6" style={{ fontFamily: 'Segoe' }}>Johannesburg, Kimberly, Polokwane, Pitermarisburg</Typography>
+                  <Typography variant="h6" style={{ fontFamily: 'Segoe' }}>Johannesburg, Kimberley, Polokwane, Pietermaritzburg</Typography>
                 </div>
               </div>
             </AiCard>
