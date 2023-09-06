@@ -41,6 +41,6 @@ As she sets her eyes on expanding her business, training youth, and making her m
 
 AgriTourZA's Principal Facilitator Ms Choene Nkoana touched on the programme's role in propelling Nakedi Suzan Leshabane's Thuto Temo Ya Nakedi, along with three other startups, toward a trajectory of success.
 
-“We will support their businesses with the knowledge, resources, and comprehensive support necessary to fast-track their startup's growth and prepare them for a prosperous commercial launch”, she said. 
+“We will support their businesses with the knowledge, resources, and comprehensive support necessary to fast-track their business growth and prepare them for a prosperous commercial launch”, she said. 
 
 ***Contact Thuto Temo Ya Nakedi for business enquiries: [thutotemoyanakedi@gmail.com](mailto:thutotemoyanakedi@gmail.com)***
