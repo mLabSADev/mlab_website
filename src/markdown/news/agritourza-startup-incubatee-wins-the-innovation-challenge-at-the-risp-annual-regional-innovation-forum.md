@@ -1,6 +1,6 @@
 ---
-title: AgriTourZA startup incubatee wins the Innovation Challenge at the RISP
-  Annual Regional Innovation Forum
+title: AgriTourZA startup incubatee wins 2nd place of the Innovation Challenge
+  at the RISP Annual Regional Innovation Forum
 author: Zukanye Madakana
 timeStamp: 2023-05-02T10:33:27.757Z
 featureImage: ../../images/tsedzu-n1.jpg
