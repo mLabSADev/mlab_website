@@ -11,7 +11,7 @@ import Typography from "../components/Typography/Typography";
 import { AnimatePresence } from "framer-motion";
 import ImageModal from "../components/ImageModal/ImageModal";
 import moment from "moment";
-const slugify = require('slugify')
+const slugify = require("slugify");
 export default function BlogPost({ data }) {
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -20,7 +20,7 @@ export default function BlogPost({ data }) {
 
   const image = getImage(
     data.markdownRemark.frontmatter.featureImage &&
-    data.markdownRemark.frontmatter.featureImage
+      data.markdownRemark.frontmatter.featureImage
   );
   const banner = getImage(data.markdownRemark.frontmatter?.banner);
   const tags = data.markdownRemark.frontmatter.tags;
@@ -31,14 +31,14 @@ export default function BlogPost({ data }) {
   const author = data.markdownRemark.frontmatter.author;
   const GeneratePath = (path) => {
     const link = slugify(path, {
-      replacement: '-',  // replace spaces with replacement character, defaults to `-`
+      replacement: "-", // replace spaces with replacement character, defaults to `-`
       remove: /[*+~.()'"!:@]/g, // remove characters that match regex, defaults to `undefined`
-      lower: true,      // convert to lower case, defaults to `false`
-      strict: true,       // strip special characters except replacement, defaults to `false`
-      trim: true         // trim leading and trailing replacement chars, defaults to `true`
-    })
-    return link
-  }
+      lower: true, // convert to lower case, defaults to `false`
+      strict: true, // strip special characters except replacement, defaults to `false`
+      trim: true, // trim leading and trailing replacement chars, defaults to `true`
+    });
+    return link;
+  };
   useEffect(() => {
     (function (h, o, t, j, a, r) {
       h.hj =
@@ -127,9 +127,11 @@ export default function BlogPost({ data }) {
           <div></div>
           <div>
             <DisqusTemplate
-              url={data.markdownRemark.frontmatter.path}
+              url={`/news/${GeneratePath(
+                data.markdownRemark.frontmatter.title
+              )}`}
               title={data.markdownRemark.frontmatter.title}
-              identifier={data.markdownRemark.frontmatter.title}
+              identifier={GeneratePath(data.markdownRemark.frontmatter.title)}
             ></DisqusTemplate>
           </div>
 

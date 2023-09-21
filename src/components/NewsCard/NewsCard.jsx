@@ -66,7 +66,9 @@ const NewsCard = ({ image, title, excerpt, url, date }) => {
 
       <div className="details-nc">
         <Typography variant="h6">{date}</Typography>
-        <Typography variant="h5" limit={true}>{titleFix.toUpperCase()}</Typography>
+        <Typography variant="h5" limit={true}>
+          {titleFix.toUpperCase()}
+        </Typography>
         <Typography color="gray" variant="b2">
           {excerpt}
         </Typography>
