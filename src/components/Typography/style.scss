@@ -10,6 +10,12 @@
 }
 .main-t {
   margin: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limit the number of lines to 2 */
+  -webkit-box-orient: vertical;
+  /* Add any additional styles you need */
 }
 .light {
   color: white;
