@@ -238,7 +238,6 @@ export const links = [
 ];
 const CodeTribeLink = () => (
   <a
-    // href="https://codetribe.mlab.co.za/"
     href="https://codetribelanding.netlify.app/"
     target="_blank"
     rel="noreferrer"

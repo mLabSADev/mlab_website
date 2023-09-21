@@ -32,9 +32,9 @@ const Typography = (props) => {
       variants={textVariants}
       {...props}
       className={[
-        `main-t ${props.variant} ${props.color} ${
-          props.center == true ? "center" : null
-        } ${
+        `main-t ${props.limit ? "limit-text" : null} ${props.variant} ${
+          props.color
+        } ${props.center == true ? "center" : null} ${
           (props.capitalise ? "sentence-case" : null,
           props.ai ? "ai-font" : null,
           props.boldAi ? "ai-font-bold" : null)
