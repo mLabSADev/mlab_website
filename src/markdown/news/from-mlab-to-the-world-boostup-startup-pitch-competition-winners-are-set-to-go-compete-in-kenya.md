@@ -22,9 +22,7 @@ Taking the number two spot was Passwordkid, a child safety company that ensures 
 
 ![BoostUp startups at a pitch training in Cape Town](../../images/pitch-training-.jpg)
 
-                     
-
-### Navigating the demanding journey of business pitching 
+###### Navigating the demanding journey of business pitching 
 
 Pitching a business in front of a panel of judges and a major audience is not so simple but it is important to take away lessons learned from it to improve your pitching skills as an entrepreneur. 
 
@@ -34,7 +32,7 @@ Pitching a business in front of a panel of judges and a major audience is not so
 
 “We will also share these critical skills with other startups who may be at a lower technology readiness level (TRL) and require support to grow”, said Mxolisi Booi the founder of Bophelo. 
 
-###  Look at the power of partnerships 
+######  Look at the power of partnerships 
 
 This success story would not have been possible without support and trust of The Department of Science and Innovation (DSI) and the Technology Innovation Agency (TIA), who played a pivotal role in empowering mLab to implement the BoostUp startup support programme, enabling these entrepreneurs to reach new heights.
 
