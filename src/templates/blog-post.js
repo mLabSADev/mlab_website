@@ -134,7 +134,6 @@ export default function BlogPost({ data }) {
               identifier={GeneratePath(data.markdownRemark.frontmatter.title)}
             ></DisqusTemplate>
           </div>
-
           <div></div>
         </div>
       </Section>

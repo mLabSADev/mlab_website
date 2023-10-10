@@ -3,7 +3,7 @@ import "./aihack.scss";
 import Layout from "../components/ChatBot/ChatBot";
 import Typography from "../components/Typography/Typography";
 import Section from "../components/Section/Section";
-import { StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image";
 import { Button, Modal, Image, Statistic } from "antd";
 import { SwapRightOutlined } from "@ant-design/icons";
 import {
@@ -21,6 +21,7 @@ import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Icons } from "../components/Icons";
+import { graphql } from "gatsby";
 const { Countdown } = Statistic;
 
 const deadline = new Date("03 November 2023"); // Dayjs is also OK
@@ -856,24 +857,12 @@ const Slides = () => {
     </Swiper>
   );
 };
-const webinars = [
-  {
-    title: "",
-    link: "",
-    graphic: (
-      <StaticImage
-        src="../images/aihack/webinars/AI_in_South_Africa .png"
-        alt=""
-      />
-    ),
-  },
-];
 
-const AiMashup = () => {
+const AiMashup = ({ data }) => {
   const [showPackage, setShowPackage] = useState(false);
   const [scaleStep, setScaleStep] = useState(0.5);
   const swiper = useSwiper();
-
+  const webinars = data.webinars.edges;
   return (
     <Layout>
       <video className="bgVideo" muted autoPlay loop style={{ width: `100%` }}>
@@ -1274,30 +1263,23 @@ const AiMashup = () => {
             </Typography>
           </div>
           <div className="thumbnails">
-            <AiCard>
-              <StaticImage
-                src="../images/aihack/webinars/AI in South Africa.png"
-                alt=""
-              />
-            </AiCard>
-            <AiCard>
-              <StaticImage
-                src="../images/aihack/webinars/Building an MVP with AI.png"
-                alt=""
-              />
-            </AiCard>
-            <AiCard>
-              <StaticImage
-                src="../images/aihack/webinars/Microsoft Azure Cognitive.png"
-                alt=""
-              />
-            </AiCard>
-            <AiCard>
-              <StaticImage
-                src="../images/aihack/webinars/Microsoft Azure OpenAI.png"
-                alt=""
-              />
-            </AiCard>
+            {webinars.map((webinar, index) => {
+              const { image, link, title } = webinar.node.frontmatter;
+              const img = getImage(image);
+              console.log(img);
+              if (title) {
+                return (
+                  <AiCard>
+                    <GatsbyImage
+                      objectFit="contain"
+                      // style={{ width: "100%", height: 300 }}
+                      image={img}
+                      alt={title}
+                    />
+                  </AiCard>
+                );
+              }
+            })}
           </div>
         </div>
         {/* Brought */}
@@ -1327,3 +1309,24 @@ const AiMashup = () => {
 };
 
 export default AiMashup;
+export const query = graphql`
+  query AIMashupQuery {
+    webinars: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/(webinars)/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            image {
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED, quality: 100, width: 1920)
+              }
+            }
+            title
+            link
+          }
+        }
+      }
+    }
+  }
+`;
