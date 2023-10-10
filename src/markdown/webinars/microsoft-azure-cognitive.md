@@ -1,5 +1,5 @@
 ---
-alt: "Microsoft Azure Cognitive"
-featureImage: ../../images/aihack/webinars/Microsoft Azure Cognitive.png
-link: ""
+title: Microsoft Azure Cognitive
+image: ../../images/microsoft-azure-cognitive.png
+link: "#"
 ---
