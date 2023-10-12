@@ -123,7 +123,7 @@ const Footer = () => {
           </Typography>
           <br />
           <Typography color="light" variant="h5">
-            The Innovation Hub, Enterprise Building, 6, Pretoria, 0020
+            The Innovation Hub, Enterprise Building, 8, Pretoria, 0020
             <iframe
               title="google-map"
               className="map-f"
