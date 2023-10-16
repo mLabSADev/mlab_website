@@ -5,18 +5,10 @@ import PageHeader from "../components/PageHeader/PageHeader";
 import Section from "../components/Section/Section";
 import Publication from "../components/Publication/Publication";
 import Typography from "../components/Typography/Typography";
+import { graphql } from "gatsby";
 // import { Helmet } from "react-helmet";
-const Resources = () => {
-  const pubs = [
-    {
-      title: "do mLabs make a difference (World Bank Report)",
-      link: "https://drive.google.com/file/d/1IdNp195GKrTRIFfNeBitmIxqDfD8MZHS/preview",
-    },
-    {
-      title: "do mLabs make a difference",
-      link: "https://drive.google.com/file/d/1ytVoAwtKUJem3EoJXmlDWj_w3zYEnRdL/preview",
-    },
-  ];
+const Resources = ({ data }) => {
+  const resources = data.resources.edges;
   useEffect(() => {
     (function (h, o, t, j, a, r) {
       h.hj =
@@ -50,9 +42,12 @@ const Resources = () => {
             <Typography variant="s1">Extra Publications</Typography>
           </div>
           <div className="pub-wrapper">
-            {pubs.map((p, i) => (
-              <Publication key={i} title={p.title} url={p.link} />
-            ))}
+            {resources.map((resource, i) => {
+              const { title, link } = resource.node.frontmatter;
+              if (link) {
+                return <Publication key={i} title={title} url={link} />;
+              }
+            })}
           </div>
         </div>
       </Section>
@@ -61,3 +56,19 @@ const Resources = () => {
 };
 
 export default Resources;
+export const query = graphql`
+  query ResourcesQuery {
+    resources: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/(resources)/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            link
+          }
+        }
+      }
+    }
+  }
+`;
