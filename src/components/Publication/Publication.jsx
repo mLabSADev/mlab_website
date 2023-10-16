@@ -5,15 +5,17 @@ import Typography from "../Typography/Typography";
 import "./style.scss";
 const Publication = ({ url, title }) => {
   return (
-    <a className="publication" key={title} href={url} target="_blank">
-      {/* <StaticImage
-        className="image"
-        src="../../images/backgrounds/pexels-eberhard-grossgasteiger-1612461.jpg"
-      /> */}
-      <div className="content">
-        <Typography variant="h5">{title.toUpperCase()}</Typography>
-      </div>
-    </a>
+    <div>
+      <a className="publication" key={title} href={url} target="_blank">
+        <iframe
+          className="content"
+          src={url}
+          width="100%"
+          height="300"
+          title="Google Drive Preview"
+        ></iframe>
+      </a>
+    </div>
   );
 };
 

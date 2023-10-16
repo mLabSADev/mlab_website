@@ -10,11 +10,11 @@ const Resources = () => {
   const pubs = [
     {
       title: "do mLabs make a difference (World Bank Report)",
-      link: "https://drive.google.com/file/d/1IdNp195GKrTRIFfNeBitmIxqDfD8MZHS/view?usp=sharing",
+      link: "https://drive.google.com/file/d/1IdNp195GKrTRIFfNeBitmIxqDfD8MZHS/preview",
     },
     {
       title: "do mLabs make a difference",
-      link: "https://drive.google.com/file/d/1ytVoAwtKUJem3EoJXmlDWj_w3zYEnRdL/view?usp=sharing",
+      link: "https://drive.google.com/file/d/1ytVoAwtKUJem3EoJXmlDWj_w3zYEnRdL/preview",
     },
   ];
   useEffect(() => {

@@ -140,6 +140,21 @@ collections:
         }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Content", name: "body", widget: "markdown" }
+  - name: "resources"
+    label: "Resources"
+    folder: "src/markdown/resources"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Drive Preview Link", name: "link", widget: "string" }
+      - {
+          label: "Document",
+          name: "file",
+          widget: "file",
+          media_folder: "src/resources",
+          required: false,
+        }
+
   - name: "aiMashupWebinars"
     label: "AI Mashup Webinars"
     folder: "src/markdown/webinars"
