@@ -15,7 +15,7 @@ tags:
 ---
 The rise of Artificial Intelligence (AI) is redefining and changing careers, it is for this reason that it is important to introduce South African youth to AI systems to boost their competitiveness in the digital economy. 
 
-On 3-4 November we hosted an AI-themed hackathon that we called the 'AI Mashup', which brought together youth from 4 provinces in South Africa, namely; Gauteng, Limpopo, Kwa-Zulu Natal, and the Northern Cape. In this 'Sustainable AI' themed hackathon, youth were given problem statements to solve using Microsoft  AI services, while contesting to win cash prizes. 
+On 3-4 November we hosted an AI-themed hackathon that we called the '[AI Mashup'](https://mlab.co.za/aimashup), which brought together youth from 4 provinces in South Africa, namely; Gauteng, Limpopo, Kwa-Zulu Natal, and the Northern Cape. In this 'Sustainable AI' themed hackathon, youth were given problem statements to solve using Microsoft  AI services, while contesting to win cash prizes. 
 
 The AI Mashup came to fruition through our partnership with Microsoft and the AI Expo Africa, sponsored by Microsoft, the Youth Employment Service (YES), and the MTN Group. 
 
