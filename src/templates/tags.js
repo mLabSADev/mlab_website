@@ -8,7 +8,7 @@ import PageHeader from "../components/PageHeader/PageHeader";
 import NewsCard from "../components/NewsCard/NewsCard";
 import { getImage } from "gatsby-plugin-image";
 import Tag from "../components/Tag/Tag";
-const slugify = require('slugify');
+const slugify = require("slugify");
 export default function TaggedPosts({ data, pageContext }) {
   // detect change
   const { tag } = pageContext;
@@ -20,14 +20,14 @@ export default function TaggedPosts({ data, pageContext }) {
   });
   const GeneratePath = (path) => {
     const link = slugify(path, {
-      replacement: '-',  // replace spaces with replacement character, defaults to `-`
+      replacement: "-", // replace spaces with replacement character, defaults to `-`
       remove: /[*+~.()'"!:@]/g, // remove characters that match regex, defaults to `undefined`
-      lower: true,      // convert to lower case, defaults to `false`
-      strict: true,       // strip special characters except replacement, defaults to `false`
-      trim: true         // trim leading and trailing replacement chars, defaults to `true`
-    })
-    return link
-  }
+      lower: true, // convert to lower case, defaults to `false`
+      strict: true, // strip special characters except replacement, defaults to `false`
+      trim: true, // trim leading and trailing replacement chars, defaults to `true`
+    });
+    return link;
+  };
   return (
     <Layout>
       <PageHeader title={tag.toUpperCase()} />
@@ -44,14 +44,6 @@ export default function TaggedPosts({ data, pageContext }) {
                 const img = getImage(entry.frontmatter.featureImage);
                 const excerpt = entry.excerpt;
                 const title = entry.frontmatter.title;
-                const lowerCase = title;
-                const remove_invalid_1 = lowerCase.replaceAll(":", "");
-                const remove_invalid_2 = remove_invalid_1.replaceAll("|", "");
-                const remove_invalid_3 = remove_invalid_2.replaceAll("#", "");
-                const remove_invalid_4 = remove_invalid_3.replaceAll("&", "");
-                const remove_invalid_5 = remove_invalid_4.replaceAll('"', "");
-                const remove_invalid_6 = remove_invalid_5.replaceAll('"', "");
-                // const _path = remove_invalid_6.replaceAll(" ", "-");
                 const _path = GeneratePath(title);
                 return (
                   <NewsCard
@@ -75,7 +67,9 @@ export default function TaggedPosts({ data, pageContext }) {
               <div className="tag-list">
                 {tags.map((item, i) => {
                   const _path = GeneratePath(item);
-                  return <Tag key={i} label={item} url={`/news/tag/${_path}`} />;
+                  return (
+                    <Tag key={i} label={item} url={`/news/tag/${_path}`} />
+                  );
                 })}
               </div>
             </div>

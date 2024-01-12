@@ -4,7 +4,7 @@ import Layout from "../components/ChatBot/ChatBot";
 import Typography from "../components/Typography/Typography";
 import Section from "../components/Section/Section";
 import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image";
-import { Button, Modal, Image, Statistic } from "antd";
+import { Button, Modal, Image, Statistic, Space } from "antd";
 import { SwapRightOutlined } from "@ant-design/icons";
 import {
   Navigation,
@@ -13,6 +13,7 @@ import {
   A11y,
   Autoplay,
   EffectCreative,
+  Virtual,
 } from "swiper/modules";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import AIVideo from "../images/aihack/bgVideo.mp4";
@@ -20,6 +21,7 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "swiper/css/virtual";
 import { Icons } from "../components/Icons";
 import { graphql } from "gatsby";
 const { Countdown } = Statistic;
@@ -154,11 +156,8 @@ const AiMashup = ({ data }) => {
   const [scaleStep, setScaleStep] = useState(0.5);
   const swiper = useSwiper();
   const webinars = data.webinars.edges;
-  return (
-    <Layout>
-      <video className="bgVideo" muted autoPlay loop style={{ width: `100%` }}>
-        <source src={AIVideo} type="video/mp4" />
-      </video>
+  const Main = () => {
+    return (
       <div className="main">
         <StaticImage
           className="circlecircuit"
@@ -198,7 +197,9 @@ const AiMashup = ({ data }) => {
                     <Icons.Star className="star1" />
                     <Icons.Star className="star2" />
                     <Icons.Star className="star3" />
-                    <Typography variant="button">Registrations Closed</Typography>
+                    <Typography variant="button">
+                      Registrations Closed
+                    </Typography>
                   </a>
                   <a
                     className="partnerbtn"
@@ -595,6 +596,21 @@ const AiMashup = ({ data }) => {
           </div>
         </div>
       </div>
+    );
+  };
+  const imageslides = [1, 2, 3, 4, 5, 6];
+
+  return (
+    <Layout>
+      <video className="bgVideo" muted autoPlay loop style={{ width: `100%` }}>
+        <source src={AIVideo} type="video/mp4" />
+      </video>
+      <Space direction="horizontal">
+        <Space style={{}}>
+          <Typography variant="h1">AiMashup Winners</Typography>{" "}
+        </Space>
+        <Space></Space>
+      </Space>
     </Layout>
   );
 };
