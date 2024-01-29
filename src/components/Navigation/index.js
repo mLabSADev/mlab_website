@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./style.scss";
 import { Link } from "gatsby";
-import Typography from "../Typography/Typography";
+import Typography from "../../Typography/Typography";
 import { graphql, StaticQuery } from "gatsby";
-import { Icons } from "../Icons";
+import { Icons } from "../../Icons";
 const slugify = require("slugify");
 //  - { label: "Author", name: "author", widget: "string" }
 const GeneratePath = (path) => {

@@ -1,5 +1,5 @@
 import React from "react";
-import { Item, links } from "../Navigation";
+import { Item, links } from "../NewsCard/Navigation";
 import Typography from "../Typography/Typography";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import "./style.scss";

@@ -1,7 +1,7 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React, { useState } from "react";
 import Footer from "../Footer/Footer";
-import Navigation from "../Navigation/index";
+import Navigation from "../NewsCard/Navigation/index";
 import Typography from "../Typography/Typography";
 import NetlifyForm from "react-ssg-netlify-forms";
 import FormControl from "@mui/material/FormControl";

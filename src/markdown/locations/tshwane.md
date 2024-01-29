@@ -12,7 +12,7 @@ programmes:
 tel: +27 012 844 0240
 physicalAddress: U8, Enterprise Building, The Innovation Hub, Mark Shuttleworth
   Street, Tshwane Pretoria, South Africa, 0087
-email: members@mlab.co.za
+email: admin@mlab.co.za
 description: mLab Tshwane is the Headquarters of the Mobile Applications
   Laboratory. It is a proud partnership between mLab, The Innovation Hub and The
   Department of Science and Innovation. It was the first location in South
