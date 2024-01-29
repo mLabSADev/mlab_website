@@ -1,5 +1,4 @@
 import React from "react";
-import { Item, links } from "../NewsCard/Navigation";
 import Typography from "../Typography/Typography";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import "./style.scss";
@@ -10,6 +9,7 @@ import {
   faYoutube,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
+import { Item, links } from "../Navigation";
 const Logo = () => {
   const logoColors = {
     m: "#8cc051",
