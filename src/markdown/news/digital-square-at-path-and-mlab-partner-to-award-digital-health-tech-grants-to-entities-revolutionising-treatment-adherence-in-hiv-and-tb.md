@@ -20,7 +20,7 @@ According to [WHO](https://www.who.int), in 2022 alone, approximately 304,000 in
 
 ![](../../images/health-body-2.png)
 
-Responding to this challenge, [Digital Square](https://digitalsquare.org) at PATH and [mLab ](https://mlab.co.za/news)are collaborating on an initiative, “Optimizing Data Systems and Digital Health in South Africa', aimed at identifying, fostering and fast-tracking the implementation of innovative digital health solutions.  Following a rigorous selection process, two standout projects emerged as the recipients of the grants.
+Responding to this challenge, [Digital Square](https://digitalsquare.org) at PATH and [mLab ](https://mlab.co.za/news)are collaborating on an initiative, *'Optimising Data Systems and Digital Health in South Africa'*, aimed at identifying, fostering and fast-tracking the implementation of innovative digital health solutions.  Following a rigorous selection process, two standout projects emerged as the recipients of the grants.
 
 Professor Ronelle Burger, Applied Health Economist from the University of Stellenbosch, and her team that have created a conversational mobile health platform will benefit from the grant. Burger's platform, leveraging behavioural economics and gamified features, aims to bolster treatment adherence among TB patients.  "Receiving this grant is a pivotal moment for us.  It propels our mission to develop a scalable solution that empowers TB patients to conquer the disease," Burger remarked enthusiastically.
 
