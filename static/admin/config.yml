@@ -164,6 +164,14 @@ collections:
       - { label: "From", name: "from", widget: "date" }
       - { label: "To", name: "to", widget: "date" }
       - { label: "Link", name: "link", widget: "string" }
+      - {
+          label: "Category",
+          name: "category",
+          widget: "relation",
+          collection: "wwdSections",
+          searchFields: ["title"],
+          valueField: "title",
+        }
   - name: "aiMashupWebinars"
     label: "AI Mashup Webinars"
     folder: "src/markdown/webinars"
