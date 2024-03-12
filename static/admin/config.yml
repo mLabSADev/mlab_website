@@ -154,7 +154,16 @@ collections:
           media_folder: "src/assets/resources",
           required: false,
         }
-
+  - name: "projects"
+    label: "Projects"
+    folder: "src/markdown/projects"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "From", name: "from", widget: "date" }
+      - { label: "To", name: "to", widget: "date" }
+      - { label: "Link", name: "link", widget: "string" }
   - name: "aiMashupWebinars"
     label: "AI Mashup Webinars"
     folder: "src/markdown/webinars"

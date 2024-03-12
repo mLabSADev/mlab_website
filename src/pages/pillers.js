@@ -8,18 +8,18 @@ import Typography from "../components/Typography/Typography";
 import SectionTitle from "../components/SectionTitle/SectionTitle";
 import Section from "../components/Section/Section";
 import TechCard from "../components/TextCard/TechCard";
-const slugify = require('slugify');
+const slugify = require("slugify");
 // import { Helmet } from "react-helmet";
 const GeneratePath = (path) => {
   const link = slugify(path, {
-    replacement: '-',  // replace spaces with replacement character, defaults to `-`
+    replacement: "-", // replace spaces with replacement character, defaults to `-`
     remove: /[*+~.()'"!:@]/g, // remove characters that match regex, defaults to `undefined`
-    lower: true,      // convert to lower case, defaults to `false`
-    strict: true,     // strip special characters except replacement, defaults to `false`
-    trim: true         // trim leading and trailing replacement chars, defaults to `true`
-  })
-  return link
-}
+    lower: true, // convert to lower case, defaults to `false`
+    strict: true, // strip special characters except replacement, defaults to `false`
+    trim: true, // trim leading and trailing replacement chars, defaults to `true`
+  });
+  return link;
+};
 const CodeTribe = ({ state = false, link, title, description }) => {
   return (
     <div className="codeTribe">
@@ -27,7 +27,7 @@ const CodeTribe = ({ state = false, link, title, description }) => {
         {state ? (
           <StaticImage
             className="ct-bg"
-            src={"../images/backgrounds/codetribe.jpg"}
+            src={"../images/backgrounds/Applications Closed.jpg"}
             alt="bg"
           />
         ) : (
@@ -46,19 +46,11 @@ const CodeTribe = ({ state = false, link, title, description }) => {
         ></iframe> */}
       </div>
       <div className="codeTribe-details">
-        {state ? (
-          <Typography variant="s2" color="light">
-            Applications Open
-          </Typography>
-        ) : (
-          <Typography variant="s2" color="light">
-            Applications Closed
-          </Typography>
-        )}
-        <Typography variant="h3" color="light">
+        {state && <Typography variant="s2">Applications Open</Typography>}
+        <Typography variant="h3" color="dark">
           {title}
         </Typography>
-        <Typography variant="b1" color="light">
+        <Typography variant="b1" color="dark">
           {description}
         </Typography>
         {state ? null : (
@@ -67,7 +59,7 @@ const CodeTribe = ({ state = false, link, title, description }) => {
           </Typography>
         )}
         {state ? (
-          <Button color="light" label="Apply Now" type="link" url={link} />
+          <Button color="dark" label="Apply Now" type="link" url={link} />
         ) : null}
       </div>
     </div>
@@ -93,6 +85,9 @@ const Pillers = ({ data, location }) => {
   const splitUrl = url.split("/");
   // const cleanSplit = splitUrl[2].replace("-", " ");
   const cleanSplit = GeneratePath(splitUrl[2]);
+  useEffect(() => {
+    console.log(cleanSplit);
+  }, []);
   useEffect(() => {
     (function (h, o, t, j, a, r) {
       h.hj =
@@ -187,9 +182,9 @@ const Pillers = ({ data, location }) => {
               )}
 
               {/* techSkillsApplication */}
-              {cleanSplit === "Tech Skills" && (
+              {cleanSplit === "tech-skills" && (
                 <CodeTribe
-                  title={cleanSplit}
+                  title={"Application are Open"}
                   state={techSkillsApplication.open}
                   description={techSkillsApplication.description}
                   link={techSkillsApplication.link}
@@ -236,7 +231,7 @@ const Pillers = ({ data, location }) => {
                           image={img}
                           icon={icon}
                           description={description}
-                        // handleClick={open}
+                          // handleClick={open}
                         />
                       );
                     })}
