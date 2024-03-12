@@ -1,5 +1,7 @@
 ---
+image: ../../images/mlab.co.za.jpg
 title: TIA App Fund
+cca: South Africa Technology Innovation Agency
 description: TIA and mLab Southern Africa entered into a partnership that would
   empower local mobile application start-ups or innovators to pivot their
   technologies with the purpose of providing a potential pipeline for ICT
@@ -21,4 +23,5 @@ description: TIA and mLab Southern Africa entered into a partnership that would
 from: 2015-10-01T20:42:59.161Z
 to: 2017-09-01T20:42:59.172Z
 link: link-to-prject.com
+category: Tech Ecosystems
 ---
