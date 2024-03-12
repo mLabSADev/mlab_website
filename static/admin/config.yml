@@ -159,8 +159,14 @@ collections:
     folder: "src/markdown/projects"
     create: true
     fields:
+      - { label: "Thumbnail", name: "image", widget: "image", choose_url: true }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
+      - {
+          label: "Client & Country of Assignment",
+          name: "cca",
+          widget: "string",
+        }
+      - { label: "Description", name: "description", widget: "markdown" }
       - { label: "From", name: "from", widget: "date" }
       - { label: "To", name: "to", widget: "date" }
       - { label: "Link", name: "link", widget: "string" }
