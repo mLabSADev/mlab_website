@@ -178,6 +178,10 @@ collections:
           searchFields: ["title"],
           valueField: "title",
         }
+      - { label: "Android", name: "android", widget: "boolean" }
+      - { label: "iOS", name: "ios", widget: "boolean" }
+      - { label: "Web", name: "web", widget: "boolean" }
+
   - name: "aiMashupWebinars"
     label: "AI Mashup Webinars"
     folder: "src/markdown/webinars"
