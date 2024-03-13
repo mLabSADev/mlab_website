@@ -24,4 +24,7 @@ from: 2015-10-01T20:42:59.161Z
 to: 2017-09-01T20:42:59.172Z
 link: link-to-prject.com
 category: Tech Solutions
+android: false
+ios: false
+web: false
 ---
