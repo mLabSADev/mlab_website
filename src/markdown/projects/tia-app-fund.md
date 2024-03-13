@@ -23,5 +23,5 @@ description: TIA and mLab Southern Africa entered into a partnership that would
 from: 2015-10-01T20:42:59.161Z
 to: 2017-09-01T20:42:59.172Z
 link: link-to-prject.com
-category: Tech Ecosystems
+category: Tech Solutions
 ---
