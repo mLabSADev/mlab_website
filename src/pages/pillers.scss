@@ -71,7 +71,17 @@
     border: 0px;
   }
 }
+.initiatives {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 20px;
+  column-gap: 20px;
+}
 @media only screen and (max-width: 1200px) {
+  .initiatives {
+    grid-template-columns: 1fr 1fr;
+  }
   .subPage {
     .subPage-header {
       .subPage-content {
@@ -81,6 +91,9 @@
   }
 }
 @media only screen and (max-width: 880px) {
+  .initiatives {
+    grid-template-columns: 1fr;
+  }
   .subPage {
     .subPage-header {
       .subPage-content {

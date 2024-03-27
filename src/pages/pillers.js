@@ -8,6 +8,7 @@ import Typography from "../components/Typography/Typography";
 import SectionTitle from "../components/SectionTitle/SectionTitle";
 import Section from "../components/Section/Section";
 import TechCard from "../components/TextCard/TechCard";
+import { Card, Modal } from "antd";
 const slugify = require("slugify");
 // import { Helmet } from "react-helmet";
 const GeneratePath = (path) => {
@@ -71,14 +72,17 @@ const Pillers = ({ data, location }) => {
     state: false,
     link: "",
   });
+  const [projectData, setProjectData] = useState({});
+  const [openProject, setOpenProject] = useState(false);
   // const icon = getImage(data.frontmatter.icon);
   // const background = getImage(data.frontmatter.featureImage);
   const sectionData = data.allMarkdownRemark.edges;
   const theTech = data.theTech.edges;
   const techStartupApplication = data.techStartupApplication.frontmatter;
   const techSkillsApplication = data.techSkillsApplication.frontmatter;
+  const projects = data.projects.edges;
   const techSolutionsApplication = data.techSolutionsApplication.frontmatter;
-  console.log(techStartupApplication);
+  console.log(projects);
   let width = typeof window !== "undefined" ? window.screen.width : 800;
   const resposiveWidth = 980;
   const url = location.pathname;
@@ -172,7 +176,7 @@ const Pillers = ({ data, location }) => {
               )}
 
               {/* techStartupApplication */}
-              {cleanSplit === "Tech Start-Ups" && (
+              {cleanSplit === "Tech Start-Ups"  && techStartupApplication.open && (
                 <CodeTribe
                   title={cleanSplit}
                   state={techStartupApplication.open}
@@ -182,7 +186,7 @@ const Pillers = ({ data, location }) => {
               )}
 
               {/* techSkillsApplication */}
-              {cleanSplit === "tech-skills" && (
+              {cleanSplit === "tech-skills" && techSkillsApplication.open && (
                 <CodeTribe
                   title={"Application are Open"}
                   state={techSkillsApplication.open}
@@ -192,7 +196,7 @@ const Pillers = ({ data, location }) => {
               )}
 
               {/* techSolutionsApplication */}
-              {cleanSplit === "Tech Solutions" && (
+              {cleanSplit === "tech-solutions"  && techSolutionsApplication.open && (
                 <CodeTribe
                   title={cleanSplit}
                   state={techSolutionsApplication.open}
@@ -212,7 +216,7 @@ const Pillers = ({ data, location }) => {
                 </div>
               </Section>
 
-              {cleanSplit == "Tech Solutions" && (
+              {cleanSplit == "tech-solutions" && (
                 <Section>
                   <SectionTitle>our tech</SectionTitle>
                   <br></br>
@@ -238,6 +242,74 @@ const Pillers = ({ data, location }) => {
                   </div>
                 </Section>
               )}
+              <Section>
+                <SectionTitle>initiatives</SectionTitle>
+                <div className="initiatives">
+                  <Modal
+                    footer={<></>}
+                    open={openProject}
+                    title={projectData?.cca}
+                    onCancel={() => {
+                      setOpenProject(false);
+                    }}
+                  >
+                    <div>
+                      <Typography variant="h3">{projectData?.title}</Typography>
+                      <Typography variant="body2">
+                        {projectData?.description}
+                      </Typography>
+                    </div>
+                  </Modal>
+                  {projects.map((item) => {
+                    const {
+                      category,
+                      description,
+                      title,
+                      link,
+                      to,
+                      cca,
+                      from,
+                      image,
+                    } = item.node.frontmatter;
+                    const coverImage = getImage(image);
+
+                    return (
+                      <Card
+                        hoverable
+                        actions={[
+                          <Button
+                            onClick={() => {
+                              setProjectData({
+                                category,
+                                description,
+                                title,
+                                link,
+                                to,
+                                cca,
+                                from,
+                                image,
+                              });
+
+                              setOpenProject(true);
+                            }}
+                          >
+                            View More
+                          </Button>,
+                        ]}
+                        cover={
+                          <GatsbyImage
+                            image={coverImage}
+                            alt=""
+                            style={{ height: 200, objectFit: "cover" }}
+                          />
+                        }
+                      >
+                        <Card.Meta title={title} description={cca} />
+                      </Card>
+                    );
+                  })}
+                </div>
+              </Section>
             </div>
           );
         }
@@ -317,7 +389,28 @@ export const query = graphql`
         }
       }
     }
-
+    projects: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/(projects)/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            image {
+              childImageSharp {
+                gatsbyImageData(quality: 100)
+              }
+            }
+            title
+            description
+            to
+            from
+            cca
+            category
+            link
+          }
+        }
+      }
+    }
     techStartupApplication: markdownRemark(
       fileAbsolutePath: { regex: "/(tech-skills/index.md)/" }
     ) {
