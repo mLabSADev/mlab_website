@@ -605,12 +605,7 @@ const AiMashup = ({ data }) => {
       <video className="bgVideo" muted autoPlay loop style={{ width: `100%` }}>
         <source src={AIVideo} type="video/mp4" />
       </video>
-      <Space direction="horizontal">
-        <Space style={{}}>
-          <Typography variant="h1">AiMashup Winners</Typography>{" "}
-        </Space>
-        <Space></Space>
-      </Space>
+      <Main />
     </Layout>
   );
 };
