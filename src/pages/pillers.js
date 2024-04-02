@@ -176,14 +176,15 @@ const Pillers = ({ data, location }) => {
               )}
 
               {/* techStartupApplication */}
-              {cleanSplit === "Tech Start-Ups"  && techStartupApplication.open && (
-                <CodeTribe
-                  title={cleanSplit}
-                  state={techStartupApplication.open}
-                  description={techStartupApplication.description}
-                  link={techStartupApplication.link}
-                />
-              )}
+              {cleanSplit === "Tech Start-Ups" &&
+                techStartupApplication.open && (
+                  <CodeTribe
+                    title={cleanSplit}
+                    state={techStartupApplication.open}
+                    description={techStartupApplication.description}
+                    link={techStartupApplication.link}
+                  />
+                )}
 
               {/* techSkillsApplication */}
               {cleanSplit === "tech-skills" && techSkillsApplication.open && (
@@ -196,14 +197,15 @@ const Pillers = ({ data, location }) => {
               )}
 
               {/* techSolutionsApplication */}
-              {cleanSplit === "tech-solutions"  && techSolutionsApplication.open && (
-                <CodeTribe
-                  title={cleanSplit}
-                  state={techSolutionsApplication.open}
-                  description={techSolutionsApplication.description}
-                  link={techSolutionsApplication.link}
-                />
-              )}
+              {cleanSplit === "tech-solutions" &&
+                techSolutionsApplication.open && (
+                  <CodeTribe
+                    title={cleanSplit}
+                    state={techSolutionsApplication.open}
+                    description={techSolutionsApplication.description}
+                    link={techSolutionsApplication.link}
+                  />
+                )}
 
               <Section>
                 <div className="reading">
@@ -260,54 +262,7 @@ const Pillers = ({ data, location }) => {
                       </Typography>
                     </div>
                   </Modal>
-                  {projects.map((item) => {
-                    const {
-                      category,
-                      description,
-                      title,
-                      link,
-                      to,
-                      cca,
-                      from,
-                      image,
-                    } = item.node.frontmatter;
-                    const coverImage = getImage(image);
-
-                    return (
-                      <Card
-                        hoverable
-                        actions={[
-                          <Button
-                            onClick={() => {
-                              setProjectData({
-                                category,
-                                description,
-                                title,
-                                link,
-                                to,
-                                cca,
-                                from,
-                                image,
-                              });
-
-                              setOpenProject(true);
-                            }}
-                          >
-                            View More
-                          </Button>,
-                        ]}
-                        cover={
-                          <GatsbyImage
-                            image={coverImage}
-                            alt=""
-                            style={{ height: 200, objectFit: "cover" }}
-                          />
-                        }
-                      >
-                        <Card.Meta title={title} description={cca} />
-                      </Card>
-                    );
-                  })}
+               
                 </div>
               </Section>
             </div>
