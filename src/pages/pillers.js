@@ -244,27 +244,7 @@ const Pillers = ({ data, location }) => {
                   </div>
                 </Section>
               )}
-              <Section>
-                <SectionTitle>initiatives</SectionTitle>
-                <div className="initiatives">
-                  <Modal
-                    footer={<></>}
-                    open={openProject}
-                    title={projectData?.cca}
-                    onCancel={() => {
-                      setOpenProject(false);
-                    }}
-                  >
-                    <div>
-                      <Typography variant="h3">{projectData?.title}</Typography>
-                      <Typography variant="body2">
-                        {projectData?.description}
-                      </Typography>
-                    </div>
-                  </Modal>
-               
-                </div>
-              </Section>
+             
             </div>
           );
         }
