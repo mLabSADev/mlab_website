@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./pillers.scss";
 import Layout from "../components/ChatBot/ChatBot";
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import Button from "../components/Button/Button";
 import Typography from "../components/Typography/Typography";
@@ -9,6 +9,8 @@ import SectionTitle from "../components/SectionTitle/SectionTitle";
 import Section from "../components/Section/Section";
 import TechCard from "../components/TextCard/TechCard";
 import { Card, Modal } from "antd";
+import { Icons } from "../components/Icons";
+import AIVideo from "../images/aihack/bgVideo.mp4";
 const slugify = require("slugify");
 // import { Helmet } from "react-helmet";
 const GeneratePath = (path) => {
@@ -82,16 +84,13 @@ const Pillers = ({ data, location }) => {
   const techSkillsApplication = data.techSkillsApplication.frontmatter;
   const projects = data.projects.edges;
   const techSolutionsApplication = data.techSolutionsApplication.frontmatter;
-  console.log(projects);
   let width = typeof window !== "undefined" ? window.screen.width : 800;
   const resposiveWidth = 980;
   const url = location.pathname;
   const splitUrl = url.split("/");
   // const cleanSplit = splitUrl[2].replace("-", " ");
   const cleanSplit = GeneratePath(splitUrl[2]);
-  useEffect(() => {
-    console.log(cleanSplit);
-  }, []);
+  console.log({ width });
   useEffect(() => {
     (function (h, o, t, j, a, r) {
       h.hj =
@@ -152,8 +151,56 @@ const Pillers = ({ data, location }) => {
                   </div>
                 </div>
               </div>
+              {cleanSplit === "tech-solutions" && (
+                <Section>
+                  <Card>
+                    <div className="apply-main">
+                      <div className="apply-content">
+                        <Typography variant="h6">
+                          Build your product today with us
+                        </Typography>
+                        {width < 500 ? (
+                          <Typography variant="h4">
+                            Ready to take the leap? Register your startup now
+                            and unlock the doors to endless possibilities!
+                          </Typography>
+                        ) : (
+                          <Typography variant="h2">
+                            Ready to take the leap? Register your startup now
+                            and unlock the doors to endless possibilities!
+                          </Typography>
+                        )}
 
-              {cleanSplit === "Tech Ecosystems" && (
+                        <div style={{ textAlign: "center" }}>
+                          <a
+                            href="https://forms.gle/NJNpY31VcUC1cwek9"
+                            target="_blank"
+                          >
+                            <Button type="link"></Button>
+                          </a>
+                        </div>
+                      </div>
+                      <div className="apply-image">
+                        <img
+                          src="https://images.pexels.com/photos/3861563/pexels-photo-3861563.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </Card>
+                </Section>
+              )}
+              {cleanSplit === "tech-ecosystems" &&
+                cleanSplit === "tech-start-ups" && (
+                  <Section>
+                    <StaticImage
+                      className="subPage-video"
+                      src="../images/resources/ecosystem.jpg"
+                      alt={"Ecosystem"}
+                    />
+                  </Section>
+                )}
+              {cleanSplit === "tech-ecosystems" && (
                 <Section>
                   <StaticImage
                     className="subPage-video"
@@ -162,21 +209,23 @@ const Pillers = ({ data, location }) => {
                   />
                 </Section>
               )}
-              {data.frontmatter.video && cleanSplit !== "Tech Ecosystems" && (
-                <Section>
-                  <iframe
-                    title={title}
-                    className="subPage-video"
-                    src={data.frontmatter.video}
-                    allowFullScreen={true}
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  ></iframe>
-                </Section>
-              )}
+              {data.frontmatter.video &&
+                cleanSplit !== "tech-ecosystems" &&
+                data.frontmatter.video !== "null" && (
+                  <Section>
+                    <iframe
+                      title={title}
+                      className="subPage-video"
+                      src={data.frontmatter.video}
+                      allowFullScreen={true}
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                  </Section>
+                )}
 
               {/* techStartupApplication */}
-              {cleanSplit === "Tech Start-Ups" &&
+              {cleanSplit === "tech-start-ups" &&
                 techStartupApplication.open && (
                   <CodeTribe
                     title={cleanSplit}
@@ -217,7 +266,72 @@ const Pillers = ({ data, location }) => {
                   <div></div>
                 </div>
               </Section>
+              {/* AI Masup */}
+              <Section>
+                {cleanSplit == "tech-solutions" && (
+                  <div className="pillers-hack">
+                    <video
+                      className="hack-bgVideo"
+                      muted
+                      autoPlay
+                      loop
+                      style={{ width: `100%` }}
+                    >
+                      <source src={AIVideo} type="video/mp4" />
+                    </video>
+                    <div className="hack-text">
+                      <div>
+                        {" "}
+                        <Typography
+                          style={{ fontFamily: "Segoe_Bold" }}
+                          variant="h3"
+                        >
+                          Sustainable
+                        </Typography>
+                        <Typography
+                          style={{ fontFamily: "Segoe_Bold" }}
+                          variant="h3 "
+                          gradient={true}
+                        >
+                          Artificial Intelligence
+                        </Typography>
+                        <Typography
+                          style={{ fontFamily: "Segoe_Bold" }}
+                          variant="h4"
+                        >
+                          themed webinars, hackathon and <br />
+                          post-hack incubation
+                        </Typography>
+                      </div>
 
+                      <Typography
+                        style={{ fontFamily: "Segoe_Bold" }}
+                        variant="h6"
+                      >
+                        Unleash Innovation, Transform Tomorrow
+                      </Typography>
+
+                      <div className="buttons">
+                        <Link
+                          to="/aimashup"
+                          target="_blank"
+                          className="registerbtn"
+                        >
+                          <Icons.Star className="star1" />
+                          <Icons.Star className="star2" />
+                          <Icons.Star className="star3" />
+                          <Typography variant="button">View Event</Typography>
+                        </Link>
+                      </div>
+                    </div>
+                    <div className="hack-logo">
+                      <StaticImage src="../images/aihack/newlogo.png" alt="" />
+                      {/* <Logo /> */}
+                    </div>
+                  </div>
+                )}
+              </Section>
+              {/* ... */}
               {cleanSplit == "tech-solutions" && (
                 <Section>
                   <SectionTitle>our tech</SectionTitle>
@@ -244,7 +358,47 @@ const Pillers = ({ data, location }) => {
                   </div>
                 </Section>
               )}
-             
+              <Section>
+                {projects.length > 0 && (
+                  <SectionTitle>initiatives</SectionTitle>
+                )}
+
+                <div className="initiatives">
+                  {projects.map((item) => {
+                    const {
+                      category,
+                      description,
+                      title,
+                      link,
+                      to,
+                      cca,
+                      from,
+                      image,
+                    } = item.node.frontmatter;
+                    const coverImage = getImage(image);
+                    const path = GeneratePath(title);
+                    return (
+                      <Card
+                        hoverable
+                        actions={[
+                          <Button type="link" url={`/initiatives/${path}`}>
+                            View More
+                          </Button>,
+                        ]}
+                        cover={
+                          <GatsbyImage
+                            image={coverImage}
+                            alt=""
+                            style={{ height: 200, objectFit: "cover" }}
+                          />
+                        }
+                      >
+                        <Card.Meta title={title} description={cca} />
+                      </Card>
+                    );
+                  })}
+                </div>
+              </Section>
             </div>
           );
         }
@@ -256,7 +410,7 @@ const Pillers = ({ data, location }) => {
 export default Pillers;
 
 export const query = graphql`
-  query WhatWeDo {
+  query WhatWeDo($title: String) {
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/(wwdSections)/" } }
       sort: { fields: frontmatter___priority, order: ASC }
@@ -325,7 +479,10 @@ export const query = graphql`
       }
     }
     projects: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/(projects)/" } }
+      filter: {
+        frontmatter: { category: { eq: $title } }
+        fileAbsolutePath: { regex: "/(projects)/" }
+      }
     ) {
       edges {
         node {

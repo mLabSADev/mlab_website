@@ -48,7 +48,7 @@ const CarouselItem = ({ title, text, image, reg }) => {
             color="light"
             variant={width > 980 ? "h1" : "h3"}
           >
-            {title.toUpperCase()}
+            {title}
           </Typography>
           <Typography color="light" variant="b2">
             {text}
