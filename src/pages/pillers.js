@@ -151,7 +151,7 @@ const Pillers = ({ data, location }) => {
                   </div>
                 </div>
               </div>
-              {cleanSplit === "tech-solutions" && (
+              {cleanSplit === "tech-start-ups" && (
                 <Section>
                   <Card>
                     <div className="apply-main">
