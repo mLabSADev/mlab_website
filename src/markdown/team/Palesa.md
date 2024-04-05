@@ -1,7 +1,7 @@
 ---
 path: /Palesa
 name: Palesa Antony
-position: Provincial Coordinator – Polokwane
+position: Provincial Coordinator
 profilePicture: ../../images/theTeam/Palesa.png
 ---
 
