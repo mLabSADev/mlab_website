@@ -176,7 +176,7 @@ const Pillers = ({ data, location }) => {
                             href="https://forms.gle/NJNpY31VcUC1cwek9"
                             target="_blank"
                           >
-                            <Button type="link"></Button>
+                            <Button label={"Apply for Tech Solution"}></Button>
                           </a>
                         </div>
                       </div>

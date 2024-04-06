@@ -11,14 +11,7 @@ import "./style.scss";
  */
 
 const Button = (
-  {
-    label = "read more",
-    type = "button",
-    url,
-    color,
-    onClick,
-    disabled = false,
-  },
+  { label, type = "button", url, color, onClick, disabled = false },
   props
 ) => {
   if (type === "button") {
@@ -33,7 +26,7 @@ const Button = (
         <div className="line-nc"></div>
         <div className="btn-nc">
           <Typography color={color ? color : null} variant="button">
-            {label}
+            {label ? label : "read more"}
           </Typography>
         </div>
         <div className="line-nc"></div>
