@@ -67,9 +67,11 @@ const Initiatives = ({ data }) => {
                           alignItems: "center",
                         }}
                       >
-                        <Button type="link" url={`/initiatives/${path}`}>
-                          View More
-                        </Button>{" "}
+                        <Button
+                          type="link"
+                          url={`/initiatives/${path}`}
+                          label="View Initiative"
+                        ></Button>
                       </div>,
                     ]}
                     cover={
