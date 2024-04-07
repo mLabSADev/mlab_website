@@ -1,7 +1,7 @@
 ---
 path: /Nokwanda
 name: Nokwanda Maranjane
-position: Skills Facilitator – Tembisa
+position: Skills Facilitator
 profilePicture: ../../images/theTeam/Nokwanda.jpg
 ---
 

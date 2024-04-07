@@ -10,14 +10,10 @@ import "./style.scss";
  * @param {string} url if type = link, url must be provided
  */
 
-const Button = ({
-    label = "read more",
-    type = "button",
-    url,
-    color,
-    onClick,
-    disabled = false,
-  }, props) => {
+const Button = (
+  { label, type = "button", url, color, onClick, disabled = false },
+  props
+) => {
   if (type === "button") {
     return (
       <button
@@ -30,7 +26,7 @@ const Button = ({
         <div className="line-nc"></div>
         <div className="btn-nc">
           <Typography color={color ? color : null} variant="button">
-            {label}
+            {label ? label : "read more"}
           </Typography>
         </div>
         <div className="line-nc"></div>

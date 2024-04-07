@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./style.scss";
 import { Link } from "gatsby";
-import Typography from "../Typography/Typography";
 import { graphql, StaticQuery } from "gatsby";
 import { Icons } from "../Icons";
+import Typography from "../Typography/Typography";
 const slugify = require("slugify");
 //  - { label: "Author", name: "author", widget: "string" }
 const GeneratePath = (path) => {
@@ -18,7 +18,7 @@ const GeneratePath = (path) => {
 };
 
 const AIHack = () => {
-  return (<></>)
+  return <></>;
   return (
     <Link
       href="https://codetribe.mlab.co.za/"

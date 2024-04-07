@@ -1,5 +1,5 @@
 const path = require("path");
-const slugify = require('slugify');
+const slugify = require("slugify");
 const { paginate } = require("gatsby-awesome-pagination");
 const { createFilePath } = require(`gatsby-source-filesystem`);
 exports.createPages = async ({ actions, graphql }) => {
@@ -7,17 +7,18 @@ exports.createPages = async ({ actions, graphql }) => {
   const PostTemplate = path.resolve("src/templates/blog-post.js");
   const TagsTemplate = path.resolve("src/templates/tags.js");
   const PillerTemplate = path.resolve("src/pages/pillers.js");
+  const InitiativesTemplate = path.resolve("src/pages/initiatives.js");
   const GeneratePath = (path) => {
     const link = slugify(path, {
-      replacement: '-',  // replace spaces with replacement character, defaults to `-`
+      replacement: "-", // replace spaces with replacement character, defaults to `-`
       remove: /[*+~.()'"!:@]/g, // remove characters that match regex, defaults to `undefined`
-      lower: true,      // convert to lower case, defaults to `false`
-      strict: true,     // strip special characters except replacement, defaults to `false`
+      lower: true, // convert to lower case, defaults to `false`
+      strict: true, // strip special characters except replacement, defaults to `false`
 
-      trim: true         // trim leading and trailing replacement chars, defaults to `true`
-    })
-    return link
-  }
+      trim: true, // trim leading and trailing replacement chars, defaults to `true`
+    });
+    return link;
+  };
   const news = await graphql(`
     {
       allMarkdownRemark(
@@ -96,6 +97,21 @@ exports.createPages = async ({ actions, graphql }) => {
       }
     }
   `);
+  const projects = await graphql(`
+    {
+      allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/(projects)/" } }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              title
+            }
+          }
+        }
+      }
+    }
+  `);
   news.data.allMarkdownRemark.edges.forEach(({ node }) => {
     const title = node.frontmatter.title;
     const _path = GeneratePath(title);
@@ -134,6 +150,14 @@ exports.createPages = async ({ actions, graphql }) => {
     createPage({
       path: `/what-we-do/${_path}`,
       component: PillerTemplate,
+      context: { title: node.frontmatter.title },
+    });
+  });
+  projects.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    const _path = GeneratePath(node.frontmatter.title);
+    createPage({
+      path: `/initiatives/${_path}`,
+      component: InitiativesTemplate,
       context: { title: node.frontmatter.title },
     });
   });

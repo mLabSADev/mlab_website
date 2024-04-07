@@ -18,6 +18,7 @@ module.exports = {
     "gatsby-plugin-sass", //
     "gatsby-plugin-image", //
     // "gatsby-plugin-react-helmet", //
+    `gatsby-plugin-material-ui`,
     "gatsby-plugin-mdx", //
     {
       resolve: "gatsby-plugin-sharp",
@@ -129,7 +130,8 @@ module.exports = {
 
     {
       resolve: `gatsby-plugin-google-analytics`,
-      options: { // previous G-3KLGEL4MZG
+      options: {
+        // previous G-3KLGEL4MZG
         trackingId: "G-8HGPG96E9D",
         head: true,
       },

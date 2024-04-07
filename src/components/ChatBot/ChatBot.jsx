@@ -1,7 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React, { useState } from "react";
 import Footer from "../Footer/Footer";
-import Navigation from "../Navigation/index";
 import Typography from "../Typography/Typography";
 import NetlifyForm from "react-ssg-netlify-forms";
 import FormControl from "@mui/material/FormControl";
@@ -14,6 +13,7 @@ import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { StaticQuery, graphql } from "gatsby";
 import "./style.scss";
 import Button from "../Button/Button";
+import Navigation from "../Navigation";
 
 export const ChatBot = ({ formState }) => {
   const [sentStatus, setSentStatus] = useState("");

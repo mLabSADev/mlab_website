@@ -10,8 +10,18 @@ import Section from "../components/Section/Section";
 import ProgressStatistic from "../components/ProgressStatistic/ProgressStatistic";
 import { AnimatePresence } from "framer-motion";
 import { WhatWeDoCard } from "./who-we-are";
+import slugify from "slugify";
 // import { Helmet } from "react-helmet";
-
+const GeneratePath = (path) => {
+  const link = slugify(path, {
+    replacement: "-", // replace spaces with replacement character, defaults to `-`
+    remove: /[*+~.()'"!:@]/g, // remove characters that match regex, defaults to `undefined`
+    lower: true, // convert to lower case, defaults to `false`
+    strict: true, // strip special characters except replacement, defaults to `false`
+    trim: true, // trim leading and trailing replacement chars, defaults to `true`
+  });
+  return link;
+};
 const WhatWeDo = ({ data, location }) => {
   const impactBarStats = data.impactBarStats.edges;
 
@@ -95,8 +105,6 @@ const WhatWeDo = ({ data, location }) => {
           {data.wwdSections.edges.map((card, i) => {
             const img = getImage(card.node.frontmatter.icon);
             const title = card.node.frontmatter.title;
-            const noSpaces = title.replaceAll(" ", "-");
-            console.log(title);
             return (
               <WhatWeDoCard
                 key={i}
@@ -104,7 +112,7 @@ const WhatWeDo = ({ data, location }) => {
                 excerpt={card.node.frontmatter.summary}
                 description={card.node.excerpt}
                 image={img}
-                url={`/what-we-do/${noSpaces}`}
+                url={`/what-we-do/${GeneratePath(title)}`}
               />
             );
           })}

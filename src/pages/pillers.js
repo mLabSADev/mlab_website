@@ -1,25 +1,28 @@
 import React, { useState, useEffect } from "react";
 import "./pillers.scss";
 import Layout from "../components/ChatBot/ChatBot";
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import Button from "../components/Button/Button";
 import Typography from "../components/Typography/Typography";
 import SectionTitle from "../components/SectionTitle/SectionTitle";
 import Section from "../components/Section/Section";
 import TechCard from "../components/TextCard/TechCard";
-const slugify = require('slugify');
+import { Card, Modal } from "antd";
+import { Icons } from "../components/Icons";
+import AIVideo from "../images/aihack/bgVideo.mp4";
+const slugify = require("slugify");
 // import { Helmet } from "react-helmet";
 const GeneratePath = (path) => {
   const link = slugify(path, {
-    replacement: '-',  // replace spaces with replacement character, defaults to `-`
+    replacement: "-", // replace spaces with replacement character, defaults to `-`
     remove: /[*+~.()'"!:@]/g, // remove characters that match regex, defaults to `undefined`
-    lower: true,      // convert to lower case, defaults to `false`
-    strict: true,     // strip special characters except replacement, defaults to `false`
-    trim: true         // trim leading and trailing replacement chars, defaults to `true`
-  })
-  return link
-}
+    lower: true, // convert to lower case, defaults to `false`
+    strict: true, // strip special characters except replacement, defaults to `false`
+    trim: true, // trim leading and trailing replacement chars, defaults to `true`
+  });
+  return link;
+};
 const CodeTribe = ({ state = false, link, title, description }) => {
   return (
     <div className="codeTribe">
@@ -27,7 +30,7 @@ const CodeTribe = ({ state = false, link, title, description }) => {
         {state ? (
           <StaticImage
             className="ct-bg"
-            src={"../images/backgrounds/codetribe.jpg"}
+            src={"../images/backgrounds/Applications Closed.jpg"}
             alt="bg"
           />
         ) : (
@@ -46,19 +49,11 @@ const CodeTribe = ({ state = false, link, title, description }) => {
         ></iframe> */}
       </div>
       <div className="codeTribe-details">
-        {state ? (
-          <Typography variant="s2" color="light">
-            Applications Open
-          </Typography>
-        ) : (
-          <Typography variant="s2" color="light">
-            Applications Closed
-          </Typography>
-        )}
-        <Typography variant="h3" color="light">
+        {state && <Typography variant="s2">Applications Open</Typography>}
+        <Typography variant="h3" color="dark">
           {title}
         </Typography>
-        <Typography variant="b1" color="light">
+        <Typography variant="b1" color="dark">
           {description}
         </Typography>
         {state ? null : (
@@ -67,7 +62,7 @@ const CodeTribe = ({ state = false, link, title, description }) => {
           </Typography>
         )}
         {state ? (
-          <Button color="light" label="Apply Now" type="link" url={link} />
+          <Button color="dark" label="Apply Now" type="link" url={link} />
         ) : null}
       </div>
     </div>
@@ -79,20 +74,23 @@ const Pillers = ({ data, location }) => {
     state: false,
     link: "",
   });
+  const [projectData, setProjectData] = useState({});
+  const [openProject, setOpenProject] = useState(false);
   // const icon = getImage(data.frontmatter.icon);
   // const background = getImage(data.frontmatter.featureImage);
   const sectionData = data.allMarkdownRemark.edges;
   const theTech = data.theTech.edges;
   const techStartupApplication = data.techStartupApplication.frontmatter;
   const techSkillsApplication = data.techSkillsApplication.frontmatter;
+  const projects = data.projects.edges;
   const techSolutionsApplication = data.techSolutionsApplication.frontmatter;
-  console.log(techStartupApplication);
   let width = typeof window !== "undefined" ? window.screen.width : 800;
   const resposiveWidth = 980;
   const url = location.pathname;
   const splitUrl = url.split("/");
   // const cleanSplit = splitUrl[2].replace("-", " ");
   const cleanSplit = GeneratePath(splitUrl[2]);
+  console.log({ width });
   useEffect(() => {
     (function (h, o, t, j, a, r) {
       h.hj =
@@ -153,8 +151,56 @@ const Pillers = ({ data, location }) => {
                   </div>
                 </div>
               </div>
+              {cleanSplit === "tech-start-ups" && (
+                <Section>
+                  <Card>
+                    <div className="apply-main">
+                      <div className="apply-content">
+                        <Typography variant="h6">
+                          Build your product today with us
+                        </Typography>
+                        {width < 500 ? (
+                          <Typography variant="h4">
+                            Ready to take the leap? Register your startup now
+                            and unlock the doors to endless possibilities!
+                          </Typography>
+                        ) : (
+                          <Typography variant="h2">
+                            Ready to take the leap? Register your startup now
+                            and unlock the doors to endless possibilities!
+                          </Typography>
+                        )}
 
-              {cleanSplit === "Tech Ecosystems" && (
+                        <div style={{ textAlign: "center" }}>
+                          <a
+                            href="https://forms.gle/NJNpY31VcUC1cwek9"
+                            target="_blank"
+                          >
+                            <Button label={"Apply for Tech Solution"}></Button>
+                          </a>
+                        </div>
+                      </div>
+                      <div className="apply-image">
+                        <img
+                          src="https://images.pexels.com/photos/3861563/pexels-photo-3861563.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </Card>
+                </Section>
+              )}
+              {cleanSplit === "tech-ecosystems" &&
+                cleanSplit === "tech-start-ups" && (
+                  <Section>
+                    <StaticImage
+                      className="subPage-video"
+                      src="../images/resources/ecosystem.jpg"
+                      alt={"Ecosystem"}
+                    />
+                  </Section>
+                )}
+              {cleanSplit === "tech-ecosystems" && (
                 <Section>
                   <StaticImage
                     className="subPage-video"
@@ -163,33 +209,36 @@ const Pillers = ({ data, location }) => {
                   />
                 </Section>
               )}
-              {data.frontmatter.video && cleanSplit !== "Tech Ecosystems" && (
-                <Section>
-                  <iframe
-                    title={title}
-                    className="subPage-video"
-                    src={data.frontmatter.video}
-                    allowFullScreen={true}
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  ></iframe>
-                </Section>
-              )}
+              {data.frontmatter.video &&
+                cleanSplit !== "tech-ecosystems" &&
+                data.frontmatter.video !== "null" && (
+                  <Section>
+                    <iframe
+                      title={title}
+                      className="subPage-video"
+                      src={data.frontmatter.video}
+                      allowFullScreen={true}
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                  </Section>
+                )}
 
               {/* techStartupApplication */}
-              {cleanSplit === "Tech Start-Ups" && (
-                <CodeTribe
-                  title={cleanSplit}
-                  state={techStartupApplication.open}
-                  description={techStartupApplication.description}
-                  link={techStartupApplication.link}
-                />
-              )}
+              {cleanSplit === "tech-start-ups" &&
+                techStartupApplication.open && (
+                  <CodeTribe
+                    title={cleanSplit}
+                    state={techStartupApplication.open}
+                    description={techStartupApplication.description}
+                    link={techStartupApplication.link}
+                  />
+                )}
 
               {/* techSkillsApplication */}
-              {cleanSplit === "Tech Skills" && (
+              {cleanSplit === "tech-skills" && techSkillsApplication.open && (
                 <CodeTribe
-                  title={cleanSplit}
+                  title={"Application are Open"}
                   state={techSkillsApplication.open}
                   description={techSkillsApplication.description}
                   link={techSkillsApplication.link}
@@ -197,14 +246,15 @@ const Pillers = ({ data, location }) => {
               )}
 
               {/* techSolutionsApplication */}
-              {cleanSplit === "Tech Solutions" && (
-                <CodeTribe
-                  title={cleanSplit}
-                  state={techSolutionsApplication.open}
-                  description={techSolutionsApplication.description}
-                  link={techSolutionsApplication.link}
-                />
-              )}
+              {cleanSplit === "tech-solutions" &&
+                techSolutionsApplication.open && (
+                  <CodeTribe
+                    title={cleanSplit}
+                    state={techSolutionsApplication.open}
+                    description={techSolutionsApplication.description}
+                    link={techSolutionsApplication.link}
+                  />
+                )}
 
               <Section>
                 <div className="reading">
@@ -216,8 +266,73 @@ const Pillers = ({ data, location }) => {
                   <div></div>
                 </div>
               </Section>
+              {/* AI Masup */}
+              <Section>
+                {cleanSplit == "tech-solutions" && (
+                  <div className="pillers-hack">
+                    <video
+                      className="hack-bgVideo"
+                      muted
+                      autoPlay
+                      loop
+                      style={{ width: `100%` }}
+                    >
+                      <source src={AIVideo} type="video/mp4" />
+                    </video>
+                    <div className="hack-text">
+                      <div>
+                        {" "}
+                        <Typography
+                          style={{ fontFamily: "Segoe_Bold" }}
+                          variant="h3"
+                        >
+                          Sustainable
+                        </Typography>
+                        <Typography
+                          style={{ fontFamily: "Segoe_Bold" }}
+                          variant="h3 "
+                          gradient={true}
+                        >
+                          Artificial Intelligence
+                        </Typography>
+                        <Typography
+                          style={{ fontFamily: "Segoe_Bold" }}
+                          variant="h4"
+                        >
+                          themed webinars, hackathon and <br />
+                          post-hack incubation
+                        </Typography>
+                      </div>
 
-              {cleanSplit == "Tech Solutions" && (
+                      <Typography
+                        style={{ fontFamily: "Segoe_Bold" }}
+                        variant="h6"
+                      >
+                        Unleash Innovation, Transform Tomorrow
+                      </Typography>
+
+                      <div className="buttons">
+                        <Link
+                          to="/aimashup"
+                          target="_blank"
+                          className="registerbtn"
+                        >
+                          <Icons.Star className="star1" />
+                          <Icons.Star className="star2" />
+                          <Icons.Star className="star3" />
+                          <Typography variant="button">View Event</Typography>
+                        </Link>
+                      </div>
+                    </div>
+                    <div className="hack-logo">
+                      <StaticImage src="../images/aihack/newlogo.png" alt="" />
+                      {/* <Logo /> */}
+                    </div>
+                  </div>
+                )}
+              </Section>
+              {/* ... */}
+              {cleanSplit == "tech-solutions" && (
                 <Section>
                   <SectionTitle>our tech</SectionTitle>
                   <br></br>
@@ -236,13 +351,54 @@ const Pillers = ({ data, location }) => {
                           image={img}
                           icon={icon}
                           description={description}
-                        // handleClick={open}
+                          // handleClick={open}
                         />
                       );
                     })}
                   </div>
                 </Section>
               )}
+              <Section>
+                {projects.length > 0 && (
+                  <SectionTitle>initiatives</SectionTitle>
+                )}
+
+                <div className="initiatives">
+                  {projects.map((item) => {
+                    const {
+                      category,
+                      description,
+                      title,
+                      link,
+                      to,
+                      cca,
+                      from,
+                      image,
+                    } = item.node.frontmatter;
+                    const coverImage = getImage(image);
+                    const path = GeneratePath(title);
+                    return (
+                      <Card
+                        hoverable
+                        actions={[
+                          <Button type="link" url={`/initiatives/${path}`}>
+                            View More
+                          </Button>,
+                        ]}
+                        cover={
+                          <GatsbyImage
+                            image={coverImage}
+                            alt=""
+                            style={{ height: 200, objectFit: "cover" }}
+                          />
+                        }
+                      >
+                        <Card.Meta title={title} description={cca} />
+                      </Card>
+                    );
+                  })}
+                </div>
+              </Section>
             </div>
           );
         }
@@ -254,7 +410,7 @@ const Pillers = ({ data, location }) => {
 export default Pillers;
 
 export const query = graphql`
-  query WhatWeDo {
+  query WhatWeDo($title: String) {
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/(wwdSections)/" } }
       sort: { fields: frontmatter___priority, order: ASC }
@@ -322,7 +478,31 @@ export const query = graphql`
         }
       }
     }
-
+    projects: allMarkdownRemark(
+      filter: {
+        frontmatter: { category: { eq: $title } }
+        fileAbsolutePath: { regex: "/(projects)/" }
+      }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            image {
+              childImageSharp {
+                gatsbyImageData(quality: 100)
+              }
+            }
+            title
+            description
+            to
+            from
+            cca
+            category
+            link
+          }
+        }
+      }
+    }
     techStartupApplication: markdownRemark(
       fileAbsolutePath: { regex: "/(tech-skills/index.md)/" }
     ) {
