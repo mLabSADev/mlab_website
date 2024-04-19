@@ -59,7 +59,11 @@ export const WhatWeDoCard = ({
 };
 const TeamCard = ({ fullName, position, image }) => {
   const capitalizeFirstLetter = (string) => {
-    return string.charAt(0).toUpperCase() + string.slice(1);
+    if (string) {
+      return string.charAt(0).toUpperCase() + string.slice(1);
+    } else {
+      return string;
+    }
   };
   return (
     <div className="card-tc">

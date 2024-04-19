@@ -20,6 +20,7 @@ module.exports = {
     // "gatsby-plugin-react-helmet", //
     `gatsby-plugin-material-ui`,
     "gatsby-plugin-mdx", //
+    "gatsby-plugin-material-ui",
     {
       resolve: "gatsby-plugin-sharp",
       options: {
