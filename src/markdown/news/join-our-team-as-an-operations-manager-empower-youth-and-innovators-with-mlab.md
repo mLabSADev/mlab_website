@@ -3,7 +3,7 @@ title: "Join Our Team as an Operations Manager: Empower Youth and Innovators
   with mLab!"
 author: Keketso Matsuma
 timeStamp: 2024-04-18T11:02:02.378Z
-featureImage: ../../images/copy-of-signage.png
+featureImage: ../../images/1.png
 category: Tech Solutions
 tags:
   - Opportunity
