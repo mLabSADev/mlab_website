@@ -2,7 +2,7 @@
 title: Lead Digital Innovation in Limpopo as mLab's Provincial Lead!
 author: Keketso Matsuma
 timeStamp: 2024-04-18T11:16:41.052Z
-featureImage: ../../images/copy-of-signage-1-.png
+featureImage: ../../images/2.png
 category: Tech Solutions
 tags:
   - Opportunity
