@@ -193,7 +193,7 @@ const Contact = ({ data }) => {
   const contactUs = data.site.siteMetadata;
   const interest = data.wwdSections.edges;
   return (
-    <Layout>
+    <Layout route="contact">
       {/* <Helmet title={"mLab | Contact Us"} /> */}
       <PageHeader index={6} title="Contact Us" />
       <Section>

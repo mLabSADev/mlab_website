@@ -1,7 +1,7 @@
 .carousel-main {
   box-sizing: border-box;
   width: 100%;
-  height: calc(100vh - 80px);
+  // height: calc(100vh - 80px);
 }
 .swiper {
   width: 100%;
@@ -41,12 +41,12 @@
 .mySwiper {
   box-sizing: border-box;
   width: 100%;
-  height: calc(100vh - 150px);
+  // height: calc(100vh - 150px);
 }
 .item-c {
   box-sizing: border-box;
   width: 100%;
-  height: calc(100vh - 150px);
+  // height: calc(100vh - 150px);
   position: relative;
   overflow: hidden;
 
@@ -107,7 +107,7 @@
   content: "";
   position: absolute;
   width: 1000px;
-  height: 1000px;
+  // height: 1000px;
   border-radius: 0px;
   background: linear-gradient(90deg, rgb(0 0 0 / 0%), rgb(61 141 35));
   box-sizing: border-box;

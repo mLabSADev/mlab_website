@@ -1,11 +1,14 @@
 import React, { useEffect } from "react";
 import "./style.scss";
-import Typography from "../Typography/Typography";
+// import Typography from "../Typography/Typography";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import Button from "../Button/Button";
 import { squareVariants } from "../Typography/Typography";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { Stack, Typography } from "@mui/material";
+import { Card } from "antd";
+import { navigate } from "gatsby";
 /**
  *
  * @param {obj} image result from getImage
@@ -32,6 +35,41 @@ const NewsCard = ({ image, title, excerpt, url, date }) => {
       controls.start("visible");
     }
   }, [controls, inView]);
+  return (
+    <Stack width={"100%"} maxWidth={400}>
+      <Card
+        onClick={() => {
+          navigate(`${url}`);
+        }}
+        hoverable
+        cover={
+          <Stack height={200}>
+            {image ? (
+              <GatsbyImage
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                objectFit="cover"
+                image={image}
+                backgroundColor={"rgba(93,145,0,0)"}
+                alt={title}
+              ></GatsbyImage>
+            ) : (
+              <StaticImage
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                src="../../assets/placeholder.jpg"
+                alt="no image"
+              />
+            )}
+          </Stack>
+        }
+      >
+        <Typography gutterBottom variant="subtitle2">
+          {" "}
+          {date}
+        </Typography>
+        <Card.Meta title={titleFix.toUpperCase()} description={excerpt} />
+      </Card>
+    </Stack>
+  );
   return (
     <motion.div
       ref={ref}

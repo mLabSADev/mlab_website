@@ -11,6 +11,7 @@ import ProgressStatistic from "../components/ProgressStatistic/ProgressStatistic
 import { AnimatePresence } from "framer-motion";
 import { WhatWeDoCard } from "./who-we-are";
 import slugify from "slugify";
+import { Grid, Stack } from "@mui/material";
 // import { Helmet } from "react-helmet";
 const GeneratePath = (path) => {
   const link = slugify(path, {
@@ -66,7 +67,7 @@ const WhatWeDo = ({ data, location }) => {
     })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
   }, []);
   return (
-    <Layout>
+    <Layout route={"what-we-do"}>
       {/* <Helmet title={'mLab | What we do'} /> */}
       <AnimatePresence initial={false} exitBeforeEnter={true}>
         {/* {modalOpen.state && (
@@ -86,37 +87,39 @@ const WhatWeDo = ({ data, location }) => {
       <br />
 
       <Section>
-        <SectionTitle>we believe in an empowered youth</SectionTitle>
-        <Typography center variant="b1">
-          At the heart of mLab’s work is the belief that when our youth are
-          empowered with the right skills to innovate and create solutions, they
-          unlock opportunities for optimising existing, or establishing new
-          businesses, that will drive our economy forward.{" "}
-        </Typography>
-        <br />
-
-        <Typography center variant="b2">
-          We do this by offering programmes, projects and services under the
-          following pillars
-        </Typography>
-        <br />
-        <br />
-        <div className="main-wwd-c">
+        <Stack py={10} pb={15}>
+          <SectionTitle>we believe in an empowered youth</SectionTitle>
+          <Typography center variant="b1">
+            At the heart of mLab’s work is the belief that when our youth are
+            empowered with the right skills to innovate and create solutions,
+            they unlock opportunities for optimising existing, or establishing
+            new businesses, that will drive our economy forward.{" "}
+          </Typography>
+          <Typography center variant="b2">
+            We do this by offering programmes, projects and services under the
+            following pillars
+          </Typography>
+        </Stack>
+      </Section>
+      <Section>
+        <Grid container spacing={1}>
           {data.wwdSections.edges.map((card, i) => {
             const img = getImage(card.node.frontmatter.icon);
             const title = card.node.frontmatter.title;
             return (
-              <WhatWeDoCard
-                key={i}
-                title={title}
-                excerpt={card.node.frontmatter.summary}
-                description={card.node.excerpt}
-                image={img}
-                url={`/what-we-do/${GeneratePath(title)}`}
-              />
+              <Grid item xs={12} sm={6} md={3} lg={3}>
+                <WhatWeDoCard
+                  key={i}
+                  title={title}
+                  excerpt={card.node.frontmatter.summary}
+                  description={card.node.excerpt}
+                  image={img}
+                  url={`/what-we-do/${GeneratePath(title)}`}
+                />
+              </Grid>
             );
           })}
-        </div>
+        </Grid>
       </Section>
       <Section>
         <SectionTitle>Our Impact</SectionTitle>

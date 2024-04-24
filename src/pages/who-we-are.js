@@ -1,13 +1,16 @@
 import React, { useEffect } from "react";
 import "./who-we-are.scss";
 import Layout from "../components/ChatBot/ChatBot";
-import { graphql } from "gatsby";
+import { Link, graphql, navigate } from "gatsby";
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
 import Section from "../components/Section/Section";
 import SectionTitle from "../components/SectionTitle/SectionTitle";
-import Typography from "../components/Typography/Typography";
+// import Typography from "../components/Typography/Typography";
 import PageHeader from "../components/PageHeader/PageHeader";
-import Button from "../components/Button/Button";
+// import Button from "../components/Button/Button";
+import { Avatar, Button, Card, ConfigProvider, Image } from "antd";
+import { Stack, Typography, colors } from "@mui/material";
+import { ANTDTheme } from "../components/ThemeProvider";
 
 export const WhatWeDoCard = ({
   image,
@@ -19,6 +22,7 @@ export const WhatWeDoCard = ({
   onClick,
 }) => {
   // const page = location.pathname;
+
   useEffect(() => {
     (function (h, o, t, j, a, r) {
       h.hj =
@@ -35,13 +39,43 @@ export const WhatWeDoCard = ({
     })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
   }, []);
   return (
+    <Stack flex={1}>
+      <ConfigProvider theme={ANTDTheme}>
+        <Card
+          onClick={() => {
+            navigate(`${url}`);
+          }}
+          hoverable
+          style={{ display: "flex", flexDirection: "column", flex: 1 }}
+          cover={<GatsbyImage image={image} />}
+          actions={[<Button type="link">Read More</Button>]}
+        >
+          <Typography
+            sx={{
+              whiteSpace: "nowrap",
+              textOverflow: "ellipsis",
+              width: "100%",
+              overflow: "hidden",
+            }}
+            gutterBottom
+            variant="subtitle2"
+          >
+            {excerpt}
+          </Typography>
+          <Card.Meta
+            title={
+              <Typography fontWeight={"bold"} variant="h6">
+                {title}
+              </Typography>
+            }
+            description={description}
+          />
+        </Card>
+      </ConfigProvider>
+    </Stack>
+  );
+  return (
     <div className="wwd-c">
-      <GatsbyImage
-        objectFit="cover"
-        image={image}
-        className="image-c"
-        alt={title}
-      ></GatsbyImage>
       <div className="details-c">
         <Typography center variant="caption">
           {excerpt}
@@ -86,7 +120,7 @@ const WhoWeAre = ({ data }) => {
   const team = data.team.edges;
   const about = data.aboutMlab.html;
   return (
-    <Layout>
+    <Layout route="who-we-are">
       {/* <Helmet title="mLab | Who We Are" /> */}
       <PageHeader title="WHO WE ARE" index={1} />
       <Section>

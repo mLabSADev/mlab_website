@@ -3,9 +3,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import React from "react";
-import Typography from "../Typography/Typography";
-import "./style.scss";
+import React, { useRef } from "react";
+// import Typography from "../Typography/Typography";
+// import "./style.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Navigation,
@@ -16,6 +16,10 @@ import {
 } from "swiper/modules";
 // import "./styles.css";
 import { Carousel } from "react-carousel-minimal";
+import { Box, Container, Stack, Typography, colors } from "@mui/material";
+import { Button, ConfigProvider } from "antd";
+import { navigate } from "gatsby";
+import { ANTDTheme } from "../ThemeProvider";
 
 const Arrow = (dir, onClick) => {
   return (
@@ -38,6 +42,83 @@ const Arrow = (dir, onClick) => {
 
 const CarouselItem = ({ title, text, image, reg }) => {
   let width = typeof window !== "undefined" ? window.screen.width : 800;
+  return (
+    <Stack position={"relative"}>
+      <Stack
+        sx={{
+          background:
+            "linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,1))",
+        }}
+        zIndex={4}
+      >
+        <Stack
+          position={"relative"}
+          zIndex={3}
+          direction={{ xs: "column", sm: "column", md: "row", lg: "row" }}
+        >
+          <Stack
+            textAlign={"left"}
+            height={"100%"}
+            flex={1}
+            p={{ xs: 2, sm: 5, md: 10, lg: 17 }}
+            spacing={3}
+            py={{ xs: 4, sm: 10, md: 20, lg: 34 }}
+          >
+            <Box
+              sx={{
+                display: { xs: "none", sm: "none", md: "block", lg: "block" },
+              }}
+            >
+              {" "}
+              <Typography variant="h2">{title}</Typography>
+            </Box>
+            <Box
+              sx={{
+                display: { xs: "block", sm: "block", md: "none", lg: "none" },
+              }}
+            >
+              <Typography variant="h4">{title}</Typography>
+            </Box>
+
+            <Typography variant="subtitle1">{text}</Typography>
+            <ConfigProvider theme={ANTDTheme}>
+              <Stack direction={"row"} spacing={2}>
+                <Button
+                  size="large"
+                  style={{ alignSelf: "self-start" }}
+                  type="primary"
+                  onClick={() => {
+                    navigate("/contact");
+                  }}
+                >
+                  Contact Us
+                </Button>
+                <Button
+                  size="large"
+                  style={{ alignSelf: "self-start" }}
+                  type="default "
+                  onClick={() => {
+                    navigate("/who-we-are");
+                  }}
+                >
+                  About Us
+                </Button>
+              </Stack>
+            </ConfigProvider>
+          </Stack>
+          <Stack flex={1}>
+            <Box sx={{ width: "100%", height: "100%" }} overflow={"hidden"}>
+              <GatsbyImage
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                image={image}
+                alt={title}
+              />
+            </Box>
+          </Stack>
+        </Stack>
+      </Stack>
+    </Stack>
+  );
   return (
     <SwiperSlide className="item-c">
       <GatsbyImage className="item-img" image={image} alt={title} />
@@ -64,19 +145,51 @@ const CarouselItem = ({ title, text, image, reg }) => {
   );
 };
 
-/**
- *
- * @param {string} title title
- * @param {string} text text
- * @param {string} image image
- * @returns
- */
-
 const CarouselSlider = ({ data = [] }) => {
-  let _data = [1, 2, 3, 4, 5, 6, 7];
+  const onAutoplayTimeLeft = (s, time, progress) => {
+    // time in miliseconds
+    // progress is from 1 to 0
+    console.log({ s, time, progress });
+  };
+  return (
+    <Stack
+      m={1}
+      mt={10}
+      overflow={"hidden"}
+      borderRadius={5}
+      sx={{ border: `solid 1px ${colors.grey[300]}` }}
+    >
+      <Swiper
+        loop={true}
+        spaceBetween={30}
+        centeredSlides={true}
+        speed={5000}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+        }}
+        navigation={true}
+        modules={[Autoplay, Navigation]}
+        onAutoplayTimeLeft={onAutoplayTimeLeft}
+        // className="mySwiper"
+      >
+        {data.map((banner, i) => {
+          const title = banner.node.frontmatter.title;
+          const reg = banner.node.frontmatter.registration;
+          const image = banner.node.frontmatter.image;
+          console.log({ title, reg });
+          return (
+            <SwiperSlide key={i}>
+              <CarouselItem title={title} image={getImage(image)} text={reg} />
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
+    </Stack>
+  );
   return (
     <Swiper
-      cssMode={true}
+      // cssMode={true}
       navigation={true}
       pagination={{
         clickable: true,
@@ -89,14 +202,14 @@ const CarouselSlider = ({ data = [] }) => {
       mousewheel={false}
       keyboard={true}
       modules={[Navigation, Pagination, Keyboard, Autoplay]}
-      className="mySwiper"
+      // className="mySwiper"
     >
       {data.map((banner, i) => {
         const title = banner.node.frontmatter.title;
         const reg = banner.node.frontmatter.registration;
         const image = banner.node.frontmatter.image;
         return (
-          <SwiperSlide key={i} className="item-c">
+          <SwiperSlide key={i}>
             <CarouselItem title={title} image={getImage(image)} text={reg} />
           </SwiperSlide>
         );

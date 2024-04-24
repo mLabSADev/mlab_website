@@ -29,7 +29,7 @@ const Partners = ({ data }) => {
     })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
   }, []);
   return (
-    <Layout>
+    <Layout route="partners">
       {/* <Helmet title={"mLab | Partners"} /> */}
       <PageHeader title="Partners" index={3} />
       <Section>
