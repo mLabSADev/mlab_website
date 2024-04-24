@@ -1,14 +1,20 @@
 import React, { useEffect } from "react";
 import "./news.scss";
+import "swiper/css";
+import "swiper/css/pagination";
 import Layout from "../components/ChatBot/ChatBot";
 import Section from "../components/Section/Section";
 // import Typography from "../components/Typography/Typography";
 import PageHeader from "../components/PageHeader/PageHeader";
 import NewsCard from "../components/NewsCard/NewsCard";
 import Pagination from "@mui/material/Pagination";
-
+import {
+  Autoplay,
+  Mousewheel,
+  Pagination as SPagination,
+} from "swiper/modules";
 import { graphql, navigate } from "gatsby";
-import { getImage } from "gatsby-plugin-image";
+import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 // import Tag from "../components/Tag/Tag";
 import moment from "moment";
@@ -22,6 +28,7 @@ import {
   useTheme,
 } from "@mui/material";
 import { ANTDTheme } from "../components/ThemeProvider";
+import { Swiper, SwiperSlide } from "swiper/react";
 // import { Helmet } from "react-helmet";
 const slugify = require("slugify");
 const News = ({ data, pageContext, numberOfAllPages = [] }) => {
@@ -86,8 +93,25 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
       />
       <Section>
         <Stack pt={5}>
+          <Stack pt={2}>
+            <Typography variant="h5">Latest News</Typography>
+          </Stack>
           <Stack py={5}>
-            <Grid container spacing={2}>
+            <Swiper
+              loop={true}
+              spaceBetween={30}
+              centeredSlides={true}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              mousewheel={true}
+              speed={3000}
+              pagination={{
+                clickable: true,
+              }}
+              modules={[SPagination, Autoplay, Mousewheel]}
+            >
               {gridNews.map((entry, i) => {
                 // clean later
                 const img = getImage(entry.node.frontmatter.featureImage);
@@ -97,28 +121,66 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
                 const _path = GeneratePath(title);
                 if (title) {
                   return (
-                    <Grid item xs={12} sm={6} md={6} lg={4}>
-                      <NewsCard
+                    <SwiperSlide>
+                      <Stack direction={"row"}>
+                        <Stack width={400}>
+                          {img ? (
+                            <GatsbyImage
+                              style={{
+                                width: "100%",
+                                height: "100%",
+                                objectFit: "cover",
+                              }}
+                              objectFit="cover"
+                              image={img}
+                              backgroundColor={"rgba(93,145,0,0)"}
+                              alt={title}
+                            ></GatsbyImage>
+                          ) : (
+                            <StaticImage
+                              style={{
+                                width: "100%",
+                                height: "100%",
+                                objectFit: "cover",
+                              }}
+                              src="../../assets/placeholder.jpg"
+                              alt="no image"
+                            />
+                          )}
+                        </Stack>
+                        <Stack flex={1} spacing={2} p={5} textAlign={"left"}>
+                          <Typography variant="subtitle2">
+                            {moment(date).format("DD MMMM, YYYY")}
+                          </Typography>
+                          <Typography variant="h5" fontWeight={"bold"}>
+                            {title}
+                          </Typography>
+                          <Typography color={colors.grey[700]}>
+                            {excerpt}
+                          </Typography>
+                        </Stack>
+                      </Stack>
+                      {/* <NewsCard
                         date={moment(date).format("DD MMMM, YYYY")}
                         key={i}
                         image={img}
                         title={title}
                         excerpt={excerpt}
                         url={`/news/${_path}`}
-                      />
-                    </Grid>
+                      /> */}
+                    </SwiperSlide>
                   );
                 }
               })}
-            </Grid>
+            </Swiper>
           </Stack>
 
-          <Stack spacing={4}>
+          <Stack spacing={2} my={3}>
             <Divider />
             <Stack
               direction={{ sm: "column", md: "row" }}
               spacing={2}
-              p={5}
+              py={5}
               borderRadius={5}
             >
               <Stack pb={0}>
@@ -126,7 +188,6 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
               </Stack>
               <Divider orientation="vertical" flexItem />
               <Stack flex={1}>
-                {" "}
                 <Grid container spacing={1}>
                   {tags.map((item, i) => {
                     const _path = GeneratePath(item.link);

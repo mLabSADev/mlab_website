@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./what-we-do.scss";
 import Layout from "../components/ChatBot/ChatBot";
 import { graphql } from "gatsby";
-import { getImage } from "gatsby-plugin-image";
+import { StaticImage, getImage } from "gatsby-plugin-image";
 import Typography from "../components/Typography/Typography";
 import PageHeader from "../components/PageHeader/PageHeader";
 import SectionTitle from "../components/SectionTitle/SectionTitle";
@@ -122,6 +122,11 @@ const WhatWeDo = ({ data, location }) => {
         </Grid>
       </Section>
       <Section>
+        <Stack py={20}>
+          <StaticImage src="../assets/mLab Programmes - Advertorial v5_page-0001.jpg" />
+        </Stack>
+      </Section>
+      <Section>
         <SectionTitle>Our Impact</SectionTitle>
         <div className="responsive-column">
           <div className="progress-stat-wrappr">
@@ -139,6 +144,7 @@ const WhatWeDo = ({ data, location }) => {
           </div>
         </div>
       </Section>
+   
     </Layout>
   );
 };
