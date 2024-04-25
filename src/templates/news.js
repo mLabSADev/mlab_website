@@ -123,7 +123,7 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
                   return (
                     <SwiperSlide>
                       <Card onClick={() => navigate(`/news/${_path}`)}>
-                        <Stack direction={"row"}>
+                        <Stack direction={{ sm: "column", md: "row" }}>
                           <Stack width={400}>
                             {img ? (
                               <GatsbyImage
@@ -223,7 +223,7 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
                 const excerpt = entry.node.excerpt;
                 const date = entry.node.frontmatter.timeStamp;
                 const _path = GeneratePath(title);
-                if (title) {
+                if (title && i > 3) {
                   return (
                     <Grid item xs={12} sm={6} md={6} lg={4}>
                       <NewsCard
