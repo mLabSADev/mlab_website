@@ -14,6 +14,7 @@ import { StaticQuery, graphql } from "gatsby";
 import "./style.scss";
 import Button from "../Button/Button";
 import Navigation from "../Navigation";
+import { Stack } from "@mui/material";
 
 export const ChatBot = ({ formState }) => {
   const [sentStatus, setSentStatus] = useState("");
@@ -74,17 +75,17 @@ export const ChatBot = ({ formState }) => {
 };
 const Layout = (props) => {
   const [openForm, setOpenForm] = useState(false);
-
+  const { children, route } = props;
   const open = () => setOpenForm(true);
   const close = () => setOpenForm(false);
 
   return (
     <div className="main-l">
-      <Navigation />
-      <div className="children-l">
-        {props.children}
+      <Navigation route={route} />
+      <Stack className="children-l">
+        {children}
         <Footer />
-      </div>
+      </Stack>
 
       <div
         className="feedback-ui-button"

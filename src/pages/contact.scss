@@ -12,6 +12,7 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
+    position: relative;
     form {
       box-sizing: border-box;
       width: 100%;
