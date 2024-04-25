@@ -48,6 +48,7 @@ const Partners = ({ data }) => {
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
+            reverseDirection: true
           }}
           pagination={{
             clickable: true,
