@@ -1,11 +1,16 @@
 import React, { useEffect } from "react";
 import "./partners.scss";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 import Layout from "../components/ChatBot/ChatBot";
 import { StaticImage } from "gatsby-plugin-image";
 import Section from "../components/Section/Section";
 import SectionTitle from "../components/SectionTitle/SectionTitle";
 import PageHeader from "../components/PageHeader/PageHeader";
 import { graphql } from "gatsby";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 // import { Helmet } from "react-helmet";
 
 const Partners = ({ data }) => {
@@ -36,38 +41,64 @@ const Partners = ({ data }) => {
         <SectionTitle>Founding Partners</SectionTitle>
       </Section>
       <Section>
-        <div className="list-partners">
-          <StaticImage
-            objectFit="contain"
-            src="../images/active-partners/worldbank_logo.jpg"
-            alt=""
-            className="partner-p"
-          ></StaticImage>
-          <StaticImage
-            objectFit="contain"
-            src="../images/active-partners/ministry.png"
-            alt=""
-            className="partner-p"
-          ></StaticImage>
-          <StaticImage
-            objectFit="contain"
-            src="../images/active-partners/DSI-Logo.png"
-            alt=""
-            className="partner-p"
-          ></StaticImage>
-          <StaticImage
-            objectFit="contain"
-            src="../images/active-partners/csir_logo.jpg"
-            alt=""
-            className="partner-p"
-          ></StaticImage>
-          <StaticImage
-            objectFit="contain"
-            src="../images/active-partners/the-innovation-hub_1_orig.png"
-            alt=""
-            className="partner-p"
-          ></StaticImage>
-        </div>
+        <Swiper
+          spaceBetween={30}
+          slidesPerView={3}
+          loop={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Autoplay, Pagination]}
+          className="mySwiper list-partners"
+          style={{ alignItems: "center" }}
+        >
+          <SwiperSlide>
+            <StaticImage
+              objectFit="contain"
+              src="../images/active-partners/worldbank_logo.jpg"
+              alt=""
+              className="partner-p"
+            ></StaticImage>
+          </SwiperSlide>
+          <SwiperSlide>
+            <StaticImage
+              objectFit="contain"
+              src="../images/active-partners/ministry.png"
+              alt=""
+              className="partner-p"
+            ></StaticImage>
+          </SwiperSlide>
+          <SwiperSlide>
+            <StaticImage
+              objectFit="contain"
+              src="../images/active-partners/DSI-Logo.png"
+              alt=""
+              className="partner-p"
+            ></StaticImage>
+          </SwiperSlide>
+          <SwiperSlide>
+            {" "}
+            <StaticImage
+              objectFit="contain"
+              src="../images/active-partners/csir_logo.jpg"
+              alt=""
+              className="partner-p"
+            ></StaticImage>
+          </SwiperSlide>
+          <SwiperSlide>
+            {" "}
+            <StaticImage
+              objectFit="contain"
+              src="../images/active-partners/the-innovation-hub_1_orig.png"
+              alt=""
+              className="partner-p"
+            ></StaticImage>
+          </SwiperSlide>
+        </Swiper>
       </Section>
       {/* <SectionTitle>Provincial Partners</SectionTitle> */}
       {/* <Section>

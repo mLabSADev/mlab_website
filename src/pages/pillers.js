@@ -174,7 +174,6 @@ const Pillers = ({ data, location }) => {
                           {data.frontmatter.shortText}
                         </Typography>
                         <Button
-                          color="dark"
                           label="Contact Us for more info"
                           type="link"
                           url="/contact"
@@ -306,14 +305,10 @@ const Pillers = ({ data, location }) => {
                 )}
 
               <Section>
-                <div className="reading">
-                  <div></div>
-                  <div
-                    className="r-content"
-                    dangerouslySetInnerHTML={{ __html: data.html }}
-                  />
-                  <div></div>
-                </div>
+                <div
+                  className="r-content"
+                  dangerouslySetInnerHTML={{ __html: data.html }}
+                />
               </Section>
               {/* AI Masup */}
               <Section>
@@ -407,6 +402,7 @@ const Pillers = ({ data, location }) => {
                 </Section>
               )}
               <Stack>
+                {/* Initiatives */}
                 <Section>
                   <Stack py={15}>
                     {projects.length > 0 && (
@@ -508,7 +504,6 @@ export const query = graphql`
                   layout: FULL_WIDTH
                   placeholder: BLURRED
                   quality: 100
-                  width: 1080
                 )
               }
             }
@@ -519,7 +514,6 @@ export const query = graphql`
                   layout: FULL_WIDTH
                   placeholder: BLURRED
                   quality: 100
-                  width: 1080
                 )
               }
             }
@@ -541,13 +535,13 @@ export const query = graphql`
             description
             screenshot {
               childImageSharp {
-                gatsbyImageData(width: 1920, quality: 100, placeholder: BLURRED)
+                gatsbyImageData(quality: 100, placeholder: BLURRED)
                 id
               }
             }
             icon {
               childImageSharp {
-                gatsbyImageData(width: 1920, placeholder: BLURRED)
+                gatsbyImageData(placeholder: BLURRED)
                 id
               }
             }

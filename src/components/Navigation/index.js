@@ -3,13 +3,16 @@ import "./style.scss";
 import { Link, navigate } from "gatsby";
 import { graphql, StaticQuery } from "gatsby";
 import { Icons } from "../Icons";
-import Typography from "../Typography/Typography";
+// import Typography from "../Typography/Typography";
 import {
   AppBar,
   Box,
   IconButton,
+  ListItemButton,
+  Paper,
   Stack,
   Toolbar,
+  Typography,
   colors,
   useTheme,
 } from "@mui/material";
@@ -241,7 +244,10 @@ export const links = [
       },
       {
         type: "group",
-        label: "Pillers",
+        label: "mLab Pillers",
+        onTitleClick: (e) => {
+          console.log(e);
+        },
         children: [
           {
             key: "tech-ecosystems",
@@ -319,6 +325,7 @@ const Navigation = ({ title, route }) => {
   const [pillers, setPillers] = useState([]);
   const [current, setCurrent] = useState("");
   const [openDrawer, setOpenDrawer] = useState(false);
+  const [openTribe, setOpenTribe] = useState(false);
   const MUITheme = useTheme();
   const logoColors = {
     m: "#8cc051",
@@ -336,18 +343,73 @@ const Navigation = ({ title, route }) => {
     } else {
       if (key === "home") {
         navigate(`/`);
+      } else if (key === "codetribe") {
       } else {
         setCurrent(key);
         navigate(`/${key}`);
       }
     }
   };
+  const pageLinks = [
+    ...links,
+    {
+      key: "codetribe",
+      label: (
+        <Stack
+          px={1}
+          className="button-86"
+          bgcolor={colors.grey[100]}
+          borderRadius={2}
+        >
+          <a href="https://codetribelanding.netlify.app/" target="_blank">
+            <Button
+              onMouseEnter={() => {
+                setOpenTribe(true);
+              }}
+              onMouseLeave={() => {
+                // setOpenTribe(false);
+              }}
+              style={{ width: "100%" }}
+              type="primary"
+            >
+              CodeTribe
+            </Button>
+          </a>
+        </Stack>
+      ),
+    },
+  ];
   useEffect(() => {
     setCurrent(route);
   }, []);
   return (
     <MUIProvider>
       <AppBar variant="outlined" sx={{ background: "white" }}>
+        <Drawer
+          anchor="right"
+          open={openTribe}
+          onClose={() => setOpenTribe(false)}
+        >
+          <Stack spacing={5}>
+            <img src="https://codetribelanding.netlify.app/static/32e04a5069a842ec53dbb79fbede4e9d/a02f6/login-illustration.webp" />
+            <Typography variant="h4">
+              Learn how to build Android & iOS Apps
+            </Typography>
+            <Typography variant="h6">
+              We have an amazing team that is willing to train, guide and mentor
+              you on your journey.
+            </Typography>
+            <Typography>
+              CodeTribe is a dedicated programme for developing the next
+              generation of software developers. While established startups are
+              welcome to have members participate in their own time and at own
+              expense, they do not qualify for bursaries as full time students.
+              Startups and their staff or members are advised to apply for
+              incubation and acceleration support through Maxum Business
+              Incubator and mLab.
+            </Typography>
+          </Stack>
+        </Drawer>
         <Toolbar>
           <Box sx={{ height: 40 }}>
             <Link to="/">
@@ -395,7 +457,7 @@ const Navigation = ({ title, route }) => {
                 onClick={onClick}
                 selectedKeys={[current]}
                 mode="horizontal"
-                items={links}
+                items={pageLinks}
               />
             </ConfigProvider>
           </Stack>
@@ -418,7 +480,7 @@ const Navigation = ({ title, route }) => {
                       disabledOverflow={true}
                       onClick={onClick}
                       selectedKeys={[current]}
-                      items={links}
+                      items={pageLinks}
                     />
                   </ConfigProvider>
                 </Stack>

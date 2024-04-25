@@ -72,19 +72,23 @@ export default function BlogPost({ data }) {
           </ImageModal>
         )}
       </AnimatePresence>
-      <div onClick={() => open()} class="image-b">
-        <div />
+      <Stack
+        mx={2}
+        borderRadius={5}
+        overflow={"hidden"}
+        height={400}
+        mt={10}
+        onClick={() => open()}
+      >
         <GatsbyImage
-          class="image-bog"
+          style={{ width: "100%", height: "100%" }}
           image={banner ? banner : image}
           alt={title}
           objectFit="cover"
         />
-        <div />
-      </div>
-
+      </Stack>
       <Section>
-        <Stack py={10}>
+        <Stack pb={10} pt={5}>
           <Stack spacing={2}>
             <Stack spacing={2}>
               <Typography variant="h6">

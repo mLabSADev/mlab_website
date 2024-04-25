@@ -242,7 +242,7 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
           </Stack>
         </Stack>
         <Divider />
-        <Stack pb={5} alignItems={"center"}>
+        <Stack py={5} pb={5} alignItems={"center"}>
           {numberOfAllPages.map((number, i) => {
             if (number === 1) number = "";
             const page = "/news";
@@ -278,7 +278,7 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
   );
 };
 export const query = graphql`
-  query NewsQuery($limit: Int) {
+  query NewsQuery($limit: Int, $skip: Int) {
     allMarkdownRemark(
       filter: {
         fileAbsolutePath: { regex: "/(news)/" }
@@ -286,7 +286,7 @@ export const query = graphql`
       }
       sort: { fields: [frontmatter___timeStamp], order: DESC }
       limit: $limit
-      skip: 4
+      skip: $skip
     ) {
       edges {
         node {
@@ -322,7 +322,7 @@ export const query = graphql`
       }
       sort: { fields: [frontmatter___timeStamp], order: DESC }
       limit: 4
-      skip: 0
+      skip: $skip
     ) {
       edges {
         node {
