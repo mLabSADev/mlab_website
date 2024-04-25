@@ -27,7 +27,7 @@ import {
   OpenInNewRounded,
   SettingsOutlined,
 } from "@mui/icons-material";
-import { Button, ConfigProvider, Drawer, Menu } from "antd";
+import { Button, ConfigProvider, Drawer, Menu, Skeleton } from "antd";
 const slugify = require("slugify");
 //  - { label: "Author", name: "author", widget: "string" }
 const GeneratePath = (path) => {
@@ -326,6 +326,7 @@ const Navigation = ({ title, route }) => {
   const [current, setCurrent] = useState("");
   const [openDrawer, setOpenDrawer] = useState(false);
   const [openTribe, setOpenTribe] = useState(false);
+  const [loadedCtImage, setLoadedCtImage] = useState(false);
   const MUITheme = useTheme();
   const logoColors = {
     m: "#8cc051",
@@ -391,7 +392,19 @@ const Navigation = ({ title, route }) => {
           onClose={() => setOpenTribe(false)}
         >
           <Stack spacing={5}>
-            <img src="https://codetribelanding.netlify.app/static/32e04a5069a842ec53dbb79fbede4e9d/a02f6/login-illustration.webp" />
+            {!loadedCtImage && (
+              <Skeleton.Image
+                active={true}
+                style={{ height: 270, width: "100%" }}
+              />
+            )}
+
+            <img
+              onLoad={() => {
+                setLoadedCtImage(true);
+              }}
+              src="https://codetribelanding.netlify.app/static/32e04a5069a842ec53dbb79fbede4e9d/a02f6/login-illustration.webp"
+            />
             <Typography variant="h4">
               Learn how to build Android & iOS Apps
             </Typography>

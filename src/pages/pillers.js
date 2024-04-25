@@ -16,7 +16,7 @@ import { Icons } from "../components/Icons";
 import AIVideo from "../images/aihack/bgVideo.mp4";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import { Container, Stack, Typography } from "@mui/material";
+import { Container, Grid, Stack, Typography } from "@mui/material";
 const slugify = require("slugify");
 // import { Helmet } from "react-helmet";
 const GeneratePath = (path) => {
@@ -313,66 +313,71 @@ const Pillers = ({ data, location }) => {
               {/* AI Masup */}
               <Section>
                 {cleanSplit == "tech-solutions" && (
-                  <div className="pillers-hack">
+                  <Stack
+                    borderRadius={10}
+                    my={15}
+                    position={"relative"}
+                    overflow={"hidden"}
+                  >
                     <video
-                      className="hack-bgVideo"
                       muted
                       autoPlay
                       loop
-                      style={{ width: `100%` }}
+                      style={{
+                        position: "absolute",
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        top: 0,
+                        zIndex: 1,
+                      }}
                     >
                       <source src={AIVideo} type="video/mp4" />
                     </video>
-                    <div className="hack-text">
-                      <div>
-                        {" "}
-                        <Typography
-                          style={{ fontFamily: "Segoe_Bold" }}
-                          variant="h3"
-                        >
-                          Sustainable
+                    <Stack
+                      zIndex={5}
+                      direction={{ sm: "column-reverse", md: "row" }}
+                      alignItems={"center"}
+                      bgcolor={"rgba(0,0,0,0.5)"}
+                    >
+                      <Stack
+                        flex={1}
+                        spacing={3}
+                        px={5}
+                        py={10}
+                        color={"white"}
+                      >
+                        <Typography variant="h3">
+                          Sustainable Artificial Intelligence Hackathon
                         </Typography>
-                        <Typography
-                          style={{ fontFamily: "Segoe_Bold" }}
-                          variant="h3 "
-                          gradient={true}
-                        >
-                          Artificial Intelligence
-                        </Typography>
-                        <Typography
-                          style={{ fontFamily: "Segoe_Bold" }}
-                          variant="h4"
-                        >
-                          themed webinars, hackathon and <br />
+                        <Typography variant="h5">
+                          Webinars, hackathon and <br />
                           post-hack incubation
                         </Typography>
-                      </div>
-
-                      <Typography
-                        style={{ fontFamily: "Segoe_Bold" }}
-                        variant="h6"
-                      >
-                        Unleash Innovation, Transform Tomorrow
-                      </Typography>
-
-                      <div className="buttons">
-                        <Link
-                          to="/aimashup"
-                          target="_blank"
-                          className="registerbtn"
-                        >
-                          <Icons.Star className="star1" />
-                          <Icons.Star className="star2" />
-                          <Icons.Star className="star3" />
-                          <Typography variant="button">View Event</Typography>
-                        </Link>
-                      </div>
-                    </div>
-                    <div className="hack-logo">
-                      <StaticImage src="../images/aihack/newlogo.png" alt="" />
-                      {/* <Logo /> */}
-                    </div>
-                  </div>
+                        <Typography variant="button">
+                          Unleash Innovation, Transform Tomorrow
+                        </Typography>
+                        <div className="buttons">
+                          <Link
+                            to="/aimashup"
+                            target="_blank"
+                            className="registerbtn"
+                          >
+                            <Icons.Star className="star1" />
+                            <Icons.Star className="star2" />
+                            <Icons.Star className="star3" />
+                            <Typography variant="button">View Event</Typography>
+                          </Link>
+                        </div>
+                      </Stack>
+                      <Stack flex={1}>
+                        <StaticImage
+                          src="../images/aihack/newlogo.png"
+                          alt=""
+                        />
+                      </Stack>
+                    </Stack>
+                  </Stack>
                 )}
               </Section>
               {/* ... */}
@@ -380,7 +385,7 @@ const Pillers = ({ data, location }) => {
                 <Section>
                   <SectionTitle>our tech</SectionTitle>
 
-                  <div>
+                  <Grid container spacing={2}>
                     {theTech.map((item, i) => {
                       console.log(item.node);
                       const img = getImage(item.node.frontmatter.screenshot);
@@ -388,17 +393,19 @@ const Pillers = ({ data, location }) => {
                       const title = item.node.frontmatter.appName;
                       const description = item.node.frontmatter.description;
                       return (
-                        <TechCard
-                          key={i}
-                          title={title}
-                          image={img}
-                          icon={icon}
-                          description={description}
-                          // handleClick={open}
-                        />
+                        <Grid item xs={12} sm={12} md={6} lg={4}>
+                          <TechCard
+                            key={i}
+                            title={title}
+                            image={img}
+                            icon={icon}
+                            description={description}
+                            // handleClick={open}
+                          />
+                        </Grid>
                       );
                     })}
-                  </div>
+                  </Grid>
                 </Section>
               )}
               <Stack>
