@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./what-we-do.scss";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import Layout from "../components/ChatBot/ChatBot";
 import { graphql } from "gatsby";
 import { StaticImage, getImage } from "gatsby-plugin-image";
@@ -107,7 +112,7 @@ const WhatWeDo = ({ data, location }) => {
             const img = getImage(card.node.frontmatter.icon);
             const title = card.node.frontmatter.title;
             return (
-              <Grid item xs={12} sm={6} md={3} lg={3}>
+              <Grid item xs={6} sm={6} md={3} lg={3}>
                 <WhatWeDoCard
                   key={i}
                   title={title}
@@ -127,24 +132,41 @@ const WhatWeDo = ({ data, location }) => {
         </Stack>
       </Section>
       <Section>
-        <SectionTitle>Our Impact</SectionTitle>
-        <div className="responsive-column">
-          <div className="progress-stat-wrappr">
+        <Stack pb={20}>
+          <SectionTitle>Our Impact</SectionTitle>
+          <Swiper
+            spaceBetween={20}
+            slidesPerView={2}
+            loop={true}
+            centeredSlides={true}
+            autoplay={{
+              delay: 500,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+            }}
+            speed={3000}
+            navigation={true}
+            modules={[Autoplay, Pagination, Navigation]}
+            className="mySwiper"
+          >
             {impactBarStats.map((item, i) => {
               const image = getImage(item.node.frontmatter.icon);
               return (
-                <ProgressStatistic
-                  key={i}
-                  label={item.node.frontmatter.label}
-                  description={item.node.frontmatter.description}
-                  icon={image}
-                />
+                <SwiperSlide>
+                  <ProgressStatistic
+                    key={i}
+                    label={item.node.frontmatter.label}
+                    description={item.node.frontmatter.description}
+                    icon={image}
+                  />
+                </SwiperSlide>
               );
             })}
-          </div>
-        </div>
+          </Swiper>
+        </Stack>
       </Section>
-   
     </Layout>
   );
 };

@@ -69,7 +69,6 @@ const CarouselItem = ({ title, text, image, reg }) => {
                 display: { xs: "none", sm: "none", md: "block", lg: "block" },
               }}
             >
-              {" "}
               <Typography variant="h2">{title}</Typography>
             </Box>
             <Box

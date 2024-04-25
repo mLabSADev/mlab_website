@@ -1,16 +1,22 @@
 import React, { useState, useEffect } from "react";
 import "./pillers.scss";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 import Layout from "../components/ChatBot/ChatBot";
-import { Link, graphql } from "gatsby";
+import { Link, graphql, navigate } from "gatsby";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import Button from "../components/Button/Button";
-import Typography from "../components/Typography/Typography";
+// import Typography from "../components/Typography/Typography";
 import SectionTitle from "../components/SectionTitle/SectionTitle";
 import Section from "../components/Section/Section";
 import TechCard from "../components/TextCard/TechCard";
 import { Card, Modal } from "antd";
 import { Icons } from "../components/Icons";
 import AIVideo from "../images/aihack/bgVideo.mp4";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Container, Stack, Typography } from "@mui/material";
 const slugify = require("slugify");
 // import { Helmet } from "react-helmet";
 const GeneratePath = (path) => {
@@ -116,78 +122,121 @@ const Pillers = ({ data, location }) => {
         if (GeneratePath(node.node.frontmatter.title) == title) {
           const data = node.node;
           return (
-            <div className="subPage" key={i}>
-              <div className="subPage-header">
-                <GatsbyImage
-                  className="image-sp"
-                  image={background}
-                  alt={title}
-                />
-                <div className="subPage-content">
-                  <div className="sp-c-icon">
-                    <GatsbyImage objectFit="contain" image={icon} alt="" />
-                  </div>
-                  <div className="sp-c-details">
-                    <Typography
-                      variant="s1"
-                      color="light"
-                      center={width < resposiveWidth ? true : false}
-                    >
-                      {data.frontmatter.title.toUpperCase()}
-                    </Typography>
-                    <Typography
-                      variant={width < resposiveWidth ? "h4" : "h2"}
-                      color="light"
-                      center={width < resposiveWidth ? true : false}
-                    >
-                      {data.frontmatter.shortText}
-                    </Typography>
-                    <Button
-                      color="light"
-                      label="Contact Us for more info"
-                      type="link"
-                      url="/contact"
-                    />
-                  </div>
-                </div>
-              </div>
+            <Stack className="subPage" key={i}>
+              <Stack
+                mx={5}
+                borderRadius={5}
+                mt={10}
+                position={"relative"}
+                overflow={"hidden"}
+              >
+                <Stack
+                  sx={{
+                    position: "absolute",
+                    top: 0,
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
+                    zIndex: -1,
+                  }}
+                >
+                  <GatsbyImage
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                    }}
+                    image={background}
+                    alt={title}
+                  />
+                </Stack>
+                <Stack
+                  zIndex={1}
+                  sx={{
+                    background:
+                      "linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,1))",
+                  }}
+                >
+                  <Container>
+                    <Stack pt={35} pb={5}>
+                      <Stack>
+                        {/* <GatsbyImage objectFit="contain" image={icon} alt="" /> */}
+                      </Stack>
+                      <Stack>
+                        <Typography variant="subtitle2">
+                          {data.frontmatter.title.toUpperCase()}
+                        </Typography>
+                        <Typography
+                          variant={width < resposiveWidth ? "h4" : "h2"}
+                          color="light"
+                          center={width < resposiveWidth ? true : false}
+                        >
+                          {data.frontmatter.shortText}
+                        </Typography>
+                        <Button
+                          color="dark"
+                          label="Contact Us for more info"
+                          type="link"
+                          url="/contact"
+                        />
+                      </Stack>
+                    </Stack>
+                  </Container>
+                </Stack>
+              </Stack>
               {cleanSplit === "tech-start-ups" && (
                 <Section>
-                  <Card>
-                    <div className="apply-main">
-                      <div className="apply-content">
-                        <Typography variant="h6">
-                          Build your product today with us
-                        </Typography>
-                        {width < 500 ? (
-                          <Typography variant="h4">
-                            Ready to take the leap? Register your startup now
-                            and unlock the doors to endless possibilities!
+                  <Stack py={15}>
+                    <Card>
+                      <Stack
+                        direction={{ sm: "column", md: "row" }}
+                        spacing={5}
+                        alignItems={"center"}
+                      >
+                        <Stack flex={1} spacing={4} className="apply-content">
+                          <Typography variant="h6">
+                            Build your product today with us
                           </Typography>
-                        ) : (
-                          <Typography variant="h2">
-                            Ready to take the leap? Register your startup now
-                            and unlock the doors to endless possibilities!
-                          </Typography>
-                        )}
+                          {width < 500 ? (
+                            <Typography variant="h6">
+                              Ready to take the leap? Register your startup now
+                              and unlock the doors to endless possibilities!
+                            </Typography>
+                          ) : (
+                            <Typography variant="h4">
+                              Ready to take the leap? Register your startup now
+                              and unlock the doors to endless possibilities!
+                            </Typography>
+                          )}
 
-                        <div style={{ textAlign: "center" }}>
-                          <a
-                            href="https://forms.gle/NJNpY31VcUC1cwek9"
-                            target="_blank"
-                          >
-                            <Button label={"Apply for Tech Solution"}></Button>
-                          </a>
-                        </div>
-                      </div>
-                      <div className="apply-image">
-                        <img
-                          src="https://images.pexels.com/photos/3861563/pexels-photo-3861563.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </Card>
+                          <Stack style={{ textAlign: "center" }}>
+                            <a
+                              href="https://forms.gle/NJNpY31VcUC1cwek9"
+                              target="_blank"
+                            >
+                              <Button
+                                label={"Apply for Tech Solution"}
+                              ></Button>
+                            </a>
+                          </Stack>
+                        </Stack>
+                        <Stack
+                          width={{ sm: 300, md: 500 }}
+                          height={{ sm: "100%", md: 400 }}
+                        >
+                          <img
+                            style={{
+                              width: "100%",
+                              height: "100%",
+                              objectFit: "cover",
+                            }}
+                            src="https://images.pexels.com/photos/3861563/pexels-photo-3861563.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt=""
+                          />
+                        </Stack>
+                      </Stack>
+                    </Card>
+                  </Stack>
                 </Section>
               )}
               {cleanSplit === "tech-ecosystems" &&
@@ -335,9 +384,8 @@ const Pillers = ({ data, location }) => {
               {cleanSplit == "tech-solutions" && (
                 <Section>
                   <SectionTitle>our tech</SectionTitle>
-                  <br></br>
-                  <br></br>
-                  <div className="techs-w">
+
+                  <div>
                     {theTech.map((item, i) => {
                       console.log(item.node);
                       const img = getImage(item.node.frontmatter.screenshot);
@@ -358,48 +406,78 @@ const Pillers = ({ data, location }) => {
                   </div>
                 </Section>
               )}
-              <Section>
-                {projects.length > 0 && (
-                  <SectionTitle>initiatives</SectionTitle>
-                )}
-
-                <div className="initiatives">
-                  {projects.map((item) => {
-                    const {
-                      category,
-                      description,
-                      title,
-                      link,
-                      to,
-                      cca,
-                      from,
-                      image,
-                    } = item.node.frontmatter;
-                    const coverImage = getImage(image);
-                    const path = GeneratePath(title);
-                    return (
-                      <Card
-                        hoverable
-                        actions={[
-                          <Button type="link" url={`/initiatives/${path}`}>
-                            View More
-                          </Button>,
-                        ]}
-                        cover={
-                          <GatsbyImage
-                            image={coverImage}
-                            alt=""
-                            style={{ height: 200, objectFit: "cover" }}
-                          />
-                        }
-                      >
-                        <Card.Meta title={title} description={cca} />
-                      </Card>
-                    );
-                  })}
-                </div>
-              </Section>
-            </div>
+              <Stack>
+                <Section>
+                  <Stack py={15}>
+                    {projects.length > 0 && (
+                      <SectionTitle>initiatives</SectionTitle>
+                    )}
+                    <Swiper
+                      spaceBetween={2}
+                      centeredSlides={true}
+                      autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                      }}
+                      loop={true}
+                      speed={2000}
+                      pagination={{
+                        clickable: true,
+                      }}
+                      modules={[Autoplay, Pagination]}
+                      className="mySwiper"
+                    >
+                      {projects.map((item) => {
+                        const {
+                          category,
+                          description,
+                          title,
+                          link,
+                          to,
+                          cca,
+                          from,
+                          image,
+                        } = item.node.frontmatter;
+                        const coverImage = getImage(image);
+                        const path = GeneratePath(title);
+                        return (
+                          <SwiperSlide>
+                            <Card
+                              hoverable
+                              onClick={() => {
+                                navigate(`/initiatives/${path}`);
+                              }}
+                            >
+                              <Stack
+                                alignItems={"center"}
+                                direction={"row"}
+                                position={"relative"}
+                                spacing={10}
+                              >
+                                <Stack flex={1}>
+                                  <GatsbyImage
+                                    image={coverImage}
+                                    alt=""
+                                    style={{
+                                      height: "100%",
+                                      objectFit: "cover",
+                                    }}
+                                  />
+                                </Stack>
+                                <Stack flex={2} textAlign={"left"}>
+                                  <Typography variant="h4">{title}</Typography>
+                                  <Typography variant="body1">{cca}</Typography>
+                                </Stack>
+                              </Stack>
+                            </Card>
+                          </SwiperSlide>
+                        );
+                      })}
+                    </Swiper>
+                  </Stack>
+                </Section>
+              </Stack>
+            </Stack>
           );
         }
       })}

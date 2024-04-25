@@ -122,44 +122,46 @@ const News = ({ data, pageContext, numberOfAllPages = [] }) => {
                 if (title) {
                   return (
                     <SwiperSlide>
-                      <Stack direction={"row"}>
-                        <Stack width={400}>
-                          {img ? (
-                            <GatsbyImage
-                              style={{
-                                width: "100%",
-                                height: "100%",
-                                objectFit: "cover",
-                              }}
-                              objectFit="cover"
-                              image={img}
-                              backgroundColor={"rgba(93,145,0,0)"}
-                              alt={title}
-                            ></GatsbyImage>
-                          ) : (
-                            <StaticImage
-                              style={{
-                                width: "100%",
-                                height: "100%",
-                                objectFit: "cover",
-                              }}
-                              src="../../assets/placeholder.jpg"
-                              alt="no image"
-                            />
-                          )}
+                      <Card onClick={() => navigate(`/news/${_path}`)}>
+                        <Stack direction={"row"}>
+                          <Stack width={400}>
+                            {img ? (
+                              <GatsbyImage
+                                style={{
+                                  width: "100%",
+                                  height: "100%",
+                                  objectFit: "cover",
+                                }}
+                                objectFit="cover"
+                                image={img}
+                                backgroundColor={"rgba(93,145,0,0)"}
+                                alt={title}
+                              ></GatsbyImage>
+                            ) : (
+                              <StaticImage
+                                style={{
+                                  width: "100%",
+                                  height: "100%",
+                                  objectFit: "cover",
+                                }}
+                                src="../../assets/placeholder.jpg"
+                                alt="no image"
+                              />
+                            )}
+                          </Stack>
+                          <Stack flex={1} spacing={2} p={5} textAlign={"left"}>
+                            <Typography variant="subtitle2">
+                              {moment(date).format("DD MMMM, YYYY")}
+                            </Typography>
+                            <Typography variant="h5" fontWeight={"bold"}>
+                              {title}
+                            </Typography>
+                            <Typography color={colors.grey[700]}>
+                              {excerpt}
+                            </Typography>
+                          </Stack>
                         </Stack>
-                        <Stack flex={1} spacing={2} p={5} textAlign={"left"}>
-                          <Typography variant="subtitle2">
-                            {moment(date).format("DD MMMM, YYYY")}
-                          </Typography>
-                          <Typography variant="h5" fontWeight={"bold"}>
-                            {title}
-                          </Typography>
-                          <Typography color={colors.grey[700]}>
-                            {excerpt}
-                          </Typography>
-                        </Stack>
-                      </Stack>
+                      </Card>
                       {/* <NewsCard
                         date={moment(date).format("DD MMMM, YYYY")}
                         key={i}
