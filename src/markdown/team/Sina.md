@@ -1,7 +1,7 @@
 ---
 path: /Sina
 name: Sina Legong
-position: Partner Programme Lead
+position: Head of Reginal Innovation and Partnerships
 profilePicture: ../../images/sina.png
 ---
 
