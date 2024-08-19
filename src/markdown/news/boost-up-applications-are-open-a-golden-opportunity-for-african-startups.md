@@ -2,7 +2,7 @@
 title: "Boost Up Applications Are Open: A golden opportunity for African Startups"
 author: Zukanye Madakana
 timeStamp: 2024-08-19T10:11:58.596Z
-featureImage: ../../images/boostup-web-banner.png
+featureImage: ../../images/lebo-for-boost-up-.png
 category: Tech Start-ups
 tags:
   - DigitalStartups
