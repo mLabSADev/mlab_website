@@ -1,10 +1,18 @@
 import React from "react";
 import "./style.scss";
-import Typography from "../Typography/Typography";
+// import Typography from "../Typography/Typography";
 import { StaticImage } from "gatsby-plugin-image";
+import { Stack, Typography, colors } from "@mui/material";
 const PageHeader = ({ image, title, page, index = 0, text }) => {
   return (
-    <div className="main-ph">
+    <Stack
+      m={1}
+      mt={10}
+      borderRadius={5}
+      sx={{ border: `solid 1px ${colors.grey[300]}` }}
+      overflow={"hidden"}
+      className="main-ph"
+    >
       {index === 1 && (
         <StaticImage
           className="imagebg"
@@ -48,17 +56,17 @@ const PageHeader = ({ image, title, page, index = 0, text }) => {
         />
       )}
 
-      <div className="title-ph">
-        <Typography variant="h3" color="light">
+      <Stack className="title-ph">
+        <Typography variant="h3" color={"white"}>
           {title.toUpperCase()}
         </Typography>
-        <div className="sectionTitleDescription">
-          <Typography variant="b2" color="light">
+        <Stack className="sectionTitleDescription">
+          <Typography variant="body1" color="white">
             {text}
           </Typography>
-        </div>
-      </div>
-    </div>
+        </Stack>
+      </Stack>
+    </Stack>
   );
 };
 
