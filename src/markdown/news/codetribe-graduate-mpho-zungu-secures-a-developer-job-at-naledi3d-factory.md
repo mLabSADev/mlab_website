@@ -1,5 +1,5 @@
 ---
-title: "CodeTribe graduate Mpho Zungu secures a Developer job at Naledi3D Factory. "
+title: "CodeTribe graduate Mpho Zondo secures a Developer job at Naledi3D Factory. "
 author: Zukanye Madakana
 timeStamp: 2024-10-24T11:04:30.070Z
 featureImage: ../../images/mpho-at-work-.jpg
