@@ -10,9 +10,10 @@ import Typography from "../components/Typography/Typography";
 import moment from "moment";
 import { WhatWeDoCard } from "./who-we-are";
 import Layout from "../components/ChatBot/ChatBot";
+import { Grid, Stack } from "@mui/material";
 // import { Helmet } from "react-helmet";
-const slugify = require('slugify')
-const IndexPage = ({ data }) => {
+const slugify = require("slugify");
+const IndexPage = ({ data, location }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const close = () => setModalOpen(false);
   const news = data.news.edges;
@@ -21,16 +22,19 @@ const IndexPage = ({ data }) => {
   const newsHeader = data.newsHeader.frontmatter.position;
   const GeneratePath = (path) => {
     const link = slugify(path, {
-      replacement: '-',  // replace spaces with replacement character, defaults to `-`
+      replacement: "-", // replace spaces with replacement character, defaults to `-`
       remove: /[*+~.()'"!:@]/g, // remove characters that match regex, defaults to `undefined`
-      lower: true,      // convert to lower case, defaults to `false`
+      lower: true, // convert to lower case, defaults to `false`
 
-      strict: true,       // strip special characters except replacement, defaults to `false`
+      strict: true, // strip special characters except replacement, defaults to `false`
 
-      trim: true         // trim leading and trailing replacement chars, defaults to `true`
-    })
-    return link
-  }
+      trim: true, // trim leading and trailing replacement chars, defaults to `true`
+    });
+    return link;
+  };
+  useEffect(() => {
+    console.log(location);
+  }, []);
   useEffect(() => {
     (function (h, o, t, j, a, r) {
       h.hj =
@@ -47,49 +51,55 @@ const IndexPage = ({ data }) => {
     })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
   }, []);
   return (
-    <Layout>
+    <Layout route={"home"}>
       <CarouselSlider data={banners} />
-
+      <Stack py={20}>
       <Section>
         <SectionTitle>what we do</SectionTitle>
-        <div className="main-wwd-c">
+        <Grid container spacing={1}>
           {data.whatWeDo.edges.map((card, i) => {
             const img = getImage(card.node.frontmatter.icon);
             const title = card.node.frontmatter.title;
             const noSpaces = title.replaceAll(" ", "-");
             const _path = GeneratePath(title);
             return (
-              <WhatWeDoCard
-                key={i}
-                title={card.node.frontmatter.title}
-                excerpt={card.node.frontmatter.summary}
-                description={card.node.excerpt}
-                image={img}
-                url={`/what-we-do/${_path}`}
-              />
+              <Grid item xs={12} sm={6} md={6} lg={3}>
+                <WhatWeDoCard
+                  key={i}
+                  title={card.node.frontmatter.title}
+                  excerpt={card.node.frontmatter.summary}
+                  description={card.node.excerpt}
+                  image={img}
+                  url={`/what-we-do/${_path}`}
+                />
+              </Grid>
             );
           })}
-        </div>
+        </Grid>
       </Section>
-      {/* dont't remove */}
-      <div className="video-i">
-        <iframe
-          className="play-video"
-          src="https://www.youtube.com/embed/z4C5HVz_wu4"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
-      </div>
-      {/* ... */}
+      </Stack>
+      
+      <Section>
+        <Stack py={10} height={{ xs: 300, sm: 400, md: 550, lg: 600 }}>
+          <iframe
+            style={{ width: "100%", height: "100%" }}
+            className="play-video"
+            src="https://www.youtube.com/embed/z4C5HVz_wu4"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </Stack>
+      </Section>
+
       <Section>
         <SectionTitle>latest news</SectionTitle>
 
         <Typography center variant="b1">
           {newsHeader}
         </Typography>
-        <div className="hs">
+        <Stack py={5} px={2} direction={"row"} sx={{ overflowX: "auto" }} spacing={2}>
           {news.map((item, i) => {
             const image = getImage(item.node.frontmatter.featureImage);
             const title = item.node.frontmatter.title;
@@ -100,7 +110,7 @@ const IndexPage = ({ data }) => {
             const remove_invalid_4 = remove_invalid_3.replaceAll("&", "");
             const remove_invalid_5 = remove_invalid_4.replaceAll('"', "");
             const remove_invalid_6 = remove_invalid_5.replaceAll('"', "");
-            const remove_invalid_7 = remove_invalid_6.replaceAll('.', "");
+            const remove_invalid_7 = remove_invalid_6.replaceAll(".", "");
             // const _path = remove_invalid_7.replaceAll(" ", "-");
             const _path = GeneratePath(title);
             if (title) {
@@ -118,7 +128,7 @@ const IndexPage = ({ data }) => {
               );
             }
           })}
-        </div>
+        </Stack>
         <div className=""></div>
       </Section>
 

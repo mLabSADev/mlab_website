@@ -1,40 +1,33 @@
 import React from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
-import Typography from "../Typography/Typography";
+// import Typography from "../Typography/Typography";
 import "./style.scss";
+import { Avatar, Stack, Typography } from "@mui/material";
+import { Card } from "antd";
 const TechCard = ({ image, icon, title, description, handleClick }) => {
   return (
-    <div className="main-tc">
-      <div className="image-w">
-        <div className="image">
-          <GatsbyImage
-            objectFit="cover"
-            className="img"
-            image={image}
-            alt=""
-          />
-        </div>
-      </div>
-      <div className="details-w">
-        <div className="details-text">
-          <div>
-            {/* <Typography variant="caption">27 Jan, 202x</Typography> */}
-            <Typography variant="h4">{title}</Typography>
-          </div>
-          <div className="icon-w">
+    <Card
+      cover={
+        <Stack maxHeight={300} overflow={"hidden"}>
+          <GatsbyImage objectFit="cover" image={image} alt="" />
+        </Stack>
+      }
+    >
+      <Card.Meta
+        avatar={
+          <Avatar size={"large"}>
             <GatsbyImage
               objectFit="cover"
-              className="icon-img"
               image={icon}
               alt=""
+              style={{ height: 40, width: 40 }}
             />
-          </div>
-        </div>
-        <br></br>
-        <Typography variant="b2">{description}</Typography>
-        {/* <Button type="button" onClick={handleClick}></Button> */}
-      </div>
-    </div>
+          </Avatar>
+        }
+        title={title}
+        description={description}
+      />
+    </Card>
   );
 };
 
