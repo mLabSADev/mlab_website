@@ -21,6 +21,4 @@ Palesa Antony, mLab's Technology Ecosystem Lead, who is instrumental in managing
 
 
 
-\-ENDS-
-
 **For enquiries: [press@mlab.co.za](mailto:press@mlab.co.za)**
