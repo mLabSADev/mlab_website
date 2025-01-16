@@ -1,14 +1,14 @@
 ---
 priority: 3
 icon: ../../images/startups-green-icon.png
-email: sina@mlab.co.za
+title: Tech Start-Ups
+shortText: Assisting early-stage start-ups to pursue their next growth opportunity
 featureImage: ../../images/start-your-day-with-a-posistive-mindset-shot-of-a-2022-09-27-02-29-52-utc.jpg
 path: /impact-through-technology
 summary: Launching Great Businesses
-shortText: Assisting early-stage start-ups to pursue their next growth opportunity
 thumb: ../../images/whatWeDo/nurturingtalent.png
-title: Tech Start-Ups
 link: impact-through-technology
+email: sina@mlab.co.za
 video: https://www.youtube.com/embed/kQpp-3lD-Dc
 ---
 ![startup accelerator](../../images/screenshot-2022-11-04-075218.png)
@@ -17,7 +17,7 @@ A great business idea is a good start … but where to from there? mLab speciali
 
 This Enterprise Development programme supports early-stage founders of tech-enabled businesses to pursue their next growth opportunity. mLab does this through providing critical support services such as gap analysis, go-to-market strategies, mentorship, grant seed funding as well as assistance with digital tools and development of minimal viable products (MVPs). Beneficiaries also benefit from entrepreneurship focused training, networking events, office space, access to equipment and devices amongst other forms of support.
 
-![venture builder](../../images/copy-of-codetribe-google-form-banner.jpg)
+![venture builder](../../images/venture-build-web-banner.png)
 
 ### SELECTION CRITERIA
 
