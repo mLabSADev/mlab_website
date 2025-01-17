@@ -17,7 +17,7 @@ A great business idea is a good start … but where to from there? mLab speciali
 
 This Enterprise Development programme supports early-stage founders of tech-enabled businesses to pursue their next growth opportunity. mLab does this through providing critical support services such as gap analysis, go-to-market strategies, mentorship, grant seed funding as well as assistance with digital tools and development of minimal viable products (MVPs). Beneficiaries also benefit from entrepreneurship focused training, networking events, office space, access to equipment and devices amongst other forms of support.
 
-![venture builder](../../images/venture-build-web-banner.png)
+![venture builder](../../images/startup-web-banner.png)
 
 ### SELECTION CRITERIA
 
