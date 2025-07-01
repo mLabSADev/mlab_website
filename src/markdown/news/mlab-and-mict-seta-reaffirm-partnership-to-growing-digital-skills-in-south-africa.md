@@ -29,6 +29,6 @@ MICT SETA CEO, Matome Madibana, added, "We are proud to continue this journey wi
 This MoU marks a strong step forward in bridging the digital divide and preparing young South Africans for a future powered by technology.
 
 \
-                                                                        **\-ENDS-**
+**\-ENDS-**
 
-                     For enquiries contact Zukanye Madakana at zukanye@mlab.co.za or press@mlab.co,za
+For enquiries contact Zukanye Madakana at zukanye@mlab.co.za or press@mlab.co.za
