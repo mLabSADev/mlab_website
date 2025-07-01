@@ -1,6 +1,6 @@
 ---
 title: mLab and MICT SETA reaffirm partnership to growing digital skills in
-  South Africa.
+  South Africa
 author: Zukanye Madakana
 timeStamp: 2025-07-01T10:05:41.995Z
 featureImage: ../../images/img_8983.jpg
