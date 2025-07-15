@@ -10,8 +10,8 @@ programmes:
   - Accelerator
   - App Fund
 tel: +27 012 844 0240
-physicalAddress: U8, Enterprise Building, The Innovation Hub, Mark Shuttleworth
-  Street, Tshwane Pretoria, South Africa, 0087
+physicalAddress: mLab, Innovation Centre 1 Mark Shuttleworth Street The
+  Innovation Hub Persequor x 10 Pretoria, South Africa 0087
 email: admin@mlab.co.za
 description: mLab Tshwane is the Headquarters of the Mobile Applications
   Laboratory. It is a proud partnership between mLab, The Innovation Hub and The
