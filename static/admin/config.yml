@@ -17,6 +17,14 @@ collections:
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Registration", name: "registration", widget: "string" }
       - { label: "Body", name: "body", widget: "string" }
+  - name: "partners"
+    label: "Partners"
+    folder: "src/markdown/partners"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Body", name: "body", widget: "string" }
   - name: "aboutUs"
     label: "About Us"
     folder: "src/markdown/about-mlab"
