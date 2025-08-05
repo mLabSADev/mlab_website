@@ -23,7 +23,7 @@ Khensani graduated in April this year, and her new role at Mbula will give her h
 
 Khensani says she feels confident stepping into this opportunity because of the strong foundation she built at CodeTribe.
 
-“This new opportunity is an exciting step forward in my career, and I feel prepared, thanks to my time at CodeTribe. The programme equipped me with valuable technical and professional skills, especially through the Scrum and interview workshops. These sessions gave me the confidence and practical tools to excel in interviews and present myself effectively in team-based environments,” she shares.
+“This new opportunity is an exciting step forward in my career, and I feel prepared, thanks to my time at CodeTribe. The programme equipped me with valuable technical and professional skills, especially through the scrum and interview workshops. These sessions gave me the confidence and practical tools to excel in interviews and present myself effectively in team-based environments,” she shares.
 
 ![Khensani poses for a picture outside the Innovation Hub's Enterprise Building.](../../images/khensani-body-.png "Khensani poses for a picture outside the Innovation Hub's Enterprise Building.")
 
