@@ -25,7 +25,7 @@ const Resources = ({ data }) => {
     })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
   }, []);
   return (
-    <Layout>
+    <Layout route="resources">
       {/* <Helmet title={'mLab | Resources'} /> */}
       <PageHeader index={5} title="resources" />
       <Section>

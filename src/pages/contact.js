@@ -5,7 +5,7 @@ import { graphql, StaticQuery } from "gatsby";
 import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image";
 import PageHeader from "../components/PageHeader/PageHeader";
 import Section from "../components/Section/Section";
-import Typography from "../components/Typography/Typography";
+// import Typography from "../components/Typography/Typography";
 import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
 import Input from "@mui/material/Input";
@@ -16,11 +16,15 @@ import { navigate } from "gatsby";
 import Modal from "../components/Modal/Modal";
 import { AnimatePresence } from "framer-motion";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
+import { Card, message } from "antd";
+import { Stack, Typography } from "@mui/material";
+import { BusinessRounded, CallRounded } from "@mui/icons-material";
 // import { Helmet } from "react-helmet";
 
 export const SignupForm = ({ main, interests = [] }) => {
   const [sentStatus, setSentStatus] = useState("");
   const [statusMessage, setStatusMessage] = useState("");
+  const [messageApi, contextHolder] = message.useMessage();
   const fv = {
     interest: "",
     firstName: "",
@@ -81,6 +85,7 @@ export const SignupForm = ({ main, interests = [] }) => {
   };
   const postSubmit = () => {
     if (main) {
+      messageApi.success("Thank you for your submission.", 5);
       setStatusMessage("Thank you for your submission.");
       setSentStatus("success");
       setTimeout(() => {
@@ -99,6 +104,7 @@ export const SignupForm = ({ main, interests = [] }) => {
       postSubmit={postSubmit}
       className="main-form"
     >
+      {contextHolder}
       <AnimatePresence initial={false} exitBeforeEnter={true}>
         {modalOpen && (
           <Modal modalOpen={modalOpen} handleClose={close}>
@@ -193,40 +199,47 @@ const Contact = ({ data }) => {
   const contactUs = data.site.siteMetadata;
   const interest = data.wwdSections.edges;
   return (
-    <Layout>
+    <Layout route="contact">
       {/* <Helmet title={"mLab | Contact Us"} /> */}
       <PageHeader index={6} title="Contact Us" />
       <Section>
-        <div className="form-wraper">
-          <div className="form-details">
-            <div>
+        <Stack spacing={5} py={15} direction={{ sm: "column", md: "row" }}>
+          <Stack flex={1}>
+            <Stack spacing={3}>
               <Typography variant="h4">Contact Us</Typography>
-              <Typography variant="b1">
+              <Typography variant="body2">
                 Our Labs are dedicated spaces that provide a range of services
                 to entrepreneurs, innovators, makers, developers and digital
                 creatives through our different programmes. We also host a
                 number of partner events, workshops and training within our labs
                 and technology partners can select to run mLab facilitated
                 activities or simply work with our events team to assist with
-                setup and arrangements.{" "}
+                setup and arrangements.
               </Typography>
-            </div>
-
-            <div>
-              <Typography variant="h5">Address</Typography>
-              <Typography variant="b2">{contactUs.address}</Typography>
-            </div>
-            <div>
-              <Typography variant="h5">Phone</Typography>
-              <Typography variant="b2">{contactUs.telephone}</Typography>
-            </div>
-          </div>
-          <div className="main-form">
+            </Stack>
+            <Stack spacing={1} py={3}>
+              <Card>
+                <Card.Meta
+                  avatar={<BusinessRounded />}
+                  title="Address"
+                  description={contactUs.address}
+                />
+              </Card>
+              <Card>
+                <Card.Meta
+                  avatar={<CallRounded />}
+                  title="Phone"
+                  description={contactUs.telephone}
+                />
+              </Card>
+            </Stack>
+          </Stack>
+          <Stack flex={1} spacing={3}>
             <Typography variant="h4">Email Us</Typography>
             <Typography variant="b1">We'd love to hear from you</Typography>
             <SignupForm main={true} interests={interest} />
-          </div>
-        </div>
+          </Stack>
+        </Stack>
       </Section>
       <Section>
         <div
@@ -247,40 +260,55 @@ const Contact = ({ data }) => {
           />
         </div>
       </Section>
-      {locations.map((l, i) => {
-        const image = getImage(l.node.frontmatter.featureImage);
-        return (
-          <Section key={i}>
-            <div className="locaton-wrapper">
-              <GatsbyImage
-                alt={l.node.frontmatter.city}
-                image={image}
-                className="location-image"
-              ></GatsbyImage>
-              <div className="location-details">
-                <Typography variant="h3">
-                  mLab | {l.node.frontmatter.province}
-                </Typography>
-                <Typography variant="s2">{l.node.frontmatter.city}</Typography>
-                <br></br>
-                <p dangerouslySetInnerHTML={{ __html: l.node.html }} />
-                <br></br>
-                <br></br>
-                <iframe
-                  title="location-map"
-                  className="map-locations"
-                  src={l.node.frontmatter.location}
-                  width="100%"
-                  height="450"
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </div>
-            </div>
-          </Section>
-        );
-      })}
+      <Section>
+        <Stack py={15} spacing={5}>
+          {locations.map((l, i) => {
+            const image = getImage(l.node.frontmatter.featureImage);
+            return (
+              <Stack
+                key={i}
+                direction={{ sm: "column", md: "row" }}
+                alignItems={"center"}
+                flex={1}
+                spacing={5}
+              >
+                <Stack
+                  flex={1}
+                  height={{ xs: 300, sm: 400, md: 600, lg: 800 }}
+                  width={"100%"}
+                  bgcolor={"red"}
+                  spacing={10}
+                >
+                  <GatsbyImage
+                    alt={l.node.frontmatter.city}
+                    image={image}
+                    style={{ width: "100%", height: "100%" }}
+                  ></GatsbyImage>
+                </Stack>
+                <Stack flex={1} spacing={4}>
+                  <Typography variant="h3">
+                    mLab | {l.node.frontmatter.province}
+                  </Typography>
+                  <Typography variant="s2">
+                    {l.node.frontmatter.city}
+                  </Typography>
+                  <p dangerouslySetInnerHTML={{ __html: l.node.html }} />
+                  <iframe
+                    title="location-map"
+                    className="map-locations"
+                    src={l.node.frontmatter.location}
+                    width="100%"
+                    height="450"
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </Stack>
+              </Stack>
+            );
+          })}
+        </Stack>
+      </Section>
       <div className="index-form">
         {/* <SignupForm main={false}></SignupForm> */}
         {/* <ChatBot /> */}

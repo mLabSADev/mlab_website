@@ -1,23 +1,25 @@
 import React, { useEffect, useState } from "react";
-import { graphql } from "gatsby";
+import { graphql, navigate } from "gatsby";
 import "./style.scss";
 import DisqusTemplate from "../components/disqus/index";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Layout from "../components/ChatBot/ChatBot";
 import Section from "../components/Section/Section";
-import Tag from "../components/Tag/Tag";
+// import Tag from "../components/Tag/Tag";
 import "./blog-post.scss";
-import Typography from "../components/Typography/Typography";
+// import Typography from "../components/Typography/Typography";
 import { AnimatePresence } from "framer-motion";
 import ImageModal from "../components/ImageModal/ImageModal";
 import moment from "moment";
+import { Tag } from "antd";
+import { Divider, Stack, Typography, useTheme } from "@mui/material";
 const slugify = require("slugify");
 export default function BlogPost({ data }) {
   const [modalOpen, setModalOpen] = useState(false);
 
   const close = () => setModalOpen(false);
   const open = () => setModalOpen(true);
-
+  const theme = useTheme();
   const image = getImage(
     data.markdownRemark.frontmatter.featureImage &&
       data.markdownRemark.frontmatter.featureImage
@@ -70,41 +72,35 @@ export default function BlogPost({ data }) {
           </ImageModal>
         )}
       </AnimatePresence>
-      <div onClick={() => open()} class="image-b">
-        <div />
+      <Stack
+        mx={2}
+        borderRadius={5}
+        overflow={"hidden"}
+        height={400}
+        mt={10}
+        onClick={() => open()}
+      >
         <GatsbyImage
-          class="image-bog"
+          style={{ width: "100%", height: "100%" }}
           image={banner ? banner : image}
           alt={title}
           objectFit="cover"
         />
-        <div />
-      </div>
-
+      </Stack>
       <Section>
-        <div className="main-blog">
-          <div></div>
-          <div className="article-blog">
-            <div>
+        <Stack pb={10} pt={5}>
+          <Stack spacing={2}>
+            <Stack spacing={2}>
               <Typography variant="h6">
                 {moment(date).format("DD MMMM, YYYY")}
               </Typography>
-              <Typography variant="h3">{title.toUpperCase()}</Typography>
-              <Typography variant="s1" color="gray">
+              <Typography variant="h3">{title}</Typography>
+              <Typography variant="s" color="gray">
                 <Typography variant="caption">author</Typography> {author}
               </Typography>
-            </div>
-            <hr className="line-hr" />
-            <div
-              className="controlImage"
-              dangerouslySetInnerHTML={{ __html: html }}
-            />
-          </div>
-          <div className="tag-section">
-            {tags && tags.length > 0 ? (
-              <Typography variant="h6">Tags</Typography>
-            ) : null}
-            <div className="tag-w">
+            </Stack>
+            <Divider />
+            <Stack direction={"row"} spacing={1}>
               {tags &&
                 tags.map((t, i) => {
                   const removeUnderscore = t.replaceAll("_", " ");
@@ -115,27 +111,32 @@ export default function BlogPost({ data }) {
                   };
                   const _path = GeneratePath(tag.link);
                   return tag.label ? (
-                    <Tag key={i} label={tag.label} url={`/news/tag/${_path}`} />
+                    <Tag
+                      color={theme.palette.success.main}
+                      key={i}
+                      onClick={() => navigate(`/news/tag/${_path}`)}
+                    >
+                      {tag.label}
+                    </Tag>
                   ) : null;
                 })}
-            </div>
-          </div>
-        </div>
+            </Stack>
+            <Divider />
+            <div
+              className="controlImage"
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
+          </Stack>
+        </Stack>
       </Section>
       <Section>
-        <div className="disquss-section">
-          <div></div>
-          <div>
-            <DisqusTemplate
-              url={`/news/${GeneratePath(
-                data.markdownRemark.frontmatter.title
-              )}`}
-              title={data.markdownRemark.frontmatter.title}
-              identifier={GeneratePath(data.markdownRemark.frontmatter.title)}
-            ></DisqusTemplate>
-          </div>
-          <div></div>
-        </div>
+        <Stack pb={20}>
+          <DisqusTemplate
+            url={`/news/${GeneratePath(data.markdownRemark.frontmatter.title)}`}
+            title={data.markdownRemark.frontmatter.title}
+            identifier={GeneratePath(data.markdownRemark.frontmatter.title)}
+          ></DisqusTemplate>
+        </Stack>
       </Section>
       <div className="index-form">
         {/* <SignupForm main={false}></SignupForm> */}

@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./what-we-do.scss";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import Layout from "../components/ChatBot/ChatBot";
 import { graphql } from "gatsby";
-import { getImage } from "gatsby-plugin-image";
+import { StaticImage, getImage } from "gatsby-plugin-image";
 import Typography from "../components/Typography/Typography";
 import PageHeader from "../components/PageHeader/PageHeader";
 import SectionTitle from "../components/SectionTitle/SectionTitle";
@@ -11,6 +16,7 @@ import ProgressStatistic from "../components/ProgressStatistic/ProgressStatistic
 import { AnimatePresence } from "framer-motion";
 import { WhatWeDoCard } from "./who-we-are";
 import slugify from "slugify";
+import { Grid, Stack } from "@mui/material";
 // import { Helmet } from "react-helmet";
 const GeneratePath = (path) => {
   const link = slugify(path, {
@@ -66,7 +72,7 @@ const WhatWeDo = ({ data, location }) => {
     })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
   }, []);
   return (
-    <Layout>
+    <Layout route={"what-we-do"}>
       {/* <Helmet title={'mLab | What we do'} /> */}
       <AnimatePresence initial={false} exitBeforeEnter={true}>
         {/* {modalOpen.state && (
@@ -86,55 +92,80 @@ const WhatWeDo = ({ data, location }) => {
       <br />
 
       <Section>
-        <SectionTitle>we believe in an empowered youth</SectionTitle>
-        <Typography center variant="b1">
-          At the heart of mLab’s work is the belief that when our youth are
-          empowered with the right skills to innovate and create solutions, they
-          unlock opportunities for optimising existing, or establishing new
-          businesses, that will drive our economy forward.{" "}
-        </Typography>
-        <br />
-
-        <Typography center variant="b2">
-          We do this by offering programmes, projects and services under the
-          following pillars
-        </Typography>
-        <br />
-        <br />
-        <div className="main-wwd-c">
+        <Stack py={10} pb={15}>
+          <SectionTitle>we believe in an empowered youth</SectionTitle>
+          <Typography center variant="b1">
+            At the heart of mLab’s work is the belief that when our youth are
+            empowered with the right skills to innovate and create solutions,
+            they unlock opportunities for optimising existing, or establishing
+            new businesses, that will drive our economy forward.{" "}
+          </Typography>
+          <Typography center variant="b2">
+            We do this by offering programmes, projects and services under the
+            following pillars
+          </Typography>
+        </Stack>
+      </Section>
+      <Section>
+        <Grid container spacing={1}>
           {data.wwdSections.edges.map((card, i) => {
             const img = getImage(card.node.frontmatter.icon);
             const title = card.node.frontmatter.title;
             return (
-              <WhatWeDoCard
-                key={i}
-                title={title}
-                excerpt={card.node.frontmatter.summary}
-                description={card.node.excerpt}
-                image={img}
-                url={`/what-we-do/${GeneratePath(title)}`}
-              />
+              <Grid item xs={6} sm={6} md={3} lg={3}>
+                <WhatWeDoCard
+                  key={i}
+                  title={title}
+                  excerpt={card.node.frontmatter.summary}
+                  description={card.node.excerpt}
+                  image={img}
+                  url={`/what-we-do/${GeneratePath(title)}`}
+                />
+              </Grid>
             );
           })}
-        </div>
+        </Grid>
       </Section>
       <Section>
-        <SectionTitle>Our Impact</SectionTitle>
-        <div className="responsive-column">
-          <div className="progress-stat-wrappr">
+        <Stack py={20}>
+          <StaticImage src="../assets/mLab Programmes - Advertorial v5_page-0001.jpg" />
+        </Stack>
+      </Section>
+      <Section>
+        <Stack pb={20}>
+          <SectionTitle>Our Impact</SectionTitle>
+          <Swiper
+            spaceBetween={20}
+            slidesPerView={2}
+            loop={true}
+            centeredSlides={true}
+            autoplay={{
+              delay: 500,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+            }}
+            speed={3000}
+            navigation={true}
+            modules={[Autoplay, Pagination, Navigation]}
+            className="mySwiper"
+          >
             {impactBarStats.map((item, i) => {
               const image = getImage(item.node.frontmatter.icon);
               return (
-                <ProgressStatistic
-                  key={i}
-                  label={item.node.frontmatter.label}
-                  description={item.node.frontmatter.description}
-                  icon={image}
-                />
+                <SwiperSlide>
+                  <ProgressStatistic
+                    key={i}
+                    label={item.node.frontmatter.label}
+                    description={item.node.frontmatter.description}
+                    icon={image}
+                  />
+                </SwiperSlide>
               );
             })}
-          </div>
-        </div>
+          </Swiper>
+        </Stack>
       </Section>
     </Layout>
   );

@@ -3,7 +3,8 @@
   width: 100%;
   height: 100vh;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   .floatNavigation {
     position: fixed;
     top: 0;
@@ -14,7 +15,7 @@
   }
   .children-l {
     box-sizing: border-box;
-    height: calc(100% - 54px);
+    // height: calc(100% - 54px);
     width: calc(100%);
     overflow-y: auto;
   }

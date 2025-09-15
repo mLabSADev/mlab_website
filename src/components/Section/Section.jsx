@@ -1,7 +1,8 @@
 import React from "react";
 import "./style.scss";
+import { Container } from "@mui/material";
 function Section(props) {
-  return <div className="main-s">{props.children}</div>;
+  return <Container>{props.children}</Container>;
 }
 
 export default Section;
