@@ -41,7 +41,7 @@ In response to the European Union’s Multi-Donor “Digital and Green Innovatio
 
 Challenger D&G has prioritised innovative solutions in the following focus areas: 
 
-![](../../images/screenshot-2025-10-24-at-12.00.15.png)
+![](../../images/call-for-digital-and-green-innocations-stratigic-focus.png)
 
 \
 \
@@ -122,6 +122,8 @@ Please submit your proposal via the F6S portal. Applications must include: 
 ● An outline of your solution, competitive analysis, unique value proposition, team, and intended impact 
 
 ● An accompanying 2 minute pitch video motivating for your selection and outlining how your startup will benefit from the programme 
+
+[Apply here](https://www.f6s.com/digital-green-tech-innovation-ap/apply)
 
 
 
