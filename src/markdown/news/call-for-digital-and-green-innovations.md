@@ -5,9 +5,11 @@ timeStamp: 2025-10-24T09:57:31.487Z
 featureImage: ../../images/call-for-proposals-web-banner-.png
 category: Tech Start-ups
 ---
-**CHALLENGER DIGITAL and GREEN ACCELERATOR PROGRAMME** 
+##### CHALLENGER DIGITAL and GREEN ACCELERATOR PROGRAMME** 
 
+![](../../images/challenger_dig.png)
 
+<!-- ![](../../images/call-for-digital-and-green-innocations-stratigic-focus.png) -->
 
 ### CONTEXT 
 
@@ -27,7 +29,10 @@ This dire situation demands urgent action and development of innovative solution
 
 
 
-In response to the European Union’s Multi-Donor “Digital and Green Innovation Action” initiative, Challenger D&G will support up to 25 high-potential startups working at the intersection of technology, sustainability, and social impact. To qualify, startups must address at least one green transition objective (e.g. climate adaptation, circular economy, biodiversity protection) and be classified as sustainable, green or circular businesses (or enterprises), defined as follows: 
+In response to the European Union’s Multi-Donor “Digital and Green Innovation Action” initiative, Challenger D&G will support up to 25 high-potential startups working at the intersection of technology, sustainability, and social impact. The accelerator programme is part of ESTDEV's activities within the Digital and Green Innovation Action, which falls under the framework of Team Europe's Twin Transition Initiative in Africa. The Twin Transition Initiative is co-funded by Team Europe partners (Germany, France, Belgium, the Netherlands and Estonia) and the European Commission. Delivered by Civitta in collaboration with mLab, GrowthAfrica, Latitude59, and Startup Wise Guys, the programme is part of a broader effort to connect Africa’s innovators with investors, markets, and global opportunities. 
+
+
+To qualify, startups must address at least one green transition objective (e.g. climate adaptation, circular economy, biodiversity protection) and be classified as sustainable, green or circular businesses (or enterprises), defined as follows: 
 
 
 
@@ -43,14 +48,12 @@ Challenger D&G has prioritised innovative solutions in the following focus areas
 
 ![](../../images/call-for-digital-and-green-innocations-stratigic-focus.png)
 
-\
-\
-**PROGRAMME OUTLINE** 
+
+##### PROGRAMME OUTLINE
 
 
 
-We are looking for bold entrepreneurs with early-stage startups registered in either South Africa, Namibia, or Botswana who are building digital, green, and/or circular solutions addressing the strategic focus areas. The programme is structured to help participants refine their business models, strengthen investment readiness, and access opportunities to grow their impact. Delivered by Civitta in collaboration with mLab, GrowthAfrica, Latitude59, and Startup Wise Guys, the programme is part of a broader effort to connect Africa’s innovators with investors, markets, and global opportunities. The Digital and Green Innovation Action is co-funded by the participating Team Europe partners (Germany, France, Belgium, the Netherlands, and Estonia) and the European Commission. 
-
+We are looking for bold entrepreneurs with early-stage startups registered in either South Africa, Namibia, or Botswana who are building digital, green, and/or circular solutions addressing the strategic focus areas. The programme is structured to help participants refine their business models, strengthen investment readiness, and access opportunities to grow their impact.
 
 
 Challenger D&G will support up to 25 startups through a virtual acceleration programme between November 2025 and May 2026. Successful applicants will be supported to attend a compulsory in-person 2-day bootcamp to be held in Pretoria/Johannesburg in December 2025. 
@@ -69,25 +72,13 @@ Challenger D&GI is an opportunity to build, connect, and grow your business with
 
 ● Build your visibility through regional and global exposure 
 
-● Join a growing network of African startups driving digital and green innovation. What will participating startups receive 
-
-The cohort of up to 25 successful startups will receive: 
-
 ● Practical business acceleration 
-
-o A structured learning and support journey covering business model refinement, market access, scaling strategies, and leadership. 
-
-● Expert mentorship 
-
-o One-on-one and group mentorship with experienced entrepreneurs, investors, and technical experts from across Africa and Europe. 
 
 ● Investor readiness and connections 
 
-o Training to refine your fundraising strategy, build a winning pitch, and connect with investors seeking digital and green ventures. 
+● Training to refine your fundraising strategy, build a winning pitch, and connect with investors seeking digital and green ventures. 
 
 ● Market and visibility opportunities 
-
-o Access to networks, partnerships, and visibility through platforms such as Latitude59 
 
 On a competitive basis: 
 
@@ -103,7 +94,7 @@ On a competitive basis: 
 
 ● Applications open on 21 October 2025 
 
-● Deadline for applications: 14 November 2025 
+● Deadline for applications: 16 November 2025 
 
 ● Programme launch and onboarding: 21 November 2025 
 
@@ -123,7 +114,7 @@ Please submit your proposal via the F6S portal. Applications must include: 
 
 ● An accompanying 2 minute pitch video motivating for your selection and outlining how your startup will benefit from the programme 
 
-[Apply here](https://www.f6s.com/digital-green-tech-innovation-ap/apply)
+##### [Apply here](https://www.f6s.com/digital-green-tech-innovation-ap/apply)
 
 
 
