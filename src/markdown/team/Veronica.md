@@ -2,6 +2,10 @@
 path: /Veronica
 name: Veronica Mahlangu
 position: Skills Accelerator Coordinator
-profilePicture: ../../images/vero.png
+profilePicture: ../../images/vero-.png
 ---
-Veronica Mahlangu is passionate about youth skills development and assisting young people to reach their full potential in their career paths. Veronica holds a Computer Science degree (IT: Software development) from UNISA, International Computer Driving License (ICDL) certificate , Business Writing and Presentation Skills certificate, and Finance for Non-Financial Managers Certificate. She occupies a Skills Accelerator Coordinator position at mLab where she manages the skill accelerator 
+With eight years at mLab, Vero specialises in programme coordination, digital skills development, and youth empowerment. 
+
+She is passionate about helping young people unlock opportunities through technology. Her proudest moments are seeing trainees secure jobs and launch their own businesses. 
+
+Outside of work, she enjoys reading, hiking, and solving Sudoku puzzles.
