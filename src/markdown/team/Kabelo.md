@@ -2,6 +2,8 @@
 path: /Kabelo
 name: Kabelo Gaotlhaelwe
 position: Skills Facilitator
-profilePicture: ../../images/theTeam/Kabelo.png
+profilePicture: ../../images/kabelo-.png
 ---
-Kabelo Gaotlhaelwe is a software engineer specializing in app and web development, with extensive knowledge and hands on experience on web technologies such as Angular, ReactJs, Ionic, Node.js, Express.js and Firebase. I love programming mainly because it allows me to express my creativity, curiosity to the fullest.
+With more than five years at mLab, Kabelo focuses on technical training, coding mentorship, and software development education. 
+
+He finds great fulfillment in seeing trainees grow from junior to senior developers. Outside of work, he enjoys DIY projects, organising events, following soccer, and is developing an interest in farming.
