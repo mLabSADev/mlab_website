@@ -1,6 +1,8 @@
 ---
 name: Ivan Johnson
-position: JUNIOR COORDINATOR
-profilePicture: ../../images/img_20221109_100639.jpg
+position: "Digital Skills Coordinator/Facilitator "
+profilePicture: ../../images/ivan.png
 ---
-N﻿/A
+With over 5 years at mLab, Ivan specialises in ICT facilitation, digital skills training, and web and mobile application development. 
+
+He is passionate about mentoring young people and sharing knowledge to help them grow. Outside of work, he enjoys anime, gaming, playing pool, and exploring new gadgets.
