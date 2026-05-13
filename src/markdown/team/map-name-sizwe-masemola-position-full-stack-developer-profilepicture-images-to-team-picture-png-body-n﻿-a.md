@@ -1,6 +1,8 @@
 ---
 name: Sizwe Masemola
-position: Full Stack Developer
-profilePicture: ../../images/whatsapp-image-2022-11-16-at-20.31.49.jpeg
+position: "Digital Skills Facilitator "
+profilePicture: ../../images/sizwe-.png
 ---
-N﻿/A
+Sizwe specialises in front-end and back-end development, UI/UX integration, and responsive web design. A career highlight was leading a development project where he mentored trainees to build a real-world app. 
+
+Outside of work, he enjoys renaissance literature, outdoor activities, and is keen to explore fishing.
