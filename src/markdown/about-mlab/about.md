@@ -9,4 +9,4 @@ mLab was established in 2011 by a consortium of organisations that include the W
 
 mLab is registered as a Not-for-Profit Company (NPC) with public benefit organisation (PBO) status and is a Level 1 B-BBEE service provider.
 
-mLab has offices in Limpopo, Gauteng, Kwa-Zulu Natal, Northern Cape and in Gauteng. It offers its CodeTribe Academy training in Limpopo, Kimberley and Pietermaritzburg.
+mLab has offices in Limpopo, Gauteng, Kwa-Zulu Natal, Northern Cape and in Gauteng. It offers its CodeTribe Academy training in Limpopo, Kimberley and Pietermaritzburg (Imbali).
