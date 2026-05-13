@@ -1,6 +1,10 @@
 ---
 name: Zukanye Madakana
-position: Marketing and Communications Admin
-profilePicture: ../../images/1634379451049.jpg
+position: "Digital Marketing & Brand Coordinator "
+profilePicture: ../../images/zukanye-.png
 ---
-N﻿/A
+Zu is a creative and passionate marketing professional who focuses on digital marketing, branding, and storytelling. He enjoys creating meaningful content and helping build strong brand connections. 
+
+Outside of work, he enjoys going to the gym, jogging, and taking naps to recharge and stay balanced. 
+
+He has a Bachelor’s Degree in Journalism and Media Studies and Geography from Rhodes University.
