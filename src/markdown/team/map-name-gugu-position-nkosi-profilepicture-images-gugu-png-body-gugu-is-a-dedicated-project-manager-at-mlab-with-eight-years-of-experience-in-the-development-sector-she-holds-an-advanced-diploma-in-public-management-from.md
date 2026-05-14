@@ -1,6 +1,6 @@
 ---
-name: "Gugu "
-position: "Nkosi "
+name: "Gugu Nkosi "
+position: Project Manager
 profilePicture: ../../images/gugu-.png
 ---
 Gugu is a dedicated Project Manager at mLab with eight years of experience in the development sector. She holds an Advanced Diploma in Public Management from the Durban University of Technology and is passionate about driving projects that create meaningful impact and empower communities.
