@@ -1,6 +1,6 @@
 ---
 name: Ivan Johnson
-position: "Digital Skills Coordinator/Facilitator "
+position: "Digital Skills Facilitator "
 profilePicture: ../../images/ivan.png
 ---
 With over 5 years at mLab, Ivan specialises in ICT facilitation, digital skills training, and web and mobile application development. 
