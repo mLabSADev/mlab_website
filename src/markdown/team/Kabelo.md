@@ -1,7 +1,7 @@
 ---
 path: /Kabelo
 name: Kabelo Gaotlhaelwe
-position: Skills Facilitator
+position: Digital Skills Facilitator
 profilePicture: ../../images/kabelo-.png
 ---
 With more than five years at mLab, Kabelo focuses on technical training, coding mentorship, and software development education. 
