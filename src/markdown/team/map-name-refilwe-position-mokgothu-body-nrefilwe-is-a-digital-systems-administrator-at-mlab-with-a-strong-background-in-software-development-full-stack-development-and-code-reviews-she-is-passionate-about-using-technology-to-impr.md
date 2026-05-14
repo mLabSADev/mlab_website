@@ -1,6 +1,6 @@
 ---
-name: "Refilwe "
-position: "Mokgothu "
+name: "Refilwe Mokgothu "
+position: Digital Systems Administrator
 profilePicture: ../../images/refilwe.png
 ---
 \
