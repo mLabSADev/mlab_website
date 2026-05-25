@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import "./who-we-are.scss";
 import Layout from "../components/ChatBot/ChatBot";
 import { graphql } from "gatsby";
@@ -57,7 +57,7 @@ export const WhatWeDoCard = ({
     </div>
   );
 };
-const TeamCard = ({ fullName, position, image }) => {
+const TeamCard = ({ fullName, position, image, about }) => {
   const capitalizeFirstLetter = (string) => {
     if (string) {
       return string.charAt(0).toUpperCase() + string.slice(1);
@@ -65,12 +65,36 @@ const TeamCard = ({ fullName, position, image }) => {
       return string;
     }
   };
+
+  const aboutRef = useRef(null);
+  const [expanded, setExpanded] = useState(false);
+  const [isOverflowing, setIsOverflowing] = useState(false);
+
+  useLayoutEffect(() => {
+    if (!about) return undefined;
+    const checkOverflow = () => {
+      const el = aboutRef.current;
+      if (!el) return;
+      const overflowing = el.scrollHeight > el.clientHeight + 1;
+      setIsOverflowing((prev) => {
+        if (prev !== overflowing && !expanded) {
+          return overflowing;
+        }
+        return prev;
+      });
+    };
+    checkOverflow();
+    window.addEventListener("resize", checkOverflow);
+    return () => window.removeEventListener("resize", checkOverflow);
+  }, [about, expanded]);
+
   return (
     <div className="card-tc">
       <GatsbyImage
         image={image}
         alt={fullName}
-        objectFit="contain"
+        objectFit="cover"
+        objectPosition="center top"
         className="image-tc"
       />
       <Typography capitalise={true} variant="h5" center>
@@ -79,6 +103,25 @@ const TeamCard = ({ fullName, position, image }) => {
       <Typography variant="s2" center color="gray">
         {position}
       </Typography>
+      {about && (
+        <div className="about-wrapper-tc">
+          <div
+            ref={aboutRef}
+            className={`about-tc ${expanded ? "expanded" : "clamped"}`}
+            dangerouslySetInnerHTML={{ __html: about }}
+          />
+          {(isOverflowing || expanded) && (
+            <button
+              type="button"
+              className="read-more-tc"
+              onClick={() => setExpanded((v) => !v)}
+              aria-expanded={expanded}
+            >
+              {expanded ? "Read less" : "Read more"}
+            </button>
+          )}
+        </div>
+      )}
     </div>
   );
 };
@@ -131,6 +174,7 @@ const WhoWeAre = ({ data }) => {
                 image={img}
                 fullName={t.node.frontmatter.name}
                 position={t.node.frontmatter.position}
+                about={t.node.html}
               />
             );
           })}
@@ -159,6 +203,7 @@ export const query = graphql`
     ) {
       edges {
         node {
+          html
           frontmatter {
             name
             position
