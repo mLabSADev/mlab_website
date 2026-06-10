@@ -1,10 +1,10 @@
 ---
 path: /Palesa
 name: Palesa Antony
-position: Digital Technology Ecosystem Lead
+position: Digital Ecosystems Lead
 profilePicture: ../../images/palesa.png
 ---
-Palesa is the Digital Technology Ecosystem Lead for mLab  and her role is to unlock the potential of the digital economy in a remote area. 
+Palesa is the Digital Ecosystems Lead for mLab  and her role is to unlock the potential of the digital economy in a remote area. 
 
 Building a vibrant tech startup ecosystem for digital innovative entrepreneurs and raising the level of digital literacy and digital skills for the youth in the ICT sector. 
 
