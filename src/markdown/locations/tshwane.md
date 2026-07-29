@@ -4,15 +4,15 @@ path: /tshwane
 city: Tshwane
 order: 1
 province: Gauteng
-location: https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114997.20989146426!2d28.197091369370757!3d-25.748662148943744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9560451d408f9d%3A0xb180e978338dcefd!2smLab%20Southern%20Africa!5e0!3m2!1sen!2sza!4v1620139798484!5m2!1sen!2sza
+location: https://maps.app.goo.gl/yUvP2BMPXU3ypAvh6
 programmes:
   - CodeTribe Academy
   - Accelerator
   - App Fund
 tel: +27 012 844 0240
-physicalAddress: mLab, Innovation Centre 1 Mark Shuttleworth Street The
-  Innovation Hub Persequor x 10 Pretoria, South Africa 0087
-email: admin@mlab.co.za
+physicalAddress: The Loft, Block C, 2nd Floor, The Village Office Park Corner
+  Oberon and Glenwood Roads, Faerie Glen, Pretoria
+email: info@mlab.co.za
 description: mLab Tshwane is the Headquarters of the Mobile Applications
   Laboratory. It is a proud partnership between mLab, The Innovation Hub and The
   Department of Science and Innovation. It was the first location in South
