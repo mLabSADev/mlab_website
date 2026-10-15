@@ -18,7 +18,7 @@ Digital skills create meaningful opportunities when they are used to solve real 
 
 The project demonstrates how young developers can apply their skills to professional projects while contributing to digital solutions that support investment and economic development in the province.
 
-### **Supporting investment in the Northern Cape**
+### Supporting investment in the Northern Cape
 
 The Northern Cape’s InvestSA One Stop Shop supports local and international investors who want to explore business opportunities in the province. The initiative forms part of South Africa’s broader efforts to make it easier to establish and operate businesses by helping investors navigate government processes, approvals, licences and permits.
 
@@ -32,7 +32,7 @@ Developed by Hanna Sebolai, Felicia Tlhareseng, Muhammed Davids and Galaletsang 
 
 The project shows how software development can go beyond writing code. When digital tools respond to an organisation’s needs, they can help make information more accessible, communicate services clearly and connect people with opportunities.
 
-### **Professional skills making a difference**
+### Professional skills making a difference
 
 The project also highlights what can happen when young people are given opportunities to apply their training in a professional environment.
 
