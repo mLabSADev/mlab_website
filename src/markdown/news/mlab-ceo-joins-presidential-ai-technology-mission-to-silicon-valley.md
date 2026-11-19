@@ -35,8 +35,10 @@ The mission is not simply about learning from Silicon Valley. It is about showca
 
 
 
-**Media Enquiries**
+**MEDIA ENQUIRIES**
 
 **Zukanye Madakana**
 
-**Email**: [zukanye@mlab.com](mailto:zukanye@mlab.com)    **Phone:** 071 097 8947       **Website:** [www.mlab.co.za](http://www.mlab.co.za/)
+**Email**: zukanye@mlab.co.za 
+
+**Phone:** 071 097 8947
