@@ -35,8 +35,6 @@ The mission is not simply about learning from Silicon Valley. It is about showca
 
 
 
-**ENDS**
-
 **Media Enquiries**
 
 **Zukanye Madakana**
