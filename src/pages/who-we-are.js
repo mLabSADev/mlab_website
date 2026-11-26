@@ -198,7 +198,7 @@ export const query = graphql`
       }
     }
     team: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/(team)/" } }
+      filter: { fileAbsolutePath: { regex: "/markdown/team/" } }
       sort: { fields: frontmatter___name, order: ASC }
     ) {
       edges {
